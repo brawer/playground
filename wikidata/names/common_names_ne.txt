@@ -1,0 +1,2644 @@
+29676	John	जोन
+15979	William	विलियम
+11955	David	डेबिड
+11767	Robert	रोबर्ट
+11017	Thomas	थोमस
+10866	James	जेम्स
+10678	George	जर्ज
+9859	Peter	पिटर 
+9314	Michael	माइकल 
+9253	Paul	पल 
+8849	Charles	चार्ल्स
+8728	Richard	रिचर्ड
+6209	Henry	हेनरी
+6187	Joseph	जोसेफ
+5674	Hans	हान्स 
+4994	Karl	कार्ल
+4989	Johann	जोहान
+4952	Edward	एडवर्ड 
+4861	Frank	फ्राङ्क
+4848	José	जोसेफ
+4769	Mark	मार्क
+4571	Daniel	ड्यानिएल
+4483	Walter	वाल्टर
+4334	Alexander	अलेक्जेन्डर
+4273	Tom	टम
+4148	Martin	मार्टिन
+4083	Mike	माइक 
+4042	Bill	बिल
+3805	Chris	क्रिस
+3737	Arthur	आर्थर
+3722	Jim	जिम
+3687	Carl	कार्ल
+3674	Jack	ज्याक
+3664	Jan	ज्यान 
+3503	Antonio	एन्टोनियो
+3467	Jean	जिन
+3434	Steve	स्टिभ
+3404	Joe	जो
+3335	Albert	अल्बर्ट
+3320	Bob	बब
+3310	Giovanni	जोभानी
+3265	Andrew	आन्ड्र्यु 
+3239	Christian	क्रिस्टियन 
+3115	Alfred	अल्फ्रेड
+3094	Samuel	स्यामुएल 
+3040	Harry	ह्यारी
+2975	Wilhelm	विल्हेम
+2975	Juan	जुवान
+2954	Maria	मारिया
+2934	Giuseppe	जुसेप्पे
+2919	Friedrich	फ्रेडरिक
+2899	Brian	ब्रायन
+2847	Franz	फ्रान्ज
+2757	Carlos	कार्लोस
+2712	Heinrich	हेनरीक
+2709	Louis	लुइस
+2699	Mary	म्यारी
+2636	Tony	टोनी
+2592	Stephen	स्टेफेन
+2570	Otto	ओट्टो
+2568	Georg	गर्ज
+2524	Pierre	पियरे
+2477	Max	म्याक्स
+2473	Eric	एरिक
+2455	Patrick	प्याट्रिक
+2454	Francis	फ्रान्सिस
+2428	Kevin	केभिन
+2408	Francesco	फ्रान्सेस्को
+2386	Ernst	अर्नेस्ट
+2378	Hermann	हर्मन
+2378	Alan	अलान
+2316	Mario	मारियो
+2275	Johannes	जोहन्नेस
+2247	Anna	अन्ना
+2216	Anthony	एन्थोनी
+2197	Josef	जोसेफ
+2184	Roger	रोजर
+2163	Fred	फ्रेड
+2154	Dave	डेव 
+2083	Ivan	इभान
+2074	Herbert	हर्बर्ट
+2063	Rudolf	रुडोल्फ
+2052	Alex	अलेक्स
+2048	Simon	सिमोन
+2040	Tim	टिम|टीम
+2024	Adam	एडम|अदम
+2015	Francisco	फ्रान्सिस्को
+2012	Frederick	फ्रडरिक
+2005	Christopher	क्रिस्टोफर
+2000	Scott	स्कट
+1982	Dan	ड्यान
+1905	Gary	ग्यारी| गेरी 
+1900	Wolfgang	वुल्फगांग 
+1898	Jonathan	जोनाथन
+1889	Ben	बेन
+1886	Ken	केन
+1880	Ian	इयान
+1872	Manuel	म्यानुएल
+1865	Philip	फिलिप
+1831	Don	डन
+1818	Carlo	कार्लो
+1806	Luigi	लुइगी
+1806	Jeff	जेफ
+1806	Andrea	आन्ड्रिया
+1788	Matt	म्याट
+1771	Roberto	रोबर्टो
+1751	Fritz	फ्रिट्ज
+1747	Vladimir	भ्लादिमिर
+1730	Marco	मार्को 
+1715	Luis	लुईस
+1692	André	आन्ड्रे
+1668	Victor	भिक्टर
+1617	Sam	साम
+1614	Jason	जेसन 
+1613	Matthew	म्याथ्यु
+1611	Kurt	कुर्त
+1605	Bruno	ब्रुनो
+1592	Jacques	ज्याक्वेस
+1590	Elizabeth	एलिजाबेथ
+1587	Benjamin	बेन्जामिन
+1583	Ron	रोन
+1581	Billy	बिली
+1558	Andy	एन्डी
+1541	Pedro	पेद्रो
+1539	Jimmy	जिम्मी
+1533	Andreas	आन्ड्रियास
+1519	Werner	वेर्नर
+1502	Lee	ली
+1491	Alberto	अल्बर्टो
+1481	Nick	निक
+1472	Ray	रे
+1470	Bernard	बर्नार्ड
+1468	Anton	एन्टोन
+1467	Stefan	स्टेफान
+1456	Ralph	राल्फ
+1449	Anne	एन्ने
+1444	Ludwig	लुडविग
+1441	Jacob	ज्याकोब
+1408	Harold	ह्यारोल्ड
+1405	Jorge	जर्ज 
+1400	Maurice	मौरिस
+1398	Johan	जोहान
+1395	Hiroshi	हिरोशी
+1377	Barbara	बार्बरा
+1373	Larry	ल्यारी
+1370	Greg	ग्रेग
+1367	Keith	किथ
+1367	Gerhard	गेरहार्ड 
+1361	Ed	एड
+1359	Marc	मार्क
+1357	Hugh	हघ
+1352	Gustav	गुस्ताभ
+1347	Charlie	चार्ली
+1347	Bruce	ब्रुस
+1336	Ernest	अर्नेस्ट
+1332	Klaus	क्लाउस
+1326	Henri	हेनरी
+1321	Pietro	पियट्रो
+1318	Michel	मिचेल
+1297	Miguel	मिग्वेल
+1295	Sarah	साराह
+1295	Jon	जोन
+1285	Donald	डोनाल्ड
+1283	Paolo	पाओलो
+1272	Emil	इमिल
+1269	Fernando	फर्नान्डो 
+1263	Ryan	रायान
+1253	Nicholas	निकोलस
+1253	Johnny	जोनी
+1249	Tommy	टम्मी
+1244	Kim	किम
+1243	Margaret	मार्गरेट
+1240	François	फ्रान्सोइस
+1231	Dick	डिक
+1218	Roy	रोय
+1215	Julius	जुलियस
+1200	Phil	फिल
+1200	Erik	एरिक
+1195	Heinz	हेइन्ज
+1183	Hugo	हुगो
+1169	Steven	स्टेेभेन
+1169	Dennis	डेनिस
+1159	Aleksandr	अलेक्सान्दर
+1148	João	जोआओ
+1143	Bobby	बबी
+1126	Danny	डेनी
+1122	Gordon	गोर्डन
+1122	Ali	अली
+1113	Leo	लियो
+1113	Craig	क्रेग
+1103	Terry	टेरी
+1097	Marcus	मार्कस
+1097	Georges	जर्जेस
+1091	Pat	प्याट
+1087	Jerry	जेरी
+1086	Rob	रब
+1072	Norman	नोर्मन
+1071	Alessandro	अलेस्सन्द्रो
+1070	Laura	लाउरा
+1070	Gabriel	ग्याब्रिएल
+1070	Erich	एरिक
+1065	Barry	ब्यारी
+1062	Eduard	एडुआर्ड
+1058	Claude	क्लाउडे
+1056	Eddie	एड्डी
+1054	René	रेनी
+1052	Raymond	रेमन्ड
+1045	Edmund	एडनमन्ड
+1044	Marie	म्यारी
+1036	Colin	कोलिन
+1034	Sergio	सेर्गियो
+1025	Kenneth	केन्नेथ
+1021	Denis	डेनिस
+1005	Helmut	हेलमुट
+999	Susan	सुसन
+993	Ted	टेड
+992	Oscar	ओस्कार
+990	Al	अल
+982	Guy	गाइ
+979	Takashi	ताकाशी
+979	Rick	रिक
+979	Li	ली
+977	Jose	जोसे
+974	Doug	डौग
+970	Ricardo	रिकार्डो
+963	Neil	नील
+956	Angelo	एन्जेलो
+955	Sergei	सेर्गेई
+952	Igor	इगोर
+949	Ronald	रोनाल्ड
+941	Rolf	रोल्फ
+940	Oliver	ओलिभर
+933	Aaron	आरोन
+932	Jane	ज्याने
+929	Marcel	मार्सेल
+929	August	अगस्त
+923	Roland	रोल्यान्ड
+923	Rafael	राफेल
+922	Helen	हेलेन
+922	Edwin	एडविन 
+917	Sean	सिन
+916	Christoph	क्रेिस्टोफ
+914	Viktor	भिक्टर
+913	Howard	होवार्ड
+912	Lars	लार्स
+904	Theodor	थियोडोर
+883	Philippe	फिलिप्प
+883	Joachim	जोअसिम
+882	Adrian	आड्रियन
+878	Jürgen	जुर्गेन
+878	Joan	जोअन
+874	Eduardo	एडुआर्डो
+873	Franco	फ्रान्को
+871	Robin	रोबिन
+869	Lisa	लिसा
+868	Wang	वाङ
+859	Derek	देरेक
+859	Boris	बोरिस
+851	Mohamed	मुहम्मद 
+849	Ferdinand	फर्डिनान्ड
+843	Adolf	एडोल्फ
+840	Mikhail	मिखाइल
+837	Justin	जस्टिन
+836	Eva	इभा
+834	Gerald	गेराल्ड
+833	Leonard	लिओनार्द
+832	Isaac	आइज्याक
+832	Felix	फेलिक्स
+831	Douglas	डग्लस
+829	Ruth	रूथ
+824	Vincent	भिन्सेन्ट
+823	Nicolas	निकोलस
+823	Josh	जोस
+822	Per	पेर
+816	Pavel	पावेल
+812	Jay	जेय
+811	Mohammad	मोहम्मद
+810	Vincenzo	भिनसेन्जो
+803	Ulrich	उलरिक
+803	Giorgio	गिओर्गियो
+802	Manfred	मान्फ्रेड
+798	Alice	अलाइस
+796	Julia	जुलिया
+795	Liu	लिउ
+795	Alfredo	अल्फ्रेडो
+794	Matthias	मत्तिआस
+790	Jeremy	जेरेमी
+789	Jamie	जेमी
+788	Graham	ग्राहम
+785	Zhang	झ्याङ
+784	Roman	रोमन
+779	Stuart	स्ट्युआर्ट
+776	Joel	जोएल
+776	Jennifer	जेनिफर
+773	Catherine	क्याथरिन
+767	Diego	डिएगो
+763	Wayne	वायन
+763	Dieter	दिएटर
+762	Stefano	स्टेफानो
+760	Lawrence	लरेन्स
+758	Edgar	एड्गर
+758	Domenico	डोमेनिको
+755	Nathan	नाथन
+754	Harald	हेराल्ड
+750	Julian	जुलियन
+750	Andrei	आन्द्रेइ
+749	Jakob	ज्याकोब
+749	Abraham	अब्राहम
+748	Karen	क्यारेन
+748	Allan	एल्लान
+746	Geoffrey	जेफ्री
+743	Ahmed	अहमद
+740	Enrico	एनरिको
+735	Guido	गिडो
+734	Linda	लिन्डा
+729	Brad	ब्राड
+728	Ana	एना
+726	Ann	एन्न
+725	Michele	मिसेले
+722	Christine	क्रिस्टिन
+720	María	मारिया
+718	Arnold	आर्नोल्ड
+717	Sebastian	सेबास्टियन
+716	Willie	विल्ली
+715	Anders	आन्ड्रर्स
+698	Patricia	प्याट्रिसिया
+697	Stanley	स्टेन्ली
+694	Markus	मार्कस
+692	Takeshi	ताकेशी
+691	Pete	पिट
+690	Claudio	क्लाउडियो
+682	Lorenzo	लोरेन्जो
+680	Alexandre	अलेक्सान्ड्रे
+678	Milan	मिलान
+675	Kenji	केन्जी
+674	Will	विल
+674	Horst	होर्स्ट
+673	Herman	हरमन
+672	Leslie	लेस्ली
+670	Nicola	निकोला
+669	Paulo	पाउलो
+666	Elisabeth	एलिजाबेथ
+665	Jens	जेन्स
+657	Luke	ल्युक
+657	Jules	जुलेस
+656	Pablo	पाब्लो
+655	Nancy	नान्सी
+653	Lewis	लेविस
+650	Abdul	अब्दुल
+649	Hubert	हुबर्ट
+648	Luca	लुका
+646	Julie	जुली
+645	Federico	फेडेरिको
+643	Antoine	अन्टोनी
+642	Günter	गुन्टर
+641	Yuri	युरी
+639	Kate	केट
+628	Dean	डिन
+626	Alain	अलाइन
+625	Timothy	टिमोथी
+625	Sara	सारा
+622	Olga	ओल्गा
+621	Caroline	क्यारोलिन
+612	Eugene	युुजिन
+609	Bryan	ब्रायन
+606	Leon	लियोन
+602	Emilio	इमिलियो
+602	Bernhard	बर्नहार्ड
+601	Ole	ओले
+601	Giacomo	गिआकोमो
+600	Sandra	सान्ड्रा
+599	Gilbert	गिल्बर्ट
+599	Elena	एलेना
+598	Nikolai	निकोलाई
+595	Gene	जिन
+594	Todd	टड
+594	Jesse	जेस्सी
+593	Malcolm	मल्कोम
+593	Julio	जुलियो
+593	Charlotte	चर्लोटी
+591	Massimo	मास्सिमो
+590	Stan	स्ट्यान
+589	Mohammed	मोहम्मद
+587	Randy	रेन्डी
+587	Nils	निल्स
+586	Louise	लुइसे
+585	Erwin	एर्विन
+582	Philipp	फिलिप्प
+581	Glenn	ग्लेन्न
+579	Bert	बर्ट
+577	Trevor	ट्रिभोर
+576	Percy	पेर्सी
+575	Javier	ज्याभियर
+575	Emma	एम्मा
+573	Nina	निना
+571	Dorothy	डोरोथी
+571	Chuck	चक
+570	Willy	विल्ली
+567	Russell	रसेल
+567	Jeffrey	जेफ्री
+565	Sergey	सेर्गेई
+564	Jessica	जेस्सिका
+564	Amy	एमी
+561	Darren	ड्यारेन
+558	Giulio	गिउलियो
+553	Muhammad	मुहम्मद
+553	Kōji	कोजी
+553	Claudia	क्लाउडिया
+552	Michelle	मिसेले
+552	Hiroyuki	हिरोयुकी
+545	Enrique	एनरिक
+543	Norbert	नोर्बर्ट
+543	Joshua	जोशुआ
+543	István	इस्तभान
+542	Kazuo	काजुओ
+541	Rachel	रचेल
+540	Konrad	कोनराड
+537	Renato	रेनाटो
+534	László	लास्लो
+527	Ellen	एलेन
+525	Warren	वारेन
+522	Siegfried	सेगफ्रेड
+522	Jonas	जोनस
+521	Ross	रस
+520	Stephan	स्टेफन
+520	Emily	इमिली
+516	Luciano	लुसियानो
+513	Salvatore	सल्बातोर
+511	Gunnar	गुन्नार
+510	Aldo	एल्डो
+509	Oskar	ओस्कर
+507	Carol	क्यारोल
+507	Arne	आर्ने
+506	Chen	चेन
+504	Ernesto	अर्नेस्टो
+503	Rebecca	रिबेक्का
+502	Alejandro	अलेजान्द्रो
+500	Jake	जेक
+498	Emmanuel	इम्यानुएल
+496	Simone	सिमोन
+496	Gerard	जेरार्ड
+495	António	आन्टोनियो
+494	Cyril	क्रिल
+493	Axel	आक्सेल
+492	Theodore	थियोडोर
+492	Brandon	ब्रान्डन
+489	Jean-Baptiste	जिन-ब्याप्टिस्टे
+489	Fabio	फ्याबियो
+487	Günther	गुन्थेर
+486	Shane	सेन
+486	Nikolay	निकोले
+486	Henrik	हेनरिक
+486	Geoff	जोफ्फ
+486	Eugen	युजिन
+485	Leonardo	लियोनार्दो
+483	Omar	ओमार
+483	Les	लेस
+483	Jean-Pierre	जिन-पियरे
+479	Nigel	निगेल
+479	Matsudaira	मत्सुदाइरा
+479	Marina	मेरीना
+478	Mick	मिक
+478	Jordan	जोर्डन
+477	Nathaniel	नाथानिएल
+477	Knut	क्नुत
+477	Filippo	फिलिप्पो
+476	Rainer	रेनर
+474	Konstantin	कन्सट्यान्टिन
+471	Sven	स्वेन
+471	Kyle	केयल
+469	Émile	इमिले
+468	Vittorio	भिट्टोरियो
+468	Martha	मार्था
+465	Nicole	निकोल
+464	Ingrid	इन्ग्रिड
+463	Dmitri	डिमित्री
+462	Cesare	ससरे
+461	Dirk	डिर्क
+460	Judith	जुडिथ
+459	Mauro	मौरो
+458	Lucy	लुकी
+457	Gustavo	गुस्तावो
+456	Angela	अंगेला
+456	Andrzej	अन्द्र्जेज
+455	Reginald	रेगिनाल्ड
+454	Jesús	
+454	Jaime	जैमे
+453	Toshio	तोशियो
+452	Karel	करेल
+452	Gregory	ग्रेगोरी
+452	Diana	दिअना
+449	Lou	लोउ
+449	Frances	फ्रांसेस
+448	Karin	करीं
+447	Leopold	लेओपोल्ड
+447	Cecil	सेसिल
+446	Alfonso	अलफोंसो
+445	Oleg	ओलेग
+445	Edith	एडिथ
+444	Stanisław	
+444	Sophie	सोफी
+443	Hideo	आइज़ावा | हिदेओ
+442	Eugène	
+442	Brett	ब्रेट
+441	Willem	विल्लेम
+441	Marko	मार्को
+441	Betty	बेट्टी
+439	Nelson	नेल्सन
+439	Janet	जनेत
+438	Luís	
+437	Armando	अरमांडो | अर्मंदो
+437	Alexandra	अलेक्सांद्र
+436	Dominique	दोमिनिकुए
+435	Satoshi	सातोशी
+433	Riccardo	रिक्कर्डो | रिच्कार्दो
+432	Olivier	ओलिवर | ओलिविएर
+432	Clarence	क्लारेंस
+431	Valentin	वालेंटिन
+431	Reinhard	रेंहर्द
+431	Earl	एअरल
+430	Jörg	
+430	Antônio	
+430	Ahmad	अहमद
+429	Jiří	
+428	Kelly	केल्ली
+427	Allen	अल्लें
+425	Yoshio	योशियो
+425	Art	आर्ट
+424	Marcelo	मार्सेलो
+424	Daisuke	दैसुके
+423	Sidney	एस | सिडनी | सिड्नी
+423	Rodrigo	रोड्रिगो
+423	Kōichi	
+422	János	
+421	Gottfried	गाटफ्रीड
+419	Ion	इओं
+419	Gerd	गर्ड | गर्द
+419	Gaetano	गैतानो
+419	Arturo	अर्तुरो
+418	Noel	नोएल
+418	Lloyd	ल्लोय्द
+417	Masahiro	मसाहिरो
+417	Kenny	कन्नी
+416	Léon	
+416	József	
+416	Ernie	एर्नी
+414	Amanda	अमंदा
+411	Rod	रोड
+411	Lucas	लुकास
+409	Vicente	विसेण्टि | विसेनते
+409	Marion	मरिओं
+408	Saint	सैंट
+408	Maurizio	मौरिजियो
+407	Vera	वेरा
+407	Carmen	कारमेन
+406	Marianne	मरिंने
+406	Dale	डाले
+404	Uwe	उवे
+404	Matteo	मत्तेओ | मत्तेयो
+404	Frédéric	
+403	Jenny	जेन्नी
+402	Jackie	जचकी | जय | जैकी
+402	Erika	एरिका
+401	Yves	यवेस
+401	Guillermo	गुइल्लेर्मो | गुलिरमो | गुलिर्मो
+400	Masao	मासो
+400	César	
+399	Kiyoshi	कियोशी
+398	Gabriele	गाब्रिएल
+398	Aleksei	अलेक्सी
+397	Lionel	लिओनेल | लियोनेल
+397	Ferenc	फेरेंक
+397	Augusto	ऑगस्टस | औगुस्तो
+396	Horace	होरस
+395	Tōru	
+395	Ramón	
+394	Stephanie	स्टेफनी
+394	Anita	अनीता
+393	Lucius	लुसिउस
+393	Gerry	गेर्री
+392	Osamu	ओसामू
+391	Víctor	
+390	Raúl	
+390	Atsushi	अत्सुशी
+388	František	
+388	Florian	फ्लोरियन
+387	Theo	ठो
+386	Willi	विल्ली
+385	Keiko	किको
+385	Alois	अलोइस
+385	Alexis	अलेक्सिस
+382	Pieter	पिएटर
+381	Laurent	लौरेंट
+380	Nikola	निकोला
+380	Dmitry	दमित्री | दिमित्री
+379	Jo	जो
+378	Marcos	मार्कोस
+377	Ibrahim	इब्राहीम
+377	Félix	
+377	Deborah	देबोराह
+376	Józef	
+376	Ashley	अशली | एशले | एश्ली | एश्ले | एस्ली | ऐश्ले
+375	Piero	पिएरो
+375	Paula	पुला
+375	Laurence	लारेंस | लॉरेंस | लौरेंस
+374	Ronnie	रोंनी | रोनी
+373	Petr	पत्र
+373	Pascal	पास्कल
+373	Irene	इरेने
+373	Alf	अल्फ
+372	Rita	रीटा | रीता
+371	Miroslav	मिरोस्लाभ | मिरोस्लाव
+370	Héctor	
+369	Claire	क्लैरे
+369	Andrey	अंदरे | आन्द्रेई
+368	Yutaka	युताका
+368	Victoria	विक्टोरिया
+368	Toni	टोनी
+368	Len	लें
+367	Dominic	डोमिनिक
+366	Minoru	मिनोरू
+366	Glen	ग्लेन
+366	Christina	च्रिस्तिना
+366	Auguste	औगुस्ते
+366	Archibald	अर्चिबाल्ड
+365	Mariano	मरिअनो
+364	Gino	गिनो
+363	Tobias	तोबिअस
+363	Jerzy	जर्ज़ी | जेर्जी
+363	Conrad	कानराड | कोनराड
+362	Ursula	उर्सुला
+362	Sally	सल्ली
+360	Yang	यंग
+360	Kathleen	कथ्लीन
+360	Fredrik	फ़्रेद्रिक | फ्रेडरिक
+359	Yūko	
+358	Lucien	लुसिएँ
+358	Daniele	दनिएले
+358	Annie	अन्नी | ई | एनी
+357	Ángel	
+356	Eberhard	एबेर्हार्ड
+355	Andrés	
+355	Aleksandar	अलेक्सान्दर
+354	Liam	लियाम | लीं
+353	Gianni	गिंनी
+351	Shigeru	शिगेरू
+351	Grant	ग्रांट
+351	Chad	चढ़
+349	Serge	सेर्गे
+348	Tyler	त्य्लेर
+348	Tadashi	तदाशी
+348	Sharon	शरों
+346	Luiz	लुइज़
+345	Yōko	
+345	Teresa	टेरेसा
+344	Marek	मराक | मारेक
+344	Artur	अर्तुर
+343	Bjørn	
+342	Xavier	क्साविएर | ज़ेवियर | जेवियर
+342	Natalia	नतालिया
+341	Magnus	माग्नुस
+341	Eugenio	एउगेनियो
+339	Moses	मोसेस
+339	Katherine	कठेरिने | केथरिन
+338	Tomáš	
+338	Duncan	डंकन | दुन्कां
+337	Owen	ओवन | ओवेन
+337	Florence	फ्लोरेंस
+337	Evan	एवं
+337	Cliff	क्लिफ्फ़
+336	Melissa	मेलिस्सा
+334	Marian	मरियन
+334	Diane	डायने | दिअने
+333	Suzanne	सुज़न्ने | सुज़ेन्न
+333	Naoki	नकोई | नोकी
+333	Leonid	लेओनिद
+333	Julien	जुलिएन
+333	Harvey	हार्वे
+332	Heather	हिथर | हिदर | हेअठेर
+332	Christophe	च्रिस्तोफे
+331	Piotr	पिओत्र
+331	Elias	एलिअस
+330	Mathias	मथिअस
+329	Monica	मोनिका
+328	Silvio	सिल्वियो
+328	Gérard	
+327	Wendy	वेंडी
+327	Masayuki	मासायुकी
+326	Irina	इरिना
+326	Empress	इम्प्रेस
+326	Brendan	ब्रेंडन
+325	Volker	वोल्कर
+325	Akiko	अकिको | अकीको
+324	Umberto	उम्बेर्तो
+324	Ricky	रिकी | रिक्की
+324	Hal	हल
+322	Edmond	एड्मोंद
+322	Daniela	दनिएला
+322	Brent	ब्रेंट
+321	Stanislav	स्तानिस्लाव
+321	Rodney	रोडनी
+320	Guillaume	गुइल्लौमे
+320	Frans	फ़्रांस
+319	Rosa	रोसा
+319	Rodolfo	रोडोल्फो
+319	Raffaele	रफ्फेले
+319	Lothar	लोथार
+319	Bernd	बेर्न्द
+318	Sandy	संद्य
+318	Rich	रिच
+318	Jaroslav	जारोस्लाव | यारोस्लाव
+318	Emanuel	एमानुएल
+318	Davide	दविदे
+318	Cristian	क्रिस्टियन
+317	Joey	जोएय
+316	Murray	मरे | मुर्रे
+316	Jacqueline	जच्कुएलिने | जैकलिन | जैक्विलीन
+316	Adolfo	अदोल्फो
+315	Lynn	ल्य्न्न
+314	Clara	क्लारा
+313	Susanne	सुसंने
+313	Shawn	शवं
+313	Akira	अकिरा
+312	Milton	मिल्टन
+312	Enzo	एंजो
+312	Einar	एइनर
+311	Sue	सुए
+311	Jill	जिल
+311	György	
+311	Esther	एस्थेर
+310	Takahiro	तकहिरो
+310	Gavin	गावीं
+309	Yūji	
+309	Yuki	युकी
+309	Tina	टिना | टीना | तीन
+309	Kristian	क्रिस्टियन
+309	Hendrik	हेंड्रिक
+308	Silvia	सिल्विया
+308	Johanna	जोहान्न
+308	Jerome	जेरोमे
+307	Édouard	
+307	Shinji	शिंजी
+307	Shaun	शौन
+307	Petra	पत्र
+307	Felipe	फेलिपे
+306	Walther	वाल्थेर
+306	Monika	मोनिका
+306	Marcello	मर्सल्लो
+305	Mel	मेल
+305	Marta	मरता
+304	Álvaro	
+304	Marvin	मार्विन
+304	Ivo	इवो | ईवो
+303	Clive	क्लाइव | क्लिवे
+303	Alison	अलिसन
+302	Sydney	सिडनी
+302	Stéphane	
+302	Santiago	संतिअगो
+302	Bernardo	बेर्नारदो
+301	Tetsuya	तेत्सुया
+301	Sabine	सबीने
+301	Olaf	ओलाफ
+300	Morten	मोरतें
+300	Agnes	अगनेस
+299	Wally	वल्ली | वॉल्टर
+299	Marius	मरिउस
+299	Lauren	लौरेन
+298	Wu	वू
+298	Kaori	कोरी
+298	Grace	ग्रास | ग्रेस
+298	Doris	डोरिस
+297	Tommaso	तोम्मासो
+297	Sylvia	सिल्विया
+297	Carla	कार्ला
+296	Judy	जुडी | जूडी
+296	Joaquim	जोअकुइम
+294	Paddy	पद्दी
+294	Orlando	ऑरलैंडो | ओरलांडो
+294	Michal	मिचल
+293	Syed	गुलाम | सय्यद | सैयद | सैय्यद | स्येद
+293	Jean-François	
+293	Cristina	क्रिस्टिना | क्रिस्टीना
+292	Ugo	उगो
+292	Travis	त्रविस
+292	Sándor	
+292	Gilles	गिल्लेस
+292	Dino	डीनो | दिनों
+291	Helena	हेलेना
+290	Natalie	नताली
+290	Denise	डेनिस | डेनीस
+289	Zoltán	
+289	Kjell	क्जेल्ल
+289	Brigitte	ब्रिगित्ते | ब्रिजित
+288	Cameron	कैमरुन | कैमरून | कैमरों | क्यामरुन
+287	Tadeusz	तदयूस्ज़
+287	Georgi	गोर्गी
+287	Curt	करत
+286	Vic	विक
+286	Rose	रोसे
+286	Pamela	पामेला
+286	Maksim	मक्सिम
+286	Lady	लदी
+286	Hannah	हन्नाह
+286	Evelyn	एवेल्यं
+285	Vanessa	वनेस्सा | वेनेसा
+285	Karl-Heinz	कार्ल-हेंज
+285	Isabel	इसाबेल
+285	Ida	इडा
+285	Dario	दारियो
+285	Cornelius	कॉर्नेलियस | कोर्नेलिउस
+284	Olav	ओलाव
+284	Moritz	मोरित्ज़
+284	Marty	मर्त्य
+284	Jeanne	जेंने
+283	Niels	निएल्स
+283	Jean-Claude	जीन-क्लाउडे | जें-क्लौदे
+283	Hassan	हस्सन
+283	Giancarlo	गिंकार्लो
+283	Basil	बासिल
+282	Ralf	राल्फ
+281	Gaius	गैउस
+281	Claus	क्लाउस
+281	Austin	ऑस्टिन
+280	Yūsuke	
+280	Gian	गियन
+279	Gaston	गास्तों
+279	Gareth	गारेथ | गेरेथ | ग्यारेथ
+279	Dana	दाना
+279	Camille	कामिल्ले
+279	Astrid	अस्त्रिड
+279	Andre	आंद्रे
+278	Tsutomu	त्सुतोमु
+278	Troy	ट्रॉय
+277	Virginia	विरगिनिया
+277	Leif	लीफ
+277	Graeme	ग्रीम | ग्रैमे
+276	Sandro	सांद्रो
+276	Phillip	फिल्लिप
+275	Krzysztof	क्र्ज्य्स्ज्तोफ़
+275	Joanna	जोंना
+275	Hiroki	हिरोकी
+274	Takayuki	तकयुकी
+274	Reinhold	Reinhold | रेंहोल्ड
+274	Masato	मस्तो
+273	Tomoko	टोमोको
+273	Prince	प्रिंस
+272	Takeo	ताको
+272	Fabrizio	फब्रिजियो
+272	Alexandru	अलेक्सान्द्रू
+271	Robbie	रॉबी | रोब्बी
+269	Thierry	थिएर्री
+269	Takao	ताको
+269	Ignacio	इग्नासियो
+269	Dietrich	दिएत्रीच
+268	Yukio	यूकियो
+268	Laurie	लौरी
+268	Frederic	फ्रेडेरिक
+268	Aleksander	अलेक्सान्दर
+267	Yevgeni	येवगेनी
+267	Tatsuya	तात्सुया
+267	Maximilian	मक्सिमिलियन
+267	Mai	मई
+267	Ichirō	
+267	Curtis	कर्टिस
+266	Tomasz	तोमस्ज़
+266	Hitoshi	हितोशी
+266	Gustave	गुस्तावे
+265	Yvonne	य्वोंने
+265	Wilson	विल्सन
+265	Tomás	
+265	Israel	इस्रैल
+265	Hideki	हिदेकी
+265	Alec	अलेक | एलेक
+264	Girolamo	गिरोलामो
+264	Eleanor	एलेअनोर
+263	Pauline	पुलिने | पॉलीन
+263	Mustafa	मुस्तफा
+263	Antoni	अंटोनी
+263	Angel	अन्गेल
+262	Solomon	सोलोमोन
+262	Mari	मरी
+262	Lord	लोर्ड
+262	Kai	कई
+261	Václav	
+261	Red	रेड
+261	Gonzalo	गोंजालो
+261	Gloria	ग्लोरिया
+260	Sheila	शेइला
+260	Pasquale	पस्कुँले
+260	Eli	एली
+260	Clifford	क्लिफ्फोर्ड
+259	Yasuo	यासुओ
+259	Péter	
+259	Gábor	
+259	Achille	अचिल्ले
+258	Rudy	रूडी
+258	Rubén	
+258	Princess	प्रिंसेस
+258	Michał	
+258	Jun	जून
+257	Yoshihiro	योशिहिरो
+257	Mickey	मिकी | मिक्की
+257	Hiroaki	हिरोअकी
+257	Cynthia	क्य्न्थिया
+256	Sun	सुन
+256	Jakub	जकुब
+256	Henning	हेन्निंग
+256	Amir	अमीर | आमिर | उस्ताद
+255	Seth	सेठ
+255	Katie	कटी | केटी
+255	Joaquín	
+254	Éric	
+254	Zhao	जहो
+254	Vince	वीनस
+254	Morgan	मोर्गन
+254	Josep	जोसेप
+254	Jean-Louis	जें-लौईस
+254	Gyula	ग्युला
+254	Béla	
+253	Mário	
+253	Carolyn	कैरोलीन
+252	Salvador	सल्वाडोर
+252	Petar	पेटर
+252	Lajos	लजोस
+251	Vasily	वसीली
+251	Hanna	हन्ना
+251	Donna	दोन्ना
+251	Akio	अकियो
+251	Adriano	अद्रिअनो
+250	Lance	लांस
+249	Zhu	जहु
+249	Mika	मिका
+249	Martina	मार्टिना
+249	Ivar	इवार
+249	Constantin	कोन्स्तान्तिन
+249	Aya	आया
+248	Yuka	यूका
+248	Makoto	मकोतो
+248	Francesca	फ्रांसेस्का
+248	Armand	अरमंड
+248	Alexei	अलेक्सेई
+247	Shirley	शर्ली | शिरली
+247	Oleksandr	ओलेक्जेंडर | ओलेक्संद्र
+247	Miriam	मिरिं
+247	Ilya	इल्या
+246	Noriko	नोरिको
+246	Leandro	लीन्द्रो
+246	Jørgen	
+246	Gustaf	गुस्टाफ | गुस्ताफ
+245	Takuya	ताकुया
+245	Marshall	मार्शल
+245	Joyce	जोयस
+245	Ettore	एत्तोरे
+244	Rui	रुई
+244	Nikolaus	निकोलौस
+243	Masaaki	मसाकी
+242	Étienne	
+242	Tetsuo	तेत्सुओ
+242	Susumu	सुसुमु
+242	Stewart	स्टेवार्ट
+242	Spencer	स्पेंसर
+242	Franklin	फ्रान्कलिन | फ्रैंकलिन | फ्र्यांकलिन
+242	Danielle	दनिएल्ले
+241	Masaru	मसरू
+240	Sonia	सोनिया
+240	Martín	
+240	Herb	हेरब
+239	Keisuke	केइसुके
+239	Hiroko	हिरोको
+239	Helge	हेलगे
+238	Tamara	ताम्र
+238	Shigeo	शिगेओ
+238	Nate	नाते
+238	Kerry	कर्री | कैरी
+237	Yoshiaki	योशिअकी
+237	Sir	सर
+237	Seiji	सीजी
+236	Junko	junko | जुन्को | जूनको
+235	Elaine	एलैने
+235	Augustus	आगस्टस | औगुस्तुस
+234	Xu	क्सु
+234	Rupert	रुपर्ट
+234	Rex	रेक्स
+234	Drew	द्रव
+234	Archie	आर्ची
+234	Abel	अबेल
+234	Abdullah	अब्दुल्ला | अब्दुल्लाह
+233	Óscar	
+233	Masashi	मसाशी
+233	Heidi	हाइडी | हेइडी | हेइदी
+233	Ferdinando	फेर्दिनान्दो
+233	Bo	बो
+232	Sébastien	
+232	Jesus	जेसुस
+232	Derrick	देर्रिच्क
+232	Agostino	अगोस्तिनो
+231	Vyacheslav	व्याचेस्लाव
+231	Jean-Marie	जें-मारी
+230	Valentina	वलेन्तीना
+230	Reggie	रेग्गिए
+230	Nicolás	
+230	Károly	
+230	Hank	हांक
+230	Gil	गिल
+230	Alvin	अल्विन | अल्वी
+229	Waldemar	वाल्देमर | व्लादीमिर
+229	Oswald	ओसवाल्ड
+229	Iván	
+229	Filip	फिलिप
+229	Eiji	एइजी
+228	Pier	पिएर
+228	Imre	इम्रे
+228	Helga	हेलगा
+228	Björn	
+227	Zoran	जोरन
+227	Tsuyoshi	त्सुयोशी
+227	Sid	सिद
+227	Raphael	राफेल
+227	Melanie	मेलानी
+227	Kent	केंट
+227	Hans-Joachim	हंस-जोआचिम
+227	Georgios	गेओर्गिओस
+227	Damien	दमिएँ
+227	Cecilia	सेसिलिया
+226	Ruslan	रुसलान
+226	Nino	नीनो
+226	Mitch	मित्च
+226	Albrecht	आल्ब्रेख्ट | आल्ब्रेच्त
+225	Russ	रूस
+225	Reg	रेग
+225	Liz	लिज़
+225	Kari	करी
+225	Fernand	फेर्नंद
+225	Bernie	बर्नी
+224	The	थे
+224	Nikita	निकिता
+224	Luc	लुक
+224	Kathy	कथ्य | क्याथी
+224	Jochen	जोचें
+224	Holger	होल्गेर
+224	Corey	करे | कोरी | कोरे
+223	Yu	यु
+223	Tomas	तोमस
+222	Taylor	टेलर | तय्लोर
+222	Gregor	ग्रेगोर
+222	Gerardo	गेरार्डो
+221	Wilfried	विल्फ्रिएद
+221	Tibor	तिबोर
+221	Benny	बननी
+221	Annette	अन्नेत्ते
+220	Vadim	वादिम
+220	Tracy	त्रच्य
+220	Morris	मोर्रिस
+220	Kazimierz	कजिमीएर्ज़
+220	Kay	के
+220	Jean-Paul	जें-पुल
+220	Huang	हुंग
+220	Edoardo	एडोअर्दो
+219	Yasuhiro	यासुहिरो
+219	Władysław	
+219	Han	हाँ
+218	Tore	तोरे
+218	Isao	इसो
+218	Egon	एगों
+217	Vladimír	
+217	Tor	तोर
+217	Tatiana	ततिअना | तातियाना
+217	Moshe	मोशे
+217	Kyōko	
+217	Hector	हेक्टर
+217	Goran	गोरान
+217	Byron	ब्य्रों | ब्रायन
+217	Anatoly	अनातोली
+217	Alfons	अल्फोंस
+216	Vernon	वेर्नों
+216	Odd	ओद्द
+216	Miloš	
+216	Freddie	फरेड्डी | फ्रेद्दिए
+216	Cornelis	कोर्नेलिस
+215	Svetlana	भेत्लाना | स्वेतलाना
+215	Peggy	पेग्ग्य
+215	Norm	नोर्म
+215	Nico	निको
+215	Jeremiah	जेरेमिः | जेरेमीयाह
+215	Casey	केसी | कैसे
+215	Bartolomeo	बर्तोलोमेओ
+215	Adriana	अद्रिअना
+214	Miki	मिकी
+214	Marilyn	मरिल्यं
+214	Abu	अबू
+213	Naomi	नओमी | म्रिदुल्
+213	Hartmut	हर्त्मुत
+213	Finn	फिन्
+212	Valerie	वलेरी
+212	Mahmoud	महमूद | मह्मौद
+212	András	
+211	Kris	क्रिस
+211	Harriet	हर्रिएत
+211	Danilo	दनिलो
+211	Christiane	च्रिस्तिअने
+210	Lydia	लीडिया
+210	Gert	गर्त
+210	Alphonse	अल्फोंसे
+209	Rudi	रूडी
+209	Regina	रेगिना
+209	Ma	माँ
+209	Lucio	लुसियो
+208	Vladislav	व्लादिस्लाव
+208	Sérgio	
+208	Nobuo	नोबुओ
+208	Lindsay	लिंडसे | लिन्ड्से
+208	Gus	गुस
+208	Eileen	एइलीन
+208	Cindy	सिंडी | सिन्डी
+207	Wilfred	विल्फ्रेड
+207	Walt	वाल्ट
+207	Ulf	उल्फ
+207	Samantha	समानता | सामंथा | सामन्था
+207	Nguyen	न्गुयेन
+207	Kristin	क्रिस्टिन
+207	Gregorio	ग्रेगोरियो
+207	Garry	गर्री | गैरी
+206	Ram	राम
+206	Miho	मिहो
+206	Isabelle	इसबेल्ले | इसाबेल
+206	Elmer	एल्मेर
+206	Augustin	औगुस्तीं
+205	Mohd	मोहद
+205	Fabian	फबियन
+205	Didier	डिडिएर
+204	Terence	टेरेंस
+204	Shannon	शन्नों
+204	Jirō	
+204	Irving	इरविंग
+204	Felice	फेलिस
+203	Tatsuo	तत्सुओ
+203	Raul	रौल
+203	Frederik	फ्रेडेरिक
+203	Dušan	
+203	Calvin	केल्विन | कॉल्विन
+203	Alexey	अलेक्सी | अलेक्सेय
+202	Yoshiyuki	योशियुकी
+202	Sammy	सम्मी
+202	Marjorie	मारजोरी
+202	Kazuya	कज़ुया
+202	Kazuhiro	काजुहिरो
+202	Jared	जारेड | जेरिड
+202	Gianfranco	गिंफ्रंको
+202	Camillo	camillo | कामिल्लो
+202	Adolphe	अदोल्फे
+201	Rudolph	रुडोल्फ
+201	Paweł	
+201	Mayumi	मायुमी
+201	Erling	एर्लिंग
+201	Buddy	बुद्दी
+200	Tamás	
+200	Sonny	लला | सोंन्य
+200	Richie	रिची
+200	Pyotr	प्योट्र | प्योत्र
+200	Ola	ओला
+200	Masahiko	मासाहिको
+200	Blake	बलके | ब्लैक
+200	Beth	बेथ
+200	Amos	अमोस
+199	Seán	
+199	Paola	पाओला | पोला
+199	Mehmet	मेहमेत
+199	Jean-Jacques	जें-जच्कुएस
+199	Guglielmo	गुग्लिएल्मो | गुल्येल्मो
+199	Caspar	कैस्पर | डेविड
+198	Zhou	ज्होऊ | झोउ | झोऊ
+198	Satoru	सतोरू
+198	Katharina	कथारिना
+198	Josip	जोसिप
+198	Damian	डेमियन
+197	Yumi	युमी
+197	Wolf	वोल्फ
+197	Udo	उदो
+197	Seiichi	सीची
+197	Rie	री
+197	Miles	मिल्स
+197	Clyde	क्ल्यदे
+197	Beatrice	बेअत्रिस
+196	Yasushi	यासुशी
+196	Svein	सवें
+196	Sigurd	सिगुर्द
+196	Dante	दांते
+195	Serhiy	सेर्हीय
+195	Lev	लेव
+195	Jozef	जोज़फ़
+195	Hitomi	हितोमी
+195	Clemens	क्लेमेन्स
+195	Brenda	ब्रेंडा
+194	Yūichi	
+194	Sverre	स्वेर्रे
+194	Lena	लेना
+194	Keiichi	कीची
+194	Karim	करीम
+194	Iain	इईं
+194	Henryk	हेन्र्य्क
+194	Clement	क्लेमेंट
+193	Volodymyr	वोलोद्य्म्य्र
+193	Sebastián	
+193	Marcin	मार्सिन
+193	Madeleine	मदेलेइने | मेडलिन
+193	Helene	हेलेने
+193	Erin	एरिन
+193	Carsten	कार्स्तें
+193	Bart	बरत
+193	Ai	ई
+192	Wojciech	वोज्सिएच
+192	Wim	विम
+192	June	जून
+192	Isabella	इसबेल्ला
+191	Yukiko	युकिको
+191	Renzo	रेंजों
+191	Josiah	जोशीया | जोसिः
+191	Cathy	क्ति | क्याथी
+191	Attila	अत्तिला
+191	Adolph	अडोल्फ
+190	Shirō	
+190	Nora	नोरा
+190	Hisashi	हिसशी
+190	Gilberto	गिल्बेर्तो
+190	Gianluca	गिंलुचा
+190	Carolina	कैरोलिना
+190	Birgit	बिरगिट
+189	Toshiyuki	तोशियुकी
+189	Teddy	तेद्द्य
+189	Karol	करोल
+189	Emanuele	एमनुएले
+188	Osvaldo	ओसवाल्डो
+188	Naoko	नोको
+188	Megumi	मेगुमी
+188	Kathryn	कथ्र्यं
+188	Agustín	
+187	Vito	वीटो
+187	Terje	तेर्जे
+187	Nicolae	निकाले
+187	Kristina	क्रिस्टीना
+187	Henk	हेंक
+187	Fumio	फुमियो
+186	Wes	वेस
+186	Reiko	रिको
+186	Mikael	मिकेल
+186	Hannes	हान्नेस
+186	Bud	बुद
+185	Ruben	रुबेन
+185	Humphrey	हम्फ्रे
+185	Gerrit	गेर्रित
+185	Geir	गिर
+185	Emile	एमिले
+185	Elsa	एल्स
+184	Zdeněk	
+184	Shingo	शिंगो
+184	Mauricio	मौरिसियो
+184	Keiji	कीजी
+184	Dietmar	दिएत्मर
+183	Raoul	रौल
+183	Olivia	ओलिविया
+183	Jana	जाना
+182	Wesley	वेस्ली
+182	Toby	टोबी
+182	Sabrina	सबरीना
+182	Mathieu	मत्हिएऊ
+182	Imperial	इम्पेरिअल
+182	Hilde	हिलदे
+182	Attilio	अत्तिलियो
+181	Tito	तितो
+181	Shōji	
+181	Mehdi	मेहदी
+181	Josephine	जोसेफिने
+181	Gail	गिल
+180	Wallace	वालेस | वाल्लास
+180	Samir	समीर
+180	Masanori	मसनोरी
+180	Dominik	डोमिनिक
+180	Arnaldo	अर्नाल्डो
+179	Quintus	कुइंतुस
+179	Publius	पुब्लिउस
+179	Neal	नाल
+179	Mirko	मिर्को
+179	Megan	मगन | मेगन
+179	Jessie	जेसी | जेस्सी
+179	Hasan	हसन
+179	Hans-Jürgen	
+179	Frankie	फ्रंकिए
+179	Dragan	दरगन
+178	Yoshinori	योशिनोरी
+178	Sofia	सोफिया
+178	Rune	रुने
+178	Eddy	एड्डी
+178	Andrej	अंद्रेज
+178	Alicia	अलिसिया | एलिसिया | एलीशिया
+177	Nikos	निकोस
+177	Maya	माया
+177	Kazuhiko	कज़ुहिको
+177	Gheorghe	घेओरघे
+177	Gabriela	गब्रिएला
+176	Renate	रेनाते
+176	Neville	नेविल्ले
+176	Ned	नेद
+176	Maxim	मक्सिम
+176	Lu	लू
+176	Jordi	जोर्दी
+176	Fiona	फिओना
+176	Corrado	कोर्रदो
+175	Nobuyuki	नोबुयुकी
+175	Noah	नोः
+175	Mitsuo	मित्सुओ
+175	May	माय
+175	Jesper	जेस्पर
+175	Inge	इंगे
+175	Fanny	फन्नी
+175	Bogdan	बोगदान
+174	Veronica	वेरोनिका
+174	Rüdiger	
+174	Ramon	रामों
+174	Park	पार्क
+174	Lester	लेस्टर
+174	Kunio	कुनियो
+174	Kirk	किर्क
+174	Ira	इरा
+174	Cornelia	कार्नेलिया | कोर्नेलिया
+173	Vivian	विवियन
+173	Niccolò	
+173	Ethel	एथेल
+173	Darryl	दर्र्य्ल
+173	Cheryl	चेरय्ल
+173	Ariel	अरिएल
+172	Sayaka	सायका
+172	Miklós	
+172	Jānis	
+172	Jérôme	
+172	Holly	होल्ली
+172	Godfrey	गोद्फ्रे
+172	Freddy	फ्रेद्द्य
+172	Flavio	फ्लावियो
+172	Bradley	ब्राडली | ब्राडले
+172	Bengt	बेन्ग्त
+172	Audrey	अड्रे | आड्री | औद्रे
+171	Petrus	पेत्रुस
+171	Patrik	पत्रिक
+171	Mitchell	मिचेल | मित्चेल्ल | मिशेल
+171	Leonhard	लेओंहर्द
+171	Joy	जोय
+171	Gertrude	गेर्त्रुदे
+171	Fausto	फौस्तो
+171	Desmond	डेसमंड | देस्मोंद
+171	Artyom	अर्तयोम
+171	Angus	अंगुस
+170	Toshiaki	तोशिअकी
+170	Tarō	
+170	Sophia	सोफिया
+170	Roberta	रोबेर्ता
+170	Piet	पिएट
+170	Michiko	मिचिको
+170	Maggie	मग्गी | मैगी | म्यागी
+170	Joanne	जोंने
+170	Jacek	जसक
+170	Giuliano	गिउलिअनो
+169	Phyllis	फ्य्ल्लिस
+169	Molly	मोल्ली
+169	Lukas	लुकास
+169	Franciszek	फ्रंसिस्जेक
+169	Dwight	द्विघ्त
+169	Akihiro	अकिहिरो
+168	Lucia	लूसिया
+168	Dejan	दजन
+167	Yūki	
+167	Lorenz	लोरेन्ज
+167	Françoise	
+167	Adrien	अद्रिएँ
+166	Yōichi	
+166	Yuriy	यूरिय
+166	Valery	वलेरी
+166	Perry	पेर्री
+166	Nicky	निक्की
+166	Manuela	मनुएला
+166	Kirsten	किर्स्टन | किर्स्तें
+166	Janusz	जनुस्ज़
+166	Hideaki	हिदेअकी
+166	Gottlieb	गोत्त्लिएब
+166	Floyd	फ्लोयड | फ्लोयड-लैनडिस-टॉक्ट्ट
+166	Darrell	दर्रेल्ल
+166	Cory	कार्य
+165	Nathalie	नताली | नथाली
+165	Mona	मोना
+165	Melvin	मेलिन | मेल्विन
+165	Domingo	डोमिंगो
+164	Zach	जाच
+164	Yoshiko	योशिको
+164	Norio	नोरियो
+164	Nana	नाना
+164	Monique	मोनिकुए
+164	Lina	लीना
+164	Jacopo	जकोपो
+164	Ioannis	इओंनिस
+164	Ilse	इलसे
+164	Hilda	हिल्डा
+163	Sonja	सोंजा
+163	Rosemary	रोसमैरी | रोसेमरी
+163	Maureen	मॉरीन | मौरीन
+163	Mariana	मरिआना
+163	Henrique	हेन्रिकुए
+163	Eliza	एलिजा
+163	Daryl	दर्य्ल
+163	Cao	को | त्साओ
+163	Benoît	
+163	Ayako	आयको
+163	Ahmet	अहमेत
+163	Ada	अदा
+162	Torsten	तोर्स्तें
+162	Stella	स्तेल्ला
+162	Saburō	
+162	Rina	रीना
+162	Reuben	रयूबें
+162	Masako	मासको
+162	Lukáš	
+162	Khalid	खालिद
+162	Courtney	कोउर्त्नी
+161	Wolfram	वोल्फ्रम
+161	Valeri	वलेरी
+161	Pál	
+161	Peder	पदर
+161	Natasha	नताशा | नतासा
+161	Maxime	मक्सिमे
+161	Lois	लोइस
+161	Jean-Michel	जें-मिचेल
+161	Else	एल्स
+161	Elisa	एलिसा
+161	Debbie	डिब्बी
+161	Constance	कांस्तांस
+160	Yumiko	युमिको
+160	Timo	टीमो
+160	Ragnar	राग्नर
+160	Marguerite	मर्गुएरिते | मर्गेरित
+160	Lin	लीं
+160	Ladislav	लादिस्लाव
+160	Gisela	गिसेला
+160	Gao	गो | गौ
+160	Clare	क्लारे
+160	Antonino	अनतोनिनो
+159	Yelena	येलेना
+159	Renata	रेनाता
+159	Massimiliano	मस्सिमिलिअनो
+159	Maciej	मसिएज
+159	Leopoldo	लेओपोल्दो
+159	Leigh	लिघ
+159	Hōjō	
+159	Grzegorz	ग्र्जेगोर्ज़
+158	Miyuki	मियुकी
+158	Ignaz	इग्नाज़
+158	Dylan	द्य्लन
+158	Bjarne	ब्जरने
+157	Tara	तारा
+157	Steffen	स्तेफ्फें
+157	Magdalena	मगदलेना
+157	Ingeborg	इन्गेबोर्ग
+157	Dudley	दुदली
+156	Tan	तन
+156	Masayoshi	मसयोशी | मसायोशी
+156	Jiang	जांग | जिंग
+156	Humberto	हुम्बेर्तो
+156	Camilla	कामिल्ला
+155	Sylvain	स्य्ल्वैन
+155	Lillian	लिल्लियन
+155	Gina	गिना | जीना
+155	Esteban	एस्तेबन
+155	Ella	एल्ला
+155	Bonnie	बोन्नी
+154	Ulrike	उल्रिके
+154	Trond	त्रोंद
+154	Sami	सामी
+154	Ismail	इस्माइल
+154	Eiichi	एईची
+154	Carole	कारोले
+153	Lutz	लुट्ज़
+152	Yui	युई
+152	Junior	जुनिओर
+152	Dora	डोरा
+152	Connie	कन्नी
+152	Christos	च्रिस्तोस
+152	Bianca	बींका
+152	Andriy	अन्द्रिय | आन्द्रेई
+151	Yukari	युकारी
+151	Titus	तीतुस
+151	Rory	रोरी
+151	Patrice	पत्रिस
+151	Hanns	हान्स
+151	Gertrud	गेर्त्रुद
+151	Christa	च्रिस्ता
+151	Armin	आर्मीन
+151	Aleksey	अलेक्सी
+150	Zbigniew	ज्बिग्निएव
+150	Nuno	नुनो
+150	Lily	लिली
+150	Kirill	किरिल्ल
+150	Jackson	जच्क्सों
+150	Caleb	कालेब
+150	Antonín	
+149	Yevgeny	येवगेनी
+149	Tatyana	तात्याना
+149	Risa	रिसा
+149	Rasmus	रस्मुस
+149	Norma	नोरमा
+149	Nadia	नदिया
+149	Matti	मट्टी
+149	Justus	जुस्तुस
+149	Guilherme	गुइल्हेर्मे
+149	Franck	फ्रंच्क
+149	Ewald	एवाल्ड
+149	Elio	एलियो
+149	Dag	दाग
+148	Yury	युरी
+148	Mirza	मिर्ज़ा
+148	Levi	लेवी
+148	Lennart	लेन्नार्ट
+148	Emi	एमी
+148	Duane	दुआने
+148	Dimitrios	दिमित्रिओस
+147	Yoshikazu	योशिकजु
+147	Søren	
+147	Susanna	सुसंना
+147	Mia	मिया
+147	Hiromi	हिरोमी
+147	Erhard	एर्हार्ड
+146	Stig	स्टिग
+146	Sebastiano	सेबस्तिअनो
+146	Hamid	हामिद
+146	Clayton	क्लेटन
+146	Allison	अल्लिसों
+145	Tadao	तदो
+145	Petter	पेत्टर
+145	Mami	मामी
+145	Hervé	
+145	Gladys	ग्लाद्य्स
+145	Erica	एरिका
+145	Elijah	इलाइज़ा | एलिजाह
+145	Dimitri	दिमित्री
+145	Benedetto	बेनेदितो | बेनेदेत्तो
+144	Yū	
+144	Valerio	वलेरियो
+144	Urs	उर्स
+144	Mabel	माबेल
+144	Leroy	लेरॉय
+144	Ján	
+144	Haruo	हरुओ
+144	Giulia	गिउलिया
+144	Chester	चेस्टर
+144	Antony	अन्तोंय
+144	Abe	अबे
+143	Toshihiko	तोशिहिको
+143	Manabu	मनाबू
+143	Hilary	हिलारी | हिलेरी
+143	Giorgos	गिओर्गोस
+143	Eri	एरी
+143	Carrie	कैर्री
+142	Masatoshi	मासातोशी
+142	Marino	मरीनो
+142	Janice	जानिके
+142	Henriette	हेन्रिएत्ते
+142	Ekaterina	एकतेरिना
+142	Alessandra	अलेस्संद्र
+141	Margarita	मार्गारिता
+141	Kostas	कोस्तास
+141	Kaspar	कास्पर
+141	Kaoru	कोरु
+141	Gillian	गिलियन | गिल्लियन
+141	Fábio	
+141	Dorothea	दोरोठेया
+141	Dagmar	डगमर
+140	Konstantinos	कोंस्तान्तिनोस
+140	Ellis	एल्लिस | ऐलिस
+140	Detlef	देत्लेफ़
+140	Clark	क्लार्क
+140	Carmelo	कार्मेलो
+140	Bernardino	बेर्नार्दिनो
+140	Aki	अकी
+140	Abbas	अब्बास
+139	Natalya	नताल्या
+139	Naoto	नोटो
+139	Louisa	लौइसा
+139	Kōhei	
+139	Hossein	हुसैन | होस्सें
+139	Fran	फ्रां
+139	Evgeny	एवगेनी
+139	Arvid	अरविद
+138	Sachiko	सचिको
+138	Ronny	रोंनी
+138	Kumiko	कुमिको
+138	Iris	इरिस
+138	Gregg	ग्रेग्ग
+138	Anastasia	अनास्टासिया | अनास्तासिया | एनस्टेसिया
+137	Vitali	वितली
+137	Nenad	नेनाद
+137	Lino	लीनो
+137	Italo	इतालो
+137	Ingo	इंगो
+137	Gideon	गिदेओं | गिदोन
+136	Zsolt	ज्सोल्ट
+136	Rika	रिका
+136	Mats	मत्स
+136	Katsuhiko	कत्सुहिको
+136	Ambrose	अम्ब्रोसे
+135	Winfried	
+135	Tanya	तनया | तान्या
+135	Michaela	मिचेल
+135	Mamoru	ममोरू
+135	Ignazio	इग्नजियो
+135	Géza	
+135	Egil	एगिल
+135	Dimitris	दिमित्रिस
+135	Chan	चन
+135	Barney	बर्नी
+135	Alessio	अलेस्सियो
+134	Saori	सओरि | सोरी
+134	Ryszard	र्य्स्ज़र्द
+134	Romain	रोमेन
+134	Maki	माकी
+134	Lew	लेव
+134	Hélène	
+134	Beverly	बेवेरली
+134	Ayaka	अयाका
+134	Aubrey	ऑब्रे
+133	Sigrid	सिग्रिड
+133	Sigmund	सिग्मुंड
+133	Roderick	रोदेरिच्क
+133	Lori	लोरी
+133	Kei	की
+133	Kana	काना
+133	Julián	
+133	Jock	जोक्क
+133	Hans-Peter	हंस-पीटर
+133	Germán	
+133	Clint	क्लिंट
+133	Birger	बिर्गेर
+132	Yoshitaka	योशिताका
+132	Rocco	रोक्को
+132	Randall	रंदल्ल
+132	Nicolaus	निकोलस | निकोलौस
+132	Luka	लुका
+132	Khaled	खालिद | खालेद
+132	Kentarō	
+132	Jovan	जोवन
+132	He	हे
+132	Emiliano	एमिलिअनो
+132	Dimitar	डिमीटर
+132	Cédric	
+132	Branko	ब्रान्को
+132	Arno	आर्नो
+131	Øyvind	
+131	Trent	ट्रेंट
+131	Rosario	रोसारियो
+131	Reza	रेज़ा
+131	Reidar	रीडर
+131	Masakazu	मसकजु
+131	Margarete	मर्गारेते
+131	Ludovico	लुदोविको
+131	Ari	आरी
+130	Thorsten	थोर्स्तें
+130	Nikki	निक्की
+130	King	किंग
+130	Katharine	कथारिने
+130	Isamu	इसमु | इसामु
+130	Horacio	होरासियो
+130	Guo	गो
+130	Eugeniusz	एउगेनिउस्ज़
+130	Big	बिग
+130	Aurelio	औरेलियो
+130	Anatoli	अनातोली
+129	Shunsuke	शुन्सुके
+129	Shin	शिन
+129	Rolando	रोलान्दो
+129	Niklas	निकलस
+129	Mihály	
+129	Margot	मर्गोत
+129	Kimberly	किम्बर्ली
+129	Kerstin	केर्स्तीं
+129	Haruka	हरुका
+129	Giles	गिल्स
+129	Elliot	एल्लिओत
+129	Edvard	एडवर्ड
+129	Clay	चले
+129	Bertrand	बर्टराण्ड | बर्टेण्ड | बेर्त्रंद
+129	Anja	अनजा
+128	Wade	वादे
+128	Vasile	वासिले
+128	Shōichi	
+128	Matías	
+128	Kenta	केंट
+128	Kamal	कमल
+128	Júlio	
+128	Jean-Marc	जें-मार्क
+128	Cedric	सेड्रिक
+127	Łukasz	
+127	Winston	विंस्टन | विन्सटन | विन्स्टन
+127	Saul	सुल
+127	Rufus	रुफुस | रूफ़स
+127	Muriel	मुरिएल
+127	Katja	कत्जा | क्याट्जा
+127	Ivana	इवाना
+127	Fyodor	फ़्योद्र | फ्योदोर
+127	El	एल
+127	Bojan	बोजन
+127	Adrián	
+126	Yannick	यांनिच्क
+126	Ryō	
+126	Pam	पं
+126	Lasse	लस्से
+126	Brooke	ब्रूके
+125	Yōsuke	
+125	Willard	विलार्ड | विल्लर्ड
+125	Song	सोंग
+125	Lucie	लुकी
+125	Kieran	किएरण
+125	Ilona	इलोना
+125	Hu	हु
+125	Ghulam	ग़ुलाम | गुलाम | घुलाम
+125	Franziska	फ्रंजिसका
+125	Diogo	डिएगो | दिओगो
+125	Constantine	कांस्तान्तिने
+125	Atsuko	अत्सुको
+125	Amelia	अमेलिया
+124	Zygmunt	ज्य्ग्मुंत
+124	Yoshihiko	योशिहिको
+124	Thor	थोर
+124	Nguyễn	
+124	Kelvin	केल्विन
+124	Kazuyuki	कज़ुयुकी
+124	Jonny	जॉनी | जोंन्य
+124	Jin	जिन
+124	Gabrielle	गब्रिएल्ले
+124	Antonia	अन्तोनिया
+124	Alma	अल्मा
+123	Vytautas	व्य्तौतास
+123	Shi	सही
+123	Rhys	र्ह्य्स
+123	Rene	रेने
+123	Raja	रजा
+123	Luise	लुइसे
+123	Jody	जोड़ी
+123	Edna	एडना
+123	Cody	कोडी
+123	Celso	सेल्सो
+122	Vijay	विजय
+122	Penny	पन्नी | पेन्नी
+122	Mildred	मिल्ड्रेड
+122	Kōsuke	
+122	Ihor	इगोर | इहोर
+122	Grigory	ग्रिगरी | ग्रिगोरी
+122	Elmar	एल्मर
+122	Dina	दिन
+122	Debra	देबरा
+122	Artem	अर्तेम
+121	Øystein	
+121	Yasuyuki	यासुयुकी
+121	Yan	यां
+121	Tiago	तिअगो
+121	Sascha	सस्चा
+121	Poul	पौल
+121	Jamal	जमाल
+121	Ibn	इब्न | इब्न-बतूता | इब्ने
+121	Giorgi	गिओर्गी
+120	Wilfrid	विल्फ्रिड
+120	Wei	वेई
+120	Maja	मजा
+120	Kazuko	कजुको | काजुको
+120	Jean-Luc	जें-लुक
+120	Janne	जानने
+120	Ivor	इवोर
+120	Hideyuki	हिदेयुकी
+120	Hana	हना
+120	Darko	दरको
+120	Choi	चोई
+120	Adnan	अदनान
+119	Tiffany	तिफ्फन्य
+119	Tang	तंग
+119	Saša	
+119	Ryōko	
+119	Nadine	नदीने
+119	Mikko	मिक्को
+119	Luisa	लुइस
+119	Lesley	लेस्ली
+119	Kristen	क्रिस्टन
+119	Katarzyna	कतार्ज्य्ना
+119	Espen	एस्पेन
+119	Des	देस
+119	Conor	कोनोर
+119	Chiara	चिअर
+119	Arnaud	अरनोद | आर्नॉद
+118	Val	वाल
+118	Tomohiro	तोमोहिरो
+118	Theresa	थेरेसा
+118	Slobodan	स्लोबोदान
+118	Shūichi	
+118	Rowland	रोव्लंद
+118	Mihai	मीही
+118	Lara	लारा
+118	Homer	होमर
+118	Gorō	
+118	Georgia	गेओर्गिया
+118	Gennaro	गेंनारो
+118	Doc	डोक
+118	Dmytro	द्म्य्त्रो
+118	Cyrus	क्य्रुस | साइरस
+118	Bettina	बेत्तिना
+118	Aleksandra	अलेक्सांद्र
+117	Sheldon	शेल्डन | शेल्दों
+117	Ryūji	
+117	Rocky	रोच्क्य
+117	Murat	मूरत
+117	Martyn	मर्त्यं
+117	Katrin	कत्रिन
+117	Helmuth	हेल्मुथ
+117	Ebenezer	एबेनेज़र
+117	Dustin	दुस्तीं
+117	Antti	अन्ति
+116	Wanda	वंदा
+116	Pia	पिया
+116	Olof	ओलोफ
+116	Masaki	मसकी
+116	Lynne	ल्य्न्ने
+116	Ludvig	लुडविग
+116	Juraj	जुराज
+116	Ioan	इओँ
+116	Gösta	
+116	Ephraim	एफ्रेम
+116	Edouard	एडौअर्द
+116	Charley	चार्ली
+116	Ayumi	अयूमी
+115	Valentine	वलेंतिने
+115	Mimi	मिमी
+115	Kanako	कनाको
+115	Harrison	हर्रिसों
+115	Gerda	गर्दा
+115	Ezra	एजरा
+115	Ethan	एथान
+115	Denny	देन्न्य
+115	Dai	दी
+115	Blair	ब्लैर
+115	Amber	अम्बर
+114	Virgil	विर्गील
+114	Valeria	वलेरिया
+114	Nicolai	निकोलाई
+114	Melchior	मेल्चिओर
+114	Manny	माननी
+114	Jacobus	जकोबुस
+114	Irma	इरमा
+114	Inger	इंगेर
+114	Hiram	हिरम | हिराम
+114	Elliott	एल्लिओत्त
+114	Elise	एलिस
+114	Dawn	दवन
+114	Dani	दानी
+114	Chip	चिप
+113	Zachary	ज़चारी | ज़ैकरी | ज्याचरी
+113	Takako	तकको
+113	Syd	सिद
+113	Simeon	सिमों
+113	Shelley	शेल्ले
+113	Preston	Carpenter | प्रेस्टन
+113	Patricio	पत्रिचियो
+113	Ove	ओवे
+113	Nicolò	
+113	Marisa	मारिसा
+113	Kåre	
+113	Karsten	कर्स्टन
+113	Hisao	हिसो
+113	Alastair	अलस्टेयर | अलास्तैर
+112	Yusuf	युसूफ
+112	Simona	सिमोन
+112	Mariko	मारिको
+112	Leila	लीला
+112	Galina	गलिन
+112	Damon	दामों
+112	Bertram	बर्टराम | बेर्त्रम
+112	Bertha	बर्थ
+111	Vitaliy	वितलीय
+111	Teodoro	तेओदोरो
+111	Shimazu	शिमजु
+111	Nikolaos	निकोलोस
+111	Mykola	म्य्कोला
+111	Mina	मीणा
+111	Leah	लेः
+111	Koji	कोजी
+111	Kees	कीस
+111	Flora	फ्लोर
+111	Colleen	कोलिन | कोल्लीन
+110	Vicki	विक्की
+110	Sultan	मुहम्मद | सुल्तान
+110	Shlomo	श्लोमो
+110	Said	सैद
+110	Kōzō	
+110	Kamil	कामिल
+110	Jenő	
+110	Jasper	जस्पेर
+110	Håkon	
+110	Hjalmar	ह्जल्मार
+110	Hamilton	हमिल्तों
+110	Göran	
+110	Georgina	गेओर्गिना
+110	Ezio	एजियो
+110	Clinton	क्लिंटन | क्लिन्टन
+110	Benedict	बेनेडिक्ट
+109	Willis	विल्लिस
+109	Ulla	उल्ला
+109	Trygve	ट्रीगवी | ट्रेग | त्र्य्ग्वे
+109	Stepan	स्तेपन
+109	Shūji	
+109	Satomi	सतोमी
+109	Salomon	सलोमों
+109	Oreste	ओरेस्ते
+109	Masaya	मसय
+109	Luther	लुथर | लुथेर
+109	Kōtarō	
+109	Ike	इके
+109	Dwayne	द्वाय्ने
+109	Csaba	कस्बा
+109	Ashok	अशोक
+109	Antal	अन्तल
+108	Yasuko	यासुको
+108	Tristan	त्रिस्तान
+108	Tomoyuki	तोमोयुकी
+108	Tomislav	तोमिस्लाव
+108	Tokugawa	तोकुगावा
+108	Tanja	तंज
+108	Sylvester	सिलवेस्टर | सिल्वेस्टर
+108	Shōgo	
+108	Ruby	रूबी
+108	Orazio	ओरजियो
+108	Malik	मालिक
+108	Honda	होंडा
+108	Dolores	डोलोरेस
+107	Yuan	यूँ
+107	Veronika	वेरोनिका
+107	Tyrone	त्य्रोने
+107	Swami	swami | लक्ष्मणानन्द | स्वामी
+107	Silas	सिलास
+107	Ryūichi	
+107	Pål	
+107	Niall	निअल्ल
+107	Márcio	
+107	Ismael	इस्मैल
+107	Heike	हाइके | हेइके
+107	Garrett	गर्रेत्त
+107	Fabrice	फब्रिस | फैब्रिस
+106	Van	वन
+106	Ty	टी
+106	Steinar	स्टीनर
+106	Reiner	रेंएर
+106	Marcia	मर्सिया
+106	Junji	जुंजी
+106	Hussein	टुन | हुस्सें
+106	Darius	दरिउस
+106	Cristiano	क्रिष्टियानो | क्रिस्टियानो | क्रिस्तिअनो
+105	Zoe	जोए
+105	Vitaly	विताली
+105	Sunil	sunil | सुनिलबहादुर | सुनिलबाबु | सुनील
+105	Mir	मीर
+105	Meredith	मेरेडिथ
+105	Masaharu	मसहरू
+105	Mads	मदस
+105	Lorraine	लोर्रैने
+105	Jutta	जुटता
+105	Irena	इरेना
+105	Giovanna	गिओवान्ना
+105	Georgy	गेओर्ग्य
+104	Tsuneo	त्सुनेओ
+104	Tracey	तरसी
+104	Mac	मक
+104	Krishna	कृष्ण
+104	Kazuki	काजुकी
+104	Daisy	डेइजी | देसी
+104	Avraham	अव्रहम
+104	Anil	अनिल
+104	Anderson	अन्देरसों
+103	Vasco	वास्को
+103	Thiago	थिअगो | थियागो
+103	Therese	थेरेसे
+103	Teruo	तेरुओ
+103	Shōko	
+103	Romano	रोमानो
+103	Rashid	रशीद
+103	Nat	नत
+103	Martine	मार्तिने
+103	Margit	मर्गित
+103	Knud	क्नुद
+103	Gabriella	गब्रिएल्ला
+103	Frode	फ्रोदे
+103	Fernanda	फेर्नान्दा
+103	Erna	एर्ना
+103	Cheng	चेंग
+103	Aziz	अज़ीज़
+102	Zheng	ज्हेंग
+102	Théodore	
+102	Stein	स्तें
+102	Stacey	सतासी
+102	Seymour	सेयमौर
+102	Sanjay	राइफलमैन | संजय | सञ्जय
+102	Renée	
+102	Osman	ओसमान
+102	Mikio	मिकियो
+102	Maud	मुद
+102	Lise	लिसे
+102	Lilian	लिलियन
+102	Kōichirō	
+102	Endre	इन्द्रे
+102	Dee	दी
+102	Dariusz	दरिउस्ज़
+102	Buck	बुक्क
+102	Benito	बेनिटो | बेनितो
+102	Beatriz	बेअत्रिज़
+102	Andres	अन्द्रेस
+101	Yūta	
+101	Yasuhiko	यासुहिको
+101	Sylvie	सिल्वी
+101	Róbert	
+101	Mieczysław	
+101	Mattias	मत्तिअस
+101	Mathilde	माथिल्डे
+101	Lotte	लोटते
+101	Kjetil	क्जेतिल
+101	Ina	इन
+101	Hernán	
+101	Chico	चिको
+101	Blanche	ब्लांचे
+100	Wendell	वेण्डल | वेन्डेल
+100	Susana	सुसाना
+100	Stefanie	स्टेफनी
+100	Sasha	सश
+100	Raquel	राकुएल
+100	Nemanja	नेमंजा
+100	Mattia	मत्टिया
+100	Marlon	मार्लन | मार्लोन
+100	Ludovic	लुडोविक
+100	Hieronymus	हिएरोंय्मुस
+100	Eve	एवे
+100	Donato	दोनातो
+100	Cláudio	
+100	Cesar	केसर
+100	Aidan	ईडन
+99	Yuriko	युरिको
+99	Tania	तानिया
+99	Stacy	स्ट्यासी | स्ताच्य
+99	Sepp	सप्प
+99	Romeo	रोमो
+99	Ravi	रवि | श्री
+99	Quentin	कुएंतीं
+99	Polly	पुल्ली
+99	Pekka	पक्का
+99	Nobuhiro	नोबुहिरो
+99	Naoya	नोया
+99	Myron	म्यरों
+99	Lim	लिम
+99	Kazuyoshi	कज़ुयोशी
+99	Jess	जेस
+99	Janez	जनेज़
+99	Horatio	होरातियो | होरेशियो
+99	Hippolyte	हिप्पोल्य्ते
+99	Hazel	हज़ल | हेज़ल
+99	Giovan	गिओवन
+99	Butch	बुत्च
+99	Arild	अरिल्ड
+99	Ami	अमी
+99	Amedeo	अमेदेओ
+99	Alina	अलीना
+98	Yoshinobu	योशिनोबू
+98	Toshihiro	तोशिहिरो
+98	Salim	सलीम
+98	Saki	सकी
+98	Ren	रेन
+98	Nadezhda	नादेज्ह्दा
+98	Mladen	म्लादें
+98	Mervyn	मेर्व्यं
+98	Marin	मरीन
+98	Mao	माओ | मो
+98	Magda	मागदा
+98	Lea	ली
+98	Joakim	जोआकिम
+97	Rusty	रुस्टी
+97	Ollie	ओल्ली
+97	Naitō	
+97	Mercedes	मेर्सदेस
+97	Le	ले
+97	Heiner	हेंएर
+97	Dallas	डल्लास
+97	Chantal	चन्टल
+97	Baba	बाबा
+97	Angelika	अन्गेलिका
+96	Éva	
+96	Priscilla	प्रिस्सिल्ला
+96	Olle	ओल्ले
+96	Michèle	
+96	Marlene	मर्लेने
+96	Marit	मृत
+96	Liang	लिंग
+96	Kitty	किट्टी
+96	Joël	
+96	Grete	ग्रेट
+96	Becky	बेचकय
+96	Asbjørn	
+96	Alexandros	अलेक्सान्द्रोस
+95	Željko	
+95	Ramesh	आर | रमेश | रमेशचन्द्र
+95	Rafał	
+95	Nelly	नेली | नेल्ली
+95	Masataka	मसाताका
+95	Lyudmila	ल्युदमिला
+95	Lenny	लेन्नी
+95	Hildegard	हिल्डेगार्ड
+95	Hanne	हनने
+95	Geraldine	गेराल्दिने
+95	Eugenia	एउगेनिया
+95	Domingos	डोमिंगोस
+95	Akihiko	अकिहिको
+95	Adrienne	अद्रिएन्ने
+94	Zack	जैक
+94	Yakov	याकोव
+94	Vasili	वसीली
+94	Takanori	तकनोरी
+94	Shōzō	
+94	Rino	रीनो
+94	Raj	राज
+94	Predrag	प्रेड्राग
+94	Paulus	पौलुस
+94	Michelangelo	माइकल | मिचेलान्गेलो
+94	Mara	मारा
+94	Livio	लिवियो
+94	Jos	जोस
+94	Howie	होवी
+94	Hedwig	हेद्विग
+94	Habib	हबीब
+94	Florin	फ्लोरिन
+94	Ewa	एवा
+94	Elsie	एलसी
+94	Eleonora	एलेओनोरा
+94	Edson	एड्सों
+94	Clément	
+94	Anne-Marie	अन्ने-मारी
+94	Alistair	अलिस्तैर
+93	Wilbur	विल्बुर
+93	Theophilus	ठोफिलुस
+93	Silvano	सिल्वानो
+93	Masafumi	मसफुमी
+93	Mandy	मंदी
+93	Karina	करीना
+93	Gudrun	गुदृं
+93	Denys	देन्य्स
+93	Corinne	कोरिन्ने
+93	Albin	अल्बिन
+92	Valeriy	वलेरिय
+92	Skip	स्किप
+92	Robyn	रोब्यं
+92	Keita	किता
+92	Juliana	जुलिअना
+92	Jefferson	जेफ्फेरसों
+92	Janine	जनिने | जेनिन
+92	Jaap	जाप
+92	Giannis	गिंनिस
+92	Gennady	गेन्नादी
+92	Emilia	एमिलिया
+92	Eirik	एइरिक
+92	Del	देल
+92	Damir	दमिर
+92	Cal	कल
+92	Augustine	औगुस्तिने
+92	April	अप्रैल
+91	Yukihiro	युकिहिरो
+91	Vicky	विक्की
+91	Vern	वेर्न
+91	Tullio	तुल्लियो
+91	Terrence	टेरेन्स | तेर्रेंस
+91	Takaaki	तकाकी
+91	Shōhei	
+91	Renee	रेनी
+91	Pino	पिनो
+91	Otis	ओटिस
+91	Ignatius	इग्नतिउस
+91	Fulvio	फुल्वियो
+91	Feng	फेंग
+91	Federica	फेदेरिका | फेदेरिचा
+91	Erick	एरिच्क
+91	An	अन
+90	Yuji	यूजी
+90	Witold	विटोल्ड
+90	Shōta	
+90	Shintarō	
+90	Rei	री
+90	Ottavio	ओतावियो | ओत्तावियो
+90	Oleh	ओलेह
+90	Léo	
+90	Lauri	लौरी
+90	Izumi	इजूमी
+90	Henrietta	हेन्रिएत्ता
+90	Giambattista	गिंबत्तिस्ता
+90	Giacinto	गिअसिन्तो
+90	Elke	एलके
+90	Cosimo	कोसिमो
+90	Ciro	सिरों
+90	Asuka	असुका
+90	Angie	अंगी
+90	Adele	अदेले
+89	Xiao	क्सिओं
+89	Winifred	विनिफ्रेड
+89	Remo	रेमो
+89	Pio	पीओ
+89	Olive	ओलिवे
+89	Noël	
+89	Moussa	मौस्सा
+89	Moe	मोए
+89	Luo	लुओ
+89	Katsuya	कत्सुया
+89	Hirokazu	हिरोकजु
+89	Hirofumi	हिरोफुमी
+89	Hans-Georg	हंस-गेओर्ग
+89	Gaspare	गस्परे
+89	Clemente	क्लेमेंते
+89	Caterina	कैटरिना | कैटरीना
+89	Carmine	कार्मिने
+89	Bridget	ब्रिगेट | ब्रिद्गेत
+89	Betsy	बेत्स्य
+89	Ante	अन्ते
+89	Anselmo	अन्सेल्मो
+88	Washington	वाशिन्ग्तों
+88	Shō	
+88	Nikolaj	निकोलाज
+88	Nic	निक
+88	Mamadou	ममदोऊ
+88	Lola	लोला
+88	Karlheinz	कर्ल्हेंज़
+88	Jukka	जुक्का
+88	Greta	ग्रेट
+88	Gnaeus	ग्नायूस
+88	Elvis	एल्विस
+88	Eivind	एइविंद
+88	Camilo	कमीलो | कैमिलो
+87	Youssef	यौस्सेफ़
+87	Tone	टोने
+87	Teodor	तेओदोर
+87	Sheikh	शेइख | शेख | शेख़
+87	Semyon	समयों
+87	Rena	रेना
+87	Raimundo	रैमुन्दो
+87	Makiko	मकिको
+87	Lyle	ल्य्ले
+87	Ludwik	लुडविक
+87	Logan	लोगन
+87	Little	लित्तले
+87	Jermaine	जेर्मैने
+87	Jeanette	जेअनेत्ते
+87	Hikaru	हिकारू
+87	Emilie	एमिली
+87	Daphne	डाफने
+87	Chief	चीएफ़
+87	Chet	चेत
+87	Amit	अमित
+87	Abram	अब्राम
+86	Ádám	
+86	Wong	वोंग
+86	Violet	विओलेट
+86	Ute	उते
+86	Stefania	स्तेफनिया
+86	Satoko	सतोको
+86	Ruggero	रुग्गेरो
+86	Rinaldo	रिनाल्दो
+86	Pierluigi	पिएर्लुइगी
+86	Nao	नो
+86	Mustapha	मुस्तफा
+86	Mo	मो
+86	Maxwell	माक्सवेल
+86	La	ला
+86	Kálmán	
+86	Gigi	गिगी | गीगी
+86	Ferruccio	फेर्रुच्चियो
+86	Elisha	एलिशा
+86	Donnie	दोंनिए
+86	Arisa	अरिसा
+86	Agnieszka	अग्निएस्ज्का | एग्निएज़का
+86	Adel	आदेल
+85	Đorđe	
+85	Sayuri	सायुरी
+85	Saeed	सईद
+85	Panagiotis	पनागिओतिस
+85	Natsumi	नत्सुमी
+85	Mihail	मिहैल
+85	Melinda	मेलिंडा | मेलिण्डा | मेलिन्डा
+85	Mariusz	मरिउस्ज़
+85	Lambert	लम्बेर्ट
+85	Jimmie	जिमी | जिम्मी
+85	Heiko	हेइको
+85	Colette	कोलेत्ते
+85	Burkhard	बुर्खार्ड
+85	Bertil	बेर्तिल
+85	Benedikt	बेनेडिक्ट
+84	Yuliya	युलिया
+84	Valentino	वालेंतीनो | वैलेंटिनो
+84	Takehiko	तकेहिको | ताकीहीको
+84	Shen	शेन
+84	Raffaello	रफ्फेल्लो
+84	Ondřej	
+84	Olena	ओलेना
+84	Mathew	मठेव
+84	Mason	मासों
+84	Masami	मसमी
+84	Lorna	लोरना
+84	Liv	लिव
+84	Kristoffer	क्रिस्तोफ्फेर
+84	Kenzō	
+84	Jade	जेड | जड़े
+84	Hajime	हाजिमे
+84	Connor	कोन्नोर
+84	Bernt	बरनत
+84	Beat	बात
+83	Yann	यन्न
+83	Ville	विल्ले
+83	Vasil	वासिल
+83	Tomomi	तोमोमी
+83	Sherman	शेर्मन
+83	Shah	शाह
+83	Rajesh	राजेश
+83	Musa	मूसा
+83	Manami	मनामी
+83	Katalin	कतालिन | क्याटालिन
+83	Geraldo	गेराल्दो
+83	Gemma	गेम्मा
+83	Garth	गर्त
+83	Everett	एवेरेट
+83	Declan	देक्लान
+83	Celia	सलिया
+83	Ayano	अयानो
+83	Anwar	अनवर
+83	Antonella	अंतोनेल्ला
+82	Åke	
+82	Yoshihisa	योशिहिसा
+82	Yekaterina	एकतेरिना
+82	Virgilio	विर्गिलियो
+82	Svend	स्वेंड
+82	Meir	मीर
+82	Marianna	मरिंना
+82	Lorne	लोरने
+82	Kristine	क्रिस्तिने
+82	Katrina	कटरीना
+82	Jocelyn	जोसल्यं
+82	Jaume	जुमे
+82	Hunter	हंटर
+82	Gaspar	गास्पर
+82	Frits	फ्रिट्स
+82	Engelbert	एन्गेल्बेर्ट
+82	Dane	दाने
+82	Christy	च्रिस्टी
+82	Chie	ची
+82	Bryce	बरीस
+82	Asami	असामी | आसामी
+81	Yosef	योसेफ
+81	Yevhen	येव्हें
+81	Yehuda	येहूदा
+81	Siri	सीरी
+81	Shmuel	श्मुएल
+81	Rico	रिको
+81	Pere	परे
+81	Nozomi	नोजोमी
+81	Norberto	नोर्बेरतो
+81	Mária	
+81	Mariya	मरिया
+81	Marat	मराट | मारत
+81	Jeroen	जेरोएँ
+81	Heikki	हेइक्की
+81	Gwen	ग्वेन
+81	Fu	फु
+81	Elisabetta	एलिसबेत्ता
+81	Eckhard	एच्खार्ड
+81	Dumitru	दुमित्रू
+81	Deepak	दीपक
+81	Chase	चसे
+81	Chaim	चैम
+81	Brittany	ब्रिटानी | ब्रिट्यानी | ब्रित्तान्य
+80	Vasyl	वासिल
+80	Toshiya	तोशिया
+80	Toshirō	
+80	Su	सु
+80	Raphaël	
+80	Randolph	रंदोल्फ
+80	Luciana	लुसिआना
+80	Kalle	कल्ले
+80	Iwao	इवो
+80	Francine	फ्रंसिने
+80	Fabien	फबिएँ
+80	Elvira	एलविरा
+80	Edgardo	एडगार्डो
+80	Duke	ड्यूक | दुके
+80	Claes	कलेस
+80	Chiaki	चिअकी
+80	Chandra	चन्द्र
+80	Bohdan	बोह्दन
+80	Arun	अरुण
+80	Aage	आगे | आजे
+79	Yolanda	योलांडा
+79	Włodzimierz	
+79	Ward	वार्ड
+79	Vilhelm	विल्हेल्म
+79	Stu	सतु
+79	Sten	स्टेन
+79	Sol	सोल
+79	Sayed	सायेद
+79	Ryōichi	
+79	Néstor	
+79	Mordechai	मोर्देचाई
+79	Michalis	मिचालिस
+79	Matthäus	
+79	Leonel	लेओनेल
+79	Klaas	क्लास
+79	Kazuaki	कजुँकी
+79	Kara	करा
+79	Juliet	जुलिएट
+79	Frederico	फ्रेदेरिको
+79	Egidio	एगिडियो
+79	Dong	दोंग
+79	Bartholomew	बर्थोलोमेव
+79	Balázs	
+79	Adalbert	अदाल्बेर्ट
+79	Abigail	अबीगेल
+78	Viola	विओला
+78	Terri	तेर्री
+78	Rogério	
+78	Rachid	राचिड
+78	Rachael	राचेल
+78	Patsy	पतस्य
+78	Oksana	ओक्साना
+78	Naoyuki	नोयुकी
+78	Mitsuhiro	मित्सुहिरो
+78	Maiko	मैको
+78	Lia	लिया
+78	Gernot	गेर्नोत
+78	Geneviève	
+78	Filipe	फिलिपे
+78	Ezequiel	
+78	Evert	एवेर्ट
+78	Enoch	एनोच
+78	Elin	एलिन
+78	Cristoforo	क्रिस्तोफोरो
+78	Chihiro	चिहिरो
+78	Carola	कारोला
+78	Bodo	बोडो
+78	Belinda	बेलिंडा
+78	Barrie	बर्री
+78	Asa	असा
+78	Alireza	अलिरेज़ा
+78	Abdel	अब्देल
+77	Yvon	यवों
+77	Yasunori	यासुनोरी
+77	Vítor	
+77	Uri	उरी
+77	Tomoya	तोमोया
+77	Tetsurō	
+77	Rosie	रोज़ी | रोसी
+77	Ramiro	रामिरो
+77	Penelope	पेनेलोपे
+77	Mircea	मिर्सा
+77	Milt	मिलत
+77	Leone	लोने
+77	Kathrin	काथरिन
+77	Katarina	कटरीना
+77	Karla	कार्ला
+77	Isaiah	इसा | इसैः | यशयाह
+77	Du	दू
+77	Devon	देवों
+77	Crystal	क्र्य्स्तल
+77	Annemarie	अन्नेमरी
+76	Árpád	
+76	Tsukasa	त्सुकासा
+76	Tran	तरण
+76	Thom	थोम
+76	Takumi	तकुमी
+76	Saverio	सवेरियो
+76	Sardar	बूटा | सरदार | सेवासिंह
+76	Salah	सलाह
+76	Rosemarie	रोसेमरी
+76	Rahul	राहुल
+76	Patty	पट्टी | पैटी
+76	Noriyuki	नोरियुकी
+76	Niko	निको
+76	Mohsen	मोहसेन
+76	Meg	मग
+76	Lazar	लेज़र
+76	Johnnie	जोह्न्निए
+76	Iosif	इओसिफ
+76	Imran	इमरान
+76	Haim	हैं
+76	Gu	गु
+76	Flávio	
+76	Fan	फेन
+76	Christer	च्रिस्टर
+76	Bent	बेंत
+76	Beau	बौ
+76	Aloys	अलोय्स
+76	Aline	अलिने
+76	Adriaan	अद्रिआं
+76	Abdoulaye	अब्दौलाये
+75	Zlatko	ज्लातको
+75	Susie	सुसी
+75	Saleh	सालेह
+75	Ronaldo	रोनाल्डो
+75	Percival	पेर्सिवल
+75	Newton	नेव्तों
+75	Nabil	नाबिल
+75	Mónica	
+75	Maxine	मक्सिने
+75	Maurício	
+75	Lonnie	लोंनिए
+75	Lidia	लीडिया
+75	Juha	जुहा
+75	Inga	इंगा
+75	Hari	हरी
+75	Farid	फरीद
+75	Ennio	एन्नियो
+75	Consort	कांसोर्ट
+75	Christof	च्रिस्तोफ़
+75	Cho	चो
+75	Chang	चंग
+75	Cam	काम
+75	Berthold	बेर्थोल्ड
+75	Aleš	
+74	Yvette	य्वेत्ते
+74	Tariq	तारिक
+74	Shunji	शुंजी
+74	Radu	रडू
+74	Nicolaas	निकोलास
+74	Lynda	ल्य्न्दा
+74	Liliana	लिलिअना
+74	Larisa	लारिसा
+74	Koichi	कोइची
+74	Kensuke	केंसुके
+74	Kang	कांग
+74	Jürg	
+74	Jean-Yves	जें-यवेस
+74	Fortunato	फोर्तुनातो
+74	Forrest	फोर्रेस्ट
+74	Chloe	च्लोए
+74	Anatoliy	अनातोलीय
+73	Zé	
+73	Young	यौंग
+73	Yitzhak	यित्ज्हक
+73	Yaroslav	यारोस्लाव
+73	Takayoshi	तकयोशी
+73	Shinsuke	शिन्सुके
+73	Pavol	पावोल
+73	Ogasawara	ओगासवारा
+73	Myles	म्य्लेस
+73	Monty	मोंटी
+73	Mohan	biography | mohan | डॉ. | मोहन | मोहनलाल
+73	Mizuno	मिजुनो
+73	Milo	मिलो
+73	Lodovico	लोदोविको
+73	Kit	कित
+73	Justine	जस्टिन | जुस्तिने
+73	Juliette	जुलिएत्ते | जूलियट
+73	Francesc	फ्रंसस्क
+73	Eiko	एइको
+73	Dmitriy	द्मित्रिय
+73	Daiki	देकी
+73	Clifton	क्लिफटन | क्लिफ्टन
+73	Chieko	चिएको
+73	Bernadette	बेर्नादेत्ते
+73	Annika	अन्निका
+73	Ambrogio	अम्ब्रोगियो
+72	Zdzisław	
+72	Xie	क्सी
+72	Woody	वुडी | वूडी
+72	Stevie	स्तेविए
+72	Shiho	शिहो
+72	Sebastião	
+72	Samson	सांसों
+72	Ryōhei	
+72	Raimund	रैमुन्द
+72	Oswaldo	ओसवाल्डो
+72	Nellie	नेल्ली
+72	Morton	मोर्टन
+72	Moisés	
+72	Matej	मातेज
+72	Marija	मरीज
+72	Laila	लैला
+72	Jelena	जेलेना
+72	Hellmuth	हेल्ल्मुथ
+72	Grégory	
+72	Gottlob	गोत्त्लोब
+72	Frida	फरीदा
+72	Ercole	एर्कोले
+72	Emerson	एमेरसों
+72	Dezső	
+72	Burton	बुर्तों
+72	Benjamín	
+72	Anand	आनंद
+72	Akane	अकाने
+72	Abby	अब्बी
+71	Zofia	जोफिया
+71	Vilmos	विल्मोस
+71	Valérie	
+71	Thea	ठा
+71	Te	ते
+71	Suresh	सुरेश
+71	Silke	सिल्के
+71	Sal	साल
+71	Sabina	सबीना
+71	Ryōta	
+71	Ragnhild	राग्न्हील्ड
+71	Pan	पण
+71	Mostafa	मोस्तफा
+71	Monte	मोंटे
+71	Mikołaj	
+71	Margherita	मरघेरिता
+71	Joop	जूप
+71	Jonah	जोनाह
+71	Ji	जी
+71	Irwin	इरविन
+71	Hellmut	हेल्ल्मुत
+71	France	फ्रांस
+71	Eriko	एरिको
+71	Dávid	
+71	Carter	कार्टर
+71	Boyd	बोय्द
+71	Amar	अमर
+71	Alicja	अलिच्जा
+70	Yūzō	
+70	Yusuke	युसुके
+70	Ye	ये
+70	Wacław	
+70	Tapio	तपियो
+70	Omer	ओमेर
+70	Miranda	मिरांडा
+70	Mateusz	मतयूस्ज़
+70	Katy	कटी | कैटी
+70	Jean-Philippe	जें-फिलिप्पे
+70	Iryna	इरयना
+70	Hidenori	हिदेनोरी
+70	Heribert	हेरिबेर्ट
+70	Ervin	एर्विन
+70	Errol	एर्रोल
+70	Daria	दरिया
+70	Cuthbert	कथ्बेर्ट
+70	Christel	च्रिस्टेल
+70	Bohumil	बोहुमिल
+70	Aron	अरों
+70	Aníbal
