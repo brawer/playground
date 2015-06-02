@@ -156,7 +156,10 @@ int main(int argc, const char * argv[]) {
   {
     Font* font = Font::FromFile([fontPath UTF8String]);
     std::string path = font->GetGlyphPath([glyph UTF8String]);
-    printf("%s", path.c_str());
+    if (path.find("quadto") != std::string::npos) {
+      printf("/quadto { /y exch def /x exch def x y x y curveto} def\n");
+    }
+    printf("newpath\n%sfill\n", path.c_str());
     delete font;
   }
   [pool release];
