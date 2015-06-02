@@ -10,9 +10,10 @@
 class Font {
  public:
   static Font* FromFile(const char* path);
-  void GetPostScriptName(std::string* name) const;
-  std::string GetGlyphPath(const std::string& glyph) const;
   ~Font();
+
+  std::string GetPostScriptName() const;
+  std::string GetGlyphPath(const std::string& glyph) const;
 
  private:
   Font(CGDataProviderRef provider);
@@ -38,16 +39,17 @@ Font::Font(CGDataProviderRef provider)
     font_(CTFontCreateWithGraphicsFont(core_graphics_font_, 12, NULL, NULL)) {
 }
 
-void Font::GetPostScriptName(std::string* name) const {
+std::string Font::GetPostScriptName() const {
   if (font_ == NULL) {
-    name->clear();
-    return;
+    return "";
   }
 
+  std::string result;
   const NSString* nsname =
       reinterpret_cast<const NSString*>(CTFontCopyPostScriptName(font_));
-  name->assign([nsname UTF8String]);
+  result.assign([nsname UTF8String]);
   [nsname release];
+  return result;
 }
 
 class PathRecorder {
@@ -153,8 +155,6 @@ int main(int argc, const char * argv[]) {
   NSString* glyph = [args stringForKey:@"glyph"];
   {
     Font* font = Font::FromFile([fontPath UTF8String]);
-    std::string psname;
-    font->GetPostScriptName(&psname);
     std::string path = font->GetGlyphPath([glyph UTF8String]);
     printf("%s", path.c_str());
     delete font;
