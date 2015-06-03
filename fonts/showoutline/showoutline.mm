@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <map>
 #include <memory>
 #include <string>
 
@@ -12,11 +13,15 @@ class Font {
   static Font* FromFile(const char* path);
   ~Font();
 
+  typedef std::map<std::string, float> VariationMap;
+  void GetVariations(VariationMap* variation) const;
+  Font* MakeVariation(const VariationMap& variation) const;
+
   std::string GetPostScriptName() const;
   std::string GetGlyphPath(const std::string& glyph) const;
 
  private:
-  Font(CGDataProviderRef provider);
+  Font(CGFontRef core_graphics_font);
 
   CGDataProviderRef provider_;
   CGFontRef core_graphics_font_;
@@ -29,14 +34,50 @@ Font* Font::FromFile(const char* path) {
     return NULL;
   }
 
-  Font* result = new Font(provider);
+  CGFontRef font = CGFontCreateWithDataProvider(provider);
+  if (font == NULL) {
+    CGDataProviderRelease(provider);
+    return NULL;
+  }
+
+  Font* result = new Font(font);
+  CGDataProviderRelease(provider);
   return result;
 }
 
-Font::Font(CGDataProviderRef provider)
-  : provider_(provider),
-    core_graphics_font_(CGFontCreateWithDataProvider(provider)),
-    font_(CTFontCreateWithGraphicsFont(core_graphics_font_, 12, NULL, NULL)) {
+Font::Font(CGFontRef font)
+  : core_graphics_font_(font),
+    font_(CTFontCreateWithGraphicsFont(core_graphics_font_, 500, NULL, NULL)) {
+  CGFontRetain(font);
+}
+
+Font* Font::MakeVariation(const VariationMap& variation) const {
+  NSMutableDictionary* dict = [NSMutableDictionary dictionary];
+  for (VariationMap::const_iterator iter = variation.begin();
+       iter != variation.end(); ++iter) {
+    NSString* key = [NSString stringWithUTF8String:iter->first.c_str()];
+    NSNumber* value = [NSNumber numberWithFloat:iter->second];
+    [dict setObject:value forKey:key];
+  }
+  CGFontRef gvarFont =
+      CGFontCreateCopyWithVariations(core_graphics_font_,
+                                     reinterpret_cast<CFDictionaryRef>(dict));
+  return new Font(gvarFont);
+}
+
+void Font::GetVariations(Font::VariationMap* gvar) const {
+  gvar->clear();
+  CFArrayRef axes = CGFontCopyVariationAxes(core_graphics_font_);
+  const CFIndex numAxes = CFArrayGetCount(axes);
+  //NSLog(@"All my array list: %@", reinterpret_cast<const NSArray*>(axes));
+  for (CFIndex axis = 0; axis < numAxes; ++axis) {
+    CFDictionaryRef dict =
+        reinterpret_cast<CFDictionaryRef>(CFArrayGetValueAtIndex(axes, axis));
+  }
+  CFRelease(axes);
+
+  (*gvar)["foo"] = 3.141;
+  (*gvar)["bar"] = 7;
 }
 
 std::string Font::GetPostScriptName() const {
@@ -46,7 +87,7 @@ std::string Font::GetPostScriptName() const {
 
   std::string result;
   const NSString* nsname =
-      reinterpret_cast<const NSString*>(CTFontCopyPostScriptName(font_));
+      reinterpret_cast<const NSString*>(CGFontCopyPostScriptName(core_graphics_font_));
   result.assign([nsname UTF8String]);
   [nsname release];
   return result;
@@ -132,10 +173,6 @@ Font::~Font() {
   if (core_graphics_font_ != NULL) {
     CGFontRelease(core_graphics_font_);
   }
-
-  if (provider_ != NULL) {
-    CGDataProviderRelease(provider_);
-  }
 }
 
 bool HasCoreText() {
@@ -154,12 +191,34 @@ int main(int argc, const char * argv[]) {
   NSString* fontPath = [args stringForKey:@"font"];
   NSString* glyph = [args stringForKey:@"glyph"];
   {
+    printf("%%!PS-Adobe-2.0\n%%%%EndComments\n");
+    printf("%%%%BeginSetup\n");
+    printf("/quadto { /y exch def /x exch def x y x y curveto} def\n");
+    printf("%%%%EndSetup\n");
     Font* font = Font::FromFile([fontPath UTF8String]);
-    std::string path = font->GetGlyphPath([glyph UTF8String]);
-    if (path.find("quadto") != std::string::npos) {
-      printf("/quadto { /y exch def /x exch def x y x y curveto} def\n");
+    int page = 1;
+    for (float width = 0.7; width <= 1.3; width += 0.1) {
+      for (float weight = 0.5; weight <= 3.1; weight += 0.1) {
+        printf("\n%%%%Page: %d %d\n", page, page);
+	page += 1;
+	Font::VariationMap variations;
+	variations["Width"] = width;
+	variations["Weight"] = weight;
+	Font* gvarFont = font->MakeVariation(variations);
+	std::string psname = gvarFont->GetPostScriptName();	
+	printf("/Helvetica-Bold 10 selectfont 10 10 moveto (%s %s ) show\n",
+               psname.c_str(), [glyph UTF8String]);
+	printf("/Helvetica 10 selectfont (width: %.1f weight: %.1f) show\n",
+               width, weight);
+
+	std::string path = gvarFont->GetGlyphPath([glyph UTF8String]);
+	printf("100 100 translate\n");
+        printf("newpath\n%s", path.c_str());
+	printf("gsave 0.8 setgray fill grestore stroke showpage\n");
+	delete gvarFont;
+      }
     }
-    printf("newpath\n%sfill\n", path.c_str());
+    printf("%%%%EOF\n");
     delete font;
   }
   [pool release];
