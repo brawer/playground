@@ -1,11 +1,17 @@
-import json
+import gzip, json
+
+def get_values(item, property):
+    claims = item.get('claims', {})
+    values = claims.get(property)
+    if not values: return []
+    return [v.get('mainsnak', {}).get('datavalue', {}).get('value', '')
+            for v in values]
 
 def get_code(item):
-    claims = item.get('claims', {})
-    code = claims.get('P300')
-    if not code: return None
-    return '|'.join([c.get('mainsnak', {}).get('datavalue', {}).get('value', '')
-                     for c in code])
+    return '|'.join(get_values(item, 'P300'))
+
+def get_mid(item):
+    return '|'.join(get_values(item, 'P646'))
 
 def normalize_language_tag(tag):
     parts = tag.split('-')
@@ -23,17 +29,19 @@ def get_names(item):
         result[normalize_language_tag(v['language'])] = v.get('value')
     return result
 
-for line in open('x'):
+for line in gzip.open('/Users/sascha/src/wikidata/wikidata-20150525.json.gz'):
     line = line.strip()
+    if len(line) < 5: continue
     if line.endswith(','): line = line[:-1]
     item = json.loads(line)
     id = item['id']
     code = get_code(item)
     if not code: continue
+    mid = get_mid(item)
     names = get_names(item)
     for lang in sorted(list(names.keys())):
         name = names[lang]
-        print '\t'.join([code, id, lang, name]).encode('utf-8')
+        print '\t'.join([code, id, mid, lang, name]).encode('utf-8')
 
 
 
