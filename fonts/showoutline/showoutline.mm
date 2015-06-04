@@ -193,7 +193,18 @@ int main(int argc, const char * argv[]) {
   {
     printf("%%!PS-Adobe-2.0\n%%%%EndComments\n");
     printf("%%%%BeginSetup\n");
-    printf("/quadto { /y exch def /x exch def x y x y curveto} def\n");
+    printf("/quadto {\n"
+           "  /cy exch def /cx exch def\n"
+           "  /by exch def /bx exch def\n"
+           "  currentpoint /ay exch def /ax exch def\n"
+           "  %% P := A + (B - A) * 2/3\n"
+           "  /px bx ax sub 2 mul 3 div ax add def\n"
+           "  /py by ay sub 2 mul 3 div ay add def\n"
+           "  %% Q := C + (B - C) * 2/3\n"
+           "  /qx bx cx sub 2 mul 3 div cx add def\n"
+           "  /qy by cy sub 2 mul 3 div cy add def\n"
+           "  px py qx qy cx cy curveto\n"
+           "} def\n");
     printf("%%%%EndSetup\n");
     Font* font = Font::FromFile([fontPath UTF8String]);
     int page = 1;
