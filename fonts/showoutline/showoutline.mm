@@ -2,11 +2,14 @@
 #include <map>
 #include <memory>
 #include <string>
+#include <vector>
 
 #include "ApplicationServices/ApplicationServices.h"
 #include "CoreGraphics/CoreGraphics.h"
 #include "CoreText/CoreText.h"
 #include "Foundation/Foundation.h"
+
+typedef std::vector<std::pair<float, float> > PointVector;
 
 class Font {
  public:
@@ -18,7 +21,8 @@ class Font {
   Font* MakeVariation(const VariationMap& variation) const;
 
   std::string GetPostScriptName() const;
-  std::string GetGlyphPath(const std::string& glyph) const;
+  std::string GetGlyphPath(const std::string& glyph,
+                           PointVector* points) const;
 
  private:
   Font(CGFontRef core_graphics_font);
@@ -95,12 +99,14 @@ std::string Font::GetPostScriptName() const {
 
 class PathRecorder {
  public:
+  PathRecorder(PointVector* points) : points_(points) {}
   void Record(CGPathRef path);
   const std::string& value() const { return value_; }
 
  private:
   static void Visit_(void* data, const CGPathElement* element);
   std::string value_;
+  PointVector* points_;
 };
 
 void PathRecorder::Record(CGPathRef path) {
@@ -113,28 +119,45 @@ void PathRecorder::Visit_(void* data, const CGPathElement* element) {
   PathRecorder* recorder = reinterpret_cast<PathRecorder*>(data);
   
   char buf[100];
+  float x, y, ax, ay, bx, by;
   switch (element->type) {
   case kCGPathElementMoveToPoint:
-    snprintf(buf, sizeof(buf), "%0.5f %0.5f moveto\n",
-             element->points[0].x, element->points[0].y);
+    x = element->points[0].x;
+    y = element->points[0].y;
+    recorder->points_->push_back(std::make_pair(x, y));
+    snprintf(buf, sizeof(buf), "%0.5f %0.5f moveto\n", x, y);
     break;
 
   case kCGPathElementAddLineToPoint:
-    snprintf(buf, sizeof(buf), "%0.5f %0.5f lineto\n",
-             element->points[0].x, element->points[0].y);
+    x = element->points[0].x;
+    y = element->points[0].y;
+    recorder->points_->push_back(std::make_pair(x, y));
+    snprintf(buf, sizeof(buf), "%0.5f %0.5f lineto\n", x, y);
     break;
 
   case kCGPathElementAddQuadCurveToPoint:
+    ax = element->points[0].x;
+    ay = element->points[0].y;
+    x = element->points[1].x;
+    y = element->points[1].y;
+    // recorder->points_->push_back(std::make_pair(ax, ay));
+    recorder->points_->push_back(std::make_pair(x, y));
     snprintf(buf, sizeof(buf), "%0.5f %0.5f %0.5f %0.5f quadto\n",
-             element->points[0].x, element->points[0].y,
-             element->points[1].x, element->points[1].y);
+             ax, ay, x, y);
     break;
 
   case kCGPathElementAddCurveToPoint:
+    ax = element->points[0].x;
+    ay = element->points[0].y;
+    bx = element->points[1].x;
+    by = element->points[1].y;
+    x = element->points[2].x;
+    y = element->points[2].y;
+    // recorder->points_->push_back(std::make_pair(ax, ay));
+    // recorder->points_->push_back(std::make_pair(bx, by));
+    recorder->points_->push_back(std::make_pair(x, y));
     snprintf(buf, sizeof(buf), "%0.5f %0.5f %0.5f %0.5f %0.5f %0.5f curveto\n",
-             element->points[0].x, element->points[0].y,
-             element->points[1].x, element->points[1].y,
-             element->points[2].x, element->points[2].y);
+             ax, ay, bx, by, x, y);
     break;
 
   case kCGPathElementCloseSubpath:
@@ -148,7 +171,8 @@ void PathRecorder::Visit_(void* data, const CGPathElement* element) {
   recorder->value_.append(buf);
 }
 
-std::string Font::GetGlyphPath(const std::string& glyph) const {
+std::string Font::GetGlyphPath(const std::string& glyph,
+                               PointVector* points) const {
   if (font_ == NULL) {
     return "";
   }
@@ -159,7 +183,7 @@ std::string Font::GetGlyphPath(const std::string& glyph) const {
   CGPathRef path = CTFontCreatePathForGlyph(font_, glyphNumber, NULL);
   [glyphName release];
 
-  PathRecorder recorder;
+  PathRecorder recorder(points);
   recorder.Record(path);
   CGPathRelease(path);
   return recorder.value();
@@ -222,10 +246,20 @@ int main(int argc, const char * argv[]) {
 	printf("/Helvetica 10 selectfont (width: %.1f weight: %.1f) show\n",
                width, weight);
 
-	std::string path = gvarFont->GetGlyphPath([glyph UTF8String]);
+	PointVector points;
+	std::string path = gvarFont->GetGlyphPath([glyph UTF8String], &points);
 	printf("100 100 translate\n");
         printf("newpath\n%s", path.c_str());
-	printf("gsave 0.8 setgray fill grestore stroke showpage\n");
+	printf("gsave 0.8 setgray fill grestore stroke\n\n");
+	printf("0.9 0.4 0.1 setrgbcolor\n");
+	printf("/Helvetica 6 selectfont\n");
+	for (int i = 0; i < points.size(); ++i) {
+	  float x = points[i].first;
+	  float y = points[i].second;
+	  printf("newpath %.5f %.5f 2 0 360 arc fill\n", x, y);
+	  printf("%.5f %.5f moveto (%d) show\n", x + 3, y - 1.5, i + 1);
+	}
+	printf("showpage\n");
 	delete gvarFont;
       }
     }
