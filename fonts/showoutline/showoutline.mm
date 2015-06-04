@@ -215,6 +215,12 @@ int main(int argc, const char * argv[]) {
   NSString* fontPath = [args stringForKey:@"font"];
   NSString* glyph = [args stringForKey:@"glyph"];
   {
+    Font* font = Font::FromFile([fontPath UTF8String]);
+    if (font == NULL) {
+      fprintf(stderr, "cannot load font from %s\n", [fontPath UTF8String]);
+      return 1;
+    }
+
     printf("%%!PS-Adobe-2.0\n%%%%EndComments\n");
     printf("%%%%BeginSetup\n");
     printf("/quadto {\n"
@@ -230,7 +236,6 @@ int main(int argc, const char * argv[]) {
            "  px py qx qy cx cy curveto\n"
            "} def\n");
     printf("%%%%EndSetup\n");
-    Font* font = Font::FromFile([fontPath UTF8String]);
     int page = 1;
     for (float width = 0.7; width <= 1.3; width += 0.1) {
       for (float weight = 0.5; weight <= 3.1; weight += 0.1) {
