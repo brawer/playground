@@ -7,6 +7,9 @@ I plan contributing these files to the
 scripts here help me ensuring that my submissions are reaonable.
 
 To run the script on a Debian machine:
-`$ sudo apt-get install libicu-dev python-pyicu
-$ python check_translit_my.py`
+
+    $ sudo apt-get install libicu-dev python-pyicu
+    $ git clone https://github.com/brawer/playground.git
+    $ cd playground/cldr
+    $ python check_translit_my.py
 
