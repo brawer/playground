@@ -1,0 +1,62 @@
+# https://en.wikipedia.org/wiki/Armenian_language#Phonology
+
+::lower();
+
+$wordBoundary = [^[:L:][:M:][:N:]] ;
+
+# Special cases
+եւ → jɛv;
+ով → ov;
+
+մ → m;
+ն → n;
+
+պ → p;
+տ → t;
+կ → k;
+
+բ → b;
+դ → d;
+գ → g;
+
+փ → pʰ;
+թ → tʰ;
+ք → kʰ;
+
+ծ → t͡s;
+ճ → t͡ʃ;
+ձ → d͡z;
+
+ջ → d͡ʒ;
+ց → t͡sʰ;
+չ → t͡ʃʰ;
+
+ֆ → f;
+ս → s;
+շ → ʃ;
+խ → x;
+հ → h;
+
+վ → v;
+զ → z;
+ժ → ʒ;
+ղ → ɣ;
+
+լ → l;
+յ → j;
+
+ռ → r;
+ր → ɾ;
+
+ի → i;
+
+ու → u;
+$wordBoundary {ո} → vo;
+ո → o;
+
+$wordBoundary {ե} → jɛ;
+ե → ɛ;
+է → ɛ;
+ը → ə;
+օ → o;
+ա → a;
