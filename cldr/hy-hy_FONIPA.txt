@@ -2,10 +2,10 @@
 
 ::lower();
 
-$wordBoundary = [^[:L:][:M:][:N:]] ;
+$wordBoundary = [^[:L:][:M:][:N:]];
+$vowel = [աեէըիոևօւ];
 
 # Special cases
-եւ → jɛv;
 ով → ov;
 
 մ → m;
@@ -38,6 +38,7 @@ $wordBoundary = [^[:L:][:M:][:N:]] ;
 հ → h;
 
 վ → v;
+ւ → v;
 զ → z;
 ժ → ʒ;
 ղ → ɣ;
@@ -54,8 +55,13 @@ $wordBoundary = [^[:L:][:M:][:N:]] ;
 $wordBoundary {ո} → vo;
 ո → o;
 
+$vowel {ե} → jɛ;
 $wordBoundary {ե} → jɛ;
 ե → ɛ;
+
+$wordBoundary {և}  → jɛv;
+և  → ɛv;
+
 է → ɛ;
 ը → ə;
 օ → o;
