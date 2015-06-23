@@ -65,6 +65,7 @@ def match(s, unicodeset):
         unicodeset, s, icu.USetSpanCondition.SPAN_CONTAINED) == len(s)
 
 def check(path):
+    prefixes = {}
     num_lines = 0
     for line in codecs.open(path, 'r', 'utf-8'):
         num_lines += 1
@@ -74,6 +75,12 @@ def check(path):
         assert line[-1] == ';'
         graph, arrow, phon = line[:-1].split()
         assert arrow == '→'
+        if graph[:-1] in prefixes:
+            error = ('%s:%d: %s hidden by %s, defined on line %d' %
+                     (path, num_lines, graph, graph[:-1], prefixes[graph[:-1]]))
+            print(error.encode('utf-8'))
+        else:
+            prefixes[graph] = num_lines
         if not match(graph, BURMESE_GRAPHEMES):
             print(('%s:%d: Non-Burmese graphemes in "%s"' %
                   (path, num_lines, line)).encode('utf-8'))
@@ -82,3 +89,7 @@ def check(path):
                    (path, num_lines, line)).encode('utf-8'))
 
 check('my-my_FONIPA.txt')
+
+rules = codecs.open('my-my_FONIPA.txt', 'r', 'utf-8').read()
+translit = icu.Transliterator.createFromRules(
+    'my-my_FONIPA', rules, icu.UTransDirection.FORWARD)
