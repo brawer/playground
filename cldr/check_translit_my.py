@@ -88,8 +88,25 @@ def check(path):
             print(('%s:%d: Non-Burmese phonemes in "%s"' %
                    (path, num_lines, line)).encode('utf-8'))
 
-check('my-my_FONIPA.txt')
+def regtest(translit_name):
+    rules = codecs.open('%s.txt' % translit_name, 'r', 'utf-8').read()
+    translit = icu.Transliterator.createFromRules(
+        translit_name, rules, icu.UTransDirection.FORWARD)
+    num_lines = 0
+    path = 'test-%s.txt' % translit_name
+    for line in codecs.open(path, 'r', 'utf-8'):
+        num_lines += 1
+        graph, expected_ipa = line.strip().split('\t')
+        if not match(graph, BURMESE_GRAPHEMES):
+            print(('%s:%d: Non-Burmese graphemes in "%s"' %
+                  (path, num_lines, graph)).encode('utf-8'))
+        if not match(expected_ipa, BURMESE_PHONEMES):
+            print(('%s:%d: Non-Burmese phonemes in "%s"' %
+                   (path, num_lines, expected_ipa)).encode('utf-8'))
+        actual_ipa = translit.transliterate(graph)
+        if actual_ipa != expected_ipa:
+            print(('%s:%d: Expected "%s" but got "%s" for "%s"' %
+                   (path, num_lines, expected_ipa, actual_ipa, graph)).encode('utf-8'))
 
-rules = codecs.open('my-my_FONIPA.txt', 'r', 'utf-8').read()
-translit = icu.Transliterator.createFromRules(
-    'my-my_FONIPA', rules, icu.UTransDirection.FORWARD)
+check('my-my_FONIPA.txt')
+regtest('my-my_FONIPA')
