@@ -28,7 +28,7 @@ def check(path, graphemes, phonemes):
     for line in codecs.open(path, 'r', 'utf-8'):
         num_lines += 1
         line = line.strip()
-        if not line or line[0] == '#':
+        if not line or line[0] in ':#':
             continue
         assert line[-1] == ';'
         graph, arrow, phon = line[:-1].split()
