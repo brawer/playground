@@ -22,15 +22,23 @@ def match(s, unicodeset):
         unicodeset, s, icu.USetSpanCondition.SPAN_CONTAINED) == len(s)
 
 
+WHITELISTED_SPECIAL_RULES = [
+    "{\.} [:^Letter:] → ;",
+    "\\u200D → ;"
+]
+
 def check(path, graphemes, phonemes):
     prefixes = {}
     num_lines = 0
     for line in codecs.open(path, 'r', 'utf-8'):
         num_lines += 1
         line = line.strip()
-        if not line or line[0] in ':#':
+        if not line or line[0] in ':#$':
             continue
         assert line[-1] == ';'
+        if line in WHITELISTED_SPECIAL_RULES:
+            continue
+        line = line.replace('\\.', '.').replace("''", "")
         graph, arrow, phon = line[:-1].split()
         assert arrow == '→'
         if graph[:-1] in prefixes:
