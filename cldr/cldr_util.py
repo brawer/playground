@@ -24,7 +24,17 @@ def match(s, unicodeset):
 
 WHITELISTED_SPECIAL_RULES = [
     "{\.} [:^Letter:] → ;",
-    "\\u200D → ;"
+    "\\u200D → ;",
+
+    # sat-sat_FONIPA
+    "ᱹᱸ → ᱺ ;",
+    "ᱸᱹ → ᱺ ;",
+    "ᱻᱹ → ᱹᱻ ;",
+    "ᱻᱸ → ᱸᱻ ;",
+    "ᱻᱺ → ᱺᱻ ;",
+    "ᱼᱹ → ᱹᱼ ;",
+    "ᱼᱸ → ᱸᱼ ;",
+    "ᱼᱺ → ᱺᱼ ;",
 ]
 
 def check(path, graphemes, phonemes):
@@ -33,9 +43,12 @@ def check(path, graphemes, phonemes):
     for line in codecs.open(path, 'r', 'utf-8'):
         num_lines += 1
         line = line.strip()
-        if not line or line[0] in ':#$':
+        if not line or line[0] in ':#$[':
             continue
-        assert line[-1] == ';'
+        if line[-1] != ';':
+            error = '%s:%d: line should end in ;' % (path, num_lines)
+            print(error.encode('utf-8'))
+            continue
         if line in WHITELISTED_SPECIAL_RULES:
             continue
         line = line.replace('\\.', '.').replace("''", "")
