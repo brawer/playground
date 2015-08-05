@@ -596,3 +596,13 @@
 ፺ → ' ';  # U+137A ETHIOPIC NUMBER NINETY
 ፻ → ' ';  # U+137B ETHIOPIC NUMBER HUNDRED
 ፼ → ' ';  # U+137C ETHIOPIC NUMBER TEN THOUSAND
+
+# Insert syllable markers in a separate pass.
+::NULL;
+{i} [[:L:]] → i \.;
+{ɨ} [[:L:]] → ɨ \.;
+{u} [[:L:]] → u \.;
+{e} [[:L:]] → e \.;
+{o} [[:L:]] → o \.;
+{ə} [[:L:]] → ə \.;
+{a} [[:L:]] → a \.;

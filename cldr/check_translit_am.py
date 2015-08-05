@@ -21,6 +21,8 @@ PHONEMES = makePhonemeSet("""
     e ə o
     a
 
+    .
+
 """)
 
 check('am-am_FONIPA.txt', GRAPHEMES, PHONEMES)
