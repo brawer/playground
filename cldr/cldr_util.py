@@ -26,6 +26,11 @@ WHITELISTED_SPECIAL_RULES = [
     "{\.} [:^Letter:] → ;",
     "\\u200D → ;",
 
+    # am-am_FONIPA
+    "\\u135D → '';",
+    "\\u135E → '';",
+    "\\u135F → '';",
+
     # sat-sat_FONIPA
     "ᱹᱸ → ᱺ ;",
     "ᱸᱹ → ᱺ ;",
@@ -42,8 +47,8 @@ def check(path, graphemes, phonemes):
     num_lines = 0
     for line in codecs.open(path, 'r', 'utf-8'):
         num_lines += 1
-        line = line.strip()
-        if not line or line[0] in ':#$[':
+        line = line.split('#')[0].strip()
+        if not line or line[0] in ':$[':
             continue
         if line[-1] != ';':
             error = '%s:%d: line should end in ;' % (path, num_lines)
@@ -52,6 +57,7 @@ def check(path, graphemes, phonemes):
         if line in WHITELISTED_SPECIAL_RULES:
             continue
         line = line.replace('\\.', '.').replace("''", "")
+        line =  line.replace("' '", "\\u0020")
         graph, arrow, phon = line[:-1].split()
         assert arrow == '→'
         if graph[:-1] in prefixes:
@@ -63,7 +69,7 @@ def check(path, graphemes, phonemes):
         if not match(graph, graphemes):
             print(('%s:%d: Unexpected graphemes in "%s"' %
                   (path, num_lines, line)).encode('utf-8'))
-        if not match(phon, phonemes):
+        if not match(phon, phonemes) and phon not in ['\\u0020']:
             print(('%s:%d: Unexpected phonemes in "%s"' %
                    (path, num_lines, line)).encode('utf-8'))
 

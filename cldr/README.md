@@ -11,6 +11,7 @@ To run the scripts on a Debian machine:
     $ sudo apt-get install libicu-dev python-pyicu
     $ git clone https://github.com/brawer/playground.git
     $ cd playground/cldr
+    $ python check_translit_am.py   # Amharic
     $ python check_translit_hy.py   # Armenian
     $ python check_translit_my.py   # Burmese
     $ python check_translit_sat.py  # Santali
