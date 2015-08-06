@@ -74,8 +74,9 @@ def check(path, graphemes, phonemes):
             continue
         line = line.replace('\\.', '.').replace("''", "")
         line =  line.replace("' '", "\\u0020")
-        graph, arrow, phon = line[:-1].split()
-        assert arrow == '→'
+        graph, phon = line[:-1].split('→')
+        graph, phon = graph.strip(), phon.strip()
+        for g in '{}[] ': graph = graph.replace(g, '')
         if graph[:-1] in prefixes:
             error = ('%s:%d: %s hidden by %s, defined on line %d' %
                      (path, num_lines, graph, graph[:-1], prefixes[graph[:-1]]))
