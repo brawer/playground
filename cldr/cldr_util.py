@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 import codecs
 import icu
+import unicodedata
 
 
 def makePhonemeSet(s):
@@ -49,6 +50,14 @@ WHITELISTED_SPECIAL_RULES = [
     "ᱼᱺ → ᱺᱼ ;",
 ]
 
+
+def check_nfc(path):
+    with codecs.open(path, 'r', 'utf-8') as f:
+        text = f.read()
+    if text != unicodedata.normalize('NFC', text):
+        print('%s: Not in normalization form NFC' % path)
+
+
 def check(path, graphemes, phonemes):
     prefixes = {}
     num_lines = 0
@@ -80,23 +89,26 @@ def check(path, graphemes, phonemes):
             print(('%s:%d: Unexpected phonemes in "%s"' %
                    (path, num_lines, line)).encode('utf-8'))
 
-            
+
 def regtest(translit_name, graphemes, phonemes):
+    check_nfc('%s.txt' % translit_name)
     rules = codecs.open('%s.txt' % translit_name, 'r', 'utf-8').read()
     translit = icu.Transliterator.createFromRules(
         translit_name, rules, icu.UTransDirection.FORWARD)
     num_lines = 0
-    path = 'test-%s.txt' % translit_name
-    for line in codecs.open(path, 'r', 'utf-8'):
+    test_path = 'test-%s.txt' % translit_name
+    check_nfc(test_path)
+    for line in codecs.open(test_path, 'r', 'utf-8'):
         num_lines += 1
         graph, expected_ipa = line.strip().split('\t')
         if not match(graph, graphemes):
             print(('%s:%d: Unexpected graphemes in "%s"' %
-                  (path, num_lines, graph)).encode('utf-8'))
+                  (test_path, num_lines, graph)).encode('utf-8'))
         if not match(expected_ipa, phonemes):
             print(('%s:%d: Unexpected phonemes in "%s"' %
-                   (path, num_lines, expected_ipa)).encode('utf-8'))
+                   (test_path, num_lines, expected_ipa)).encode('utf-8'))
         actual_ipa = translit.transliterate(graph)
         if actual_ipa != expected_ipa:
             print(('%s:%d: Expected "%s" but got "%s" for "%s"' %
-                   (path, num_lines, expected_ipa, actual_ipa, graph)).encode('utf-8'))
+                   (test_path, num_lines,
+                    expected_ipa, actual_ipa, graph)).encode('utf-8'))
