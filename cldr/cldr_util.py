@@ -77,6 +77,7 @@ def check(path, graphemes, phonemes):
         graph, phon = line[:-1].split('→')
         graph, phon = graph.strip(), phon.strip()
         for g in '{}[] ': graph = graph.replace(g, '')
+        for p in '. ': phon = phon.replace(p, '')
         if graph[:-1] in prefixes:
             error = ('%s:%d: %s hidden by %s, defined on line %d' %
                      (path, num_lines, graph, graph[:-1], prefixes[graph[:-1]]))
@@ -102,6 +103,10 @@ def regtest(translit_name, graphemes, phonemes):
     for line in codecs.open(test_path, 'r', 'utf-8'):
         num_lines += 1
         graph, expected_ipa = line.strip().split('\t')
+        if False:
+            actual_ipa = translit.transliterate(graph).strip()
+            print((u'%s\t%s' % (graph.strip(), actual_ipa)).encode('utf-8'))
+            continue
         if not match(graph, graphemes):
             print(('%s:%d: Unexpected graphemes in "%s"' %
                   (test_path, num_lines, graph)).encode('utf-8'))
