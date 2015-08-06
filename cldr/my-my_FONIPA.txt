@@ -1,5 +1,13 @@
 ::NFC;
 
+# To simplify our rules, we normalize the ordering of
+# U+1037 MYANMAR SIGN DOT BELOW and U+103A MYANMAR SIGN ASAT.
+\u1037 \u103A → \u103A \u1037;
+
+# Filter out punctuation.
+[။၊] → ;
+::NULL;
+
 အွတ် → ʔwaʔ ;
 အွ → ʔwə ;
 အသ် → ʔæθ ;
