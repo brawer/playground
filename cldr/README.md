@@ -1,10 +1,10 @@
 CLDR playground
 ===============
 
-This is my playground for small clean-ups of various data files.
-I plan contributing these files to the
-[Unicode CLDR](http://cldr.unicode.org/) project, and these
-scripts here help me ensuring that my submissions are reaonable.
+This is my playground (or staging area) for small clean-ups to various
+data files for the [Unicode CLDR](http://cldr.unicode.org/) project.
+Once the files are in a reasonable state, I will send them upstream
+for addition to Unicode CLDR.
 
 To run the scripts on a Debian machine:
 
