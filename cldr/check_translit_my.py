@@ -48,6 +48,8 @@ PHONEMES = makePhonemeSet("""
     aɪ̯ áɪ̯ àɪ̯ a̰ɪ̯
     aʊ̯ áʊ̯ àʊ̯ a̰ʊ̯
 
+    .
+
 """)
 
 
