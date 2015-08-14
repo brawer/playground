@@ -405,8 +405,8 @@
 ጟ → ŋwa;
 ⶕ → ŋwe;
 
-# In Sebatbeit, ⷘ is spoken as palatalized voiced velar stop /gj/ ([1], Appendix H).
-# Amharic speakers pronounce it as voiced velar stop /g/ without palatalization.
+# In Sebatbeit, ⷘ is spoken as palatalized voiced velar stop /ɡj/ ([1], Appendix H).
+# Amharic speakers pronounce it as voiced velar stop /ɡ/ without palatalization.
 ⷘ → ɡə;
 ⷙ → ɡu;
 ⷚ → ɡi;
