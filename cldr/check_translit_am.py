@@ -11,7 +11,7 @@ GRAPHEMES.applyPattern('[[:Ethi:]]')
 PHONEMES = makePhonemeSet("""
 
     m n ɲ ŋ
-    p pʼ b t tʼ d k kʼ g ʔ
+    p pʼ b t tʼ d k kʼ ɡ ʔ
     f v s sʼ z ʃ ʒ ʕ h
     t͡ʃ t͡ʃʼ d͡ʒ
     r j l

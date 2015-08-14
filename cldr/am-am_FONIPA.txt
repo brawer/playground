@@ -376,18 +376,18 @@
 ጆ → d͡ʒo;
 ጇ → d͡ʒwa;
 
-ገ → gə;
-ጉ → gu;
-ጊ → gi;
-ጋ → ga;
-ጌ → ge;
-ግ → gɨ;
-ጎ → go;
-ጐ → gwə;
-ጕ → gwu;
-ጒ → gwi;
-ጓ → gwa;
-ጔ → gwe;
+ገ → ɡə;
+ጉ → ɡu;
+ጊ → ɡi;
+ጋ → ɡa;
+ጌ → ɡe;
+ግ → ɡɨ;
+ጎ → ɡo;
+ጐ → ɡwə;
+ጕ → ɡwu;
+ጒ → ɡwi;
+ጓ → ɡwa;
+ጔ → ɡwe;
 
 # In Awngi, Blin, Qimant, and Xamtanga, ጘ is spoken as voiced velar nasal /ŋ/.
 # Source: [1], Appendix C. While /ŋ/ is not an Amharic phoneme, Amharic speakers
@@ -407,13 +407,13 @@
 
 # In Sebatbeit, ⷘ is spoken as palatalized voiced velar stop /gj/ ([1], Appendix H).
 # Amharic speakers pronounce it as voiced velar stop /g/ without palatalization.
-ⷘ → gə;
-ⷙ → gu;
-ⷚ → gi;
-ⷛ → ga;
-ⷜ → ge;
-ⷝ → gɨ;
-ⷞ → go;
+ⷘ → ɡə;
+ⷙ → ɡu;
+ⷚ → ɡi;
+ⷛ → ɡa;
+ⷜ → ɡe;
+ⷝ → ɡɨ;
+ⷞ → ɡo;
 
 ጠ → tʼə;
 ጡ → tʼu;
