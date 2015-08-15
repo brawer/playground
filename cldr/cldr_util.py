@@ -39,6 +39,11 @@ WHITELISTED_SPECIAL_RULES = [
     "{ə} [[:L:]] → ə \\.;",
     "{a} [[:L:]] → a \\.;",
 
+    # ia-ia_FONIPA
+    "{age} $end_of_word → ad͡ʒe;",
+    "{agi} $vowel → ad͡ʒ;",
+    "{egi} $vowel → ed͡ʒ;",
+
     # sat-sat_FONIPA
     "ᱹᱸ → ᱺ ;",
     "ᱸᱹ → ᱺ ;",
