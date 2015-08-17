@@ -15,7 +15,7 @@ PHONEMES = makePhonemeSet("""
     s ʃ
     t͡ʃ  d͡ʒ
     f h
-    r
+    r r̩
     ʋ l j
     w
 
