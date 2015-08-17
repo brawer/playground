@@ -11,7 +11,7 @@ GRAPHEMES.applyPattern('[[:Sinh:] [:Cf:]]')
 PHONEMES = makePhonemeSet("""
 
     m n ɲ ŋ
-    p b ᵐb ⁿd ʈ ɖ ⁿɖ k g ᵑg
+    p b ᵐb ⁿd ʈ ɖ ⁿɖ k ɡ ᵑɡ
     s ʃ
     t͡ʃ  d͡ʒ
     f h
