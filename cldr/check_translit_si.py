@@ -11,10 +11,10 @@ GRAPHEMES.applyPattern('[[:Sinh:] [:Cf:]]')
 PHONEMES = makePhonemeSet("""
     p b t d c ɟ ʈ ɖ k g
     m n ɲ ŋ b̃ d̃ ɖ̃ ɟ̃ g̃ f s ʃ h
-    r l j ʋ ɑ ɑ: æ æ: i i:
-    u u: e e: o o: ə ə: ɑ:̃   æ:̃ ə:̃
-    ɑi ɑu iu ei eu æi æu ɑi ɑu oi ou ui ɑ:i
-    e:i o:i o:u u:i æ:i ɑ:u æ:u i:u w
+    r l j ʋ ɑ ɑː æ æː i iː
+    u uː e eː o oː ə əː ɑ̃ː æ̃ː ə̃ː
+    ɑ̯i ɑu iu ei eu æi æu ɑi̯ ɑ̯u oi ou ui ɑːi
+    eːi oːi oːu uːi æːi ɑːu æːu iːu w
     .
 
 """)
