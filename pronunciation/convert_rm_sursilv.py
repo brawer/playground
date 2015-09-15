@@ -26,6 +26,29 @@ IPA_OVERRIDES = {
     'vaht': 'vaːt',
 }
 
+TAGS = {
+    'm': ['NOM-mas-sin'],
+    'm/pl': ['NOM-mas-plu'],
+    'f': ['NOM-fem-sin'],
+    'f/pl': ['NOM-fem-plu'],
+    'f u. adj': ['NOM-fem-sin', 'ADJ'],
+    'm u. f': ['NOM-mas', 'NOM-fem'],
+    'm/f': ['NOM-mas', 'NOM-fem'],
+    'interj': ['INTERJ'],
+    'prep': ['PREP'],
+    'refl': ['VERB-refl'],
+    'tr': ['VERB-trans'],
+    'intr': ['VERB-intrans'],
+    'intr u. tr': ['VERB-intrans', 'VERB-trans'],
+    'adj': ['ADJ'],
+    'adv': ['ADV'],
+    'adj u. adv': ['ADJ', 'ADV'],
+    'tr u. refl': ['VERB-trans', 'VERB-refl'],
+    'conj': ['CONJ'],
+    'onomat': ['ONOM'],
+}
+
+
 def cleanup_word(word):
     word = word.split(',')[0].strip()
     for suffix in SUFFIXES:
@@ -131,6 +154,7 @@ IPA_MAPPING = {
 
 RE_STRESS = re.compile(r'([^aeɛəioɔøuʊyUː]+)@')
 
+
 # These were used to identify onsets and codas; not used anymore.
 RE_ONSET = re.compile(r'^([^aeɛəioɔøuʊyˈ]+)')
 RE_CODA = re.compile(r'[aeɛəioɔøuʊyU]ː?([^aeɛəioɔøuʊyUː]+)$')
@@ -160,7 +184,7 @@ def move_stress(s):
                 max_onset = onset
     coda = cluster[:-len(max_onset)]
     if coda and coda not in CODAS:
-        raise ValueError("Cannot split syllable: " + cluster)
+        return '_[' + coda + '].' + max_onset + '_'
     return coda + 'ˈ' + max_onset
 
 def make_ipa(pron):
@@ -178,6 +202,22 @@ def make_ipa(pron):
     return ipa
 
 
+RE_SPLIT_LEXEMES = re.compile(r'- (II|III|IV|V|VI|VII|VII|IX|X|XI|XII|XII)')
+
+MISSING_GRAMMAR={}
+def make_grammar(s):
+    result = set()
+    for lex in RE_SPLIT_LEXEMES.split(s):
+        if lex.startswith('I '):
+            lex = lex[2:]
+        tag = lex.split(',')[0].split(' ->')[0].split(' ; ')[0]
+        for gram in TAGS.get(tag, ['???']):
+            if gram == '???':
+                MISSING_GRAMMAR[tag] = MISSING_GRAMMAR.get(tag, 0) + 1
+            result.add(gram)
+    return sorted(list(result))
+
+
 def read_sql(path):
     for line in codecs.open(path, 'r', 'utf-8'):
         if line[0] != '(':
@@ -186,11 +226,17 @@ def read_sql(path):
         word = cleanup_word(word)
         if ' ' in word:
             continue  # almost all entries with spaces are conversion errors
+
         ipa = make_ipa(cleanup_pron(pron))
+        grammar = make_grammar(corp)
         if word and ipa:
-            print '\t'.join([word, ipa]).encode('utf-8')
+            for g in grammar:
+                print ' '.join([word, g, ipa]).encode('utf-8')
+
+    #print(sorted((n,t) for (t,n) in MISSING_GRAMMAR.items()))
+    #print ' '.join([word, ipa, c.group(1)]).encode('utf-8')
+    #print ' '.join([word, ipa]).encode('utf-8')
 
 
 if __name__ == '__main__':
     read_sql(sys.argv[1])
-
