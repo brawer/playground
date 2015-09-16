@@ -26,26 +26,79 @@ IPA_OVERRIDES = {
     'vaht': 'vaːt',
 }
 
+# Modeled after http://universaldependencies.github.io/docs/
+# TODO: [AdjType, Coll] are custom additions; they need more thought.
 TAGS = {
-    'm': ['NOM-mas-sin'],
-    'm/pl': ['NOM-mas-plu'],
-    'f': ['NOM-fem-sin'],
-    'f/pl': ['NOM-fem-plu'],
-    'f u. adj': ['NOM-fem-sin', 'ADJ'],
-    'm u. f': ['NOM-mas', 'NOM-fem'],
-    'm/f': ['NOM-mas', 'NOM-fem'],
-    'interj': ['INTERJ'],
-    'prep': ['PREP'],
-    'refl': ['VERB-refl'],
-    'tr': ['VERB-trans'],
-    'intr': ['VERB-intrans'],
-    'intr u. tr': ['VERB-intrans', 'VERB-trans'],
-    'adj': ['ADJ'],
-    'adv': ['ADV'],
+    '(in)tr':  ['VERB|Subcat=Intr,Tran'],
+    'ON': ['INTJ'],
+    'PN': ['PROPN'],
     'adj u. adv': ['ADJ', 'ADV'],
-    'tr u. refl': ['VERB-trans', 'VERB-refl'],
+    'adj u. f': ['ADJ', 'NOUN|Gender=Fem'],
+    'adj u. m': ['ADJ', 'NOUN|Gender=Masc'],
+    'adj u. subst': ['ADJ', 'NOUN'],
+    'adj': ['ADJ'],
+    'adj.': ['ADJ'],
+    'adj.invar': ['ADJ|AdjType=Invar'],
+    'adv u. m': ['ADV', 'NOUN|Gender=Masc'],
+    'adv': ['ADV'],
+    'adv. u. prep': ['ADV', 'ADP'],
+    'adv.': ['ADV'],
+    'adv/interj': ['ADV', 'INTJ'],
+    'adv; far ~': ['ADV'],
+    'coll': ['NOUN|Coll=Yes'],
     'conj': ['CONJ'],
-    'onomat': ['ONOM'],
+    'f  ON': ['NOUN|Gender=Fem'],
+    'f  PN': ['PROPN|Gender=Fem'],
+    'f u. adj': ['ADJ', 'NOUN|Gender=Fem'],
+    'f u. coll': ['NOUN|Coll=Yes|Gender=Fem', 'NOUN|Gender=Fem'],
+    'f u. f/coll': ['NOUN|Coll=Yes|Gender=Fem', 'NOUN|Gender=Fem'],
+    'f u. m': ['NOUN|Gender=Masc', 'NOUN|Gender=Masc'],
+    'f': ['NOUN|Gender=Fem'],
+    'f/coll': ['NOUN|Coll=Yes|Gender=Fem'],
+    'f/pl': ['NOUN|Gender=Fem|Number=Plur'],
+    'inter': ['INTJ'],
+    'interj': ['INTJ'],
+    'intr u. refl': ['VERB|Subcat=Intr,Refl'],
+    'intr u. tr': ['VERB|Subcat=Intr,Tran'],
+    'intr': ['VERB|Subcat=Intr'],
+    'intr.': ['VERB|Subcat=Intr'],
+    'm  ON': ['NOUN|Gender=Masc'],
+    'm  PN': ['PROPN|Gender=Masc'],
+    'm u. adv': ['ADV', 'NOUN|Gender=Masc'],
+    'm u. f': ['NOUN|Gender=Fem', 'NOUN|Gender=Masc'],
+    'm': ['NOUN|Gender=Masc'],
+    'm/coll': ['NOUN|Coll=Yes|Gender=Masc'],
+    'm/f': ['NOUN|Gender=Fem', 'NOUN|Gender=Masc'],
+    'm/pl': ['NOUN|Gender=Masc|Number=Plur'],
+    'num': ['NUM'],
+    'num.card': ['NUM|NumType=Card'],
+    'num.ord': ['ADJ|NumType=Ord'],
+    'onomat': ['INTJ'],
+    'onomat.': ['INTJ'],
+    'pl': ['NOUN|Number=Plur'],
+    'pp': ['VERB|VerbForm=Part'],
+    'prep': ['ADP'],
+    'pron': ['PRON'],
+    'pron. dem': ['PRON|PronType=Dem'],
+    'pron. indef': ['DET|PronType=Ind'],
+    'pron.dem': ['PRON|PronType=Dem'],
+    'pron.indef': ['DET|PronType=Ind'],
+    'pron.interrog': ['PRON|PronType=Int'],
+    'pron.pers': ['PRON|PronType=Prs'],
+    'pron.pers.': ['PRON|PronType=Prs'],
+    'pron.pers.obj': ['PRON|PronType=Prs'],
+    'pron.pers.pl': ['PRON|Number=Plur|PronType=Prs'],
+    'pron.poss': ['DET|Poss=Yes|PronType=Prs'],
+    'refl': ['VERB|Subcat=Refl'],
+    'tr (bzw. intr.)': ['VERB|Subcat=Intr,Tran'],
+    'tr . 1. registrieren': ['VERB|Subcat=Tran'],
+    'tr u. intr': ['VERB|Subcat=Intr,Tran'],
+    'tr u. refl sedistrigar': ['VERB|Subcat=Refl,Tran'],
+    'tr u. refl': ['VERB|Subcat=Refl,Tran'],
+    'tr': ['VERB|Subcat=Tran'],
+    'tr. u. intr': ['VERB|Subcat=Intr,Tran'],
+    'tr.': ['VERB|Subcat=Tran'],
+    'v': ['VERB'],
 }
 
 
@@ -211,8 +264,8 @@ def make_grammar(s):
         if lex.startswith('I '):
             lex = lex[2:]
         tag = lex.split(',')[0].split(' ->')[0].split(' ; ')[0]
-        for gram in TAGS.get(tag, ['???']):
-            if gram == '???':
+        for gram in TAGS.get(tag, ['X']):
+            if gram == 'X':
                 MISSING_GRAMMAR[tag] = MISSING_GRAMMAR.get(tag, 0) + 1
             result.add(gram)
     return sorted(list(result))
@@ -234,8 +287,6 @@ def read_sql(path):
                 print ' '.join([word, g, ipa]).encode('utf-8')
 
     #print(sorted((n,t) for (t,n) in MISSING_GRAMMAR.items()))
-    #print ' '.join([word, ipa, c.group(1)]).encode('utf-8')
-    #print ' '.join([word, ipa]).encode('utf-8')
 
 
 if __name__ == '__main__':
