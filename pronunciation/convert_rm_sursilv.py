@@ -29,7 +29,7 @@ IPA_OVERRIDES = {
 # Modeled after http://universaldependencies.github.io/docs/
 # TODO: [AdjType, Coll] are custom additions; they need more thought.
 TAGS = {
-    '(in)tr':  ['VERB|Subcat=Intr,Tran'],
+    '(in)tr':  ['VERB|Subcat=Intr', 'VERB|Subcat=Tran'],
     'ON': ['INTJ'],
     'PN': ['PROPN'],
     'adj u. adv': ['ADJ', 'ADV'],
@@ -58,8 +58,8 @@ TAGS = {
     'f/pl': ['NOUN|Gender=Fem|Number=Plur'],
     'inter': ['INTJ'],
     'interj': ['INTJ'],
-    'intr u. refl': ['VERB|Subcat=Intr,Refl'],
-    'intr u. tr': ['VERB|Subcat=Intr,Tran'],
+    'intr u. refl': ['VERB|Subcat=Intr', 'VERB|Subcat=Refl'],
+    'intr u. tr': ['VERB|Subcat=Intr', 'VERB|Subcat=Tran'],
     'intr': ['VERB|Subcat=Intr'],
     'intr.': ['VERB|Subcat=Intr'],
     'm  ON': ['NOUN|Gender=Masc'],
@@ -90,13 +90,13 @@ TAGS = {
     'pron.pers.pl': ['PRON|Number=Plur|PronType=Prs'],
     'pron.poss': ['DET|Poss=Yes|PronType=Prs'],
     'refl': ['VERB|Subcat=Refl'],
-    'tr (bzw. intr.)': ['VERB|Subcat=Intr,Tran'],
+    'tr (bzw. intr.)': ['VERB|Subcat=Intr', 'VERB|Subcat=Tran'],
     'tr . 1. registrieren': ['VERB|Subcat=Tran'],
-    'tr u. intr': ['VERB|Subcat=Intr,Tran'],
-    'tr u. refl sedistrigar': ['VERB|Subcat=Refl,Tran'],
-    'tr u. refl': ['VERB|Subcat=Refl,Tran'],
+    'tr u. intr': ['VERB|Subcat=Tran', 'VERB|Subcat=Tran'],
+    'tr u. refl sedistrigar': ['VERB|Subcat=Refl', 'VERB|Subcat=Tran'],
+    'tr u. refl': ['VERB|Subcat=Refl', 'VERB|Subcat=Tran'],
     'tr': ['VERB|Subcat=Tran'],
-    'tr. u. intr': ['VERB|Subcat=Intr,Tran'],
+    'tr. u. intr': ['VERB|Subcat=Intr', 'VERB|Subcat=Tran'],
     'tr.': ['VERB|Subcat=Tran'],
     'v': ['VERB'],
 }
@@ -271,6 +271,72 @@ def make_grammar(s):
     return sorted(list(result))
 
 
+def make_hunspell_dictionary_entry(word, grammar):
+    if grammar.startswith('VERB'):  # TODO: Distinguish Subcat=Tran|Intr|Refl
+        if word.endswith('tgar'):  # spetgar
+            return '%s/9' % word
+        if word.endswith('ignar'):  # cumpignar
+            return '%s/10' % word
+        if word.endswith('gar'):  # pagar
+            return '%s/11' % word
+        if word.endswith('ar'):  # admirar
+            return '%s/5' % word
+        if word.endswith('er'):  # vender
+            return '%s/14' % word
+        if word.endswith('ir'):  # partir
+            return '%s/15' % word
+    if grammar == 'NOUN|Gender=Fem':  # staila
+        return '%s/1' % word
+    if grammar == 'NOUN|Gender=Masc':  # caschiel
+        return '%s/2' % word
+    if grammar == 'ADJ':
+        return '%s/3' % word
+    if grammar == 'ADV':  # biaronz
+        return '%s/4' % word
+    if grammar == 'INTJ':  # assa
+        return '%s/6' % word
+    if grammar == 'NOUN|Coll=Yes|Gender=Fem':  # feglia
+        return '%s/7' % word
+    if grammar == 'NOUN|Coll=Yes' and word.endswith('a'):  # piaza
+        return '%s/7' % word
+    if grammar == 'NOUN|Gender=Fem|Number=Plur':  # capuns
+        return '%s/17' % word
+    if grammar == 'NOUN|Gender=Masc|Number=Plur':  # repressalias
+        return '%s/18' % word
+    if grammar == 'PROPN|Gender=Fem':  # Catrina
+        return '%s/19' % word
+    if grammar == 'PROPN|Gender=Masc':  # Carli
+        return '%s/20' % word
+    if grammar == 'PROPN':  # Habacuc, Gagl (all instances are masculine)
+        return '%s/20' % word
+    if grammar == 'ADP':  # sin
+        return '%s/21' % word
+    if grammar == 'CONJ':  # u
+        return '%s/22' % word
+    if grammar == 'NOUN|Coll=Yes|Gender=Masc':  # biestgam
+        return '%s/23' % word
+    if grammar == 'NUM|NumType=Card':  # otg
+        return '%s/24' % word
+    if grammar == 'NUM':  # treitschien
+        return '%s/24' % word
+    if grammar == 'ADJ|NumType=Ord':  # tschienavel
+        return '%s/25' % word
+    if grammar == 'PRON|PronType=Dem':  # quest
+        return '%s/26' % word
+    if grammar == 'PRON|PronType=Int':  # tgi
+        return '%s/27' % word
+    if grammar == 'ADJ|AdjType=Invar':  # extra
+        return '%s/28' % word
+    if grammar == 'DET|PronType=Ind':  # enqualche
+        return '%s/29' % word
+    if grammar == 'PRON|PronType=Prs':  # ti
+        return '%s po:PRON uf:PronType=Prs'  % word
+    if grammar == 'DET|Poss=Yes|PronType=Prs': # tes
+        return '%s po:DET uf:Poss=Yes|PronType=Prs' % word
+    if grammar == 'X':
+        return word
+    return word
+
 def read_sql(path):
     for line in codecs.open(path, 'r', 'utf-8'):
         if line[0] != '(':
@@ -282,9 +348,12 @@ def read_sql(path):
 
         ipa = make_ipa(cleanup_pron(pron))
         grammar = make_grammar(corp)
-        if word and ipa:
+        if False and word and ipa:
             for g in grammar:
                 print ' '.join([word, g, ipa]).encode('utf-8')
+        if True:
+            for g in grammar:
+                print(make_hunspell_dictionary_entry(word, g)).encode('utf-8')
 
     #print(sorted((n,t) for (t,n) in MISSING_GRAMMAR.items()))
 
