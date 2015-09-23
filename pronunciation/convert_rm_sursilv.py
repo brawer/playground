@@ -207,7 +207,6 @@ IPA_MAPPING = {
 
 RE_STRESS = re.compile(r'([^aeɛəioɔøuʊyUː]+)@')
 
-
 # These were used to identify onsets and codas; not used anymore.
 RE_ONSET = re.compile(r'^([^aeɛəioɔøuʊyˈ]+)')
 RE_CODA = re.compile(r'[aeɛəioɔøuʊyU]ː?([^aeɛəioɔøuʊyUː]+)$')
@@ -271,7 +270,7 @@ def make_grammar(s):
     return sorted(list(result))
 
 
-def make_hunspell_dictionary_entry(word, grammar):
+def make_hunspell_dictionary_entry(word, grammar, ends_in_escha):
     if grammar.startswith('VERB'):  # TODO: Distinguish Subcat=Tran|Intr|Refl
         if word.endswith('tgar'):  # spetgar
             return '%s/9' % word
@@ -279,12 +278,18 @@ def make_hunspell_dictionary_entry(word, grammar):
             return '%s/10' % word
         if word.endswith('gar'):  # pagar
             return '%s/11' % word
-        if word.endswith('ar'):  # admirar
-            return '%s/5' % word
+        if word.endswith('ar'):
+            if ends_in_escha:
+                return '%s/8' % word  # skizzar
+            else:
+                return '%s/5' % word  # admirar
         if word.endswith('er'):  # vender
             return '%s/14' % word
-        if word.endswith('ir'):  # partir
-            return '%s/15' % word
+        if word.endswith('ir'):
+            if ends_in_escha:
+                return '%s/16' % word  # capir
+            else:
+                return '%s/15' % word  # partir
     if grammar == 'NOUN|Gender=Fem':  # staila
         return '%s/1' % word
     if grammar == 'NOUN|Gender=Masc':  # caschiel
@@ -337,6 +342,8 @@ def make_hunspell_dictionary_entry(word, grammar):
         return word
     return word
 
+RE_THIRD = re.compile(r'geschr. 3.: ([^\s,\)]+)')
+
 def read_sql(path):
     for line in codecs.open(path, 'r', 'utf-8'):
         if line[0] != '(':
@@ -346,6 +353,11 @@ def read_sql(path):
         if ' ' in word:
             continue  # almost all entries with spaces are conversion errors
 
+        third = RE_THIRD.search(pron2)
+        ends_in_escha = third and third.group(1).endswith('escha')
+        if '<f>-D≈</f>' in pron2:
+            ends_in_escha = True
+
         ipa = make_ipa(cleanup_pron(pron))
         grammar = make_grammar(corp)
         if False and word and ipa:
@@ -353,7 +365,7 @@ def read_sql(path):
                 print ' '.join([word, g, ipa]).encode('utf-8')
         if True:
             for g in grammar:
-                print(make_hunspell_dictionary_entry(word, g)).encode('utf-8')
+                print(make_hunspell_dictionary_entry(word, g, ends_in_escha)).encode('utf-8')
 
     #print(sorted((n,t) for (t,n) in MISSING_GRAMMAR.items()))
 
