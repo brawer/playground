@@ -107,7 +107,12 @@ def regtest(translit_name, graphemes, phonemes):
     check_nfc(test_path)
     for line in codecs.open(test_path, 'r', 'utf-8'):
         num_lines += 1
-        graph, expected_ipa = line.strip().split('\t')
+        try:
+            graph, expected_ipa = line.strip().split('\t')
+        except ValueError:
+            print(('%s:%d: Invalid testcase format "%s"' %
+                   (test_path, num_lines, line.strip())).encode('utf-8'))
+            continue
         if False:
             actual_ipa = translit.transliterate(graph).strip()
             print((u'%s\t%s' % (graph.strip(), actual_ipa)).encode('utf-8'))
