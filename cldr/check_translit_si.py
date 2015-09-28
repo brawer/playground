@@ -8,20 +8,25 @@ from cldr_util import makePhonemeSet, match, check, regtest
 GRAPHEMES = icu.UnicodeSet()
 GRAPHEMES.applyPattern('[[:Sinh:] [:Cf:]]')
 
+# TODO: ᵑɡ or ⁿɡ ?
+# TODO: No  t͡ʃ  d͡ʒ ?
+# TODO: No əː ?
 PHONEMES = makePhonemeSet("""
 
     m n ɲ ŋ
-    p b ᵐb ⁿd ʈ ɖ ⁿɖ k ɡ ᵑɡ
+    p b ᵐb ⁿd d t ʈ ɖ ⁿɖ k ɡ ⁿɡ
     s ʃ
-    t͡ʃ  d͡ʒ
+    c ɟ
     f h
-    r r̩
-    ʋ l j
+    r
+    l j
     w
 
     i iː   u uː
     e eː ə o oː
     æː æ   a aː
+    ei̯ ou̯ ou̯ː
+    æi̯ ai̯ au̯
     .
 
 """)
