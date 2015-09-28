@@ -236,7 +236,7 @@
 ဦး → ʔú;
 ဦ → ʔù;
 ဧ့ → ʔḛ;  # this does not usually occur
-ဧး → ʔé;
+ဧး → ʔé; # this does not usually occur
 ဧ → ʔè;
 ဩ့ → ʔɔ̰;  # this does not usually occur
 ဩး → ʔɔ́;  # redundant high tone; this does not usually occur
@@ -246,6 +246,8 @@
 ဪ → ʔɔ̀;
 # Various signs
 ၌ → n̥aɪ̯ʔ;
+၍ → jwḛ;
+၏ → ʔḭ;
 #
 # Postprocessing
 #
