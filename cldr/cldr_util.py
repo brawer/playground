@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 import codecs
 import icu
+import re
 import unicodedata
 
 
@@ -78,6 +79,9 @@ def check(path, graphemes, phonemes):
         if line in WHITELISTED_SPECIAL_RULES:
             continue
         line = line.replace('\\.', '.').replace("''", "")
+        line = re.sub(r'\\u([0-9a-fA-F]{4})',
+                      lambda m: unichr(int(m.group(1), 16)),
+                      line)
         line =  line.replace("' '", "\\u0020")
         graph, phon = line[:-1].split('→')
         graph, phon = graph.strip(), phon.strip()
