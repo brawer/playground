@@ -54,6 +54,9 @@ WHITELISTED_SPECIAL_RULES = [
     "ᱼᱹ → ᱹᱼ ;",
     "ᱼᱸ → ᱸᱼ ;",
     "ᱼᱺ → ᱺᱼ ;",
+
+    # si-si_FONIPA
+    "k { ə } [rl] u    → a;",
 ]
 
 
