@@ -1,3 +1,11 @@
+# References
+#
+# [1] Asanka Wasala, Ruvan Weerasinghe, and Kumudu Gamage:
+#     Sinhala Grapheme-to-Phoneme Conversion and Rules for Schwa Epenthesis.
+#     Proceedings of the COLING/ACL 2006 Main Conference Poster Sessions,
+#     pages 890–897. http://www.aclweb.org/anthology/P06-2114
+
+
 # First, delete ZWNJ and ZWJ to simplify further processing.
 \u200C → ;
 \u200D → ;
@@ -105,14 +113,13 @@
 ෲ → ruː;
 ෳ → luː;
 
-# Heuristics for turning /ə/ into /a/.
-# Based on Wasala, Weerasinghe & Gamage, COLING/ACL 2006.
+# Heuristics for turning /ə/ into /a/. Based on Wasala et al. [1].
 
 $c=[k ɡ ŋ {ⁿɡ} c ɟ ɲ ʈ ɖ {ⁿɖ} t d n {ⁿd} p b m {ᵐb} j r l w ʃ s z h f];
 
 $s=[:^L:];
 
-# Rule #1
+# [1], rule #1
 ::Null;
 $s sv    { ə      → ə;  # exception (a)
 $s k     { ə } r  → ə;  # exception (b)
@@ -120,19 +127,19 @@ $s $c    { ə } $s → ə;  # exception (c)
 $s $c $c { ə      → a;
 $s $c    { ə      → a;
 
-# Rule #2
+# [1], rule #2
 ::Null;
 $c r { ə } $c → a;  # clause (a) and (b)
 $c r { a } h  → a;  # clause (d), exception
 $c r { a } $c → ə;  # clause (c)
 
-# Rule #3
+# [1], rule #3
 # The paper is unclear about what this rule means. The interpretation here
 # assumes that "preceded" in the paper is a typo and should be read "followed".
 ::Null;
 [a e æ o ə] h { ə → a;
 
-# Rules #4 through #7
+# [1], rules #4 through #7
 ::Null;
     ə } $c $c     → a;  # Rule #4
     ə } [rbɖʈ] $s → ə;  # Rule #5 exception
@@ -140,7 +147,7 @@ $c r { a } $c → ə;  # clause (c)
     ə } ji     $s → a;  # Rule #6
 k { ə } [rl] u    → a;  # Rule #7
 
-# Rule #8
+# [1], rule #8
 # Note that the paper doesn't say explicitly that this rule should be
 # anchored at the beginning of a word, but the remarks before the rules
 # seem to imply this.
