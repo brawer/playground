@@ -22,10 +22,10 @@ PHONEMES = makePhonemeSet("""
     l j
     w
 
-    i iː   u uː
-    e eː ə o oː
-    æː æ   a aː
-    ei̯ ou̯ ou̯ː
+    i iː      u uː
+    e eː ə əː o oː
+    æː æ      a aː
+    ei̯ ou̯ ou̯
     æi̯ ai̯ au̯
     .
 

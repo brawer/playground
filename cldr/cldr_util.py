@@ -70,7 +70,7 @@ def check(path, graphemes, phonemes):
     for line in codecs.open(path, 'r', 'utf-8'):
         num_lines += 1
         line = line.split('#')[0].strip()
-        if not line or line[0] in ':$[':
+        if not line or line[0] in ':$[' or '$' in line:
             continue
         if line[-1] != ';':
             error = '%s:%d: line should end in ;' % (path, num_lines)

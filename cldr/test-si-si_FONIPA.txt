@@ -362,7 +362,7 @@
 නොමිළයේ	nomiləjeː
 නොරැඳවිය	noræⁿdəwijə
 නොවනු	nowənu
-නොවූ	nou̯ː
+නොවූ	nou̯
 නොසඳහන්ව	nosəⁿdəhanwə
 නොසලකා	nosələkaː
 නොසැළකිය	nosæləkijə
@@ -378,6 +378,7 @@
 පමණක්වත්	pamənakwat
 පමණකි	pamənəki
 පමණි	paməni
+පරණ	parəːnə
 පරමාර්ථයන්	parəmaːrtəjan
 පරිපීඩනයන්ගෙන්	paripiːɖənəjanɡen
 පරිපීඩනයන්ට	paripiːɖənəjanʈə
