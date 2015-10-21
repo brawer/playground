@@ -85,7 +85,7 @@ public:
 
     QVector<QRgb> palette;
     for (int i = 0; i < 256; ++i) {
-      palette.append(qRgb(255 - i, 255 - i, 255 - i));
+      palette.append(qRgba(255 - i, 255 - i, 255 - i, i));
     }
     
     FT_Bitmap converted;
