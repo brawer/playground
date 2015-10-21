@@ -7,6 +7,6 @@ for visual inspection. Currently, the tool does not work yet.
 Building
 --------
 
-```$ qmake
-$ make
-$ ./atm --text Foobar path/to/Skia-Regular.ttf```
+    $ qmake
+    $ make
+    $ ./atm --text Foobar path/to/Skia-Regular.ttf
