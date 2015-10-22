@@ -160,10 +160,22 @@ class ATMWindow {
 public:
   ATMWindow()
     : shapingCheckBox_(new QCheckBox("Shaping")),
+      textWidget_(new TextWidget()),
       widget_(new QWidget()) {
+  }
+
+  void setFont(const std::string& path) {
+    FT_New_Face(freeTypeLibrary, path.c_str(), 0, &font_);
+    FT_Set_Char_Size(font_, FONT_SIZE << 6, FONT_SIZE << 6, 0, 0);
+    textWidget_->setFont(font_);
+  }
+
+  void setText(const std::string& text) {
+    textWidget_->setText(text);
+  }
+
+  void show() {
     QGraphicsScene* textScene = new QGraphicsScene();
-    textWidget_ = new TextWidget();
-    textWidget_->setPreferredSize(800, 200);
     QGraphicsView* textView = new QGraphicsView();
     textScene->addItem(textWidget_);
     textView->setScene(textScene);
@@ -205,18 +217,10 @@ public:
     widget_->setLayout(gridLayout);
     widget_->setWindowTitle("Morphable Type");
 
+    textWidget_->setPreferredSize(800, 200);
+
     redrawText();
     widget_->show();
-  }
-
-  void setFont(const std::string& path) {
-    FT_New_Face(freeTypeLibrary, path.c_str(), 0, &font_);
-    FT_Set_Char_Size(font_, FONT_SIZE << 6, FONT_SIZE << 6, 0, 0);
-    textWidget_->setFont(font_);
-  }
-
-  void setText(const std::string& text) {
-    textWidget_->setText(text);
   }
 
 private:
@@ -265,6 +269,7 @@ int main(int argc, char* argv[]) {
   ATMWindow window;
   window.setFont(args.at(0).toUtf8().constData());
   window.setText(cmd.value(textOption).toUtf8().constData());
+  window.show();
 
   int status = app.exec();
   FT_Done_FreeType(freeTypeLibrary);
