@@ -96,8 +96,10 @@ public:
 
       char glyphname[32];
       hb_font_get_glyph_name(hbFont_, gid, glyphname, sizeof(glyphname));
-      std::cout << "glyph='" << glyphname << "' cluster=" << cluster
-		<< " position=" << x_position << ", " << y_position << "\n";
+      if (false) {
+        std::cout << "glyph='" << glyphname << "' cluster=" << cluster
+		  << " position=" << x_position << ", " << y_position << "\n";
+      }
 
       FT_Glyph glyph;
       if (FT_Load_Glyph(ftFont_, glyphs[i].codepoint, FT_LOAD_DEFAULT)) continue;
@@ -142,8 +144,8 @@ private:
         FT_Set_Var_Design_Coordinates(ftFont_, 2, coord));
     if (status) std::cout << "SetCoords: " << status << "\n";
     status = static_cast<int>(FT_Load_Glyph(ftFont_, 123, FT_LOAD_DEFAULT));
-    if (!status) std::cout << "glyph.metrics.width: "
-			   << ftFont_->glyph->metrics.width << "\n";
+    if (status) std::cout << "glyph.metrics.width: "
+			  << ftFont_->glyph->metrics.width << "\n";
     hbFont_ = hb_ft_font_create(ftFont_, NULL);
   }
   
@@ -156,11 +158,11 @@ private:
 };
 
 
-class ATMWindow {
+class MainWindow {
 public:
-  ATMWindow()
-    : shapingCheckBox_(new QCheckBox("Shaping")),
-      textWidget_(new TextWidget()),
+  MainWindow()
+    : textWidget_(new TextWidget()),
+      shapingCheckBox_(new QCheckBox("Shaping")),
       widget_(new QWidget()) {
   }
 
@@ -243,7 +245,7 @@ private:
 
 int main(int argc, char* argv[]) {
   QApplication app(argc, argv);
-  app.setApplicationName("atm");
+  app.setApplicationName("Morphable Type");
 
   QCommandLineParser cmd;
   cmd.addHelpOption();
@@ -253,20 +255,19 @@ int main(int argc, char* argv[]) {
       QCoreApplication::translate("main", "Text to display."));
   cmd.addOption(textOption);
 
-  cmd.addPositionalArgument("source", QCoreApplication::translate("font", "Font file to view."));
+  cmd.addPositionalArgument(
+      "source",
+      QCoreApplication::translate("font", "Font file to view."));
   cmd.setApplicationDescription("Morphable Type");
   cmd.process(app);
   const QStringList args = cmd.positionalArguments();
   if (args.isEmpty()) {
-    std::cerr << "Usage: atm --text Foobar path/to/font.otf\n";
+    std::cerr << "Usage: morphable_type --text Foobar path/to/font.otf\n";
     return 1;
   }
 
-  std::cout << "****************** " << args.at(0).toUtf8().constData()
-	    << "; " << cmd.value(textOption).toUtf8().constData() << "\n";
-
   FT_Init_FreeType(&freeTypeLibrary);
-  ATMWindow window;
+  MainWindow window;
   window.setFont(args.at(0).toUtf8().constData());
   window.setText(cmd.value(textOption).toUtf8().constData());
   window.show();
