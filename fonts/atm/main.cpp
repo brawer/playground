@@ -32,7 +32,7 @@
 FT_Library freeTypeLibrary;
 
 typedef std::vector<FT_Fixed> AxisVariations;
-static const int FONT_SIZE = 80;
+static const int FONT_SIZE = 72;
 
 class TextWidget : public QGraphicsWidget {
 public:
@@ -150,9 +150,9 @@ private:
     FT_Fixed* coord = &variations_[0];
     int status = static_cast<int>(
         FT_Set_Var_Design_Coordinates(ftFont_, 2, coord));
-    if (status) std::cout << "SetCoords: " << status << "\n";
+    if (status) std::cerr << "SetCoords: " << status << "\n";
     status = static_cast<int>(FT_Load_Glyph(ftFont_, 123, FT_LOAD_DEFAULT));
-    if (status) std::cout << "glyph.metrics.width: "
+    if (status) std::cerr << "glyph.metrics.width: "
 			  << ftFont_->glyph->metrics.width << "\n";
     hbFont_ = hb_ft_font_create(ftFont_, NULL);
   }
@@ -236,8 +236,9 @@ public:
 private:
   void redrawText() {
     AxisVariations v;
-    v.push_back(static_cast<FT_Fixed>(sliders_[0]->value() * .01f * 65536));
-    v.push_back(static_cast<FT_Fixed>(sliders_[1]->value() * .01f * 65536));
+    for (const auto slider : sliders_) {
+      v.push_back(static_cast<FT_Fixed>(slider->value() * .01f * 65536));
+    }
     textWidget_->setVariations(v);
     textWidget_->setShapingActive(shapingCheckBox_->isChecked());
   }
