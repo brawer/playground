@@ -102,10 +102,18 @@ public:
       }
 
       FT_Glyph glyph;
-      if (FT_Load_Glyph(ftFont_, glyphs[i].codepoint, FT_LOAD_DEFAULT)) continue;
-      if (FT_Get_Glyph(ftFont_->glyph, &glyph)) continue;
+      if (FT_Load_Glyph(ftFont_, glyphs[i].codepoint, FT_LOAD_DEFAULT)) {
+	continue;
+      }
+      
+      if (FT_Get_Glyph(ftFont_->glyph, &glyph)) {
+	continue;
+      }
+      
       if (glyph->format != FT_GLYPH_FORMAT_BITMAP) {
-	if (FT_Glyph_To_Bitmap(&glyph, FT_RENDER_MODE_NORMAL, 0, false)) continue;
+	if (FT_Glyph_To_Bitmap(&glyph, FT_RENDER_MODE_NORMAL, 0, false)) {
+	  continue;
+	}
       }
 
       FT_BitmapGlyph rendered = reinterpret_cast<FT_BitmapGlyph>(glyph);
