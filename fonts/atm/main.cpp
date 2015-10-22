@@ -63,11 +63,6 @@ public:
   }
 
   void paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget* = 0) Q_DECL_OVERRIDE {
-    qreal marginSize = 10.0;
-    qreal fontScale = 64.0;
-
-    //painter->fillRect(boundingRect(), Qt::blue);
-    //std::cout << "text: \"" << text_ << "\"; font: " << hbFont_ << "\n";
     recreateHarfbuzzFont();
     if (!hbFont_) return;
 
