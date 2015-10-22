@@ -31,7 +31,7 @@
 
 FT_Library freeTypeLibrary;
 
-typedef std::map<std::string, float> AxisVariations;
+typedef std::vector<FT_Fixed> AxisVariations;
 static const int FONT_SIZE = 80;
 
 class TextWidget : public QGraphicsWidget {
@@ -137,11 +137,7 @@ private:
       hbFont_ = NULL;
     }
 
-    FT_Fixed coord[2];
-    coord[0] = static_cast<FT_Fixed>(variations_["wght"] * 65536);
-    coord[1] = static_cast<FT_Fixed>(variations_["wdth"] * 65536);
-    std::cout << "**A wdth: " << coord[0]
-	      << ", wght: " << coord[1] << "\n";
+    FT_Fixed* coord = &variations_[0];
     int status = static_cast<int>(
         FT_Set_Var_Design_Coordinates(ftFont_, 2, coord));
     if (status) std::cout << "SetCoords: " << status << "\n";
@@ -163,9 +159,7 @@ private:
 class ATMWindow {
 public:
   ATMWindow()
-    : weightSlider_(new QSlider(Qt::Horizontal)),
-      widthSlider_(new QSlider(Qt::Horizontal)),
-      shapingCheckBox_(new QCheckBox("Shaping")),
+    : shapingCheckBox_(new QCheckBox("Shaping")),
       widget_(new QWidget()) {
     QGraphicsScene* textScene = new QGraphicsScene();
     textWidget_ = new TextWidget();
@@ -177,37 +171,41 @@ public:
     QGridLayout* gridLayout = new QGridLayout();
     
     QLabel* weightLabel = new QLabel("Weight:");
-    weightSlider_->setMinimum(48);
-    weightSlider_->setMaximum(320);
-    weightSlider_->setValue(100);
-    weightLabel->setBuddy(weightSlider_);
-    QObject::connect(weightSlider_, &QSlider::valueChanged,
-		     [=](int) {RedrawText();});
+    QSlider* weightSlider = new QSlider(Qt::Horizontal);
+    sliders_.push_back(weightSlider);
+    weightSlider->setMinimum(48);
+    weightSlider->setMaximum(320);
+    weightSlider->setValue(100);
+    weightLabel->setBuddy(weightSlider);
+    QObject::connect(weightSlider, &QSlider::valueChanged,
+		     [=](int) {redrawText();});
 
     QLabel* widthLabel = new QLabel("Width:");
-    widthSlider_->setMinimumWidth(300);
-    widthSlider_->setMinimum(62);
-    widthSlider_->setMaximum(129);
-    widthSlider_->setValue(100);
-    widthLabel->setBuddy(widthSlider_);
-    QObject::connect(widthSlider_, &QSlider::valueChanged,
-		     [=](int) {RedrawText();});
+    QSlider* widthSlider = new QSlider(Qt::Horizontal);
+    sliders_.push_back(widthSlider);
+    widthSlider->setMinimumWidth(300);
+    widthSlider->setMinimum(62);
+    widthSlider->setMaximum(129);
+    widthSlider->setValue(100);
+    widthLabel->setBuddy(widthSlider);
+    QObject::connect(widthSlider, &QSlider::valueChanged,
+		     [=](int) {redrawText();});
 
     QObject::connect(shapingCheckBox_, &QCheckBox::stateChanged,
-		     [=](int) {RedrawText();});
+		     [=](int) {redrawText();});
 
     // addWidget(*Widget, row, column, rowspan, colspan)
     gridLayout->addWidget(textView, 0, 0, 1, 2);
     gridLayout->addWidget(weightLabel, 1, 0, 1, 1);
-    gridLayout->addWidget(weightSlider_, 1, 1, 1, 1);
+    gridLayout->addWidget(weightSlider, 1, 1, 1, 1);
     gridLayout->addWidget(widthLabel, 2, 0, 1, 1);
-    gridLayout->addWidget(widthSlider_, 2, 1, 1, 1);
-    gridLayout->addWidget(shapingCheckBox_, 3, 1, 1, 1);
+    gridLayout->addWidget(widthSlider, 2, 1, 1, 1);
+    gridLayout->addWidget(shapingCheckBox_, sliders_.size() + 1, 1, 1, 1);
 
     widget_->setLayout(gridLayout);
     widget_->setWindowTitle("Morphable Type");
 
-    RedrawText();
+    redrawText();
     widget_->show();
   }
 
@@ -222,10 +220,10 @@ public:
   }
 
 private:
-  void RedrawText() {
+  void redrawText() {
     AxisVariations v;
-    v["wdth"] = widthSlider_->value() * .01f;
-    v["wght"] = weightSlider_->value() * .01f;
+    v.push_back(static_cast<FT_Fixed>(sliders_[0]->value() * .01f * 65536));
+    v.push_back(static_cast<FT_Fixed>(sliders_[1]->value() * .01f * 65536));
     textWidget_->setVariations(v);
     textWidget_->setShapingActive(shapingCheckBox_->isChecked());
   }
@@ -234,8 +232,7 @@ private:
   hb_font_t* harfbuzzFont_;
 
   TextWidget* textWidget_;
-  QSlider* weightSlider_;
-  QSlider* widthSlider_;
+  std::vector<QSlider*> sliders_;
   QCheckBox* shapingCheckBox_;
   std::unique_ptr<QWidget> widget_;
 };
