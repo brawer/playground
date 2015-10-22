@@ -64,7 +64,9 @@ public:
 
   void paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget* = 0) Q_DECL_OVERRIDE {
     recreateHarfbuzzFont();
-    if (!hbFont_) return;
+    if (!hbFont_) {
+      return;
+    }
 
     hb_buffer_t *hbBuffer = hb_buffer_create();
     hb_buffer_add_utf8(hbBuffer, text_.c_str(), -1, 0, -1);
@@ -185,43 +187,41 @@ public:
   }
 
   void show() {
+    if (!font_) {
+      std::cerr << "never called setFont()\n";
+      return;
+    }
+
     QGraphicsScene* textScene = new QGraphicsScene();
     QGraphicsView* textView = new QGraphicsView();
     textScene->addItem(textWidget_);
     textView->setScene(textScene);
 
     QGridLayout* gridLayout = new QGridLayout();
-    
-    QLabel* weightLabel = new QLabel("Weight:");
-    QSlider* weightSlider = new QSlider(Qt::Horizontal);
-    sliders_.push_back(weightSlider);
-    weightSlider->setMinimum(48);
-    weightSlider->setMaximum(320);
-    weightSlider->setValue(100);
-    weightLabel->setBuddy(weightSlider);
-    QObject::connect(weightSlider, &QSlider::valueChanged,
-		     [=](int) {redrawText();});
-
-    QLabel* widthLabel = new QLabel("Width:");
-    QSlider* widthSlider = new QSlider(Qt::Horizontal);
-    sliders_.push_back(widthSlider);
-    widthSlider->setMinimumWidth(300);
-    widthSlider->setMinimum(62);
-    widthSlider->setMaximum(129);
-    widthSlider->setValue(100);
-    widthLabel->setBuddy(widthSlider);
-    QObject::connect(widthSlider, &QSlider::valueChanged,
-		     [=](int) {redrawText();});
+    FT_MM_Var* mmvar = NULL;
+    if (!FT_Get_MM_Var(font_, &mmvar) && mmvar) {
+      for (unsigned int i = 0; i < mmvar->num_axis; ++i) {
+	const FT_Var_Axis& axis = mmvar->axis[i];
+	QLabel* label = new QLabel(QString("%1:").arg(axis.name));
+	QSlider* slider = new QSlider(Qt::Horizontal);
+	sliders_.push_back(slider);
+	slider->setMinimum(axis.minimum / 65536.0 * 100);
+	slider->setMaximum(axis.maximum / 65536.0 * 100);
+	slider->setValue(axis.def / 65536.0 * 100);
+	gridLayout->addWidget(label, i + 1, 0, 1, 1);
+	gridLayout->addWidget(slider, i + 1, 1, 1, 1);
+	QObject::connect(slider, &QSlider::valueChanged,
+			 [=](int) {redrawText();});
+	label->setBuddy(slider);
+      }
+      free(mmvar);
+    }
 
     QObject::connect(shapingCheckBox_, &QCheckBox::stateChanged,
 		     [=](int) {redrawText();});
 
     // addWidget(*Widget, row, column, rowspan, colspan)
     gridLayout->addWidget(textView, 0, 0, 1, 2);
-    gridLayout->addWidget(weightLabel, 1, 0, 1, 1);
-    gridLayout->addWidget(weightSlider, 1, 1, 1, 1);
-    gridLayout->addWidget(widthLabel, 2, 0, 1, 1);
-    gridLayout->addWidget(widthSlider, 2, 1, 1, 1);
     gridLayout->addWidget(shapingCheckBox_, sliders_.size() + 1, 1, 1, 1);
 
     widget_->setLayout(gridLayout);
