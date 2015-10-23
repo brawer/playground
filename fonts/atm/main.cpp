@@ -99,7 +99,9 @@ public:
       char glyphname[32];
       hb_font_get_glyph_name(hbFont_, gid, glyphname, sizeof(glyphname));
       if (false) {
-        std::cout << "glyph='" << glyphname << "' cluster=" << cluster
+        std::cout << "glyph='" << glyphname
+		  << "' gid=" << gid
+		  << " cluster=" << cluster
 		  << " position=" << x_position << ", " << y_position << "\n";
       }
 
