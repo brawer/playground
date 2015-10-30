@@ -106,7 +106,7 @@ public:
       }
 
       FT_Glyph glyph;
-      if (FT_Load_Glyph(ftFont_, glyphs[i].codepoint, FT_LOAD_DEFAULT)) {
+      if (FT_Load_Glyph(ftFont_, glyphs[i].codepoint, FT_LOAD_DEFAULT|FT_LOAD_NO_HINTING)) {
 	continue;
       }
       
@@ -155,7 +155,7 @@ private:
     int status = static_cast<int>(
         FT_Set_Var_Design_Coordinates(ftFont_, 2, coord));
     if (status) std::cerr << "SetCoords: " << status << "\n";
-    status = static_cast<int>(FT_Load_Glyph(ftFont_, 123, FT_LOAD_DEFAULT));
+    status = static_cast<int>(FT_Load_Glyph(ftFont_, 123, FT_LOAD_DEFAULT|FT_LOAD_NO_HINTING));
     if (status) std::cerr << "glyph.metrics.width: "
 			  << ftFont_->glyph->metrics.width << "\n";
     hbFont_ = hb_ft_font_create(ftFont_, NULL);
