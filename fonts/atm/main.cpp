@@ -32,7 +32,7 @@
 FT_Library freeTypeLibrary;
 
 typedef std::vector<FT_Fixed> AxisVariations;
-static const int FONT_SIZE = 72;
+static const int FONT_SIZE = 128;
 
 class TextWidget : public QGraphicsWidget {
 public:
@@ -53,8 +53,9 @@ public:
     language_ = hb_language_from_string(lang.c_str(), lang.size());
   }
 
-  void setVariations(const AxisVariations& variations) {
+  void setVariations(const AxisVariations& variations, unsigned int num_axes) {
     variations_ = variations;
+    num_axes_ = num_axes;
     update();
   }
 
@@ -153,7 +154,7 @@ private:
 
     FT_Fixed* coord = &variations_[0];
     int status = static_cast<int>(
-        FT_Set_Var_Design_Coordinates(ftFont_, 2, coord));
+        FT_Set_Var_Design_Coordinates(ftFont_, num_axes_, coord));
     if (status) std::cerr << "SetCoords: " << status << "\n";
     status = static_cast<int>(FT_Load_Glyph(ftFont_, 123, FT_LOAD_DEFAULT|FT_LOAD_NO_HINTING));
     if (status) std::cerr << "glyph.metrics.width: "
@@ -166,6 +167,7 @@ private:
   hb_font_t* hbFont_;
   hb_language_t language_;
   AxisVariations variations_;
+  unsigned int num_axes_;
   bool shaping_active_;
 };
 
@@ -241,7 +243,7 @@ private:
     for (const auto slider : sliders_) {
       v.push_back(static_cast<FT_Fixed>(slider->value() * .01f * 65536));
     }
-    textWidget_->setVariations(v);
+    textWidget_->setVariations(v, v.size());
     textWidget_->setShapingActive(shapingCheckBox_->isChecked());
   }
 
