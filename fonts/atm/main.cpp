@@ -37,7 +37,7 @@ static const int FONT_SIZE = 128;
 class TextWidget : public QGraphicsWidget {
 public:
   TextWidget()
-    : QGraphicsWidget(), ftFont_(NULL), hbFont_(NULL), shaping_active_(false) {
+    : QGraphicsWidget(), ftFont_(NULL), hbFont_(NULL) {
     setLanguage("und");
   }
 
@@ -57,10 +57,6 @@ public:
     variations_ = variations;
     num_axes_ = num_axes;
     update();
-  }
-
-  void setShapingActive(bool active) {
-    shaping_active_ = active;
   }
 
   void paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget* = 0) Q_DECL_OVERRIDE {
@@ -130,13 +126,8 @@ public:
 				current_y + FONT_SIZE - rendered->top),
 			 glyphImage);
 
-      if (shaping_active_) {
-	current_x += pos[i].x_advance / 64.;
-	current_y += pos[i].y_advance / 64.;
-      } else {
-	current_x += glyph->advance.x >> 16;
-	current_y += glyph->advance.y >> 16;
-      }
+      current_x += pos[i].x_advance / 64.;
+      current_y += pos[i].y_advance / 64.;
 
       FT_Done_Glyph(glyph);
     }
@@ -168,7 +159,6 @@ private:
   hb_language_t language_;
   AxisVariations variations_;
   unsigned int num_axes_;
-  bool shaping_active_;
 };
 
 
@@ -176,7 +166,6 @@ class MainWindow {
 public:
   MainWindow()
     : textWidget_(new TextWidget()),
-      shapingCheckBox_(new QCheckBox("Shaping")),
       widget_(new QWidget()) {
   }
 
@@ -221,12 +210,8 @@ public:
       free(mmvar);
     }
 
-    QObject::connect(shapingCheckBox_, &QCheckBox::stateChanged,
-		     [=](int) {redrawText();});
-
     // addWidget(*Widget, row, column, rowspan, colspan)
     gridLayout->addWidget(textView, 0, 0, 1, 2);
-    gridLayout->addWidget(shapingCheckBox_, sliders_.size() + 1, 1, 1, 1);
 
     widget_->setLayout(gridLayout);
     widget_->setWindowTitle("Morphable Type");
@@ -244,7 +229,6 @@ private:
       v.push_back(static_cast<FT_Fixed>(slider->value() * .01f * 65536));
     }
     textWidget_->setVariations(v, v.size());
-    textWidget_->setShapingActive(shapingCheckBox_->isChecked());
   }
 
   FT_Face font_;
@@ -252,7 +236,6 @@ private:
 
   TextWidget* textWidget_;
   std::vector<QSlider*> sliders_;
-  QCheckBox* shapingCheckBox_;
   std::unique_ptr<QWidget> widget_;
 };
 
