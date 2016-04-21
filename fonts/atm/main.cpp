@@ -33,12 +33,12 @@
 FT_Library freeTypeLibrary;
 
 typedef std::vector<FT_Fixed> AxisVariations;
-static const int FONT_SIZE = 72;
+static const int FONT_SIZE = 128;
 
 class TextWidget : public QGraphicsWidget {
 public:
   TextWidget()
-    : QGraphicsWidget(), ftFont_(NULL), hbFont_(NULL), shaping_active_(false) {
+    : QGraphicsWidget(), ftFont_(NULL), hbFont_(NULL) {
     setLanguage("und");
   }
 
@@ -54,13 +54,10 @@ public:
     language_ = hb_language_from_string(lang.c_str(), lang.size());
   }
 
-  void setVariations(const AxisVariations& variations) {
+  void setVariations(const AxisVariations& variations, unsigned int num_axes) {
     variations_ = variations;
+    num_axes_ = num_axes;
     update();
-  }
-
-  void setShapingActive(bool active) {
-    shaping_active_ = active;
   }
 
   void paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget* = 0) Q_DECL_OVERRIDE {
@@ -130,13 +127,8 @@ public:
 				current_y + FONT_SIZE - rendered->top),
 			 glyphImage);
 
-      if (shaping_active_) {
-	current_x += pos[i].x_advance / 64.;
-	current_y += pos[i].y_advance / 64.;
-      } else {
-	current_x += glyph->advance.x >> 16;
-	current_y += glyph->advance.y >> 16;
-      }
+      current_x += pos[i].x_advance / 64.;
+      current_y += pos[i].y_advance / 64.;
 
       FT_Done_Glyph(glyph);
     }
@@ -154,7 +146,7 @@ private:
 
     FT_Fixed* coord = &variations_[0];
     int status = static_cast<int>(
-        FT_Set_Var_Design_Coordinates(ftFont_, 2, coord));
+        FT_Set_Var_Design_Coordinates(ftFont_, num_axes_, coord));
     if (status) std::cerr << "SetCoords: " << status << "\n";
     status = static_cast<int>(FT_Load_Glyph(ftFont_, 123, FT_LOAD_DEFAULT|FT_LOAD_NO_HINTING));
     if (status) std::cerr << "glyph.metrics.width: "
@@ -167,7 +159,7 @@ private:
   hb_font_t* hbFont_;
   hb_language_t language_;
   AxisVariations variations_;
-  bool shaping_active_;
+  unsigned int num_axes_;
 };
 
 
@@ -175,7 +167,6 @@ class MainWindow {
 public:
   MainWindow()
     : textWidget_(new TextWidget()),
-      shapingCheckBox_(new QCheckBox("Shaping")),
       widget_(new QWidget()) {
   }
 
@@ -220,12 +211,8 @@ public:
       free(mmvar);
     }
 
-    QObject::connect(shapingCheckBox_, &QCheckBox::stateChanged,
-		     [=](int) {redrawText();});
-
     // addWidget(*Widget, row, column, rowspan, colspan)
     gridLayout->addWidget(textView, 0, 0, 1, 2);
-    gridLayout->addWidget(shapingCheckBox_, sliders_.size() + 1, 1, 1, 1);
 
     widget_->setLayout(gridLayout);
     widget_->setWindowTitle("Morphable Type");
@@ -242,8 +229,7 @@ private:
     for (const auto slider : sliders_) {
       v.push_back(static_cast<FT_Fixed>(slider->value() * .01f * 65536));
     }
-    textWidget_->setVariations(v);
-    textWidget_->setShapingActive(shapingCheckBox_->isChecked());
+    textWidget_->setVariations(v, v.size());
   }
 
   FT_Face font_;
@@ -251,7 +237,6 @@ private:
 
   TextWidget* textWidget_;
   std::vector<QSlider*> sliders_;
-  QCheckBox* shapingCheckBox_;
   std::unique_ptr<QWidget> widget_;
 };
 
