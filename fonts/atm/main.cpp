@@ -147,9 +147,6 @@ private:
     int status = static_cast<int>(
         FT_Set_Var_Design_Coordinates(ftFont_, num_axes_, coord));
     if (status) std::cerr << "SetCoords: " << status << "\n";
-    status = static_cast<int>(FT_Load_Glyph(ftFont_, 123, FT_LOAD_DEFAULT|FT_LOAD_NO_HINTING));
-    if (status) std::cerr << "glyph.metrics.width: "
-			  << ftFont_->glyph->metrics.width << "\n";
     hbFont_ = hb_ft_font_create(ftFont_, NULL);
   }
   
