@@ -144,9 +144,11 @@ private:
     }
 
     FT_Fixed* coord = &variations_[0];
-    int status = static_cast<int>(
-        FT_Set_Var_Design_Coordinates(ftFont_, num_axes_, coord));
-    if (status) std::cerr << "SetCoords: " << status << "\n";
+    if (num_axes_) {
+      int status = static_cast<int>(
+          FT_Set_Var_Design_Coordinates(ftFont_, num_axes_, coord));
+      if (status) std::cerr << "SetCoords: " << status << "\n";
+    }
     hbFont_ = hb_ft_font_create(ftFont_, NULL);
   }
   
