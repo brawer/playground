@@ -32,7 +32,7 @@
 FT_Library freeTypeLibrary;
 
 typedef std::vector<FT_Fixed> AxisVariations;
-static const int FONT_SIZE = 128;
+static const int FONT_SIZE = 384;
 
 class TextWidget : public QGraphicsWidget {
 public:
@@ -197,9 +197,9 @@ public:
 	QLabel* label = new QLabel(QString("%1:").arg(axis.name));
 	QSlider* slider = new QSlider(Qt::Horizontal);
 	sliders_.push_back(slider);
-	slider->setMinimum(axis.minimum / 65536.0 * 100);
-	slider->setMaximum(axis.maximum / 65536.0 * 100);
-	slider->setValue(axis.def / 65536.0 * 100);
+	slider->setMinimum(axis.minimum);
+	slider->setMaximum(axis.maximum);
+	slider->setValue(axis.def);
 	gridLayout->addWidget(label, i + 1, 0, 1, 1);
 	gridLayout->addWidget(slider, i + 1, 1, 1, 1);
 	QObject::connect(slider, &QSlider::valueChanged,
@@ -209,13 +209,13 @@ public:
       free(mmvar);
     }
 
+    textWidget_->setPreferredSize(1920, 1000);
+
     // addWidget(*Widget, row, column, rowspan, colspan)
     gridLayout->addWidget(textView, 0, 0, 1, 2);
 
     widget_->setLayout(gridLayout);
     widget_->setWindowTitle("Morphable Type");
-
-    textWidget_->setPreferredSize(800, 200);
 
     redrawText();
     widget_->show();
@@ -225,7 +225,7 @@ private:
   void redrawText() {
     AxisVariations v;
     for (const auto slider : sliders_) {
-      v.push_back(static_cast<FT_Fixed>(slider->value() * .01f * 65536));
+      v.push_back(static_cast<FT_Fixed>(round (slider->value())));
     }
     textWidget_->setVariations(v, v.size());
   }
