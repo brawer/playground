@@ -6,9 +6,11 @@ import codecs, os, urllib
 
 """Removes diacritics from a Persian corpus. Output is tab-separated UTF-8."""
 
+DIACRITICS = '\u064B\u064C\u064D\u064E\u064F\u0650\u0651\u0652\u0653'
+
 
 def unaccent(word):
-    for c in u'\u064B\u064C\u064D\u064E\u064F\u0650\u0651\u0652\u0653':
+    for c in DIACRITICS:
         word = word.replace(c, '')
     return word
 
@@ -28,8 +30,9 @@ def unaccent_corpus(path):
         for c in ' ؛.,!?[+/];»:»()“‘" ؟؉؊؍،–—': line = line.replace(c, ' ')
         words = line.split()
         for word in words:
-            # Remove word-final U+0652 Arabic Sukun
-            if word.endswith('\u0652'):
+            # Remove word-final diacritcs
+            last_char = word[-1]
+            if last_char in DIACRITICS:
                 word = word[:-1]
             print u'\t'.join([unaccent(word), word]).encode('utf-8')
 
