@@ -1,3 +1,4 @@
+QT_CONFIG -= no-pkg-config
 CONFIG += c++11 link_pkgconfig
 TEMPLATE += app
 TARGET = atm
