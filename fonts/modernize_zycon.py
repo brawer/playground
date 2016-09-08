@@ -66,7 +66,7 @@ def modernizeZycon(fontPath, newFontPath):
     font['name'].names = []
     setName(font, 0,
             u'Copyright ©1993–2016 by The Font Bureau, Inc. ' +
-            u' with Reserved Font Name “Zycon”')
+            u'with Reserved Font Name “Zycon”')
     setName(font, 1, 'Zycon')
     setName(font, 2, 'Regular')
     setName(font, 5, 'Version 1.8')
