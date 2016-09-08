@@ -74,6 +74,12 @@ def modernizeZycon(fontPath, newFontPath):
     setName(font, 9, 'David Berlow')
     setName(font, 14, 'https://opensource.org/licenses/OFL-1.1')
     setName(font, 19, makeSampleText(), encoding=10)
+    setName(font, 256, 'Toggle 1')
+    setName(font, 257, 'Toggle 2')
+    setName(font, 258, 'Toggle 3')
+    setName(font, 259, 'Toggle 4')
+    setName(font, 260, 'Motion 1')
+    setName(font, 261, 'Motion 2')
     del font['hdmx']
 
     # Isn’t there a better way to rename glyphs with fontTools?
