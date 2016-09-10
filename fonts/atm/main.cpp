@@ -91,7 +91,7 @@ public:
       hb_codepoint_t gid   = glyphs[i].codepoint;
       unsigned int cluster = glyphs[i].cluster;
       double x_position = current_x + pos[i].x_offset / 64.;
-      double y_position = current_y + pos[i].y_offset / 64.;
+      double y_position = current_y - pos[i].y_offset / 64.;
 
       char glyphname[32];
       hb_font_get_glyph_name(hbFont_, gid, glyphname, sizeof(glyphname));
@@ -122,8 +122,8 @@ public:
       QImage glyphImage(converted.buffer, converted.width, converted.rows,
 			converted.pitch, QImage::QImage::Format_Indexed8);
       glyphImage.setColorTable(palette);
-      painter->drawImage(QPoint(current_x + rendered->left,
-				current_y + FONT_SIZE - rendered->top),
+      painter->drawImage(QPoint(x_position + rendered->left,
+				y_position + FONT_SIZE - rendered->top),
 			 glyphImage);
 
       current_x += pos[i].x_advance / 64.;
