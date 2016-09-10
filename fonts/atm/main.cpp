@@ -71,7 +71,8 @@ public:
     //hb_buffer_set_language(hbBuffer, language_);
     //hb_buffer_set_direction(hbBuffer, HB_DIRECTION_LTR);
 
-    hb_shape(hbFont_, hbBuffer, NULL, 0);
+    hb_feature_t feat = {HB_TAG('s','s','0','2'), 1, 0, (unsigned int)-1};
+    hb_shape(hbFont_, hbBuffer, &feat, 1);
     int numGlyphs = hb_buffer_get_length(hbBuffer);
     
     hb_glyph_info_t* glyphs = hb_buffer_get_glyph_infos(hbBuffer, NULL);
