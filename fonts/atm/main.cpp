@@ -18,10 +18,10 @@
 #include <hb.h>
 #include <hb-ft.h>
 
-#include <ftbitmap.h>
-#include <ftglyph.h>
-#include <ftimage.h>
-#include <ftmm.h>
+#include FT_BITMAP_H
+#include FT_GLYPH_H
+#include FT_IMAGE_H
+#include FT_MULTIPLE_MASTERS_H
 
 #include <iostream>
 #include <map>
