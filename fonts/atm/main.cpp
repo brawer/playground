@@ -151,37 +151,8 @@ private:
       if (status) std::cerr << "SetCoords: " << status << "\n";
     }
     hbFont_ = hb_ft_font_create(ftFont_, NULL);
-
-    /* Normalize coords and set on hbFont. XXX Move to harfbuzz itself. */
-    FT_MM_Var       *master = NULL;
-    if (!FT_Get_MM_Var (ftFont_, &master))
-    {
-      unsigned int count = master->num_axis;
-      if (num_axes_ < count)
-        count = num_axes_;
-      int axes[master->num_axis];
-      for (unsigned int i = 0; i < master->num_axis; i++)
-      {
-        FT_Fixed value = coord[i];
-        FT_Fixed min = master->axis[i].minimum;
-        FT_Fixed def = master->axis[i].def;
-        FT_Fixed max = master->axis[i].maximum;
-
-        FT_Fixed v;
-
-        if (value == def)      v = 0;
-        else if (value <= min) v = -0x10000;
-        else if (value >= max) v = +0x10000;
-        else if (value < def)  v = FT_DivFix(value - def, def - min);
-        else if (value > def)  v = FT_DivFix(value - def, max - def);
-        else abort(); /* Can't happen */
-
-        axes[i] = (v + 2) >> 2;
-      }
-      hb_font_set_var_coords_normalized (hbFont_, axes, master->num_axis);
-    }
   }
-
+  
   std::string text_;
   FT_Face ftFont_;
   hb_font_t* hbFont_;
