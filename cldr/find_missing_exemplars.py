@@ -346,7 +346,7 @@ if __name__ == '__main__':
     print('(c) Unsupported language codes: %d languages' % len(bogus))
     print('(d) OK: %d languages' % len(ok))
 
-    out = codecs.open('missing_exemplars.md', 'w', 'utf-8')    
+    out = codecs.open('missing_exemplars.md', 'w', 'utf-8')
     out.write(
         '# Exemplar characters missing from Unicode CLDR\n\n'
         'See [CLDR bug 9497](http://unicode.org/cldr/trac/ticket/9497)\n'
@@ -354,8 +354,15 @@ if __name__ == '__main__':
         '[Python script](https://github.com/brawer/playground/'
         'blob/master/cldr/find_missing_exemplars.py).\n\n')
     out.write(
+        '1. [Missing languages](#missing-languages): %d\n\n'
+        '2. [Languages with possibly missing characters]'
+        '(#languages-with-possiby-missing-characters): %d\n\n'
+        '3. [Unsupported language codes](#unsupported-language-codes): %d\n\n'
+        '4. [Languages without problems](#languages-without-problems): %d\n\n' %
+        (len(fully_missing), len(chars_missing), len(bogus), len(ok)))
+    out.write(
         '\n\n'
-        '## (a) Missing languages\n\n'
+        '## Missing languages\n\n'
         'For these %d languages, CLDR has no exemplar data at all.\n'
         'To match the conventions of the existing [exemplars data]'
         '(http://www.unicode.org/repos/cldr/trunk/exemplars/main)\n'
@@ -368,7 +375,7 @@ if __name__ == '__main__':
     write_additions(fully_missing, out)
     out.write(
         '\n\n'
-        '## (b) Missing characters\n\n'
+        '## Languages with possibly missing characters\n\n'
         'For these %d languages, CLDR already has exemplar data. However,\n'
         'fontconfig specifies additional characters beyond CLDR.\n'
         '\n'
@@ -379,7 +386,7 @@ if __name__ == '__main__':
     write_deltas(chars_missing, out)
     out.write(
         '\n\n'
-        '## (c) Unsupported language codes\n\n'
+        '## Unsupported language codes\n\n'
         'For these %d languages, fontconfig uses a language code\n'
         'that could not be mapped to a Unicode language code. While\n'
         'the IANA language subtag registry for IETF BCP-47 contains\n'
@@ -393,7 +400,7 @@ if __name__ == '__main__':
     write_deltas(bogus, out)
     out.write(
         '\n\n'
-        '## (d) OK\n\n'
+        '## Languages without problems\n\n'
         'For these %d languages, the exemplar characters of fontconfig\n'
         'are also present in CLDR. No action needed.\n\n' %
         len(ok))
