@@ -198,6 +198,13 @@ DOUBLECHECKED_LANGTAGS = {
 }
 
 
+NEEDS_MANUAL_CLEANUP = {
+    'hz_Latn',  # Herero
+    'nv_Latn',  # Navajo
+    'sat_Deva',  # Santali
+    'shs_Latn',  # Shuswap
+}
+
 def get_cldr_exemplars_by_type(lang, key, exemplars):
     subtags = lang.split('_')
     for i in range(len(subtags), 0, -1):
@@ -318,7 +325,8 @@ def write_deltas(deltas, out):
 
 if __name__ == '__main__':
     empty_uset = icu.UnicodeSet()
-    chars_missing, fully_missing, ok, bogus = {}, {}, {}, {}
+    fully_missing, fully_missing_manual_cleanup_needed = {}, {}
+    chars_missing, ok, bogus = {}, {}, {}
     likely_subtags = read_likely_subtags()
     language_aliases = read_language_aliases()
     cldr_exemplars = read_cldr_exemplars()
@@ -341,13 +349,19 @@ if __name__ == '__main__':
                 mset.removeAll(cldrset)
                 chars_missing[lang] = (mset, fcrefs, cldr_sources)
         elif likely.startswith(lang) or lang in DOUBLECHECKED_LANGTAGS:
-            fully_missing[lang] = (fcset, fcrefs, cldr_sources)
+            if lang in NEEDS_MANUAL_CLEANUP:
+                fully_missing_manual_cleanup_needed[lang] = (
+                    fcset, fcrefs, cldr_sources)
+            else:
+                fully_missing[lang] = (fcset, fcrefs, cldr_sources)
         else:
             bogus[fclang] = (fcset, fcrefs, set())
-    print('(a) Missing languages: %d languages' % len(fully_missing))
-    print('(b) Missing characters: %d languages' % len(chars_missing))
-    print('(c) Unsupported language codes: %d languages' % len(bogus))
-    print('(d) OK: %d languages' % len(ok))
+    print('1. Missing languages: %d languages' % len(fully_missing))
+    print('2. Missing languages, manual cleanup needed: %d languages' % (
+        len(fully_missing_manual_cleanup_needed)))
+    print('3. Missing characters: %d languages' % len(chars_missing))
+    print('4. Unsupported language codes: %d languages' % len(bogus))
+    print('5. OK: %d languages' % len(ok))
 
     out = codecs.open('missing_exemplars.md', 'w', 'utf-8')
     out.write(
@@ -358,11 +372,13 @@ if __name__ == '__main__':
         'blob/master/cldr/find_missing_exemplars.py).\n\n')
     out.write(
         '1. [Missing languages](#missing-languages): %d\n'
-        '2. [Languages with possibly missing characters]'
+        '2. [Missing languages, manual cleanup needed](#missing-languages-manual-cleanup-needed): %d\n'
+        '3. [Languages with possibly missing characters]'
         '(#languages-with-possibly-missing-characters): %d\n'
-        '3. [Unsupported language codes](#unsupported-language-codes): %d\n'
-        '4. [Languages without problems](#languages-without-problems): %d\n\n' %
-        (len(fully_missing), len(chars_missing), len(bogus), len(ok)))
+        '4. [Unsupported language codes](#unsupported-language-codes): %d\n'
+        '5. [Languages without problems](#languages-without-problems): %d\n\n' %
+        (len(fully_missing), len(fully_missing_manual_cleanup_needed),
+         len(chars_missing), len(bogus), len(ok)))
     out.write(
         '\n\n'
         '## Missing languages\n\n'
@@ -378,9 +394,24 @@ if __name__ == '__main__':
     write_additions(fully_missing, out)
     out.write(
         '\n\n'
+        '## Missing languages, manual cleanup needed\n\n'
+        'For the following %d languages, CLDR has no exemplar data at all.\n'
+        'Other than with the first list, the data looked suspicious in\n'
+        'a manual review, so it should not been added to CLDR automatically.\n'
+        'To match the conventions of the existing [exemplars data]'
+        '(http://www.unicode.org/repos/cldr/trunk/exemplars/main)\n'
+        'in CLDR, the language codes always contain a script subtag.\n'
+        '\n'
+        '**Proposal:** Add the following files to Unicode CLDR\n'
+        'in directory `exemplars/main` after manual cleanup.\n'
+        '\n' %
+        len(fully_missing_manual_cleanup_needed))
+    write_additions(fully_missing_manual_cleanup_needed, out)
+    out.write(
+        '\n\n'
         '## Languages with possibly missing characters\n\n'
-        'For these %d languages, CLDR already has exemplar data. However,\n'
-        'fontconfig specifies additional characters beyond CLDR.\n'
+        'For the following %d languages, CLDR already has exemplar data.\n'
+        'However, fontconfig specifies additional characters beyond CLDR.\n'
         '\n'
         '**Proposal:** Manually go through each case and decide whether\n'
         'the CLDR data needs to be adjusted. Add reference URLs to the CLDR\n'
