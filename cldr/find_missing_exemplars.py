@@ -354,10 +354,10 @@ if __name__ == '__main__':
         '[Python script](https://github.com/brawer/playground/'
         'blob/master/cldr/find_missing_exemplars.py).\n\n')
     out.write(
-        '1. [Missing languages](#missing-languages): %d\n\n'
+        '1. [Missing languages](#missing-languages): %d\n'
         '2. [Languages with possibly missing characters]'
-        '(#languages-with-possiby-missing-characters): %d\n\n'
-        '3. [Unsupported language codes](#unsupported-language-codes): %d\n\n'
+        '(#languages-with-possibly-missing-characters): %d\n'
+        '3. [Unsupported language codes](#unsupported-language-codes): %d\n'
         '4. [Languages without problems](#languages-without-problems): %d\n\n' %
         (len(fully_missing), len(chars_missing), len(bogus), len(ok)))
     out.write(
