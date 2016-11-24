@@ -114,16 +114,12 @@ def read_fontconfig_orth(path):
 
 def read_cldr_exemplars():
     result = {}
-    path = os.path.expanduser(os.path.join(CLDR_SOURCE, 'exemplars/main'))
-    for filename in os.listdir(path):
-        if filename.endswith('.xml'):
-            lang, exemplars = read_cldr_file(os.path.join(path, filename))
-            result[lang] = (exemplars, 'exemplars/main/' + filename)
-    path = os.path.expanduser(os.path.join(CLDR_SOURCE, 'common/main'))
-    for filename in os.listdir(path):
-        if filename.endswith('.xml'):
-            lang, exemplars = read_cldr_file(os.path.join(path, filename))
-            result[lang] = (exemplars, 'common/main/' + filename)
+    for directory in ('seed', 'exemplars', 'common'):
+        path = os.path.expanduser(os.path.join(CLDR_SOURCE, directory, 'main'))
+        for filename in os.listdir(path):
+            if filename.endswith('.xml'):
+                lang, exemplars = read_cldr_file(os.path.join(path, filename))
+                result[lang] = (exemplars, '%s/main/%s' % (directory, filename))
     return result
 
 
