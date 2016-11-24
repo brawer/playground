@@ -9,6 +9,7 @@ import codecs
 import icu
 import os
 import re
+import unicodedata
 import xml.etree.ElementTree as etree
 from xml.sax.saxutils import escape as xmlescape
 
@@ -83,6 +84,12 @@ def extract_urls(s):
     return re.findall(r'http[s]?://[^\s]+', s)
 
 
+# CLDR only has lowercase characters in its exemplars,
+# and uses Unicode normalization form NFC.
+def normalize_fontconfig_char(c):
+    return unicodedata.normalize('NFC', c.lower())
+
+
 def read_fontconfig_orth(path):
     """filepath to fontconfig *.orth file --> (icu.UnicodeSet, [references])"""
     result = icu.UnicodeSet()
@@ -102,10 +109,10 @@ def read_fontconfig_orth(path):
             else:
                 r = [int(x, 16) for x in line.split('-') if x.strip()]
                 if len(r) == 1:
-                    result.add(unichr(r[0]).lower())
+                    result.add(normalize_fontconfig_char(unichr(r[0])))
                 elif len(r) == 2:
                     for c in range(r[0], r[1] + 1):
-                        result.add(unichr(c).lower())
+                        result.add(normalize_fontconfig_char(unichr(c)))
                 else:
                     raise ValueError(path)
     result = result.compact()
@@ -259,9 +266,9 @@ def format_unicodeset(uset):
                           (escape_for_unicodeset(unichr(start)),
                            escape_for_unicodeset(unichr(end))))
     result = '[%s]' % ' '.join(ranges)
-    assert icu.UnicodeSet(result).toPattern() == uset.toPattern(), (
-        'format_unicodset("%s") changes semantics' %
-        uset.toPattern())
+    # Make sure we don't change semantics with our pretty-pretting.
+    if icu.UnicodeSet(result).toPattern() != uset.toPattern():
+        return uset.toPattern()
     return result
 
 
