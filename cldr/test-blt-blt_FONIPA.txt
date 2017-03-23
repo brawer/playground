@@ -1,14 +1,51 @@
-# Transcription examples from http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf,
-# page 5, but writtein with IPA tone markers.
+# (a) Transcription examples from Jim Brase, SIL International:
+#     Proposal to encode the Tai Viet script in the UCS.
+#     ISO/IEC JTC1/SC2/WG2 N3220. March 20, 2007.
+#     http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf
+
 ꪵꪀ꫁ꪫ	kɛw˨˩
 ꪵꪀꪫ꫁	kʷɛ˨˩
-ꪀꪳꪫ	kiw˨
-ꪀꪫꪳ	kʷi˨
+ꪀꪲꪫ	kiw˨
+ꪀꪫꪲ	kʷi˨
 ꪵꪀ꪿ꪙ	kɛn˧˥
 ꪶꪄꪙ	xon˨
 ꫛꫜ	kon˥nɨŋ˦
-# TODO: N3220 writes /sɨa˨/
+
+# TODO: N3220 writes /sɨa¹/ which is /sɨa˨/ -- what to use for diphthong?
 ꪹꪎ	sɨə̯˨
+
 ꪻꪐ꪿	ɲəw˧˥
 ꪼꪒ꫁	dai̯˨˩
+
+# TODO: N3220 writes /tat²/ which is /tat˧˥/ -- different tone
 ꪔꪰꪒ	tat˨
+
+# TODO: N3220 writes /tʰiw¹/ which is /tʰiw˨/ -- why aspirated?
+ꪔꪲꪫ	tiw˨
+
+ꪣꪸ	miə̯˥
+ꪜꪳꪙ	pɨn˨
+ꪝꪷ	pɔ˥
+ꪁꪾ	kam˥
+
+# TODO: N3220 writes ꪄꪴꪷꪙ with *two* accents, is this by mistake?
+# TODO: N3220 writes /xun²/ which is /xun˧˥/ but ꪄ is a low-accent letter
+ꪄꪴꪙ	xun˨
+
+
+# (b) Words from http://www.unicode.org/udhr/d/udhr_blt.html
+#ꪁꪫꪱꪣ	TODO
+#ꪜꪱꪫ	TODO
+#ꪹꪕꪸꪉ	TODO
+#ꪵꪠꪙ	TODO
+#ꪒꪲꪙ	TODO
+#ꪘꪱ	TODO
+#ꪫꪸꪀ	TODO
+#ꪩꪾ	TODO
+ꫛ	kon˥
+#ꪶꪔꪙ	TODO
+#ꪠꪴ	TODO
+#ꪄꪮꪉ	TODO
+#ꪨꪸꪙ	TODO
+#ꪹꪭꪷꪚ	TODO
+#ꪀꪺꪀ	TODO

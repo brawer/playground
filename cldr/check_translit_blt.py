@@ -10,16 +10,22 @@ GRAPHEMES.applyPattern('[[:Tavt:]]')
 
 PHONEMES = makePhonemeSet("""
 
-t tʷ d dʷ k kʷ
-n nʷ ɲ ŋ
-s x
-w
+p pʰ t d k kʰ ɡ
+m n ɲ ŋ
+f s h x
+w j
 
-i ɨ ɛ
-ə o
-a
+t͡ɕ t͡ɕʷ t͡ɕʰ t͡ɕʰʷ
 
-ɨə̯ ai̯
+pʷ pʰʷ tʷ dʷ kʰʷ kʷ ɡʷ
+mʷ nʷ ɲʷ ŋʷ
+fʷ sʷ hʷ xʷ
+
+i ɨ u
+ɛ ə ɔ o
+a aː
+
+iə̯ ɨə̯ ai̯
 
 ˨ ˧˥ ˨˩ ˥ ˦ ˧˩
 

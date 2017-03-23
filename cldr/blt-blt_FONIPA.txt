@@ -1,5 +1,6 @@
 # References
 # ----------
+#
 # [1] Jim Brase, SIL International: Proposal to encode the Tai Viet script
 #     in the UCS. ISO/IEC JTC1/SC2/WG2 N3220. March 20, 2007.
 #     http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf
@@ -7,7 +8,10 @@
 # [2] ScriptSource: Tai Viet Vowels.
 #     http://scriptsource.org/entry/eusd5ehysa
 #
-# [3] http://www.seasite.niu.edu/tai/TaiDam/tones.htm
+# [3] ScriptSource: Tai Viet Consonants.
+#     http://scriptsource.org/entry/lbwpkrqk7b
+#
+# [4] http://www.seasite.niu.edu/tai/TaiDam/tones.htm
 
 $LO = [ꪀ ꪂ ꪄ ꪆ ꪈ ꪊ ꪌ ꪎ ꪐ ꪒ ꪔ ꪖ ꪘ ꪚ ꪜ ꪞ ꪠ ꪢ ꪤ ꪦ ꪨ ꪪ ꪬ ꪮ];
 $HI = [ꪁ ꪃ ꪅ ꪇ ꪉ ꪋ ꪍ ꪏ ꪑ ꪓ ꪕ ꪗ ꪙ ꪛ ꪝ ꪟ ꪡ ꪣ ꪥ ꪧ ꪩ ꪫ ꪭ ꪯ];
@@ -17,6 +21,8 @@ $V2 = [ ꪰ ꪲ ꪳ ꪴ ꪷ ꪸ ꪾ];  # vowels written above or below consonant
 $V = [$V1 $V2];
 $W = [ꪫ];  # labialization marker
 $F = [$C]; # syllable-final consonant
+$IPA_TONE = [˥ ˦ ˧ ˨ ˩];
+$NOT_IPA_TONE = [^$IPA_TONE];
 
 # The Tai Viet script uses visual ordering. Convert to logical order.
 ($V1) ($C $W?) → $2 $1;
@@ -30,9 +36,8 @@ $LO $W? $V { ꫁ ($F?)} → $1 ˨˩;  # Tone class 3: Low-falling tone
 $HI $W? $V { ꪿ ($F?)} → $1 ˦;   # Tone class 5: High-mid tone
 $HI $W? $V { ꫁ ($F?)} → $1 ˧˩;  # Tone class 6: Mid-falling tone
 ::null;
-$NOTONE = [^˥˦˧˨˩];
-{($LO $W? $V $F?)} $NOTONE → $1 ˨;  # Tone class 1: Low-mid tone.
-{($HI $W? $V $F?)} $NOTONE → $1 ˥;  # Tone class 4: High tone.
+{($LO $W? $V $F?)} $NOT_IPA_TONE → $1 ˨;  # Tone class 1: Low-mid tone.
+{($HI $W? $V $F?)} $NOT_IPA_TONE → $1 ˥;  # Tone class 4: High tone.
 ::null;
 
 # Harden syllable-final consonants.
@@ -44,23 +49,46 @@ $C {$W} $V → ʷ;
 ::null;
 
 [ꪀ ꪁ] → k;
+[ꪂ ꪃ] → kʰ;  # Tai Dón; not used in Tai Dam according to [3]
 [ꪄ ꪅ] → x;
+[ꪆ ꪇ] → ɡ;  # only in loanwords, according to [3]
+[ꪈ ꪉ] → ŋ;
+[ꪊ ꪋ] → t͡ɕ;  # Tai Dón; not used in Tai Dam according to [3]
+[ꪌ ꪍ] → t͡ɕʰ;  # Tai Dón; not used in Tai Dam according to [3]
 [ꪎ ꪏ] → s;
 [ꪐ ꪑ] → ɲ;
 [ꪒ ꪓ] → d;
 [ꪔ ꪕ] → t;
+[ꪖ ꪗ] → tʰ;
 [ꪘ ꪙ] → n;
-ꪫ → w;
-
+[ꪚ ꪛ] → b;
+[ꪜ ꪝ] → p;
+[ꪞ ꪟ] → pʰ;  # Tai Dón; not used in Tai Dam according to [3]
+[ꪠ ꪡ] → f;
+[ꪢ ꪣ] → m;
+[ꪤ ꪥ] → j;
+[ꪦ ꪧ] → r;  # only in loanwords, according to [3]
+[ꪨ ꪩ] → l;
+{[ꪪ ꪫ]} $IPA_TONE → w;  # at the end of a syllable (before tone letters)
+[ꪪ ꪫ] → v;  # not at the end of a syllable
+[ꪬ ꪭ] → h;
+[ꪮ ꪯ] → ʔ;
 
 # Vowels.
  ꪰ → a;
+ꪱ → aː;
+ ꪲ → i;
+ ꪳ → ɨ;
+ ꪴ → u;
 ꪵ → ɛ;
+# TODO: What about /e/? See [2].
 ꪶ → o;
- ꪳ → i;
+ ꪷ → ɔ;
 ꪹ → ɨə̯;
+ ꪸ → iə̯;
 ꪻ → əw;
 ꪼ → ai̯;
+ ꪾ → am;
 
 # Word ligature symbols.
 ꫛ → kon˥;
