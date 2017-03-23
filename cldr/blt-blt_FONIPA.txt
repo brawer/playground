@@ -35,9 +35,6 @@ $CHK = [ꪜ ꪝ ꪞ ꪟ ꪔ ꪕ ꪖ ꪗ ꪀ ꪁ ꪂ ꪃ ꪮ ꪯ];
 ($V1) ($C $W?) → $2 $1;
 ::null;
 
-# ꪹꪸ → EEEEEEEEEEE;
-# ::null;
-
 # Special handling for stand-alone ꪽ ‘that’.
 $BOUNDARY {ꪽ} $BOUNDARY → nan˧˩;
 
@@ -116,7 +113,6 @@ $C {$W} $V123 → ʷ;
  ꪳ → ɨ;
  ꪴ → u;
 ꪵ → ɛ;
-# TODO: What about /e/? See [2].
 ꪶ → o;
  ꪷ → ɔ;
 ꪮ → ɔ;
