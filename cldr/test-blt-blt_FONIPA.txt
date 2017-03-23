@@ -1,7 +1,11 @@
-# (a) Transcription examples from Jim Brase, SIL International:
+###########################################################################
+#
+# (a) Transcription examples taken from Jim Brase, SIL International:
 #     Proposal to encode the Tai Viet script in the UCS.
 #     ISO/IEC JTC1/SC2/WG2 N3220. March 20, 2007.
 #     http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf
+#
+###########################################################################
 
 ꪵꪀ꫁ꪫ	kɛw˨˩
 ꪵꪀꪫ꫁	kʷɛ˨˩
@@ -27,13 +31,24 @@
 ꪜꪳꪙ	pɨn˨
 ꪝꪷ	pɔ˥
 ꪁꪾ	kam˥
+ꪄꪴ꪿ꪙ	xun˧˥
+ꪮ꪿ꪱꪉ	ʔaːŋ˧˥
 
-# TODO: N3220 writes ꪄꪴꪷꪙ with *two* accents, is this by mistake?
-# TODO: N3220 writes /xun²/ which is /xun˧˥/ but ꪄ is a low-accent letter
-ꪄꪴꪙ	xun˨
+# TODO: N3220 writes /ʔɔʔ²/ which is /ʔɔʔ˧˥/ but we do not know
+# if the syllable-final ꪀ is /ʔ/ or /k/. Is one of them more likely?
+ꪮꪮꪀ	ʔɔk˧˥
+
+ꪎ꫁ꪺꪉ	suə̯ŋ˨˩
+ꪜ꫁ꪽ	pan˨˩
 
 
-# (b) Words from http://www.unicode.org/udhr/d/udhr_blt.html
+###########################################################################
+#
+# (b) Words from the Universal Declaration of Human Rights
+#     http://www.unicode.org/udhr/d/udhr_blt.html
+#
+###########################################################################
+
 #ꪁꪫꪱꪣ	TODO
 #ꪜꪱꪫ	TODO
 #ꪹꪕꪸꪉ	TODO

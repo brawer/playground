@@ -18,34 +18,56 @@ $HI = [ꪁ ꪃ ꪅ ꪇ ꪉ ꪋ ꪍ ꪏ ꪑ ꪓ ꪕ ꪗ ꪙ ꪛ ꪝ ꪟ ꪡ ꪣ �
 $C = [$LO $HI];
 $V1 = [ꪵ ꪶ ꪹ ꪻ ꪼ];  # vowels written before consonant
 $V2 = [ ꪰ ꪲ ꪳ ꪴ ꪷ ꪸ ꪾ];  # vowels written above or below consonant
-$V = [$V1 $V2];
+$V3 = [ꪱ ꪮ ꪺ ꪽ];  # vowels written after consonant
+$V12 = [$V1 $V2];
+$V123 = [$V1 $V2 $V3];
 $W = [ꪫ];  # labialization marker
 $F = [$C]; # syllable-final consonant
 $IPA_TONE = [˥ ˦ ˧ ˨ ˩];
 $NOT_IPA_TONE = [^$IPA_TONE];
 
+# Consonants at the end of "checked" syllables.
+$CHK = [ꪜ ꪝ ꪞ ꪟ ꪔ ꪕ ꪖ ꪗ ꪀ ꪁ ꪂ ꪃ ꪮ ꪯ];
+
 # The Tai Viet script uses visual ordering. Convert to logical order.
 ($V1) ($C $W?) → $2 $1;
 ::null;
 
-# Convert tones.
-# TODO: This only works for "unchecked" syllables.
+# Convert tones for checked syllables (those ending in /p/, /t/, /k/, /ʔ/)
+$LO $W? $V12 {($CHK)} → $1 ˧˥;  # Tone class 2: High-rising tone
+$LO $W? {($V3 $CHK)} → $1 ˧˥;  # Tone class 2: High-rising tone
+$HI $W? $V12 {($CHK)} → $1 ˦;  # Tone class 5: High-mid tone
+$HI $W? {($V3 $CHK)} → $1 ˦;  # Tone class 5: High-mid tone
+
+# Convert tones for unchecked syllables with vowels that are written
+# after the consonant (V3).
 # TODO: Also support tone letters, not just tone marks.
-$LO $W? $V { ꪿ ($F?)} → $1 ˧˥;  # Tone class 2: High-rising tone
-$LO $W? $V { ꫁ ($F?)} → $1 ˨˩;  # Tone class 3: Low-falling tone
-$HI $W? $V { ꪿ ($F?)} → $1 ˦;   # Tone class 5: High-mid tone
-$HI $W? $V { ꫁ ($F?)} → $1 ˧˩;  # Tone class 6: Mid-falling tone
-::null;
-{($LO $W? $V $F?)} $NOT_IPA_TONE → $1 ˨;  # Tone class 1: Low-mid tone.
-{($HI $W? $V $F?)} $NOT_IPA_TONE → $1 ˥;  # Tone class 4: High tone.
+$LO $W? { ꪿ ($V3 $F?)} → $1 ˧˥;  # Tone class 2: High-rising tone
+$LO $W? { ꫁ ($V3 $F?)} → $1 ˨˩;  # Tone class 3: Low-falling tone
+$HI $W? { ꪿ ($V3 $F?)} → $1 ˦;   # Tone class 5: High-mid tone
+$HI $W? { ꫁ ($V3 $F?)} → $1 ˧˩;  # Tone class 6: Mid-falling tone
+
+# Convert tones for unchecked syllables with vowels that are either written
+# before the consonant (V1) or vowels that are written above or below it (V2).
+# TODO: Also support tone letters, not just tone marks.
+$LO $W? $V12 { ꪿ ($F?)} → $1 ˧˥;  # Tone class 2: High-rising tone
+$LO $W? $V12 { ꫁ ($F?)} → $1 ˨˩;  # Tone class 3: Low-falling tone
+$HI $W? $V12 { ꪿ ($F?)} → $1 ˦;   # Tone class 5: High-mid tone
+$HI $W? $V12 { ꫁ ($F?)} → $1 ˧˩;  # Tone class 6: Mid-falling tone
 ::null;
 
+{($LO $W? $V123 $F?)} $NOT_IPA_TONE → $1 ˨;  # Tone class 1: Low-mid tone.
+{($HI $W? $V123 $F?)} $NOT_IPA_TONE → $1 ˥;  # Tone class 4: High tone.
+::null;
+
+# TODO: Handle digraphs.
+
 # Harden syllable-final consonants.
-$C $W? $V {ꪒ} → ꪔ;  # /d/ → /t/
+$C $W? $V123 {ꪒ} → ꪔ;  # /d/ → /t/
 ::null;
 
 # Convert labialization marker.
-$C {$W} $V → ʷ;
+$C {$W} $V123 → ʷ;
 ::null;
 
 [ꪀ ꪁ] → k;
@@ -72,6 +94,7 @@ $C {$W} $V → ʷ;
 {[ꪪ ꪫ]} $IPA_TONE → w;  # at the end of a syllable (before tone letters)
 [ꪪ ꪫ] → v;  # not at the end of a syllable
 [ꪬ ꪭ] → h;
+ʔ {[ꪮ ꪯ]} → ɔ;  # eg. ꪮꪮꪀ
 [ꪮ ꪯ] → ʔ;
 
 # Vowels.
@@ -84,6 +107,9 @@ $C {$W} $V → ʷ;
 # TODO: What about /e/? See [2].
 ꪶ → o;
  ꪷ → ɔ;
+ꪮ → ɔ;
+ꪺ → uə̯;
+ꪽ → an;
 ꪹ → ɨə̯;
  ꪸ → iə̯;
 ꪻ → əw;
