@@ -40,6 +40,15 @@
 
 ꪎ꫁ꪺꪉ	suə̯ŋ˨˩
 ꪜ꫁ꪽ	pan˨˩
+ꪽ	nan˧˩
+ꪹꪔꪸꪣ	tem˨
+ꪹꪬꪷꪉ	həŋ˨
+
+# TODO: N3220 writes /ŋaːw¹/ which is /ŋaːw˨/ but ꪉ is actually a high class
+# consonant, so one would expect tone 4 (which is what we get) and not tone 1.
+# Either this is a typo in N3220, or there are some rules missing from the
+# description. Or maybe ꪹꪉꪱ is just an exception to the pronunciation rules.
+ꪹꪉꪱ	ŋaːw˥
 
 
 ###########################################################################

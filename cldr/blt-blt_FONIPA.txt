@@ -19,12 +19,14 @@ $C = [$LO $HI];
 $V1 = [ꪵ ꪶ ꪹ ꪻ ꪼ];  # vowels written before consonant
 $V2 = [ ꪰ ꪲ ꪳ ꪴ ꪷ ꪸ ꪾ];  # vowels written above or below consonant
 $V3 = [ꪱ ꪮ ꪺ ꪽ];  # vowels written after consonant
-$V12 = [$V1 $V2];
-$V123 = [$V1 $V2 $V3];
+$DIGRAPHS = [{ꪹ  ꪸ} {ꪹ  ꪷ} {ꪹ ꪱ}];
+$V12 = [$V1 $V2 $DIGRAPHS];
+$V123 = [$V12 $V3];
 $W = [ꪫ];  # labialization marker
 $F = [$C]; # syllable-final consonant
 $IPA_TONE = [˥ ˦ ˧ ˨ ˩];
 $NOT_IPA_TONE = [^$IPA_TONE];
+$BOUNDARY = [^[:L:][:M:][:N:]];
 
 # Consonants at the end of "checked" syllables.
 $CHK = [ꪜ ꪝ ꪞ ꪟ ꪔ ꪕ ꪖ ꪗ ꪀ ꪁ ꪂ ꪃ ꪮ ꪯ];
@@ -32,6 +34,12 @@ $CHK = [ꪜ ꪝ ꪞ ꪟ ꪔ ꪕ ꪖ ꪗ ꪀ ꪁ ꪂ ꪃ ꪮ ꪯ];
 # The Tai Viet script uses visual ordering. Convert to logical order.
 ($V1) ($C $W?) → $2 $1;
 ::null;
+
+# ꪹꪸ → EEEEEEEEEEE;
+# ::null;
+
+# Special handling for stand-alone ꪽ ‘that’.
+$BOUNDARY {ꪽ} $BOUNDARY → nan˧˩;
 
 # Convert tones for checked syllables (those ending in /p/, /t/, /k/, /ʔ/)
 $LO $W? $V12 {($CHK)} → $1 ˧˥;  # Tone class 2: High-rising tone
@@ -60,7 +68,6 @@ $HI $W? $V12 { ꫁ ($F?)} → $1 ˧˩;  # Tone class 6: Mid-falling tone
 {($HI $W? $V123 $F?)} $NOT_IPA_TONE → $1 ˥;  # Tone class 4: High tone.
 ::null;
 
-# TODO: Handle digraphs.
 
 # Harden syllable-final consonants.
 $C $W? $V123 {ꪒ} → ꪔ;  # /d/ → /t/
@@ -96,6 +103,11 @@ $C {$W} $V123 → ʷ;
 [ꪬ ꪭ] → h;
 ʔ {[ꪮ ꪯ]} → ɔ;  # eg. ꪮꪮꪀ
 [ꪮ ꪯ] → ʔ;
+
+# Digraphs.
+ꪹ  ꪸ → e;
+ꪹ  ꪷ → ə;
+ꪹ ꪱ → aːw;
 
 # Vowels.
  ꪰ → a;
