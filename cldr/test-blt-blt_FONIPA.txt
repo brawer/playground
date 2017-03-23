@@ -58,18 +58,11 @@
 #
 ###########################################################################
 
-#ꪁꪫꪱꪣ	TODO
-#ꪜꪱꪫ	TODO
-#ꪹꪕꪸꪉ	TODO
-#ꪵꪠꪙ	TODO
-#ꪒꪲꪙ	TODO
-#ꪘꪱ	TODO
-#ꪫꪸꪀ	TODO
-#ꪩꪾ	TODO
-ꫛ	kon˥
-#ꪶꪔꪙ	TODO
-#ꪠꪴ	TODO
-#ꪄꪮꪉ	TODO
-#ꪨꪸꪙ	TODO
-#ꪹꪭꪷꪚ	TODO
-#ꪀꪺꪀ	TODO
+ꪁꪫꪱꪣ ꪜꪱꪫ ꪹꪕꪸꪉ ꪵꪠꪙ ꪒꪲꪙ	kʷaːm˥ paːw˨ teŋ˥ fɛn˨ din˨
+ꪘꪱ ꪫꪸꪀ ꪩꪾ ꫛ	naː˨ viə̯k˥ lam˥ kon˥
+ꪶꪔꪙ ꪠꪴ ꪄꪮꪉ ꪨꪸꪙ ꪹꪭꪷꪚ ꪀꪺꪀ	ton˨ fu˨ xʔŋ˨ liə̯n˨ həb˥ kuə̯k˧˥
+ꪹꪕꪸꪉ ꪀꪱ ꪋꪴ ꫛ ꪎꪲꪉ ꪮꪮꪀ ꪣꪱ ꪻꪠ ꪁꪷ ꪻꪬ ꪼꪒ ꪕꪳ	teŋ˥ kaː˨ t͡ɕu˥ kon˥ siŋ˨ ʔɔk˧˥ maː˥ fəw˨ kɔ˥ həw˨ dai̯˨ tɨ˥
+ꪕꪱꪉ ꪀꪾꪚ ꪹꪋꪷꪉ ꪝꪸꪉ ꪕꪮꪥ ꪩꪾ ꫛ ꪶꪔꪙ ꪠꪴ	taːŋ˥ kamb˨ t͡ɕəŋ˥ piə̯ŋ˥ tʔj˥ lam˥ kon˥ ton˨ fu˨
+ꪋꪴ ꪬꪺ ꫛ ꪻꪠ ꪁꪷ ꪻꪬ ꪣꪲ ꪁꪫꪸꪙ ꪎꪱꪉ ꪶꪎꪣ ꪩꪺꪉ	t͡ɕu˥ huə̯˨ kon˥ fəw˨ kɔ˥ həw˨ mi˥ kʷiə̯n˥ saːŋ˨ som˨ luə̯ŋ˥
+ꪹꪥꪸꪒ ꫛ ꪀꪾꪚ ꪹꪥꪸꪒ ꪻꪊ ꪚꪴꪙ ꪀꪾꪚ ꪼꪒ	jet˥ kon˥ kamb˨ jet˥ t͡ɕəw˨ bun˨ kamb˨ dai̯˨
+ꪹꪚꪷꪉ ꪒꪲ ꪀꪾꪚ ꪫꪸꪀ ꪭꪰꪀ ꪵꪝꪉ ꪹꪏꪉ ꪹꪭꪙ ꪒꪸꪫ	bəŋ˨ di˨ kamb˨ viə̯k˥ hak˦ pɛŋ˥ sɨə̯ŋ˥ hɨə̯n˥ diə̯w˨
