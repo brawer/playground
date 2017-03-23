@@ -1,0 +1,14 @@
+# Transcription examples from http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf,
+# page 5, but writtein with IPA tone markers.
+ꪵꪀ꫁ꪫ	kɛw˨˩
+ꪵꪀꪫ꫁	kʷɛ˨˩
+ꪀꪳꪫ	kiw˨
+ꪀꪫꪳ	kʷi˨
+ꪵꪀ꪿ꪙ	kɛn˧˥
+ꪶꪄꪙ	xon˨
+ꫛꫜ	kon˥nɨŋ˦
+# TODO: N3220 writes /sɨa˨/
+ꪹꪎ	sɨə̯˨
+ꪻꪐ꪿	ɲəw˧˥
+ꪼꪒ꫁	dai̯˨˩
+ꪔꪰꪒ	tat˨

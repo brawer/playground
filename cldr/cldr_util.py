@@ -114,6 +114,8 @@ def regtest(translit_name, graphemes, phonemes):
     check_nfc(test_path)
     for line in codecs.open(test_path, 'r', 'utf-8'):
         num_lines += 1
+        if not line.strip() or line.startswith('#'):
+            continue
         try:
             graph, expected_ipa = line.strip().split('\t')
         except ValueError:
