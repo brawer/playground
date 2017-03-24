@@ -32,5 +32,5 @@ ai̯
 
 """)
 
-#check('sat-sat_FONIPA.txt', GRAPHEMES, PHONEMES)
+check('blt-blt_FONIPA.txt', GRAPHEMES, PHONEMES)
 regtest('blt-blt_FONIPA', GRAPHEMES, PHONEMES)
