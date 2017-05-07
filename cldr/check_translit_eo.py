@@ -28,5 +28,5 @@ PHONEMES = makePhonemeSet("""
 
 """)
 
-check('eo-eo_FONIPA.txt', GRAPHEMES, PHONEMES)
-regtest('eo-eo_FONIPA', GRAPHEMES, PHONEMES)
+check('eo-fonipa-t-eo', GRAPHEMES, PHONEMES)
+regtest('eo-fonipa-t-eo', GRAPHEMES, PHONEMES)

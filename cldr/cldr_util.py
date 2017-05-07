@@ -74,7 +74,7 @@ def check_nfc(path):
 def check(path, graphemes, phonemes):
     prefixes = {}
     num_lines = 0
-    for line in codecs.open(path, 'r', 'utf-8'):
+    for line in codecs.open('rules/%s.txt' % path, 'r', 'utf-8'):
         num_lines += 1
         line = line.split('#')[0].strip()
         if not line or line[0] in ':$[' or '$' in line:
@@ -109,12 +109,12 @@ def check(path, graphemes, phonemes):
 
 
 def regtest(translit_name, graphemes, phonemes):
-    check_nfc('%s.txt' % translit_name)
-    rules = codecs.open('%s.txt' % translit_name, 'r', 'utf-8').read()
+    check_nfc('rules/%s.txt' % translit_name)
+    rules = codecs.open('rules/%s.txt' % translit_name, 'r', 'utf-8').read()
     translit = icu.Transliterator.createFromRules(
         translit_name, rules, icu.UTransDirection.FORWARD)
     num_lines = 0
-    test_path = 'test-%s.txt' % translit_name
+    test_path = 'test/%s.txt' % translit_name
     check_nfc(test_path)
     for line in codecs.open(test_path, 'r', 'utf-8'):
         num_lines += 1

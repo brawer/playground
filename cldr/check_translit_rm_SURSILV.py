@@ -23,5 +23,5 @@ PHONEMES = makePhonemeSet("""
 
 """)
 
-check('rm_SURSILV-rm_FONIPA_SURSILV.txt', GRAPHEMES, PHONEMES)
-regtest('rm_SURSILV-rm_FONIPA_SURSILV', GRAPHEMES, PHONEMES)
+check('rm-fonipa-sursilv-t-rm-sursilv', GRAPHEMES, PHONEMES)
+regtest('rm-fonipa-sursilv-t-rm-sursilv', GRAPHEMES, PHONEMES)

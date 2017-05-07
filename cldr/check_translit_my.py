@@ -54,5 +54,5 @@ PHONEMES = makePhonemeSet("""
 """)
 
 
-check('my-my_FONIPA.txt', GRAPHEMES, PHONEMES)
-regtest('my-my_FONIPA', GRAPHEMES, PHONEMES)
+check('my-fonipa-t-my', GRAPHEMES, PHONEMES)
+regtest('my-fonipa-t-my', GRAPHEMES, PHONEMES)

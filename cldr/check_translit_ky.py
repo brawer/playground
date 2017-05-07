@@ -29,5 +29,5 @@ PHONEMES = makePhonemeSet("""
 
 """)
 
-check('ky-ky_FONIPA.txt', GRAPHEMES, PHONEMES)
-regtest('ky-ky_FONIPA', GRAPHEMES, PHONEMES)
+check('ky-fonipa-t-ky', GRAPHEMES, PHONEMES)
+regtest('ky-fonipa-t-ky', GRAPHEMES, PHONEMES)

@@ -26,5 +26,5 @@ PHONEMES = makePhonemeSet("""
 
 """)
 
-check('ta-ta_FONIPA.txt', GRAPHEMES, PHONEMES)
-regtest('ta-ta_FONIPA', GRAPHEMES, PHONEMES)
+check('ta-fonipa-t-ta', GRAPHEMES, PHONEMES)
+regtest('ta-fonipa-t-ta', GRAPHEMES, PHONEMES)

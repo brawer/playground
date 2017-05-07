@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 import codecs
 import icu
 
-rules = codecs.open('hy-hy_FONIPA.txt', 'r', 'utf-8').read()
+rules = codecs.open('rules/hy-fonipa-t-hy.txt', 'r', 'utf-8').read()
 translit = icu.Transliterator.createFromRules(
     "hy-hy_FONIPA", rules, icu.UTransDirection.FORWARD)
 
@@ -60,4 +60,4 @@ def check(testdatapath):
                    (testdatapath, num_lines,
                     graph, expected_phon, actual_phon)).encode('utf-8'))
 
-check('test-hy-hy_FONIPA.txt')
+check('test/hy-fonipa-t-hy.txt')

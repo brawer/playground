@@ -28,5 +28,5 @@ PHONEMES = makePhonemeSet("""
 
 """)
 
-check('sat-sat_FONIPA.txt', GRAPHEMES, PHONEMES)
-regtest('sat-sat_FONIPA', GRAPHEMES, PHONEMES)
+check('sat-fonipa-t-sat', GRAPHEMES, PHONEMES)
+regtest('sat-fonipa-t-sat', GRAPHEMES, PHONEMES)

@@ -32,5 +32,5 @@ ai̯
 
 """)
 
-check('blt-blt_FONIPA.txt', GRAPHEMES, PHONEMES)
-regtest('blt-blt_FONIPA', GRAPHEMES, PHONEMES)
+check('blt-fonipa-t-blt', GRAPHEMES, PHONEMES)
+regtest('blt-fonipa-t-blt', GRAPHEMES, PHONEMES)
