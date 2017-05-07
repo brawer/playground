@@ -26,6 +26,7 @@ def match(s, unicodeset):
 
 WHITELISTED_SPECIAL_RULES = [
     "{\.} [:^Letter:] → ;",
+    "\\u200C → ;",
     "\\u200D → ;",
 
     # am-am_FONIPA
@@ -57,6 +58,9 @@ WHITELISTED_SPECIAL_RULES = [
 
     # si-si_FONIPA
     "k { ə } [rl] u    → a;",
+
+    # ta-ta_FONIPA
+    "\\u0BCD → ;",    
 ]
 
 
