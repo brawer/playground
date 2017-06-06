@@ -6,7 +6,7 @@ import icu
 from cldr_util import makePhonemeSet, match, check, regtest
 
 GRAPHEMES = icu.UnicodeSet()
-GRAPHEMES.applyPattern('[[:Arab:] \u064e  ٰ  ْ  ِ  ُ  ٓ]')
+GRAPHEMES.applyPattern('[[:Arab:] \u064e  ٰ  ْ  ِ  ُ  ٓ \u200c \u200d]')
 
 PHONEMES = makePhonemeSet("""
 
