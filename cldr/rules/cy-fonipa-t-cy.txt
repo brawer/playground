@@ -17,15 +17,21 @@
 ::NFC;
 [’ [:P:]] → ;
 
-## Class definitions
+# Class definitions
 
 $end = [$ ];
-## Both orthographic and phonetic vowels
-$vowel = [aeiouwyâêîôûŵŷɑɨəɛɪʊ];
-## W is a placeholder for the glide -- see below
-$cons = [{ŋ̊}χðɬ{m̥}{n̥}ŋ{r̥}θbkdvfgɡhlmnprstʃWj{d͡ʒ}];
+# Both orthographic and phonetic vowels
+$vowel = [aeiouwyâêîôûŵŷɑɨəɛɪɔʊ];
+# W is a placeholder for the glide -- see below
+$cons = [
+    m {m̥} n {n̥} ŋ {ŋ̊}
+    p b t d k ɡ
+    f v θ ð s ʃ h χ
+    l ɬ r {r̥}
+    {d͡ʒ} g W w j
+];
 
-## Preprocessing of letters that sometimes occur
+# Preprocessing of letters that sometimes occur
 
 k → c;
 v → f;
@@ -34,13 +40,13 @@ z → s;
 
 ::Null;
 
-## Consonant transductions:
+# Consonant transductions:
 
-## Trigraphs
+# Trigraphs
 
 ngh → ŋ̊;
 
-## Digraphs
+# Digraphs
 
 ch → χ;
 dd → ð;
@@ -53,7 +59,7 @@ ph → F;  # Temporary register
 rh → r̥;
 th → θ;
 
-## Monographs
+# Monographs
 
 b → b;
 c → k;
@@ -61,7 +67,7 @@ d → d;
 f → v;
 g → ɡ;
 h → h;
-j → d͡ʒ;   ## Loan words
+j → d͡ʒ;   # Loan words
 l → l;
 m → m;
 n → n;
@@ -74,37 +80,37 @@ t → t;
 
 F → f;
 
-## Transduce <si> to /ʃ/ before vowels
+# Transduce <si> to /ʃ/ before vowels
 
 si} $vowel → ʃ;
 
 ::Null;
 
-## Treatment of glides.
+# Treatment of glides.
 
-## First transduce <i>, <w> to glides prior to vowels. With <w> we want to
-## do this also before /r,l/ after /ɡ/ (<Proto-Celtic *w) e.g. "gwlad",
-## "gwraig". However the "after g" environment must allow for the following
-## possibilities:
-##
-## ɡ -> ŋ via nasal mutation
-## ɡ -> 0 via soft mutation
+# First transduce <i>, <w> to glides prior to vowels. With <w> we want to
+# do this also before /r,l/ after /ɡ/ (<Proto-Celtic *w) e.g. "gwlad",
+# "gwraig". However the "after g" environment must allow for the following
+# possibilities:
+#
+# ɡ -> ŋ via nasal mutation
+# ɡ -> 0 via soft mutation
 
 {i} $vowel → j;
 {w} $vowel → W; # Temporary register
-[ɡŋ] {w} [rl] $vowel → W;   ## Plain or nasal mutation environment
-^ {w} [rl] $vowel → W;      ## Soft mutation at the beginning of a word
+[ɡŋ] {w} [rl] $vowel → W;   # Plain or nasal mutation environment
+^ {w} [rl] $vowel → W;      # Soft mutation at the beginning of a word
 
-## Transduce accented <ẃ> to <w>: this is used to indicate when a <w> that would
-## normally be expected to be a glide, is instead a vowel:
+# Transduce accented <ẃ> to <w>: this is used to indicate when a <w> that would
+# normally be expected to be a glide, is instead a vowel:
 
 ẃ → w;
 
 ::Null;
 
-## Stress placement, needed for vowel quality/quantity prediction
-## Basic rule of stress in Welsh is to place it on the penult,
-## except of course in monosyllables.
+# Stress placement, needed for vowel quality/quantity prediction
+# Basic rule of stress in Welsh is to place it on the penult,
+# except of course in monosyllables.
 
 } $vowel+ $cons+ $vowel+ $cons* $end → ˈ;  ## Polysyllabic words
 
@@ -112,19 +118,19 @@ si} $vowel → ʃ;
 
 ::Null;
 
-## Transduction of vowels
+# Transduction of vowels
 
-## The first rule above overgenerates streams of stress marks. The rule below
-## cleans that up.
+# The first rule above overgenerates streams of stress marks. The rule below
+# cleans that up.
 
 ˈ+ → ˈ;
 
-## Diphthongs
+# Diphthongs
 
-## Deal with <y> first since we also need to lengthen the /ɨ/ if that is in the
-## correct environment for lengthening.
+# Deal with <y> first since we also need to lengthen the /ɨ/ if that is in the
+# correct environment for lengthening.
 
-## <y> is /ɨ/ in final syllable, otherwise /ə/
+# <y> is /ɨ/ in final syllable, otherwise /ə/
 
 yw } $cons* $end → ɨu;
 yw → əu;
@@ -134,9 +140,9 @@ y → ə;
 
 ::Null;
 
-## Diphthongs in long environment
+# Diphthongs in long environment
 
-## Final, or before word-final s
+# Final, or before word-final s
 
 ˈ { ɨu } s? $end → ɨːu;
 ˈ { aw } s? $end → ɑːu;
@@ -162,7 +168,7 @@ y → ə;
 ˈ { ou } [bχdðɡvfθ] $vowel → ɔːɨ;
 ˈ { wy } [bχdðɡvfθ] $vowel → uːɨ;
 
-## Diphthongs in other environments
+# Diphthongs in other environments
 
 ae → ɑːɨ;
 ai → ai;
@@ -179,9 +185,9 @@ ou → ɔɨ;
 uw → ɨu;
 wy → ʊɨ;
 
-## Long environments
+# Long environments
 
-## Final, or before word-final s
+# Final, or before word-final s
 
 ˈ { ɨ } s? $end → ɨː;
 ˈ { a } s? $end → ɑː;
@@ -210,7 +216,7 @@ wy → ʊɨ;
 ˈ { u } [bχdðɡvfθ] $vowel → ɨː;
 ˈ { w } [bχdðɡvfθ] $vowel → uː;
 
-## Short environments
+# Short environments
 
 a → a;
 e → ɛ;
@@ -223,9 +229,9 @@ w → ʊ;
 
 W → w;
 
-## Finally deal with vowels that are marked as long with a circumflex
-## ("to bach"). Do this last because we don't want the other vowel
-## changes messing this up.
+# Finally, deal with vowels that are marked as long with a circumflex
+# ("to bach"). Do this last because we don't want the other vowel
+# changes messing this up.
 
 â → ɑː;
 ê → eː;
@@ -234,3 +240,8 @@ W → w;
 û → ɨː;
 ŵ → uː;
 ŷ → ɨː;
+
+::Null;
+
+# Move IPA stress marker to begin of syllable.
+([$cons w] [l ɬ r {r̥}]? j? w?) ˈ → ˈ $1;
