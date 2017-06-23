@@ -6,7 +6,8 @@ import icu
 from cldr_util import makePhonemeSet, match, check, regtest
 
 GRAPHEMES = icu.UnicodeSet()
-GRAPHEMES.applyPattern('[[:Arab:] \u064e  ٰ  ْ  ِ  ُ  ٓ \u200c \u200d]')
+GRAPHEMES.applyPattern('[[:Arab:] َ ٰ ْ ِ ُ ٓ ّ ٔ ً \u200c \u200d]')
+
 
 PHONEMES = makePhonemeSet("""
 
@@ -15,9 +16,11 @@ PHONEMES = makePhonemeSet("""
     f v s z ʃ ʒ ʁ ɢ h χ
     t͡ʃ d͡ʒ
     l ɾ j w
-    iː uː e o æ ɒː
+    i u e o æ ɒ
+    ː
 
 """)
+
 
 check('fa-fonipa-t-fa', GRAPHEMES, PHONEMES)
 regtest('fa-fonipa-t-fa', GRAPHEMES, PHONEMES)

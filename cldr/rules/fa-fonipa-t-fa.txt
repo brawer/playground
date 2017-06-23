@@ -1,8 +1,18 @@
 [\u200c \u200d] → ;  # Strip off ZWJ and ZWNJ.
 ::NFD;
 
+# Rewrite similarly-looking Arabic letters to Persian.
+ي → ی;
+ى → ی;
+ك → ک;
+ە → ه;
+
+::NULL;
+
 $VOWEL = [ َ ِ  ُ  ٓ ا و ی];
 $BOUNDARY = [^[:L:][:M:][:N:]];
+
+$IPA_CONSONANT = [ m n p b t d k ɡ ʔ f v s z ʃ ʒ ʁ ɢ h χ {t͡ʃ} {d͡ʒ} l ɾ ];
 
 # Vowels
 َیْ → æj;
@@ -14,9 +24,10 @@ $BOUNDARY = [^[:L:][:M:][:N:]];
 َا → ɒː;
 َ → æ;
 یه → jæ;
-ىٰ → ɒː;
+یٰ → ɒː;
 {ی} $VOWEL → j;
 ی → iː;
+
 $BOUNDARY {ای} → iː;
 ا\u0653 → ɒː;
 آ → ɒː;
@@ -55,5 +66,10 @@ $BOUNDARY {ای} → iː;
 
 ْ → ;
 
-::NFC;
+::NULL;
 
+# TODO: How to handle these?
+($IPA_CONSONANT) { ّ} → $1;
+[ ّ ٔ ً ٰ ] → ;
+
+::NFC;

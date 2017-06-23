@@ -41,6 +41,12 @@ WHITELISTED_SPECIAL_RULES = [
     "{ə} [[:L:]] → ə \\.;",
     "{a} [[:L:]] → a \\.;",
 
+    # fa-fa_FONIPA
+    "ي → ی;",
+    "ى → ی;",
+    "ك → ک;",
+    "ە → ه;",
+
     # ia-ia_FONIPA
     "{age} $end_of_word → ad͡ʒe;",
     "{agi} $vowel → ad͡ʒ;",
