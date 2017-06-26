@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE supplementalData SYSTEM "../../common/dtd/ldmlSupplemental.dtd">
+<!--
+Copyright © 1991-2017 Unicode, Inc.
+CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
+For terms of use, see http://www.unicode.org/copyright.html
+-->
+<supplementalData>
+	<version number="$Revision: 12137 $"/>
+	<transforms>
+		<transform source="InterIndic" target="Chakma" direction="forward" visibility="internal">
+			<tRule>
+\uE001→𑄀;      # SIGN CANDRABINDU
+\uE002→𑄁;      # SIGN ANUSVARA
+\uE003→𑄂;      # SIGN VISARGA
+\uE004→𑄃𑄧;    # FALLBACK TO LETTER A
+\uE005→𑄃𑄧;    # LETTER A
+\uE006→𑄃;      # LETTER AA
+\uE007→𑄃𑄨;    # LETTER I
+\uE008→𑄃𑄩;    # LETTER II
+\uE009→𑄃𑄪;    # LETTER U
+\uE00A→𑄃𑄫;    # LETTER UU
+\uE00B→𑄢𑄨;    # LETTER VOCALIC R
+\uE00C→𑄣𑄨;    # LETTER VOCALIC L
+\uE00D→𑄆;      # FALLBACK
+\uE00E→𑄆;      # FALLBACK
+\uE00F→𑄆;      # LETTER E
+\uE010→𑄃𑄰;    # LETTER AI
+\uE011→𑄃𑄮;    # FALLBACK
+\uE012→𑄃𑄮;    # FALLBACK
+\uE013→𑄃𑄮;    # LETTER O
+\uE014→𑄃𑄯;    # LETTER AU
+\uE015→𑄇𑄧;    # LETTER KA
+\uE016→𑄈𑄧;    # LETTER KHA
+\uE017→𑄉𑄧;    # LETTER GA
+\uE018→𑄊𑄧;    # LETTER GHA
+\uE019→𑄋𑄧;    # LETTER NGA
+\uE01A→𑄌𑄧;    # LETTER CA
+\uE01B→𑄍𑄧;    # LETTER CHA
+\uE01C→𑄎𑄧;    # LETTER JA
+\uE01D→𑄏𑄧;    # LETTER JHA
+\uE01E→𑄐𑄧;    # LETTER NYA
+\uE01F→𑄑𑄧;    # LETTER TTA
+\uE020→𑄒𑄧;    # LETTER TTHA
+\uE021→𑄓𑄧;    # LETTER DDA
+\uE022→𑄔𑄧;    # LETTER DDHA
+\uE023→𑄕𑄧;    # LETTER NNA
+\uE024→𑄖𑄧;    # LETTER TA
+\uE025→𑄗𑄧;    # LETTER THA
+\uE026→𑄘𑄧;    # LETTER DA
+\uE027→𑄙𑄧;    # LETTER DHA
+\uE028→𑄚𑄧;    # LETTER NA
+\uE029→𑄚𑄧𑄚𑄧;# LETTER NNNA
+\uE02A→𑄛𑄧;    # LETTER PA
+\uE02B→𑄜𑄧;    # LETTER PHA
+\uE02C→𑄝𑄧;    # LETTER BA
+\uE02D→𑄞𑄧;    # LETTER BHA
+\uE02E→𑄟𑄧;    # LETTER MA
+\uE02F→𑄡𑄧;    # LETTER YA
+\uE030→𑄢𑄧;    # LETTER RA
+\uE031→𑄢𑄧;    # FALLBACK to RA
+\uE032→𑄣𑄧;    # LETTER LA
+\uE033→𑄣𑄧;    # LETTER LLA
+\uE034→𑄣𑄧;    # LETTER LLLA
+\uE035→𑄝𑄧;    # LETTER VA
+\uE036→𑄥𑄧;    # LETTER SHA
+\uE037→𑄥𑄧;    # LETTER SSA
+\uE038→𑄥𑄧;    # LETTER SA
+\uE039→𑄦𑄧;    # LETTER HA
+\uE03C→;        # SIGN NUKTA
+\uE03D→;        # SIGN AVAGRAHA
+\uE03E→𑄳𑄃;    # VOWEL SIGN AA
+\uE03F→𑄨;      # VOWEL SIGN I
+\uE040→𑄩;      # VOWEL SIGN II
+\uE041→𑄪;      # VOWEL SIGN U
+\uE042→𑄫;      # VOWEL SIGN UU
+\uE043→𑄢𑄨;    # VOWEL SIGN VOCALIC R
+\uE044→𑄢𑄨;    # VOWEL SIGN VOCALIC RR
+\uE045→𑄬;      # VOWEL SIGN CANDRA E
+\uE046→𑄬;      # FALLBACK
+\uE047→𑄬;      # VOWEL SIGN E
+\uE048→𑄰;      # VOWEL SIGN AI
+\uE049→𑄮;      # VOWEL SIGN CANDRA O
+\uE04A→𑄮;      # FALLBACK
+\uE04B→𑄮;      # VOWEL SIGN O
+\uE04C→𑄯;      # VOWEL SIGN AU
+\uE04D→𑄳;      # SIGN VIRAMA
+\uE050→𑄃𑄮𑄁;  # OM
+\uE051→;
+\uE052→;
+\uE053→;
+\uE054→;
+\uE055→;        # LENGTH MARK  
+\uE056→𑄰;      # AI LENGTH MARK
+\uE057→𑄩;      # AU LENGTH MARK
+\uE058→𑄇𑄧;    # FALLBACK
+\uE059→𑄈𑄧;    # LETTER KHHA
+\uE05A→𑄊𑄧;    # LETTER GHHA
+\uE05B→𑄎𑄧;    # LETTER ZA
+\uE05C→𑄢𑄧;    # FALLBACK
+\uE05D→𑄢𑄧;    # LETTER RHA
+\uE05E→𑄜𑄧;    # LETTER FA
+\uE05F→𑄠;      # LETTER YYA
+\uE060→𑄢𑄨𑄢𑄨;# LETTER VOCALIC RR  
+\uE061→𑄣𑄨𑄣𑄨;# LETTER VOCALIC LL  
+\uE062→𑄣𑄨;    # VOWEL SIGN VOCALIC L
+\uE063→𑄣𑄨𑄣𑄨;# VOWEL SIGN VOCALIC LL
+\uE064→𑅁;    # DANDA
+\uE065→𑅂;    # DOUBLE DANDA
+\uE066→𑄶;    # DIGIT ZERO
+\uE067→𑄷;    # DIGIT ONE
+\uE068→𑄸;    # DIGIT TWO
+\uE069→𑄹;    # DIGIT THREE
+\uE06A→𑄺;    # DIGIT FOUR
+\uE06B→𑄻;    # DIGIT FIVE
+\uE06C→𑄼;    # DIGIT SIX
+\uE06D→𑄽;    # DIGIT SEVEN
+\uE06E→𑄾;    # DIGIT EIGHT
+\uE06F→𑄿;    # DIGIT NINE
+\uE070→;     # ABBREVIATION SIGN
+\uE071→𑄢𑄧;  # FALLBACK TO LETTER RA
+\uE072→𑄢𑄧;  # FALLBACK TO LETTER RA
+\uE073→;     # RUPEE MARK
+\uE074→;     # RUPEE SIGN
+\uE075→;     # CURRENCY NUMERATOR ONE
+\uE076→;     # CURRENCY NUMERATOR TWO
+\uE077→;     # CURRENCY NUMERATOR THREE
+\uE078→;     # CURRENCY NUMERATOR FOUR
+\uE079→;     # CURRENCY NUMERATOR ONE LESS THAN THE DENOMINATOR
+\uE07A→;     # CURRENCY DENOMINATOR SIXTEEN
+\uE07B→;     # ISSHAR 
+\uE07C→;     # TIPPI
+\uE07D→;     # ADDAK
+\uE07E→;     # IRI
+\uE07F→;     # URA
+\uE080→;     # EK ONKAR
+\uE081→𑄝𑄧; # ORIYA LETTER WA
+\uE082→;     # Devanagari Glottal Stop
+\uE083→𑄖𑄧; # Khanda-ta
+0 → 𑄶;      # FALLBACK FOR TAMIL
+1 → 𑄷;
+			</tRule>
+		</transform>
+	</transforms>
+</supplementalData>
