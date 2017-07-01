@@ -17,13 +17,17 @@ $IPA_CONSONANT = [ m n p b t d k ɡ ʔ f v s z ʃ ʒ ʁ ɢ h χ {t͡ʃ} {d͡ʒ} 
 # Vowels
 َیْ → æj;
 ِیْ → ej;
+
 َوْ → ow;
 ِی → iː;
+
 َه → æ;
-[^ːeoæ] {ه} $BOUNDARY → æ;
-َا → ɒː;
+[^ːeoæ] {ه} $BOUNDARY → e;
+[e] {ه} $BOUNDARY → ;
+اَ → æ;
 َ → æ;
-یه → jæ;
+یه → je;
+{هٔ} $BOUNDARY → jæ;
 یٰ → ɒː;
 {ی} $VOWEL → j;
 ی → iː;
@@ -31,11 +35,14 @@ $IPA_CONSONANT = [ m n p b t d k ɡ ʔ f v s z ʃ ʒ ʁ ɢ h χ {t͡ʃ} {d͡ʒ} 
 $BOUNDARY {ای} → iː;
 ا\u0653 → ɒː;
 آ → ɒː;
+اِ → e;
 ا → ɒː;
 ِ → e;
 هِ → e;
-ُو → uː;
+
 {و} $VOWEL → v;
+$IPA_CONSONANT {و} → uː;
+$VOWEL و → ow;
 و → o;
 ُ → o;
 
@@ -70,6 +77,7 @@ $BOUNDARY {ای} → iː;
 
 # TODO: How to handle these?
 ($IPA_CONSONANT) { ّ} → $1;
-[ ّ ٔ ً ٰ ] → ;
+
+[ ٔ ً ٰ ] → ;
 
 ::NFC;
