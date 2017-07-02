@@ -25,6 +25,7 @@ $IPA_CONSONANT = [ m n p b t d k ɡ ʔ f v s z ʃ ʒ ʁ ɢ h χ {t͡ʃ} {d͡ʒ} 
 [^ːeoæ] {ه} $BOUNDARY → e;
 [e] {ه} $BOUNDARY → ;
 اَ → æ;
+اً $BOUNDARY → æn;
 َ → æ;
 یه → je;
 {هٔ} $BOUNDARY → jæ;
