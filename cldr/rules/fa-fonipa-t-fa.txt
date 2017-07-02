@@ -37,6 +37,7 @@ $BOUNDARY {ای} → iː;
 ا\u0653 → ɒː;
 آ → ɒː;
 اِ → e;
+اُ → o;
 ا → ɒː;
 ِ → e;
 هِ → e;
@@ -45,6 +46,7 @@ $BOUNDARY {ای} → iː;
 $IPA_CONSONANT {و} → uː;
 $VOWEL و → ow;
 و → o;
+
 ُ → o;
 
 # Consonants
