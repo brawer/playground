@@ -6,19 +6,19 @@
 ى → ی;
 ك → ک;
 ە → ه;
-
 ::NULL;
 
 $VOWEL = [ َ ِ  ُ  ٓ ا و ی];
 $BOUNDARY = [^[:L:][:M:][:N:]];
-
 $IPA_CONSONANT = [ m n p b t d k ɡ ʔ f v s z ʃ ʒ ʁ ɢ h χ {t͡ʃ} {d͡ʒ} l ɾ ];
 
 # Vowels
+یّ → jj;
+($VOWEL)ّ → ّ | $1;
 َیْ → æj;
 ِیْ → ej;
 
-َوْ → ow;
+َوْ → ov;
 ِی → iː;
 
 َه → æ;
@@ -33,20 +33,20 @@ $IPA_CONSONANT = [ m n p b t d k ɡ ʔ f v s z ʃ ʒ ʁ ɢ h χ {t͡ʃ} {d͡ʒ} 
 {ی} $VOWEL → j;
 ی → iː;
 
+
 $BOUNDARY {ای} → iː;
 ا\u0653 → ɒː;
 آ → ɒː;
 اِ → e;
 اُ → o;
-ا → ɒː;
+ا → ɒː; # Probably [^$BOUNDARY]
 ِ → e;
 هِ → e;
 
 {و} $VOWEL → v;
 $IPA_CONSONANT {و} → uː;
-$VOWEL و → ow;
+$VOWEL و → ov;
 و → o;
-
 ُ → o;
 
 # Consonants
@@ -75,12 +75,11 @@ $VOWEL و → ow;
 ر → ɾ;
 
 ْ → ;
-
 ::NULL;
 
 # TODO: How to handle these?
-($IPA_CONSONANT) { ّ} → $1;
+([$IPA_CONSONANT|$VOWEL]){ّ} → $1;
 
-[ ٔ ً ٰ ] → ;
+[ ّ ٔ ً ٰ ] → ;
 
 ::NFC;
