@@ -33,20 +33,22 @@ $IPA_CONSONANT = [ m n p b t d k ɡ ʔ f v s z ʃ ʒ ʁ ɢ h χ {t͡ʃ} {d͡ʒ} 
 {ی} $VOWEL → j;
 ی → iː;
 
-
 $BOUNDARY {ای} → iː;
 ا\u0653 → ɒː;
 آ → ɒː;
 اِ → e;
 اُ → o;
+او → uː;
 ا → ɒː; # Probably [^$BOUNDARY]
 ِ → e;
 هِ → e;
 
 {و} $VOWEL → v;
 $IPA_CONSONANT {و} → uː;
-$VOWEL و → ov;
-و → o;
+ُ{و} $IPA_CONSONANT → uː;
+
+$BOUNDARY {و} $BOUNDARY → va;
+و → ;
 ُ → o;
 
 # Consonants
