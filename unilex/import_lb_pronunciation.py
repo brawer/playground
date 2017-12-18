@@ -89,7 +89,8 @@ if __name__ == '__main__':
         lex.append((graph, ipa(sampa)))
     lex.sort(cmp=compare_lb)
     print('\t'.join(['Form', 'Pronunciation']))
+    print()
     print('# SPDX-License-Identifier: Unicode-DFS-2016')
+    print()
     for graph, phon in lex:
         print('\t'.join((graph, phon)).encode('utf-8'))
-
