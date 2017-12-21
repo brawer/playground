@@ -1,0 +1,1260 @@
+<terms>
+	<!-- in common/main/ar.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">عادي</styleName>
+		<styleName type="ital" subtype="1">مائل</styleName>
+		<styleName type="ital" subtype="unknown">‏‏غير معروف</styleName>
+		<styleName type="slnt" subtype="0">عادي</styleName>
+		<styleName type="slnt" subtype="12">مائل</styleName>
+		<styleName type="slnt" subtype="unknown">‏‏غير معروف</styleName>
+		<styleName type="wdth" subtype="50">فائق الكثافة</styleName>
+		<styleName type="wdth" subtype="62.5">مكثف بشدة</styleName>
+		<styleName type="wdth" subtype="75">مكثف</styleName>
+		<styleName type="wdth" subtype="87.5">شبه مكثف</styleName>
+		<styleName type="wdth" subtype="100">عادي</styleName>
+		<styleName type="wdth" subtype="112.5">شبه موسع</styleName>
+		<styleName type="wdth" subtype="125">موسّع</styleName>
+		<styleName type="wdth" subtype="150">موسع بشدة</styleName>
+		<styleName type="wdth" subtype="200">فائق التوسيع</styleName>
+		<styleName type="wdth" subtype="unknown">‏‏غير معروف</styleName>
+		<styleName type="wght" subtype="100">رقيق</styleName>
+		<styleName type="wght" subtype="200">فاتح جدًا</styleName>
+		<styleName type="wght" subtype="300">فاتح</styleName>
+		<styleName type="wght" subtype="350">ضوء خفيف</styleName>
+		<styleName type="wght" subtype="400">عادي</styleName>
+		<styleName type="wght" subtype="500">متوسط</styleName>
+		<styleName type="wght" subtype="600">شبه غامق</styleName>
+		<styleName type="wght" subtype="700">غامق</styleName>
+		<styleName type="wght" subtype="800">غامق جداً</styleName>
+		<styleName type="wght" subtype="900">أسود</styleName>
+		<styleName type="wght" subtype="1000">شديد السواد</styleName>
+		<styleName type="wght" subtype="unknown">غير معروف</styleName>
+		<styleName type="wght" subtype="unspecified">غير محدد</styleName>
+	</typographicNames>
+
+	<!-- in common/main/bg.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">Нормално</styleName>
+		<styleName type="ital" subtype="1">Курсив</styleName>
+		<styleName type="ital" subtype="unknown">Няма информация</styleName>
+		<styleName type="slnt" subtype="0">Нормално</styleName>
+		<styleName type="slnt" subtype="12">Наклон</styleName>
+		<styleName type="slnt" subtype="unknown">Няма информация</styleName>
+		<styleName type="wdth" subtype="50">Свръх сгъстен</styleName>
+		<styleName type="wdth" subtype="62.5">Допълнително сгъстен</styleName>
+		<styleName type="wdth" subtype="75">Сгъстен</styleName>
+		<styleName type="wdth" subtype="87.5">Полусгъстен</styleName>
+		<styleName type="wdth" subtype="100">Нормален</styleName>
+		<styleName type="wdth" subtype="112.5">Полуразреден</styleName>
+		<styleName type="wdth" subtype="125">Разгънат</styleName>
+		<styleName type="wdth" subtype="150">Допълнително разреден</styleName>
+		<styleName type="wdth" subtype="200">Свръх разреден</styleName>
+		<styleName type="wdth" subtype="unknown">Няма информация</styleName>
+		<styleName type="wght" subtype="100">Тънко</styleName>
+		<styleName type="wght" subtype="200">Свръх лек</styleName>
+		<styleName type="wght" subtype="300">Лек</styleName>
+		<styleName type="wght" subtype="350">Блед</styleName>
+		<styleName type="wght" subtype="400">Обикновен</styleName>
+		<styleName type="wght" subtype="500">Среден</styleName>
+		<styleName type="wght" subtype="600">Плътен</styleName>
+		<styleName type="wght" subtype="700">Получер</styleName>
+		<styleName type="wght" subtype="800">Свръх получер</styleName>
+		<styleName type="wght" subtype="900">Черно</styleName>
+		<styleName type="wght" subtype="1000">Допълнително черно</styleName>
+		<styleName type="wght" subtype="unknown">Няма информация</styleName>
+		<styleName type="wght" subtype="unspecified">Неопределен</styleName>
+	</typographicNames>
+
+	<!-- in common/main/cs.xml -->
+	<typographicNames>
+		<axisName type="ital">Kurzíva</axisName>
+		<axisName type="opsz">Optická velikost</axisName>
+		<axisName type="slnt">Sklon</axisName>
+		<axisName type="wdth">Šířka</axisName>
+		<axisName type="wght">Tloušťka čáry</axisName>
+		<styleName type="ital" subtype="0">Normální</styleName>
+		<styleName type="ital" subtype="1">Kurzíva</styleName>
+		<styleName type="ital" subtype="unknown">Neznámý</styleName>
+		<styleName type="slnt" subtype="0">Normální</styleName>
+		<styleName type="slnt" subtype="12">Šikmé</styleName>
+		<styleName type="slnt" subtype="unknown">Neznámý</styleName>
+		<styleName type="wdth" subtype="50">Ultra zhuštěné</styleName>
+		<styleName type="wdth" subtype="62.5">Extra zhuštěné</styleName>
+		<styleName type="wdth" subtype="75">Zhuštěné</styleName>
+		<styleName type="wdth" subtype="87.5">Polozhuštěné</styleName>
+		<styleName type="wdth" subtype="100">Normální</styleName>
+		<styleName type="wdth" subtype="112.5">Poloroztažené</styleName>
+		<styleName type="wdth" subtype="125">Roztažené</styleName>
+		<styleName type="wdth" subtype="150">Extra roztažené</styleName>
+		<styleName type="wdth" subtype="200">Ultra roztažené</styleName>
+		<styleName type="wdth" subtype="unknown">Neznámé</styleName>
+		<styleName type="wght" subtype="100">Tenké</styleName>
+		<styleName type="wght" subtype="200">Velmi jemné</styleName>
+		<styleName type="wght" subtype="300">Jemné</styleName>
+		<styleName type="wght" subtype="350">Polojemné</styleName>
+		<styleName type="wght" subtype="400">Normální</styleName>
+		<styleName type="wght" subtype="500">Střední</styleName>
+		<styleName type="wght" subtype="600">Polotučné</styleName>
+		<styleName type="wght" subtype="700">Tučné</styleName>
+		<styleName type="wght" subtype="800">Velmi tučné</styleName>
+		<styleName type="wght" subtype="900">Černé</styleName>
+		<styleName type="wght" subtype="1000">Extra černé</styleName>
+		<styleName type="wght" subtype="unknown">Neznámé</styleName>
+		<styleName type="wght" subtype="unspecified">Neurčené</styleName>
+	</typographicNames>
+
+	<!-- in common/main/da.xml -->
+	<typographicNames>
+		<axisName type="ital">Kursiv</axisName>
+		<axisName type="opsz">Optisk størrelse</axisName>
+		<axisName type="slnt">Skråtstilling</axisName>
+		<axisName type="wdth">Bredde</axisName>
+		<axisName type="wght">Vægt</axisName>
+		<styleName type="ital" subtype="0">Normal</styleName>
+		<styleName type="ital" subtype="1">kursiv</styleName>
+		<styleName type="ital" subtype="unknown">Ukendt</styleName>
+		<styleName type="slnt" subtype="0">Normal</styleName>
+		<styleName type="slnt" subtype="12">Skrå</styleName>
+		<styleName type="slnt" subtype="unknown">Ukendt</styleName>
+		<styleName type="wdth" subtype="50">Ultrasmal</styleName>
+		<styleName type="wdth" subtype="62.5">Ekstra smal</styleName>
+		<styleName type="wdth" subtype="75">Smal</styleName>
+		<styleName type="wdth" subtype="87.5">Halvsmal</styleName>
+		<styleName type="wdth" subtype="100">Normal</styleName>
+		<styleName type="wdth" subtype="112.5">Halvbred</styleName>
+		<styleName type="wdth" subtype="125">Bred</styleName>
+		<styleName type="wdth" subtype="150">Ekstra bred</styleName>
+		<styleName type="wdth" subtype="200">Ultrabred</styleName>
+		<styleName type="wdth" subtype="unknown">Ukendt</styleName>
+		<styleName type="wght" subtype="100">Tynd</styleName>
+		<styleName type="wght" subtype="200">Ekstra lys</styleName>
+		<styleName type="wght" subtype="300">Lys</styleName>
+		<styleName type="wght" subtype="350">Halvlys</styleName>
+		<styleName type="wght" subtype="400">Almindelig</styleName>
+		<styleName type="wght" subtype="500">Mellem</styleName>
+		<styleName type="wght" subtype="600">Halvfed</styleName>
+		<styleName type="wght" subtype="700">Fed</styleName>
+		<styleName type="wght" subtype="800">Meget fed</styleName>
+		<styleName type="wght" subtype="900">Sort</styleName>
+		<styleName type="wght" subtype="1000">Ekstra sort</styleName>
+		<styleName type="wght" subtype="unknown">Ukendt</styleName>
+		<styleName type="wght" subtype="unspecified">Ikke angivet</styleName>
+	</typographicNames>
+
+	<!-- in common/main/de.xml -->
+	<typographicNames>
+		<axisName type="ital">Kursiv</axisName>
+		<axisName type="opsz">Optische Größe</axisName>
+		<axisName type="slnt">Schrägstellung</axisName>
+		<axisName type="wdth">Breite</axisName>
+		<axisName type="wght">Stärke</axisName>
+		<styleName type="ital" subtype="0">Standard</styleName>
+		<styleName type="ital" subtype="1">Kursiv</styleName>
+		<styleName type="ital" subtype="unknown">Unbekannt</styleName>
+		<styleName type="slnt" subtype="0">Standard</styleName>
+		<styleName type="slnt" subtype="12">Schräg</styleName>
+		<styleName type="slnt" subtype="unknown">Unbekannt</styleName>
+		<styleName type="wdth" subtype="50">Extrem Schmal</styleName>
+		<styleName type="wdth" subtype="62.5">Sehr Schmal</styleName>
+		<styleName type="wdth" subtype="75">Schmal</styleName>
+		<styleName type="wdth" subtype="87.5">Halb Schmal</styleName>
+		<styleName type="wdth" subtype="100">Standard</styleName>
+		<styleName type="wdth" subtype="112.5">Halb Breit</styleName>
+		<styleName type="wdth" subtype="125">Breit</styleName>
+		<styleName type="wdth" subtype="150">Sehr Breit</styleName>
+		<styleName type="wdth" subtype="200">Extrem Breit</styleName>
+		<styleName type="wdth" subtype="unknown">Unbekannt</styleName>
+		<styleName type="wght" subtype="100">Dünn</styleName>
+		<styleName type="wght" subtype="200">Sehr Fein</styleName>
+		<styleName type="wght" subtype="300">Fein</styleName>
+		<styleName type="wght" subtype="350">Halb Fein</styleName>
+		<styleName type="wght" subtype="400">Standard</styleName>
+		<styleName type="wght" subtype="500">Mittel</styleName>
+		<styleName type="wght" subtype="600">Halb Fett</styleName>
+		<styleName type="wght" subtype="700">Fett</styleName>
+		<styleName type="wght" subtype="800">Sehr Fett</styleName>
+		<styleName type="wght" subtype="900">Schwarz</styleName>
+		<styleName type="wght" subtype="1000">Sehr Schwarz</styleName>
+		<styleName type="wght" subtype="unknown">Unbekannt</styleName>
+		<styleName type="wght" subtype="unspecified">Nicht angegeben</styleName>
+	</typographicNames>
+
+	<!-- in common/main/el.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">Κανονική</styleName>
+		<styleName type="ital" subtype="1">Πλάγια γραφή</styleName>
+		<styleName type="ital" subtype="unknown">Άγνωστη</styleName>
+		<styleName type="slnt" subtype="0">Κανονική</styleName>
+		<styleName type="slnt" subtype="12">Λοξή</styleName>
+		<styleName type="slnt" subtype="unknown">Άγνωστη</styleName>
+		<styleName type="wdth" subtype="50">Εξαιρετικά συμπυκνωμένη</styleName>
+		<styleName type="wdth" subtype="62.5">Πολύ συμπυκνωμένη</styleName>
+		<styleName type="wdth" subtype="75">Συμπυκνωμένη</styleName>
+		<styleName type="wdth" subtype="87.5">Ημισυμπυκνωμένη</styleName>
+		<styleName type="wdth" subtype="100">Κανονική</styleName>
+		<styleName type="wdth" subtype="112.5">Ημιεκτεταμένη</styleName>
+		<styleName type="wdth" subtype="125">Εκτεταμένη</styleName>
+		<styleName type="wdth" subtype="150">Πολύ εκτεταμένη</styleName>
+		<styleName type="wdth" subtype="200">Εξαιρετικά εκτεταμένη</styleName>
+		<styleName type="wdth" subtype="unknown">Άγνωστη</styleName>
+		<styleName type="wght" subtype="100">Λεπτή</styleName>
+		<styleName type="wght" subtype="200">Πολύ αχνή</styleName>
+		<styleName type="wght" subtype="300">Αχνή</styleName>
+		<styleName type="wght" subtype="350">Ημιφωτεινό</styleName>
+		<styleName type="wght" subtype="400">Κανονική</styleName>
+		<styleName type="wght" subtype="500">Μέτρια</styleName>
+		<styleName type="wght" subtype="600">Ημιέντονη</styleName>
+		<styleName type="wght" subtype="700">Έντονη γραφή</styleName>
+		<styleName type="wght" subtype="800">Πολύ έντονη</styleName>
+		<styleName type="wght" subtype="900">Μαύρη</styleName>
+		<styleName type="wght" subtype="1000">Πολύ μαύρη</styleName>
+		<styleName type="wght" subtype="unknown">Άγνωστο</styleName>
+		<styleName type="wght" subtype="unspecified">Δεν έχει οριστεί</styleName>
+	</typographicNames>
+
+	<!-- in common/main/en.xml -->
+	<typographicNames>
+		<axisName type="ital">Italic</axisName>
+		<axisName type="opsz">Optical size</axisName>
+		<axisName type="slnt">Slant</axisName>
+		<axisName type="wdth">Width</axisName>
+		<axisName type="wght">Weight</axisName>
+		<styleName type="ital" subtype="0">Normal</styleName>
+		<styleName type="ital" subtype="1">Italic</styleName>
+		<styleName type="ital" subtype="unknown">Unknown</styleName>
+		<styleName type="slnt" subtype="0">Normal</styleName>
+		<styleName type="slnt" subtype="12">Oblique</styleName>
+		<styleName type="slnt" subtype="unknown">Unknown</styleName>
+		<styleName type="wdth" subtype="50">Ultra Condensed</styleName>
+		<styleName type="wdth" subtype="62.5">Extra Condensed</styleName>
+		<styleName type="wdth" subtype="75">Condensed</styleName>
+		<styleName type="wdth" subtype="87.5">Semi Condensed</styleName>
+		<styleName type="wdth" subtype="100">Normal</styleName>
+		<styleName type="wdth" subtype="112.5">Semi Expanded</styleName>
+		<styleName type="wdth" subtype="125">Expanded</styleName>
+		<styleName type="wdth" subtype="150">Extra Expanded</styleName>
+		<styleName type="wdth" subtype="200">Ultra Expanded</styleName>
+		<styleName type="wdth" subtype="unknown">Unknown</styleName>
+		<styleName type="wght" subtype="100">Thin</styleName>
+		<styleName type="wght" subtype="200">Extra Light</styleName>
+		<styleName type="wght" subtype="300">Light</styleName>
+		<styleName type="wght" subtype="350">Semi Light</styleName>
+		<styleName type="wght" subtype="400">Regular</styleName>
+		<styleName type="wght" subtype="500">Medium</styleName>
+		<styleName type="wght" subtype="600">Semi Bold</styleName>
+		<styleName type="wght" subtype="700">Bold</styleName>
+		<styleName type="wght" subtype="800">Extra Bold</styleName>
+		<styleName type="wght" subtype="900">Black</styleName>
+		<styleName type="wght" subtype="1000">Extra Black</styleName>
+		<styleName type="wght" subtype="unknown">Unknown</styleName>
+		<styleName type="wght" subtype="unspecified">Unspecified</styleName>
+	</typographicNames>
+
+	<!-- in common/main/en_GB.xml -->
+	<typographicNames>
+		<styleName type="wght" subtype="400">Standard</styleName>
+	</typographicNames>
+
+	<!-- in common/main/es.xml -->
+	<typographicNames>
+		<axisName type="ital">Cursiva</axisName>
+		<axisName type="opsz">Tamaño óptico</axisName>
+		<axisName type="slnt">Inclinación</axisName>
+		<axisName type="wdth">Anchura</axisName>
+		<axisName type="wght">Grosor</axisName>
+		<styleName type="ital" subtype="0">Normal</styleName>
+		<styleName type="ital" subtype="1">Cursiva</styleName>
+		<styleName type="ital" subtype="unknown">Desconocida</styleName>
+		<styleName type="slnt" subtype="0">Normal</styleName>
+		<styleName type="slnt" subtype="12">Oblicua</styleName>
+		<styleName type="slnt" subtype="unknown">Desconocida</styleName>
+		<styleName type="wdth" subtype="50">Ultracomprimida</styleName>
+		<styleName type="wdth" subtype="62.5">Extracomprimida</styleName>
+		<styleName type="wdth" subtype="75">Comprimida</styleName>
+		<styleName type="wdth" subtype="87.5">Semicomprimida</styleName>
+		<styleName type="wdth" subtype="100">Normal</styleName>
+		<styleName type="wdth" subtype="112.5">Semiexpandida</styleName>
+		<styleName type="wdth" subtype="125">Expandida</styleName>
+		<styleName type="wdth" subtype="150">Extraexpandida</styleName>
+		<styleName type="wdth" subtype="200">Ultraexpandida</styleName>
+		<styleName type="wdth" subtype="unknown">Desconocida</styleName>
+		<styleName type="wght" subtype="100">Fina</styleName>
+		<styleName type="wght" subtype="200">Extraclara</styleName>
+		<styleName type="wght" subtype="300">Clara</styleName>
+		<styleName type="wght" subtype="350">Semi liviana</styleName>
+		<styleName type="wght" subtype="400">Normal</styleName>
+		<styleName type="wght" subtype="500">Mediana</styleName>
+		<styleName type="wght" subtype="600">Seminegrita</styleName>
+		<styleName type="wght" subtype="700">Negrita</styleName>
+		<styleName type="wght" subtype="800">Extranegrita</styleName>
+		<styleName type="wght" subtype="900">Negra</styleName>
+		<styleName type="wght" subtype="1000">Extranegra</styleName>
+		<styleName type="wght" subtype="unknown">Desconocida</styleName>
+		<styleName type="wght" subtype="unspecified">No especificado</styleName>
+	</typographicNames>
+
+	<!-- in common/main/es_419.xml -->
+	<typographicNames>
+		<styleName type="wght" subtype="unspecified">No especificada</styleName>
+	</typographicNames>
+
+	<!-- in common/main/et.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">tavaline</styleName>
+		<styleName type="ital" subtype="1">kursiiv</styleName>
+		<styleName type="ital" subtype="unknown">Tundmatu</styleName>
+		<styleName type="slnt" subtype="0">tavaline</styleName>
+		<styleName type="slnt" subtype="12">kaldus</styleName>
+		<styleName type="slnt" subtype="unknown">Tundmatu</styleName>
+		<styleName type="wdth" subtype="50">Kõrgtihendatud</styleName>
+		<styleName type="wdth" subtype="62.5">Ülitihendatud</styleName>
+		<styleName type="wdth" subtype="75">Tihendatud</styleName>
+		<styleName type="wdth" subtype="87.5">Pooltihendatud</styleName>
+		<styleName type="wdth" subtype="100">Tavaline</styleName>
+		<styleName type="wdth" subtype="112.5">Poollaiendatud</styleName>
+		<styleName type="wdth" subtype="125">Laiendatud</styleName>
+		<styleName type="wdth" subtype="150">Ülilaiendatud</styleName>
+		<styleName type="wdth" subtype="200">Kõrglaiendatud</styleName>
+		<styleName type="wdth" subtype="unknown">Tundmatu</styleName>
+		<styleName type="wght" subtype="100">Õhuke</styleName>
+		<styleName type="wght" subtype="200">Ülihele</styleName>
+		<styleName type="wght" subtype="300">Hele</styleName>
+		<styleName type="wght" subtype="350">Poolpeen</styleName>
+		<styleName type="wght" subtype="400">harilik</styleName>
+		<styleName type="wght" subtype="500">Keskmine</styleName>
+		<styleName type="wght" subtype="600">Poolpaks</styleName>
+		<styleName type="wght" subtype="700">paks</styleName>
+		<styleName type="wght" subtype="800">Ülipaks</styleName>
+		<styleName type="wght" subtype="900">must</styleName>
+		<styleName type="wght" subtype="1000">Ülimust</styleName>
+		<styleName type="wght" subtype="unknown">Tundmatu</styleName>
+		<styleName type="wght" subtype="unspecified">Määramata</styleName>
+	</typographicNames>
+
+	<!-- in common/main/fi.xml -->
+	<typographicNames>
+		<axisName type="ital">Kursivoitu</axisName>
+		<axisName type="opsz">Optinen koko</axisName>
+		<axisName type="slnt">Kallistus</axisName>
+		<axisName type="wdth">Leveys</axisName>
+		<axisName type="wght">Paksuus</axisName>
+		<styleName type="ital" subtype="0">Normaali</styleName>
+		<styleName type="ital" subtype="1">Kursivoitu</styleName>
+		<styleName type="ital" subtype="unknown">Tuntematon</styleName>
+		<styleName type="slnt" subtype="0">Normaali</styleName>
+		<styleName type="slnt" subtype="12">Kallistettu</styleName>
+		<styleName type="slnt" subtype="unknown">Tuntematon</styleName>
+		<styleName type="wdth" subtype="50">Erittäin tiivistetty</styleName>
+		<styleName type="wdth" subtype="62.5">Erityistiivistetty</styleName>
+		<styleName type="wdth" subtype="75">Tiivistetty</styleName>
+		<styleName type="wdth" subtype="87.5">Puolitiivistetty</styleName>
+		<styleName type="wdth" subtype="100">Normaali</styleName>
+		<styleName type="wdth" subtype="112.5">Puolilaajennettu</styleName>
+		<styleName type="wdth" subtype="125">Laajennettu</styleName>
+		<styleName type="wdth" subtype="150">Erityislaajennettu</styleName>
+		<styleName type="wdth" subtype="200">Erittäin laajennettu</styleName>
+		<styleName type="wdth" subtype="unknown">Tuntematon</styleName>
+		<styleName type="wght" subtype="100">Ohut</styleName>
+		<styleName type="wght" subtype="200">Erityisohut</styleName>
+		<styleName type="wght" subtype="300">Kevyt</styleName>
+		<styleName type="wght" subtype="350">Melko kevyt</styleName>
+		<styleName type="wght" subtype="400">Tavallinen</styleName>
+		<styleName type="wght" subtype="500">Neljänneslihavoitu</styleName>
+		<styleName type="wght" subtype="600">Puolilihavoitu</styleName>
+		<styleName type="wght" subtype="700">Lihavoitu</styleName>
+		<styleName type="wght" subtype="800">Erityislihavoitu</styleName>
+		<styleName type="wght" subtype="900">Musta</styleName>
+		<styleName type="wght" subtype="1000">Erityismusta</styleName>
+		<styleName type="wght" subtype="unknown">Tuntematon</styleName>
+		<styleName type="wght" subtype="unspecified">Määrittämätön</styleName>
+	</typographicNames>
+
+	<!-- in common/main/fr.xml -->
+	<typographicNames>
+		<axisName type="ital">Italique</axisName>
+		<axisName type="opsz">Corps optique</axisName>
+		<axisName type="slnt">Inclinaison</axisName>
+		<axisName type="wdth">Largeur</axisName>
+		<axisName type="wght">Epaisseur</axisName>
+		<styleName type="ital" subtype="0">Normal</styleName>
+		<styleName type="ital" subtype="1">Italique</styleName>
+		<styleName type="ital" subtype="unknown">Inconnu</styleName>
+		<styleName type="slnt" subtype="0">Normal</styleName>
+		<styleName type="slnt" subtype="12">Oblique</styleName>
+		<styleName type="slnt" subtype="unknown">Inconnu</styleName>
+		<styleName type="wdth" subtype="50">Ultra-condensé</styleName>
+		<styleName type="wdth" subtype="62.5">Extra-condensé</styleName>
+		<styleName type="wdth" subtype="75">Condensé</styleName>
+		<styleName type="wdth" subtype="87.5">Semi-condensé</styleName>
+		<styleName type="wdth" subtype="100">Normal</styleName>
+		<styleName type="wdth" subtype="112.5">Semi-étendu</styleName>
+		<styleName type="wdth" subtype="125">Développé</styleName>
+		<styleName type="wdth" subtype="150">Extra-étendu</styleName>
+		<styleName type="wdth" subtype="200">Ultra-étendu</styleName>
+		<styleName type="wdth" subtype="unknown">Inconnu</styleName>
+		<styleName type="wght" subtype="100">Fin</styleName>
+		<styleName type="wght" subtype="200">Très fin</styleName>
+		<styleName type="wght" subtype="300">Léger</styleName>
+		<styleName type="wght" subtype="350">Semi Light</styleName>
+		<styleName type="wght" subtype="400">Normal</styleName>
+		<styleName type="wght" subtype="500">Moyen</styleName>
+		<styleName type="wght" subtype="600">Semi-gras</styleName>
+		<styleName type="wght" subtype="700">Gras</styleName>
+		<styleName type="wght" subtype="800">Extra-gras</styleName>
+		<styleName type="wght" subtype="900">Noir</styleName>
+		<styleName type="wght" subtype="1000">Extra-noir</styleName>
+		<styleName type="wght" subtype="unknown">Inconnu</styleName>
+		<styleName type="wght" subtype="unspecified">Non spécifié</styleName>
+	</typographicNames>
+
+	<!-- in common/main/fr_CA.xml -->
+	<typographicNames>
+		<styleName type="wght" subtype="350">Semi-fin</styleName>
+	</typographicNames>
+
+	<!-- in common/main/he.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">רגיל</styleName>
+		<styleName type="ital" subtype="1">נטוי</styleName>
+		<styleName type="ital" subtype="unknown">לא ידוע</styleName>
+		<styleName type="slnt" subtype="0">רגיל</styleName>
+		<styleName type="slnt" subtype="12">משופע</styleName>
+		<styleName type="slnt" subtype="unknown">לא ידוע</styleName>
+		<styleName type="wdth" subtype="50">דחוס ביותר</styleName>
+		<styleName type="wdth" subtype="62.5">דחוס מאוד</styleName>
+		<styleName type="wdth" subtype="75">דחוס</styleName>
+		<styleName type="wdth" subtype="87.5">דחוס למחצה</styleName>
+		<styleName type="wdth" subtype="100">רגיל</styleName>
+		<styleName type="wdth" subtype="112.5">מורחב למחצה</styleName>
+		<styleName type="wdth" subtype="125">מורחב</styleName>
+		<styleName type="wdth" subtype="150">מורחב מאוד</styleName>
+		<styleName type="wdth" subtype="200">מורחב ביותר</styleName>
+		<styleName type="wdth" subtype="unknown">לא ידוע</styleName>
+		<styleName type="wght" subtype="100">דק</styleName>
+		<styleName type="wght" subtype="200">קל מאד</styleName>
+		<styleName type="wght" subtype="300">קל</styleName>
+		<styleName type="wght" subtype="350">קל למחצה</styleName>
+		<styleName type="wght" subtype="400">רגיל</styleName>
+		<styleName type="wght" subtype="500">בינוני</styleName>
+		<styleName type="wght" subtype="600">מודגש למחצה</styleName>
+		<styleName type="wght" subtype="700">מודגש</styleName>
+		<styleName type="wght" subtype="800">מודגש מאד</styleName>
+		<styleName type="wght" subtype="900">שחור</styleName>
+		<styleName type="wght" subtype="1000">שחור מאוד</styleName>
+		<styleName type="wght" subtype="unknown">לא ידוע</styleName>
+		<styleName type="wght" subtype="unspecified">לא צוין</styleName>
+	</typographicNames>
+
+	<!-- in common/main/hr.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">Normalno</styleName>
+		<styleName type="ital" subtype="1">Kurziv</styleName>
+		<styleName type="ital" subtype="unknown">Nepoznato</styleName>
+		<styleName type="slnt" subtype="0">Normalno</styleName>
+		<styleName type="slnt" subtype="12">Nakošeno</styleName>
+		<styleName type="slnt" subtype="unknown">Nepoznato</styleName>
+		<styleName type="wdth" subtype="50">Jako zgusnuto</styleName>
+		<styleName type="wdth" subtype="62.5">Vrlo zgusnuto</styleName>
+		<styleName type="wdth" subtype="75">Zgusnuto</styleName>
+		<styleName type="wdth" subtype="87.5">Poluzgusnuto</styleName>
+		<styleName type="wdth" subtype="100">Normalno</styleName>
+		<styleName type="wdth" subtype="112.5">Poluprošireno</styleName>
+		<styleName type="wdth" subtype="125">Prošireno</styleName>
+		<styleName type="wdth" subtype="150">Vrlo prošireno</styleName>
+		<styleName type="wdth" subtype="200">Jako prošireno</styleName>
+		<styleName type="wdth" subtype="unknown">Nepoznato</styleName>
+		<styleName type="wght" subtype="100">Tanko</styleName>
+		<styleName type="wght" subtype="200">Vrlo svijetlo</styleName>
+		<styleName type="wght" subtype="300">Svijetlo</styleName>
+		<styleName type="wght" subtype="350">Polusvijetlo</styleName>
+		<styleName type="wght" subtype="400">Obično</styleName>
+		<styleName type="wght" subtype="500">Srednje</styleName>
+		<styleName type="wght" subtype="600">Polupodebljano</styleName>
+		<styleName type="wght" subtype="700">Podebljano</styleName>
+		<styleName type="wght" subtype="800">Ekstra podebljano</styleName>
+		<styleName type="wght" subtype="900">Crno</styleName>
+		<styleName type="wght" subtype="1000">Ekstra crno</styleName>
+		<styleName type="wght" subtype="unknown">Nepoznato</styleName>
+		<styleName type="wght" subtype="unspecified">Nije navedeno</styleName>
+	</typographicNames>
+
+	<!-- in common/main/hu.xml -->
+	<typographicNames>
+		<axisName type="ital">Dőlt</axisName>
+		<axisName type="opsz">Optikai méret</axisName>
+		<axisName type="slnt">Dőlés</axisName>
+		<axisName type="wdth">Szélesség</axisName>
+		<axisName type="wght">Súly</axisName>
+		<styleName type="ital" subtype="0">Normál</styleName>
+		<styleName type="ital" subtype="1">Dőlt</styleName>
+		<styleName type="ital" subtype="unknown">Ismeretlen</styleName>
+		<styleName type="slnt" subtype="0">Normál</styleName>
+		<styleName type="slnt" subtype="12">Hamis kurzív</styleName>
+		<styleName type="slnt" subtype="unknown">Ismeretlen</styleName>
+		<styleName type="wdth" subtype="50">Ultrasűrített</styleName>
+		<styleName type="wdth" subtype="62.5">Extrasűrített</styleName>
+		<styleName type="wdth" subtype="75">Sűrített</styleName>
+		<styleName type="wdth" subtype="87.5">Félsűrített</styleName>
+		<styleName type="wdth" subtype="100">Normál</styleName>
+		<styleName type="wdth" subtype="112.5">Félritkított</styleName>
+		<styleName type="wdth" subtype="125">Bővített</styleName>
+		<styleName type="wdth" subtype="150">Extraritkított</styleName>
+		<styleName type="wdth" subtype="200">Ultraritkított</styleName>
+		<styleName type="wdth" subtype="unknown">Ismeretlen</styleName>
+		<styleName type="wght" subtype="100">Vékony</styleName>
+		<styleName type="wght" subtype="200">Extravékonyított</styleName>
+		<styleName type="wght" subtype="300">Vékonyított</styleName>
+		<styleName type="wght" subtype="350">Enyhén vékonyított</styleName>
+		<styleName type="wght" subtype="400">Normál</styleName>
+		<styleName type="wght" subtype="500">Közepes</styleName>
+		<styleName type="wght" subtype="600">Kicsit kövér</styleName>
+		<styleName type="wght" subtype="700">Félkövér</styleName>
+		<styleName type="wght" subtype="800">Kövér</styleName>
+		<styleName type="wght" subtype="900">Fekete</styleName>
+		<styleName type="wght" subtype="1000">Extrafekete</styleName>
+		<styleName type="wght" subtype="unknown">Ismeretlen</styleName>
+		<styleName type="wght" subtype="unspecified">Meghatározatlan</styleName>
+	</typographicNames>
+
+	<!-- in common/main/it.xml -->
+	<typographicNames>
+		<axisName type="ital">Corsivo</axisName>
+		<axisName type="opsz">Dimensione ottica</axisName>
+		<axisName type="slnt">Inclinazione</axisName>
+		<axisName type="wdth">Larghezza</axisName>
+		<axisName type="wght">Spessore</axisName>
+		<styleName type="ital" subtype="0">Normale</styleName>
+		<styleName type="ital" subtype="1">Corsivo</styleName>
+		<styleName type="ital" subtype="unknown">Sconosciuto</styleName>
+		<styleName type="slnt" subtype="0">Normale</styleName>
+		<styleName type="slnt" subtype="12">Obliquo</styleName>
+		<styleName type="slnt" subtype="unknown">Sconosciuto</styleName>
+		<styleName type="wdth" subtype="50">Ultraridotta</styleName>
+		<styleName type="wdth" subtype="62.5">Molto ridotta</styleName>
+		<styleName type="wdth" subtype="75">Ridotta</styleName>
+		<styleName type="wdth" subtype="87.5">Semiridotta</styleName>
+		<styleName type="wdth" subtype="100">Normale</styleName>
+		<styleName type="wdth" subtype="112.5">Semiespansa</styleName>
+		<styleName type="wdth" subtype="125">Espansa</styleName>
+		<styleName type="wdth" subtype="150">Molto espansa</styleName>
+		<styleName type="wdth" subtype="200">Ultraespansa</styleName>
+		<styleName type="wdth" subtype="unknown">Sconosciuto</styleName>
+		<styleName type="wght" subtype="100">Sottile</styleName>
+		<styleName type="wght" subtype="200">Chiarissimo</styleName>
+		<styleName type="wght" subtype="300">Leggero</styleName>
+		<styleName type="wght" subtype="350">Semichiaro</styleName>
+		<styleName type="wght" subtype="400">Normale</styleName>
+		<styleName type="wght" subtype="500">Medio</styleName>
+		<styleName type="wght" subtype="600">Semigrassetto</styleName>
+		<styleName type="wght" subtype="700">Grassetto</styleName>
+		<styleName type="wght" subtype="800">Grassetto accentuato</styleName>
+		<styleName type="wght" subtype="900">Nero</styleName>
+		<styleName type="wght" subtype="1000">Nero accentuato</styleName>
+		<styleName type="wght" subtype="unknown">Sconosciuto</styleName>
+		<styleName type="wght" subtype="unspecified">Non specificato</styleName>
+	</typographicNames>
+
+	<!-- in common/main/ja.xml -->
+	<typographicNames>
+		<axisName type="ital">イタリック</axisName>
+		<axisName type="opsz">オプティカルサイズ</axisName>
+		<axisName type="slnt">傾斜角</axisName>
+		<axisName type="wdth">字幅</axisName>
+		<axisName type="wght">太さ</axisName>
+		<styleName type="ital" subtype="0">標準</styleName>
+		<styleName type="ital" subtype="1">斜体</styleName>
+		<styleName type="ital" subtype="unknown">不明</styleName>
+		<styleName type="slnt" subtype="0">標準</styleName>
+		<styleName type="slnt" subtype="12">斜体</styleName>
+		<styleName type="slnt" subtype="unknown">不明</styleName>
+		<styleName type="wdth" subtype="50">極めて狭い</styleName>
+		<styleName type="wdth" subtype="62.5">より狭い</styleName>
+		<styleName type="wdth" subtype="75">狭い</styleName>
+		<styleName type="wdth" subtype="87.5">やや狭い</styleName>
+		<styleName type="wdth" subtype="100">標準</styleName>
+		<styleName type="wdth" subtype="112.5">やや広い</styleName>
+		<styleName type="wdth" subtype="125">広い</styleName>
+		<styleName type="wdth" subtype="150">より広い</styleName>
+		<styleName type="wdth" subtype="200">極めて広い</styleName>
+		<styleName type="wdth" subtype="unknown">不明</styleName>
+		<styleName type="wght" subtype="100">極細</styleName>
+		<styleName type="wght" subtype="200">特細</styleName>
+		<styleName type="wght" subtype="300">細字</styleName>
+		<styleName type="wght" subtype="350">中細</styleName>
+		<styleName type="wght" subtype="400">標準</styleName>
+		<styleName type="wght" subtype="500">中</styleName>
+		<styleName type="wght" subtype="600">中太</styleName>
+		<styleName type="wght" subtype="700">太字</styleName>
+		<styleName type="wght" subtype="800">特太</styleName>
+		<styleName type="wght" subtype="900">極太</styleName>
+		<styleName type="wght" subtype="1000">極々太</styleName>
+		<styleName type="wght" subtype="unknown">不明</styleName>
+		<styleName type="wght" subtype="unspecified">指定なし</styleName>
+	</typographicNames>
+
+	<!-- in common/main/ko.xml -->
+	<typographicNames>
+		<axisName type="ital">기울임꼴</axisName>
+		<axisName type="opsz">시각적 크기</axisName>
+		<axisName type="slnt">기울기</axisName>
+		<axisName type="wdth">폭</axisName>
+		<axisName type="wght">두께</axisName>
+		<styleName type="ital" subtype="0">보통</styleName>
+		<styleName type="ital" subtype="1">기울임꼴</styleName>
+		<styleName type="ital" subtype="unknown">알 수 없음</styleName>
+		<styleName type="slnt" subtype="0">보통</styleName>
+		<styleName type="slnt" subtype="12">기울임꼴</styleName>
+		<styleName type="slnt" subtype="unknown">알 수 없음</styleName>
+		<styleName type="wdth" subtype="50">아주 많이 좁게</styleName>
+		<styleName type="wdth" subtype="62.5">아주 좁게</styleName>
+		<styleName type="wdth" subtype="75">좁게</styleName>
+		<styleName type="wdth" subtype="87.5">약간 좁게</styleName>
+		<styleName type="wdth" subtype="100">보통</styleName>
+		<styleName type="wdth" subtype="112.5">약간 넓게</styleName>
+		<styleName type="wdth" subtype="125">확장됨</styleName>
+		<styleName type="wdth" subtype="150">아주 넓게</styleName>
+		<styleName type="wdth" subtype="200">아주 많이 넓게</styleName>
+		<styleName type="wdth" subtype="unknown">알 수 없음</styleName>
+		<styleName type="wght" subtype="100">가늘게</styleName>
+		<styleName type="wght" subtype="200">아주 가늘게</styleName>
+		<styleName type="wght" subtype="300">가늘게</styleName>
+		<styleName type="wght" subtype="350">약간 가늘게</styleName>
+		<styleName type="wght" subtype="400">보통</styleName>
+		<styleName type="wght" subtype="500">중간</styleName>
+		<styleName type="wght" subtype="600">약간 굵게</styleName>
+		<styleName type="wght" subtype="700">굵게</styleName>
+		<styleName type="wght" subtype="800">아주 굵게</styleName>
+		<styleName type="wght" subtype="900">검정</styleName>
+		<styleName type="wght" subtype="1000">진한 검정</styleName>
+		<styleName type="wght" subtype="unknown">알 수 없음</styleName>
+		<styleName type="wght" subtype="unspecified">지정되지 않음</styleName>
+	</typographicNames>
+
+	<!-- in common/main/lt.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">Įprastinis</styleName>
+		<styleName type="ital" subtype="1">Pasvirasis</styleName>
+		<styleName type="ital" subtype="unknown">Nežinomas</styleName>
+		<styleName type="slnt" subtype="0">Įprastinis</styleName>
+		<styleName type="slnt" subtype="12">Pasvirasis</styleName>
+		<styleName type="slnt" subtype="unknown">Nežinomas</styleName>
+		<styleName type="wdth" subtype="50">Ypač sutrauktas</styleName>
+		<styleName type="wdth" subtype="62.5">Labai sutrauktas</styleName>
+		<styleName type="wdth" subtype="75">Sutrauktas</styleName>
+		<styleName type="wdth" subtype="87.5">Pusiau sutrauktas</styleName>
+		<styleName type="wdth" subtype="100">Įprastinis</styleName>
+		<styleName type="wdth" subtype="112.5">Pusiau išplėstas</styleName>
+		<styleName type="wdth" subtype="125">Išplėstas</styleName>
+		<styleName type="wdth" subtype="150">Labai išplėstas</styleName>
+		<styleName type="wdth" subtype="200">Ypač išplėstas</styleName>
+		<styleName type="wdth" subtype="unknown">Nežinomas</styleName>
+		<styleName type="wght" subtype="100">Plonas</styleName>
+		<styleName type="wght" subtype="200">Labai neryškus</styleName>
+		<styleName type="wght" subtype="300">Neryškus</styleName>
+		<styleName type="wght" subtype="350">Pusiau neryškus</styleName>
+		<styleName type="wght" subtype="400">paprastasis</styleName>
+		<styleName type="wght" subtype="500">Vidutinis</styleName>
+		<styleName type="wght" subtype="600">Pusiau paryškintas</styleName>
+		<styleName type="wght" subtype="700">paryškintasis</styleName>
+		<styleName type="wght" subtype="800">Labai paryškintas</styleName>
+		<styleName type="wght" subtype="900">Juoda</styleName>
+		<styleName type="wght" subtype="1000">Labai juodas</styleName>
+		<styleName type="wght" subtype="unknown">Nežinomas</styleName>
+		<styleName type="wght" subtype="unspecified">Nenurodyta</styleName>
+	</typographicNames>
+
+	<!-- in common/main/lv.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">Parasts</styleName>
+		<styleName type="ital" subtype="1">Italic</styleName>
+		<styleName type="ital" subtype="unknown">Nezināms</styleName>
+		<styleName type="slnt" subtype="0">Parasts</styleName>
+		<styleName type="slnt" subtype="12">Slīps</styleName>
+		<styleName type="slnt" subtype="unknown">Nezināms</styleName>
+		<styleName type="wdth" subtype="50">Ļoti saspiests</styleName>
+		<styleName type="wdth" subtype="62.5">Īpaši sablīvēts</styleName>
+		<styleName type="wdth" subtype="75">Sablīvēts</styleName>
+		<styleName type="wdth" subtype="87.5">Daļēji sablīvēts</styleName>
+		<styleName type="wdth" subtype="100">Parasts</styleName>
+		<styleName type="wdth" subtype="112.5">Daļēji izstiepts</styleName>
+		<styleName type="wdth" subtype="125">Izstiepts</styleName>
+		<styleName type="wdth" subtype="150">Īpaši izstiepts</styleName>
+		<styleName type="wdth" subtype="200">Ļoti izkliedēts</styleName>
+		<styleName type="wdth" subtype="unknown">Nezināms</styleName>
+		<styleName type="wght" subtype="100">Šaurs</styleName>
+		<styleName type="wght" subtype="200">Īpaši gaišs</styleName>
+		<styleName type="wght" subtype="300">Gaišs</styleName>
+		<styleName type="wght" subtype="350">Daļēji gaišs</styleName>
+		<styleName type="wght" subtype="400">Regular</styleName>
+		<styleName type="wght" subtype="500">Vidējs</styleName>
+		<styleName type="wght" subtype="600">Daļējs treknraksts</styleName>
+		<styleName type="wght" subtype="700">Bold</styleName>
+		<styleName type="wght" subtype="800">Īpašs treknraksts</styleName>
+		<styleName type="wght" subtype="900">Melns</styleName>
+		<styleName type="wght" subtype="1000">Īpaši melns</styleName>
+		<styleName type="wght" subtype="unknown">Nezināms</styleName>
+		<styleName type="wght" subtype="unspecified">Nenorādīts</styleName>
+	</typographicNames>
+
+	<!-- in common/main/nb.xml -->
+	<typographicNames>
+		<axisName type="ital">Kursiv</axisName>
+		<axisName type="opsz">Optisk størrelse</axisName>
+		<axisName type="slnt">Helling</axisName>
+		<axisName type="wdth">Bredde</axisName>
+		<axisName type="wght">Tykkelse</axisName>
+		<styleName type="ital" subtype="0">Normal</styleName>
+		<styleName type="ital" subtype="1">Kursiv</styleName>
+		<styleName type="ital" subtype="unknown">Ukjent</styleName>
+		<styleName type="slnt" subtype="0">Normal</styleName>
+		<styleName type="slnt" subtype="12">Skrå</styleName>
+		<styleName type="slnt" subtype="unknown">Ukjent</styleName>
+		<styleName type="wdth" subtype="50">Svært knepet</styleName>
+		<styleName type="wdth" subtype="62.5">Ekstra knepet</styleName>
+		<styleName type="wdth" subtype="75">Knepet</styleName>
+		<styleName type="wdth" subtype="87.5">Delvis knepet</styleName>
+		<styleName type="wdth" subtype="100">Normal</styleName>
+		<styleName type="wdth" subtype="112.5">Delvis utvidet</styleName>
+		<styleName type="wdth" subtype="125">Utvidet</styleName>
+		<styleName type="wdth" subtype="150">Ekstra utvidet</styleName>
+		<styleName type="wdth" subtype="200">Svært utvidet</styleName>
+		<styleName type="wdth" subtype="unknown">Ukjent</styleName>
+		<styleName type="wght" subtype="100">Tynn</styleName>
+		<styleName type="wght" subtype="200">Ekstra smal</styleName>
+		<styleName type="wght" subtype="300">Smal</styleName>
+		<styleName type="wght" subtype="350">Halvtynn</styleName>
+		<styleName type="wght" subtype="400">Vanlig</styleName>
+		<styleName type="wght" subtype="500">Middels</styleName>
+		<styleName type="wght" subtype="600">Halvfet</styleName>
+		<styleName type="wght" subtype="700">Fet</styleName>
+		<styleName type="wght" subtype="800">Ekstra fet</styleName>
+		<styleName type="wght" subtype="900">Svart</styleName>
+		<styleName type="wght" subtype="1000">Ekstra svart</styleName>
+		<styleName type="wght" subtype="unknown">Ukjent</styleName>
+		<styleName type="wght" subtype="unspecified">Uspesifisert</styleName>
+	</typographicNames>
+
+	<!-- in common/main/nl.xml -->
+	<typographicNames>
+		<axisName type="ital">Cursief</axisName>
+		<axisName type="opsz">Optisch formaat</axisName>
+		<axisName type="slnt">Schuin</axisName>
+		<axisName type="wdth">Breedte</axisName>
+		<axisName type="wght">Dikte</axisName>
+		<styleName type="ital" subtype="0">Normaal</styleName>
+		<styleName type="ital" subtype="1">Cursief</styleName>
+		<styleName type="ital" subtype="unknown">Onbekend</styleName>
+		<styleName type="slnt" subtype="0">Normaal</styleName>
+		<styleName type="slnt" subtype="12">Schuin</styleName>
+		<styleName type="slnt" subtype="unknown">Onbekend</styleName>
+		<styleName type="wdth" subtype="50">Extreem smal</styleName>
+		<styleName type="wdth" subtype="62.5">Extra smal</styleName>
+		<styleName type="wdth" subtype="75">Smal</styleName>
+		<styleName type="wdth" subtype="87.5">Halfsmal</styleName>
+		<styleName type="wdth" subtype="100">Normaal</styleName>
+		<styleName type="wdth" subtype="112.5">Halfbreed</styleName>
+		<styleName type="wdth" subtype="125">Breed</styleName>
+		<styleName type="wdth" subtype="150">Extra breed</styleName>
+		<styleName type="wdth" subtype="200">Extreem breed</styleName>
+		<styleName type="wdth" subtype="unknown">Onbekend</styleName>
+		<styleName type="wght" subtype="100">Dun</styleName>
+		<styleName type="wght" subtype="200">Extra licht</styleName>
+		<styleName type="wght" subtype="300">Licht</styleName>
+		<styleName type="wght" subtype="350">Halflicht</styleName>
+		<styleName type="wght" subtype="400">Standaard</styleName>
+		<styleName type="wght" subtype="500">Gemiddeld</styleName>
+		<styleName type="wght" subtype="600">Halfvet</styleName>
+		<styleName type="wght" subtype="700">Vet</styleName>
+		<styleName type="wght" subtype="800">Extra vet</styleName>
+		<styleName type="wght" subtype="900">Zwart</styleName>
+		<styleName type="wght" subtype="1000">Extra zwart</styleName>
+		<styleName type="wght" subtype="unknown">Onbekend</styleName>
+		<styleName type="wght" subtype="unspecified">Niet aangegeven</styleName>
+	</typographicNames>
+
+	<!-- in common/main/pl.xml -->
+	<typographicNames>
+		<axisName type="ital">Kursywa</axisName>
+		<axisName type="opsz">Rozmiar optyczny</axisName>
+		<axisName type="slnt">Pochylenie</axisName>
+		<axisName type="wdth">Szerokość</axisName>
+		<axisName type="wght">Grubość</axisName>
+		<styleName type="ital" subtype="0">Standardowa</styleName>
+		<styleName type="ital" subtype="1">kursywa</styleName>
+		<styleName type="ital" subtype="unknown">Nieznany</styleName>
+		<styleName type="slnt" subtype="0">Standardowa</styleName>
+		<styleName type="slnt" subtype="12">Pochyła</styleName>
+		<styleName type="slnt" subtype="unknown">Nieznany</styleName>
+		<styleName type="wdth" subtype="50">Ultrawąska</styleName>
+		<styleName type="wdth" subtype="62.5">Bardzo wąska</styleName>
+		<styleName type="wdth" subtype="75">Wąska</styleName>
+		<styleName type="wdth" subtype="87.5">Półwąska</styleName>
+		<styleName type="wdth" subtype="100">Normalna</styleName>
+		<styleName type="wdth" subtype="112.5">Półszeroka</styleName>
+		<styleName type="wdth" subtype="125">Szeroka</styleName>
+		<styleName type="wdth" subtype="150">Bardzo szeroka</styleName>
+		<styleName type="wdth" subtype="200">Ultraszeroka</styleName>
+		<styleName type="wdth" subtype="unknown">Nieznany</styleName>
+		<styleName type="wght" subtype="100">Cienka</styleName>
+		<styleName type="wght" subtype="200">Bardzo lekka</styleName>
+		<styleName type="wght" subtype="300">Lekka</styleName>
+		<styleName type="wght" subtype="350">Półlekka</styleName>
+		<styleName type="wght" subtype="400">zwykła</styleName>
+		<styleName type="wght" subtype="500">Średnia</styleName>
+		<styleName type="wght" subtype="600">Półgruba</styleName>
+		<styleName type="wght" subtype="700">pogrubiona</styleName>
+		<styleName type="wght" subtype="800">Bardzo gruba</styleName>
+		<styleName type="wght" subtype="900">Ciemna</styleName>
+		<styleName type="wght" subtype="1000">Bardzo ciemna</styleName>
+		<styleName type="wght" subtype="unknown">Nieznany</styleName>
+		<styleName type="wght" subtype="unspecified">Nieokreślona</styleName>
+	</typographicNames>
+
+	<!-- in common/main/pt.xml -->
+	<typographicNames>
+		<axisName type="ital">Itálico</axisName>
+		<axisName type="opsz">Tamanho óptico</axisName>
+		<axisName type="slnt">Inclinação</axisName>
+		<axisName type="wdth">Largura</axisName>
+		<axisName type="wght">Peso</axisName>
+		<styleName type="ital" subtype="0">Normal</styleName>
+		<styleName type="ital" subtype="1">Itálico</styleName>
+		<styleName type="ital" subtype="unknown">Desconhecida</styleName>
+		<styleName type="slnt" subtype="0">Normal</styleName>
+		<styleName type="slnt" subtype="12">Oblíquo</styleName>
+		<styleName type="slnt" subtype="unknown">Desconhecida</styleName>
+		<styleName type="wdth" subtype="50">Ultracondensado</styleName>
+		<styleName type="wdth" subtype="62.5">Extracondensado</styleName>
+		<styleName type="wdth" subtype="75">Condensado</styleName>
+		<styleName type="wdth" subtype="87.5">Semicondensado</styleName>
+		<styleName type="wdth" subtype="100">Normal</styleName>
+		<styleName type="wdth" subtype="112.5">Semiexpandido</styleName>
+		<styleName type="wdth" subtype="125">Expandido</styleName>
+		<styleName type="wdth" subtype="150">Extraexpandido</styleName>
+		<styleName type="wdth" subtype="200">Ultraexpandido</styleName>
+		<styleName type="wdth" subtype="unknown">Desconhecido</styleName>
+		<styleName type="wght" subtype="100">Fina</styleName>
+		<styleName type="wght" subtype="200">Extraleve</styleName>
+		<styleName type="wght" subtype="300">Leve</styleName>
+		<styleName type="wght" subtype="350">Semi-leve</styleName>
+		<styleName type="wght" subtype="400">Regular</styleName>
+		<styleName type="wght" subtype="500">Médio</styleName>
+		<styleName type="wght" subtype="600">Seminegrito</styleName>
+		<styleName type="wght" subtype="700">Negrito</styleName>
+		<styleName type="wght" subtype="800">Extranegrito</styleName>
+		<styleName type="wght" subtype="900">Preto</styleName>
+		<styleName type="wght" subtype="1000">Extrapreto</styleName>
+		<styleName type="wght" subtype="unknown">Desconhecido</styleName>
+		<styleName type="wght" subtype="unspecified">Não especificada</styleName>
+	</typographicNames>
+
+	<!-- in common/main/pt_PT.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="unknown">Desconhecido</styleName>
+		<styleName type="slnt" subtype="unknown">Desconhecido</styleName>
+		<styleName type="wdth" subtype="50">Ultra Condensado</styleName>
+		<styleName type="wdth" subtype="62.5">Extra Condensado</styleName>
+		<styleName type="wdth" subtype="87.5">Semi Condensado</styleName>
+		<styleName type="wdth" subtype="112.5">Semi Expandido</styleName>
+		<styleName type="wdth" subtype="150">Extra Expandido</styleName>
+		<styleName type="wdth" subtype="200">Ultra Expandido</styleName>
+		<styleName type="wght" subtype="100">Fino</styleName>
+		<styleName type="wght" subtype="200">Extra Claro</styleName>
+		<styleName type="wght" subtype="300">Claro</styleName>
+		<styleName type="wght" subtype="350">Semi Claro</styleName>
+		<styleName type="wght" subtype="400">Normal</styleName>
+		<styleName type="wght" subtype="600">Semi Negrito</styleName>
+		<styleName type="wght" subtype="800">Extra Negrito</styleName>
+		<styleName type="wght" subtype="1000">Extra Preto</styleName>
+		<styleName type="wght" subtype="unspecified">Não especificado</styleName>
+	</typographicNames>
+
+	<!-- in common/main/ro.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">Normal</styleName>
+		<styleName type="ital" subtype="1">Cursiv</styleName>
+		<styleName type="ital" subtype="unknown">Necunoscut</styleName>
+		<styleName type="slnt" subtype="0">Normal</styleName>
+		<styleName type="slnt" subtype="12">Oblic</styleName>
+		<styleName type="slnt" subtype="unknown">Necunoscut</styleName>
+		<styleName type="wdth" subtype="50">Foarte condensat</styleName>
+		<styleName type="wdth" subtype="62.5">Extra condensat</styleName>
+		<styleName type="wdth" subtype="75">Condensat</styleName>
+		<styleName type="wdth" subtype="87.5">Semi-condensat</styleName>
+		<styleName type="wdth" subtype="100">Normal</styleName>
+		<styleName type="wdth" subtype="112.5">Semi-extins</styleName>
+		<styleName type="wdth" subtype="125">Extins</styleName>
+		<styleName type="wdth" subtype="150">Extra extins</styleName>
+		<styleName type="wdth" subtype="200">Foarte extins</styleName>
+		<styleName type="wdth" subtype="unknown">Necunoscut</styleName>
+		<styleName type="wght" subtype="100">Subțire</styleName>
+		<styleName type="wght" subtype="200">Extra ușor</styleName>
+		<styleName type="wght" subtype="300">Ușor</styleName>
+		<styleName type="wght" subtype="350">Semi Light</styleName>
+		<styleName type="wght" subtype="400">Obișnuit</styleName>
+		<styleName type="wght" subtype="500">Mediu</styleName>
+		<styleName type="wght" subtype="600">Semi-aldin</styleName>
+		<styleName type="wght" subtype="700">Aldin</styleName>
+		<styleName type="wght" subtype="800">Extra aldin</styleName>
+		<styleName type="wght" subtype="900">Negru</styleName>
+		<styleName type="wght" subtype="1000">Extra negru</styleName>
+		<styleName type="wght" subtype="unknown">Necunoscut</styleName>
+		<styleName type="wght" subtype="unspecified">Nespecificat</styleName>
+	</typographicNames>
+
+	<!-- in common/main/ru.xml -->
+	<typographicNames>
+		<axisName type="ital">Курсив</axisName>
+		<axisName type="opsz">Оптический размер</axisName>
+		<axisName type="slnt">Наклон</axisName>
+		<axisName type="wdth">Ширина</axisName>
+		<axisName type="wght">Толщина</axisName>
+		<styleName type="ital" subtype="0">обычный</styleName>
+		<styleName type="ital" subtype="1">курсив</styleName>
+		<styleName type="ital" subtype="unknown">Неизвестно</styleName>
+		<styleName type="slnt" subtype="0">обычный</styleName>
+		<styleName type="slnt" subtype="12">наклонный</styleName>
+		<styleName type="slnt" subtype="unknown">Неизвестно</styleName>
+		<styleName type="wdth" subtype="50">ультрауплотненный</styleName>
+		<styleName type="wdth" subtype="62.5">сверхуплотненный</styleName>
+		<styleName type="wdth" subtype="75">уплотненный</styleName>
+		<styleName type="wdth" subtype="87.5">полууплотненный</styleName>
+		<styleName type="wdth" subtype="100">обычный</styleName>
+		<styleName type="wdth" subtype="112.5">полуразреженный</styleName>
+		<styleName type="wdth" subtype="125">разреженный</styleName>
+		<styleName type="wdth" subtype="150">сверхразреженный</styleName>
+		<styleName type="wdth" subtype="200">ультраразреженный</styleName>
+		<styleName type="wdth" subtype="unknown">Неизвестно</styleName>
+		<styleName type="wght" subtype="100">сверхтонкий</styleName>
+		<styleName type="wght" subtype="200">очень тонкий</styleName>
+		<styleName type="wght" subtype="300">тонкий</styleName>
+		<styleName type="wght" subtype="350">Полутонкий</styleName>
+		<styleName type="wght" subtype="400">обычный</styleName>
+		<styleName type="wght" subtype="500">средний</styleName>
+		<styleName type="wght" subtype="600">плотный</styleName>
+		<styleName type="wght" subtype="700">полужирный</styleName>
+		<styleName type="wght" subtype="800">жирный</styleName>
+		<styleName type="wght" subtype="900">очень жирный</styleName>
+		<styleName type="wght" subtype="1000">сверхжирный</styleName>
+		<styleName type="wght" subtype="unknown">Неизвестно</styleName>
+		<styleName type="wght" subtype="unspecified">Не определено</styleName>
+	</typographicNames>
+
+	<!-- in common/main/sk.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">Normálne</styleName>
+		<styleName type="ital" subtype="1">Kurzíva</styleName>
+		<styleName type="ital" subtype="unknown">Neznáme</styleName>
+		<styleName type="slnt" subtype="0">Normálne</styleName>
+		<styleName type="slnt" subtype="12">Šikmé</styleName>
+		<styleName type="slnt" subtype="unknown">Neznáme</styleName>
+		<styleName type="wdth" subtype="50">Maximálne zhustené</styleName>
+		<styleName type="wdth" subtype="62.5">Veľmi zhustené</styleName>
+		<styleName type="wdth" subtype="75">Zhustené</styleName>
+		<styleName type="wdth" subtype="87.5">Polovičné zhustené</styleName>
+		<styleName type="wdth" subtype="100">Normálne</styleName>
+		<styleName type="wdth" subtype="112.5">Polovičné rozšírené</styleName>
+		<styleName type="wdth" subtype="125">Rozšírené</styleName>
+		<styleName type="wdth" subtype="150">Veľmi rozšírené</styleName>
+		<styleName type="wdth" subtype="200">Maximálne rozšírené</styleName>
+		<styleName type="wdth" subtype="unknown">Neznáme</styleName>
+		<styleName type="wght" subtype="100">Tenké</styleName>
+		<styleName type="wght" subtype="200">Veľmi svetlé</styleName>
+		<styleName type="wght" subtype="300">Svetlé</styleName>
+		<styleName type="wght" subtype="350">Semi Light</styleName>
+		<styleName type="wght" subtype="400">Normálne</styleName>
+		<styleName type="wght" subtype="500">Stredné</styleName>
+		<styleName type="wght" subtype="600">Polovičné tučné</styleName>
+		<styleName type="wght" subtype="700">Tučné</styleName>
+		<styleName type="wght" subtype="800">Veľmi tučné</styleName>
+		<styleName type="wght" subtype="900">Čierne</styleName>
+		<styleName type="wght" subtype="1000">Silne čierne</styleName>
+		<styleName type="wght" subtype="unknown">Neznáme</styleName>
+		<styleName type="wght" subtype="unspecified">Neurčené</styleName>
+	</typographicNames>
+
+	<!-- in common/main/sl.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">Navadno</styleName>
+		<styleName type="ital" subtype="1">Ležeče</styleName>
+		<styleName type="ital" subtype="unknown">Neznano</styleName>
+		<styleName type="slnt" subtype="0">Navadno</styleName>
+		<styleName type="slnt" subtype="12">Nagnjeno</styleName>
+		<styleName type="slnt" subtype="unknown">Neznano</styleName>
+		<styleName type="wdth" subtype="50">Ultra zgoščeno</styleName>
+		<styleName type="wdth" subtype="62.5">Zelo zgoščeno</styleName>
+		<styleName type="wdth" subtype="75">Zgoščeno</styleName>
+		<styleName type="wdth" subtype="87.5">Polzgoščeno</styleName>
+		<styleName type="wdth" subtype="100">Navadno</styleName>
+		<styleName type="wdth" subtype="112.5">Polrazširjeno</styleName>
+		<styleName type="wdth" subtype="125">Razširjeno</styleName>
+		<styleName type="wdth" subtype="150">Zelo razširjeno</styleName>
+		<styleName type="wdth" subtype="200">Ultra razširjeno</styleName>
+		<styleName type="wdth" subtype="unknown">Neznano</styleName>
+		<styleName type="wght" subtype="100">Tanko</styleName>
+		<styleName type="wght" subtype="200">Zelo lahko</styleName>
+		<styleName type="wght" subtype="300">Lahko</styleName>
+		<styleName type="wght" subtype="350">Srednje lahko</styleName>
+		<styleName type="wght" subtype="400">navadno</styleName>
+		<styleName type="wght" subtype="500">Srednje</styleName>
+		<styleName type="wght" subtype="600">Polkrepko</styleName>
+		<styleName type="wght" subtype="700">krepko</styleName>
+		<styleName type="wght" subtype="800">Zelo krepko</styleName>
+		<styleName type="wght" subtype="900">Črno</styleName>
+		<styleName type="wght" subtype="1000">Zelo črno</styleName>
+		<styleName type="wght" subtype="unknown">Neznano</styleName>
+		<styleName type="wght" subtype="unspecified">Ni navedeno</styleName>
+	</typographicNames>
+
+	<!-- in common/main/sr_Latn.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">Normalno</styleName>
+		<styleName type="ital" subtype="1">Kurziv</styleName>
+		<styleName type="ital" subtype="unknown">Nepoznato</styleName>
+		<styleName type="slnt" subtype="0">Normalno</styleName>
+		<styleName type="slnt" subtype="12">Iskošeno</styleName>
+		<styleName type="slnt" subtype="unknown">Nepoznato</styleName>
+		<styleName type="wdth" subtype="50">Izuzetno zgusnuto</styleName>
+		<styleName type="wdth" subtype="62.5">Veoma zgusnuto</styleName>
+		<styleName type="wdth" subtype="75">Zgusnuto</styleName>
+		<styleName type="wdth" subtype="87.5">Poluzgusnuto</styleName>
+		<styleName type="wdth" subtype="100">Normalno</styleName>
+		<styleName type="wdth" subtype="112.5">Poluprošireno</styleName>
+		<styleName type="wdth" subtype="125">Prošireno</styleName>
+		<styleName type="wdth" subtype="150">Veoma prošireno</styleName>
+		<styleName type="wdth" subtype="200">Izuzetno prošireno</styleName>
+		<styleName type="wdth" subtype="unknown">Nepoznato</styleName>
+		<styleName type="wght" subtype="100">Tanak</styleName>
+		<styleName type="wght" subtype="200">Veoma svetlo</styleName>
+		<styleName type="wght" subtype="300">Svetlo</styleName>
+		<styleName type="wght" subtype="350">Srednje bledo</styleName>
+		<styleName type="wght" subtype="400">Standardni</styleName>
+		<styleName type="wght" subtype="500">Srednje</styleName>
+		<styleName type="wght" subtype="600">Polupodebljano</styleName>
+		<styleName type="wght" subtype="700">Podebljano</styleName>
+		<styleName type="wght" subtype="800">Dodatno podebljano</styleName>
+		<styleName type="wght" subtype="900">Crna</styleName>
+		<styleName type="wght" subtype="1000">Veoma crno</styleName>
+		<styleName type="wght" subtype="unknown">Nepoznato</styleName>
+		<styleName type="wght" subtype="unspecified">Neodređeno</styleName>
+	</typographicNames>
+
+	<!-- in common/main/sv.xml -->
+	<typographicNames>
+		<axisName type="ital">Kursiv</axisName>
+		<axisName type="opsz">Optisk storlek</axisName>
+		<axisName type="slnt">Lutning</axisName>
+		<axisName type="wdth">Bredd</axisName>
+		<axisName type="wght">Vikt</axisName>
+		<styleName type="ital" subtype="0">Normal</styleName>
+		<styleName type="ital" subtype="1">Kursiv</styleName>
+		<styleName type="ital" subtype="unknown">Okänd</styleName>
+		<styleName type="slnt" subtype="0">Normal</styleName>
+		<styleName type="slnt" subtype="12">Lutande</styleName>
+		<styleName type="slnt" subtype="unknown">Okänd</styleName>
+		<styleName type="wdth" subtype="50">Ultrakondenserad</styleName>
+		<styleName type="wdth" subtype="62.5">Extrakondenserad</styleName>
+		<styleName type="wdth" subtype="75">Kondenserad</styleName>
+		<styleName type="wdth" subtype="87.5">Halvkondenserad</styleName>
+		<styleName type="wdth" subtype="100">Normal</styleName>
+		<styleName type="wdth" subtype="112.5">Halvexpanderad</styleName>
+		<styleName type="wdth" subtype="125">Utökad</styleName>
+		<styleName type="wdth" subtype="150">Extraexpanderad</styleName>
+		<styleName type="wdth" subtype="200">Ultraexpanderad</styleName>
+		<styleName type="wdth" subtype="unknown">Okänd</styleName>
+		<styleName type="wght" subtype="100">Mager</styleName>
+		<styleName type="wght" subtype="200">Extrasmal</styleName>
+		<styleName type="wght" subtype="300">Smal</styleName>
+		<styleName type="wght" subtype="350">Halvsmal</styleName>
+		<styleName type="wght" subtype="400">Normal</styleName>
+		<styleName type="wght" subtype="500">Medel</styleName>
+		<styleName type="wght" subtype="600">Halvfet</styleName>
+		<styleName type="wght" subtype="700">Fet</styleName>
+		<styleName type="wght" subtype="800">Extrafet</styleName>
+		<styleName type="wght" subtype="900">Svart</styleName>
+		<styleName type="wght" subtype="1000">Extrasvart</styleName>
+		<styleName type="wght" subtype="unknown">Okänt</styleName>
+		<styleName type="wght" subtype="unspecified">Ospecificerat</styleName>
+	</typographicNames>
+
+	<!-- in common/main/th.xml -->
+	<typographicNames>
+		<styleName type="ital" subtype="0">ปกติ</styleName>
+		<styleName type="ital" subtype="1">ตัวเอียง</styleName>
+		<styleName type="ital" subtype="unknown">ไม่รู้จัก</styleName>
+		<styleName type="slnt" subtype="0">ปกติ</styleName>
+		<styleName type="slnt" subtype="12">ตัวเอน</styleName>
+		<styleName type="slnt" subtype="unknown">ไม่รู้จัก</styleName>
+		<styleName type="wdth" subtype="50">บีบอัดอักขระระดับมากที่สุด</styleName>
+		<styleName type="wdth" subtype="62.5">บีบอัดอักขระระดับพิเศษ</styleName>
+		<styleName type="wdth" subtype="75">บีบอัด</styleName>
+		<styleName type="wdth" subtype="87.5">บีบอัดอักขระระดับปานกลาง</styleName>
+		<styleName type="wdth" subtype="100">ปกติ</styleName>
+		<styleName type="wdth" subtype="112.5">ขยายระดับปานกลาง</styleName>
+		<styleName type="wdth" subtype="125">ขยาย</styleName>
+		<styleName type="wdth" subtype="150">ขยายระดับพิเศษ</styleName>
+		<styleName type="wdth" subtype="200">ขยายระดับมากที่สุด</styleName>
+		<styleName type="wdth" subtype="unknown">ไม่รู้จัก</styleName>
+		<styleName type="wght" subtype="100">บาง</styleName>
+		<styleName type="wght" subtype="200">บางมาก</styleName>
+		<styleName type="wght" subtype="300">บาง</styleName>
+		<styleName type="wght" subtype="350">Semi Light</styleName>
+		<styleName type="wght" subtype="400">ปกติ</styleName>
+		<styleName type="wght" subtype="500">ปานกลาง</styleName>
+		<styleName type="wght" subtype="600">กึ่งหนา</styleName>
+		<styleName type="wght" subtype="700">ตัวหนา</styleName>
+		<styleName type="wght" subtype="800">ตัวหนาพิเศษ</styleName>
+		<styleName type="wght" subtype="900">ดำ</styleName>
+		<styleName type="wght" subtype="1000">ดำมาก</styleName>
+		<styleName type="wght" subtype="unknown">ไม่รู้จัก</styleName>
+		<styleName type="wght" subtype="unspecified">ไม่ระบุ</styleName>
+	</typographicNames>
+
+	<!-- in common/main/tr.xml -->
+	<typographicNames>
+		<axisName type="ital">Eğik</axisName>
+		<axisName type="opsz">Optik boyut</axisName>
+		<axisName type="slnt">Eğim</axisName>
+		<axisName type="wdth">Genişlik</axisName>
+		<axisName type="wght">Kalınlık</axisName>
+		<styleName type="ital" subtype="0">Normal</styleName>
+		<styleName type="ital" subtype="1">İtalik</styleName>
+		<styleName type="ital" subtype="unknown">Bilinmiyor</styleName>
+		<styleName type="slnt" subtype="0">Normal</styleName>
+		<styleName type="slnt" subtype="12">Eğik</styleName>
+		<styleName type="slnt" subtype="unknown">Bilinmiyor</styleName>
+		<styleName type="wdth" subtype="50">Ultra Sıkıştırılmış</styleName>
+		<styleName type="wdth" subtype="62.5">Çok Sıkıştırılmış</styleName>
+		<styleName type="wdth" subtype="75">Sıkıştırılmış</styleName>
+		<styleName type="wdth" subtype="87.5">Yarı Sıkıştırılmış</styleName>
+		<styleName type="wdth" subtype="100">Normal</styleName>
+		<styleName type="wdth" subtype="112.5">Yarı Genişletilmiş</styleName>
+		<styleName type="wdth" subtype="125">Genişletilmiş</styleName>
+		<styleName type="wdth" subtype="150">Çok Genişletilmiş</styleName>
+		<styleName type="wdth" subtype="200">Ultra Genişletilmiş</styleName>
+		<styleName type="wdth" subtype="unknown">Bilinmiyor</styleName>
+		<styleName type="wght" subtype="100">İncecik</styleName>
+		<styleName type="wght" subtype="200">Çok İnce</styleName>
+		<styleName type="wght" subtype="300">İnce</styleName>
+		<styleName type="wght" subtype="350">Yarı Açık</styleName>
+		<styleName type="wght" subtype="400">Normal</styleName>
+		<styleName type="wght" subtype="500">Orta</styleName>
+		<styleName type="wght" subtype="600">Yarı Kalın</styleName>
+		<styleName type="wght" subtype="700">Kalın</styleName>
+		<styleName type="wght" subtype="800">Çok Kalın</styleName>
+		<styleName type="wght" subtype="900">Siyah</styleName>
+		<styleName type="wght" subtype="1000">Çok Siyah</styleName>
+		<styleName type="wght" subtype="unknown">Bilinmiyor</styleName>
+		<styleName type="wght" subtype="unspecified">Belirtilmemiş</styleName>
+	</typographicNames>
+
+	<!-- in common/main/uk.xml -->
+	<typographicNames>
+		<axisName type="ital">Курсив</axisName>
+		<axisName type="opsz">Оптичний розмір</axisName>
+		<axisName type="slnt">Нахил</axisName>
+		<axisName type="wdth">Ширина</axisName>
+		<axisName type="wght">Щільність</axisName>
+		<styleName type="ital" subtype="0">звичайний</styleName>
+		<styleName type="ital" subtype="1">курсив</styleName>
+		<styleName type="ital" subtype="unknown">Немає даних</styleName>
+		<styleName type="slnt" subtype="0">звичайний</styleName>
+		<styleName type="slnt" subtype="12">похилий</styleName>
+		<styleName type="slnt" subtype="unknown">Немає даних</styleName>
+		<styleName type="wdth" subtype="50">надущільнений</styleName>
+		<styleName type="wdth" subtype="62.5">дуже ущільнений</styleName>
+		<styleName type="wdth" subtype="75">ущільнений</styleName>
+		<styleName type="wdth" subtype="87.5">напівущільнений</styleName>
+		<styleName type="wdth" subtype="100">звичайний</styleName>
+		<styleName type="wdth" subtype="112.5">напіврозгорнутий</styleName>
+		<styleName type="wdth" subtype="125">розгорнутий</styleName>
+		<styleName type="wdth" subtype="150">дуже розгорнутий</styleName>
+		<styleName type="wdth" subtype="200">надрозгорнутий</styleName>
+		<styleName type="wdth" subtype="unknown">Немає даних</styleName>
+		<styleName type="wght" subtype="100">тонкий</styleName>
+		<styleName type="wght" subtype="200">дуже світлий</styleName>
+		<styleName type="wght" subtype="300">світлий</styleName>
+		<styleName type="wght" subtype="350">Напівлегкий</styleName>
+		<styleName type="wght" subtype="400">звичайний</styleName>
+		<styleName type="wght" subtype="500">середній</styleName>
+		<styleName type="wght" subtype="600">напівжирний</styleName>
+		<styleName type="wght" subtype="700">жирний</styleName>
+		<styleName type="wght" subtype="800">дуже жирний</styleName>
+		<styleName type="wght" subtype="900">чорний</styleName>
+		<styleName type="wght" subtype="1000">дуже чорний</styleName>
+		<styleName type="wght" subtype="unknown">Немає даних</styleName>
+		<styleName type="wght" subtype="unspecified">Немає даних</styleName>
+	</typographicNames>
+
+	<!-- in common/main/zh.xml -->
+	<typographicNames>
+		<axisName type="ital">斜体</axisName>
+		<axisName type="opsz">视觉大小</axisName>
+		<axisName type="slnt">倾斜</axisName>
+		<axisName type="wdth">宽度</axisName>
+		<axisName type="wght">直线宽度</axisName>
+		<styleName type="ital" subtype="0">常规</styleName>
+		<styleName type="ital" subtype="1">斜体</styleName>
+		<styleName type="ital" subtype="unknown">未知</styleName>
+		<styleName type="slnt" subtype="0">常规</styleName>
+		<styleName type="slnt" subtype="12">倾斜</styleName>
+		<styleName type="slnt" subtype="unknown">未知</styleName>
+		<styleName type="wdth" subtype="50">极紧缩</styleName>
+		<styleName type="wdth" subtype="62.5">超紧缩</styleName>
+		<styleName type="wdth" subtype="75">紧缩</styleName>
+		<styleName type="wdth" subtype="87.5">半紧缩</styleName>
+		<styleName type="wdth" subtype="100">常规</styleName>
+		<styleName type="wdth" subtype="112.5">半展开</styleName>
+		<styleName type="wdth" subtype="125">展开</styleName>
+		<styleName type="wdth" subtype="150">超展开</styleName>
+		<styleName type="wdth" subtype="200">极展开</styleName>
+		<styleName type="wdth" subtype="unknown">未知</styleName>
+		<styleName type="wght" subtype="100">细体</styleName>
+		<styleName type="wght" subtype="200">特细</styleName>
+		<styleName type="wght" subtype="300">细体</styleName>
+		<styleName type="wght" subtype="350">半细体</styleName>
+		<styleName type="wght" subtype="400">常规</styleName>
+		<styleName type="wght" subtype="500">中等</styleName>
+		<styleName type="wght" subtype="600">半粗体</styleName>
+		<styleName type="wght" subtype="700">粗体</styleName>
+		<styleName type="wght" subtype="800">超粗体</styleName>
+		<styleName type="wght" subtype="900">黑体</styleName>
+		<styleName type="wght" subtype="1000">超黑体</styleName>
+		<styleName type="wght" subtype="unknown">未知</styleName>
+		<styleName type="wght" subtype="unspecified">未指定</styleName>
+	</typographicNames>
+
+	<!-- in common/main/zh_Hant.xml -->
+	<typographicNames>
+		<axisName type="ital">斜體</axisName>
+		<axisName type="opsz">視覺大小</axisName>
+		<axisName type="slnt">傾斜</axisName>
+		<axisName type="wdth">寬度</axisName>
+		<axisName type="wght">線段寬度</axisName>
+		<styleName type="ital" subtype="0">標準</styleName>
+		<styleName type="ital" subtype="1">斜體</styleName>
+		<styleName type="slnt" subtype="0">標準</styleName>
+		<styleName type="slnt" subtype="12">傾斜</styleName>
+		<styleName type="wdth" subtype="50">超緊縮</styleName>
+		<styleName type="wdth" subtype="62.5">特緊縮</styleName>
+		<styleName type="wdth" subtype="75">緊縮</styleName>
+		<styleName type="wdth" subtype="87.5">半緊縮</styleName>
+		<styleName type="wdth" subtype="100">標準</styleName>
+		<styleName type="wdth" subtype="112.5">半延伸</styleName>
+		<styleName type="wdth" subtype="125">延伸</styleName>
+		<styleName type="wdth" subtype="150">特延伸</styleName>
+		<styleName type="wdth" subtype="200">超延伸</styleName>
+		<styleName type="wght" subtype="100">細</styleName>
+		<styleName type="wght" subtype="200">特淡</styleName>
+		<styleName type="wght" subtype="300">淡</styleName>
+		<styleName type="wght" subtype="350">半淡</styleName>
+		<styleName type="wght" subtype="400">標準</styleName>
+		<styleName type="wght" subtype="500">適中</styleName>
+		<styleName type="wght" subtype="600">半粗</styleName>
+		<styleName type="wght" subtype="700">粗體</styleName>
+		<styleName type="wght" subtype="800">特粗</styleName>
+		<styleName type="wght" subtype="900">黑色</styleName>
+		<styleName type="wght" subtype="1000">特黑</styleName>
+	</typographicNames>
+
+</terms>
