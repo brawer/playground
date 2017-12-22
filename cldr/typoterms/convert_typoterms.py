@@ -1,10 +1,15 @@
 # coding: utf-8
 
 from __future__ import print_function, unicode_literals
-import codecs, os, unicodedata
+import codecs, os, subprocess, unicodedata
+import xml.etree.ElementTree as etree
+
 
 PHOTOSHOP_PATH = 'typoterms-photoshop.tsv'
 WINDOWS_PATH = 'typoterms-windows.tsv'
+MACOS_PATH = '/System/Library/Frameworks/CoreText.framework/Resources'
+
+SLANT_DEGREES = 12
 
 
 def join(parts, lang):
@@ -16,6 +21,109 @@ def join(parts, lang):
     if lang in {'th', 'zh', 'zh_Hant'}:
         return ''.join(parts)
     return ' '.join(parts)
+
+
+def read_macos_typoterms():
+    styleNames = {}
+    for dirname in os.listdir(MACOS_PATH):
+        if not dirname.endswith('.lproj'):
+            continue
+        lang = dirname[:-6]
+        lang = {'zh_CN': 'zh', 'zh_TW': 'zh_Hant'}.get(lang, lang)
+        if lang == 'pl':
+            continue
+        names = read_macos_plist(
+            '%s/%s/StyleNames.strings' % (MACOS_PATH, dirname))
+        for key, name in sorted(names.items()):
+            style = _MACOS_STYLES.get(key)
+            if not style:
+                continue
+            styleNames.setdefault(style, {})[lang] = name
+    prune_variant_styles(styleNames)
+    return {'styleNames': styleNames}
+
+
+def prune_variant_styles(styleNames):
+    alts = {}
+    for (axis, value, alt) in styleNames:
+        if alt:
+            alts.setdefault((axis, value), set()).add(alt)
+    for (axis, value), alt in sorted(alts.items()):
+        for a in alt:
+            for lang, altName in sorted(list(styleNames[(axis, value, a)].items())):
+                name = styleNames[(axis, value, None)].get(lang)
+                if name == altName:
+                    del styleNames[(axis, value, a)][lang]
+
+
+_MACOS_STYLES = {
+    'backslanted': ('slnt', str(-SLANT_DEGREES), None),
+    'upright': ('slnt', '0', None),
+    'slanted': ('slnt', str(SLANT_DEGREES), None),
+    'extraslant': ('slnt', str(2 * SLANT_DEGREES), None),
+
+    'cursive': ('ital', '1', None),
+
+    'titling': ('opsz', '18', None),
+    'display': ('opsz', '72', None),
+    'poster': ('opsz', '144', None),
+
+    'ultra compressed': ('wdth', '50', 'variant'),
+    'extra compressed': ('wdth', '62.5', 'variant'),
+    'compressed': ('wdth', '75', 'variant'),
+    'semi extended': ('wdth', '112.5', 'variant'),
+    'extended': ('wdth', '125', 'variant'),
+    'extra extended': ('wdth', '150', 'variant'),
+    'ultra extended': ('wdth', '200', 'variant'),
+
+    'extra narrow': ('wdth', '62.5', 'variant2'),
+    'narrow': ('wdth', '75', 'variant2'),
+    'wide': ('wdth', '125', 'variant2'),
+    'extra wide': ('wdth', '150', 'variant2'),
+
+    'ultra condensed': ('wdth', '50', None),
+    'extra condensed': ('wdth', '62.5', None),
+    'condensed': ('wdth', '75', None),
+    'cond': ('wdth', '75', 'short'),
+    'semi condensed': ('wdth', '87.5', None),
+    'normal': ('wdth', '100', None),
+    'semi expanded': ('wdth', '112.5', None),
+    'expanded': ('wdth', '125', None),
+    'extra expanded': ('wdth', '150', None),
+    'ultra expanded': ('wdth', '200', None),
+
+    'thin': ('wght', '100', None),
+    'extra light': ('wght', '200', None),
+    'ultra light': ('wght', '200', 'variant'),
+    'light': ('wght', '300', None),
+    'semi light': ('wght', '350', None),
+    'demi light': ('wght', '350', 'variant'),
+    'book': ('wght', '380', None),
+    'regular': ('wght', '400', None),
+    'medium': ('wght', '500', None),
+    'semi bold': ('wght', '600', None),
+    'demi bold': ('wght', '600', 'variant'),
+    'bold': ('wght', '700', None),
+    'extra bold': ('wght', '800', None), 
+    'ultra bold': ('wght', '800', 'variant'), 
+    'black': ('wght', '900', None),
+    'heavy': ('wght', '900', 'variant'),
+    'extrablack': ('wght', '950', None),
+    'ultra heavy': ('wght', '950', 'variant'),
+    'ultra black': ('wght', '950', 'variant2'),
+}
+
+
+def read_macos_plist(path):
+    command = ['/usr/bin/plutil', '-convert', 'xml1', path, '-o', '-']
+    doc = etree.fromstring(subprocess.check_output(command))
+    keys = list(doc.findall('dict/key'))
+    values = list(doc.findall('dict/string'))
+    assert len(keys) == len(values), path
+    names = {}
+    for key, value in zip(keys, values):
+        names[key.text.strip()] = value.text.strip()
+    return names
 
 
 def read_photoshop_typoterms():
@@ -59,6 +167,7 @@ _WINDOWS_STYLES = {
     ('WWS - Weight', 'Thin'): ('wght', '100', None),
     ('WWS - Weight', 'Extra Light'): ('wght', '200', None),
     ('WWS - Weight', 'Light'): ('wght', '300', None),
+    ('WWS - Weight', 'Semi Light'): ('wght', '350', None),
     ('WWS - Weight', 'Regular'): ('wght', '400', None),
     ('WWS - Weight', 'Medium'): ('wght', '500', None),
     ('WWS - Weight', 'Semi Bold'): ('wght', '600', None),
@@ -66,14 +175,13 @@ _WINDOWS_STYLES = {
     ('WWS - Weight', 'Extra Bold'): ('wght', '800', None),
     ('WWS - Weight', 'Black'): ('wght', '900', None),
     ('WWS - Weight', 'Extra Black'): ('wght', '950', None),
-    ('WWS - Weight', 'Semi Light'): ('wght', '350', None),
     ('WWS - Weight', 'Unknown'): ('wght', 'unknown', None),
 
     ('WWS - Style', 'Normal'): ('ital', '0', None),
     ('WWS - Style', 'Italic'): ('ital', '1', None),
     ('WWS - Style', 'Unknown'): ('ital', 'unknown', None),
 
-    ('WWS - Style', 'Oblique'): ('slnt', '12', None),
+    ('WWS - Style', 'Oblique'): ('slnt', str(SLANT_DEGREES), None),
 }
 
 
@@ -233,8 +341,16 @@ def check_combined_facenames(terms, out):
             combinedName = join(parts, 'en')
             if combinedName:
                 combined[combinedName] = {'wdth': width, 'wght': weight}
-            combined[join(parts + ['Italic'], 'en')] = {'wdth': width, 'wght': weight, 'ital': '1'}
-            combined[join(parts + ['Oblique'], 'en')] = {'wdth': width, 'wght': weight, 'slnt': '12'}
+            combined[join(parts + ['Italic'], 'en')] = {
+                'wdth': width,
+                'wght': weight,
+                'ital': '1'
+            }
+            combined[join(parts + ['Oblique'], 'en')] = {
+                'wdth': width,
+                'wght': weight,
+                'slnt': str(SLANT_DEGREES)
+            }
     out.write('Face\tLanguage\tCLDR\tWindows\n')
     for combinedKey, combinedNames in sorted(terms['combinedFaceNames'].items()):
         var = combined[combinedKey]
@@ -245,10 +361,12 @@ def check_combined_facenames(terms, out):
 
 
 if __name__ == '__main__':
-    terms = read_windows_typoterms()
+    terms = {}
+    terms.update(read_macos_typoterms())
     terms.update(read_photoshop_typoterms())
-    with codecs.open('combined-facenames.tsv', 'w', 'utf-8') as out:
-        check_combined_facenames(terms, out)
+    #terms.update(read_windows_typoterms())
+    #with codecs.open('combined-facenames.tsv', 'w', 'utf-8') as out:
+    #    check_combined_facenames(terms, out)
     with codecs.open('typoterms.xml', 'w', 'utf-8') as out:
         out.write('<terms>\n')
         for lang in sorted(find_languages(terms)):
