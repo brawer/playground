@@ -65,7 +65,7 @@ _WINDOWS_STYLES = {
     ('WWS - Weight', 'Bold'): ('wght', '700', None),
     ('WWS - Weight', 'Extra Bold'): ('wght', '800', None),
     ('WWS - Weight', 'Black'): ('wght', '900', None),
-    ('WWS - Weight', 'Extra Black'): ('wght', '1000', None),
+    ('WWS - Weight', 'Extra Black'): ('wght', '950', None),
     ('WWS - Weight', 'Semi Light'): ('wght', '350', None),
     ('WWS - Weight', 'Unknown'): ('wght', 'unknown', None),
 

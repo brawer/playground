@@ -27,7 +27,7 @@
 		<styleName type="wght" subtype="700">غامق</styleName>
 		<styleName type="wght" subtype="800">غامق جداً</styleName>
 		<styleName type="wght" subtype="900">أسود</styleName>
-		<styleName type="wght" subtype="1000">شديد السواد</styleName>
+		<styleName type="wght" subtype="950">شديد السواد</styleName>
 		<styleName type="wght" subtype="unknown">غير معروف</styleName>
 		<styleName type="wght" subtype="unspecified">غير محدد</styleName>
 	</typographicNames>
@@ -60,7 +60,7 @@
 		<styleName type="wght" subtype="700">Получер</styleName>
 		<styleName type="wght" subtype="800">Свръх получер</styleName>
 		<styleName type="wght" subtype="900">Черно</styleName>
-		<styleName type="wght" subtype="1000">Допълнително черно</styleName>
+		<styleName type="wght" subtype="950">Допълнително черно</styleName>
 		<styleName type="wght" subtype="unknown">Няма информация</styleName>
 		<styleName type="wght" subtype="unspecified">Неопределен</styleName>
 	</typographicNames>
@@ -98,7 +98,7 @@
 		<styleName type="wght" subtype="700">Tučné</styleName>
 		<styleName type="wght" subtype="800">Velmi tučné</styleName>
 		<styleName type="wght" subtype="900">Černé</styleName>
-		<styleName type="wght" subtype="1000">Extra černé</styleName>
+		<styleName type="wght" subtype="950">Extra černé</styleName>
 		<styleName type="wght" subtype="unknown">Neznámé</styleName>
 		<styleName type="wght" subtype="unspecified">Neurčené</styleName>
 	</typographicNames>
@@ -136,7 +136,7 @@
 		<styleName type="wght" subtype="700">Fed</styleName>
 		<styleName type="wght" subtype="800">Meget fed</styleName>
 		<styleName type="wght" subtype="900">Sort</styleName>
-		<styleName type="wght" subtype="1000">Ekstra sort</styleName>
+		<styleName type="wght" subtype="950">Ekstra sort</styleName>
 		<styleName type="wght" subtype="unknown">Ukendt</styleName>
 		<styleName type="wght" subtype="unspecified">Ikke angivet</styleName>
 	</typographicNames>
@@ -174,7 +174,7 @@
 		<styleName type="wght" subtype="700">Fett</styleName>
 		<styleName type="wght" subtype="800">Sehr Fett</styleName>
 		<styleName type="wght" subtype="900">Schwarz</styleName>
-		<styleName type="wght" subtype="1000">Sehr Schwarz</styleName>
+		<styleName type="wght" subtype="950">Sehr Schwarz</styleName>
 		<styleName type="wght" subtype="unknown">Unbekannt</styleName>
 		<styleName type="wght" subtype="unspecified">Nicht angegeben</styleName>
 	</typographicNames>
@@ -207,7 +207,7 @@
 		<styleName type="wght" subtype="700">Έντονη γραφή</styleName>
 		<styleName type="wght" subtype="800">Πολύ έντονη</styleName>
 		<styleName type="wght" subtype="900">Μαύρη</styleName>
-		<styleName type="wght" subtype="1000">Πολύ μαύρη</styleName>
+		<styleName type="wght" subtype="950">Πολύ μαύρη</styleName>
 		<styleName type="wght" subtype="unknown">Άγνωστο</styleName>
 		<styleName type="wght" subtype="unspecified">Δεν έχει οριστεί</styleName>
 	</typographicNames>
@@ -245,7 +245,7 @@
 		<styleName type="wght" subtype="700">Bold</styleName>
 		<styleName type="wght" subtype="800">Extra Bold</styleName>
 		<styleName type="wght" subtype="900">Black</styleName>
-		<styleName type="wght" subtype="1000">Extra Black</styleName>
+		<styleName type="wght" subtype="950">Extra Black</styleName>
 		<styleName type="wght" subtype="unknown">Unknown</styleName>
 		<styleName type="wght" subtype="unspecified">Unspecified</styleName>
 	</typographicNames>
@@ -288,7 +288,7 @@
 		<styleName type="wght" subtype="700">Negrita</styleName>
 		<styleName type="wght" subtype="800">Extranegrita</styleName>
 		<styleName type="wght" subtype="900">Negra</styleName>
-		<styleName type="wght" subtype="1000">Extranegra</styleName>
+		<styleName type="wght" subtype="950">Extranegra</styleName>
 		<styleName type="wght" subtype="unknown">Desconocida</styleName>
 		<styleName type="wght" subtype="unspecified">No especificado</styleName>
 	</typographicNames>
@@ -326,7 +326,7 @@
 		<styleName type="wght" subtype="700">paks</styleName>
 		<styleName type="wght" subtype="800">Ülipaks</styleName>
 		<styleName type="wght" subtype="900">must</styleName>
-		<styleName type="wght" subtype="1000">Ülimust</styleName>
+		<styleName type="wght" subtype="950">Ülimust</styleName>
 		<styleName type="wght" subtype="unknown">Tundmatu</styleName>
 		<styleName type="wght" subtype="unspecified">Määramata</styleName>
 	</typographicNames>
@@ -364,7 +364,7 @@
 		<styleName type="wght" subtype="700">Lihavoitu</styleName>
 		<styleName type="wght" subtype="800">Erityislihavoitu</styleName>
 		<styleName type="wght" subtype="900">Musta</styleName>
-		<styleName type="wght" subtype="1000">Erityismusta</styleName>
+		<styleName type="wght" subtype="950">Erityismusta</styleName>
 		<styleName type="wght" subtype="unknown">Tuntematon</styleName>
 		<styleName type="wght" subtype="unspecified">Määrittämätön</styleName>
 	</typographicNames>
@@ -402,7 +402,7 @@
 		<styleName type="wght" subtype="700">Gras</styleName>
 		<styleName type="wght" subtype="800">Extra-gras</styleName>
 		<styleName type="wght" subtype="900">Noir</styleName>
-		<styleName type="wght" subtype="1000">Extra-noir</styleName>
+		<styleName type="wght" subtype="950">Extra-noir</styleName>
 		<styleName type="wght" subtype="unknown">Inconnu</styleName>
 		<styleName type="wght" subtype="unspecified">Non spécifié</styleName>
 	</typographicNames>
@@ -440,7 +440,7 @@
 		<styleName type="wght" subtype="700">מודגש</styleName>
 		<styleName type="wght" subtype="800">מודגש מאד</styleName>
 		<styleName type="wght" subtype="900">שחור</styleName>
-		<styleName type="wght" subtype="1000">שחור מאוד</styleName>
+		<styleName type="wght" subtype="950">שחור מאוד</styleName>
 		<styleName type="wght" subtype="unknown">לא ידוע</styleName>
 		<styleName type="wght" subtype="unspecified">לא צוין</styleName>
 	</typographicNames>
@@ -473,7 +473,7 @@
 		<styleName type="wght" subtype="700">Podebljano</styleName>
 		<styleName type="wght" subtype="800">Ekstra podebljano</styleName>
 		<styleName type="wght" subtype="900">Crno</styleName>
-		<styleName type="wght" subtype="1000">Ekstra crno</styleName>
+		<styleName type="wght" subtype="950">Ekstra crno</styleName>
 		<styleName type="wght" subtype="unknown">Nepoznato</styleName>
 		<styleName type="wght" subtype="unspecified">Nije navedeno</styleName>
 	</typographicNames>
@@ -511,7 +511,7 @@
 		<styleName type="wght" subtype="700">Félkövér</styleName>
 		<styleName type="wght" subtype="800">Kövér</styleName>
 		<styleName type="wght" subtype="900">Fekete</styleName>
-		<styleName type="wght" subtype="1000">Extrafekete</styleName>
+		<styleName type="wght" subtype="950">Extrafekete</styleName>
 		<styleName type="wght" subtype="unknown">Ismeretlen</styleName>
 		<styleName type="wght" subtype="unspecified">Meghatározatlan</styleName>
 	</typographicNames>
@@ -549,7 +549,7 @@
 		<styleName type="wght" subtype="700">Grassetto</styleName>
 		<styleName type="wght" subtype="800">Grassetto accentuato</styleName>
 		<styleName type="wght" subtype="900">Nero</styleName>
-		<styleName type="wght" subtype="1000">Nero accentuato</styleName>
+		<styleName type="wght" subtype="950">Nero accentuato</styleName>
 		<styleName type="wght" subtype="unknown">Sconosciuto</styleName>
 		<styleName type="wght" subtype="unspecified">Non specificato</styleName>
 	</typographicNames>
@@ -587,7 +587,7 @@
 		<styleName type="wght" subtype="700">太字</styleName>
 		<styleName type="wght" subtype="800">特太</styleName>
 		<styleName type="wght" subtype="900">極太</styleName>
-		<styleName type="wght" subtype="1000">極々太</styleName>
+		<styleName type="wght" subtype="950">極々太</styleName>
 		<styleName type="wght" subtype="unknown">不明</styleName>
 		<styleName type="wght" subtype="unspecified">指定なし</styleName>
 	</typographicNames>
@@ -625,7 +625,7 @@
 		<styleName type="wght" subtype="700">굵게</styleName>
 		<styleName type="wght" subtype="800">아주 굵게</styleName>
 		<styleName type="wght" subtype="900">검정</styleName>
-		<styleName type="wght" subtype="1000">진한 검정</styleName>
+		<styleName type="wght" subtype="950">진한 검정</styleName>
 		<styleName type="wght" subtype="unknown">알 수 없음</styleName>
 		<styleName type="wght" subtype="unspecified">지정되지 않음</styleName>
 	</typographicNames>
@@ -658,7 +658,7 @@
 		<styleName type="wght" subtype="700">paryškintasis</styleName>
 		<styleName type="wght" subtype="800">Labai paryškintas</styleName>
 		<styleName type="wght" subtype="900">Juoda</styleName>
-		<styleName type="wght" subtype="1000">Labai juodas</styleName>
+		<styleName type="wght" subtype="950">Labai juodas</styleName>
 		<styleName type="wght" subtype="unknown">Nežinomas</styleName>
 		<styleName type="wght" subtype="unspecified">Nenurodyta</styleName>
 	</typographicNames>
@@ -691,7 +691,7 @@
 		<styleName type="wght" subtype="700">Bold</styleName>
 		<styleName type="wght" subtype="800">Īpašs treknraksts</styleName>
 		<styleName type="wght" subtype="900">Melns</styleName>
-		<styleName type="wght" subtype="1000">Īpaši melns</styleName>
+		<styleName type="wght" subtype="950">Īpaši melns</styleName>
 		<styleName type="wght" subtype="unknown">Nezināms</styleName>
 		<styleName type="wght" subtype="unspecified">Nenorādīts</styleName>
 	</typographicNames>
@@ -729,7 +729,7 @@
 		<styleName type="wght" subtype="700">Fet</styleName>
 		<styleName type="wght" subtype="800">Ekstra fet</styleName>
 		<styleName type="wght" subtype="900">Svart</styleName>
-		<styleName type="wght" subtype="1000">Ekstra svart</styleName>
+		<styleName type="wght" subtype="950">Ekstra svart</styleName>
 		<styleName type="wght" subtype="unknown">Ukjent</styleName>
 		<styleName type="wght" subtype="unspecified">Uspesifisert</styleName>
 	</typographicNames>
@@ -767,7 +767,7 @@
 		<styleName type="wght" subtype="700">Vet</styleName>
 		<styleName type="wght" subtype="800">Extra vet</styleName>
 		<styleName type="wght" subtype="900">Zwart</styleName>
-		<styleName type="wght" subtype="1000">Extra zwart</styleName>
+		<styleName type="wght" subtype="950">Extra zwart</styleName>
 		<styleName type="wght" subtype="unknown">Onbekend</styleName>
 		<styleName type="wght" subtype="unspecified">Niet aangegeven</styleName>
 	</typographicNames>
@@ -805,7 +805,7 @@
 		<styleName type="wght" subtype="700">pogrubiona</styleName>
 		<styleName type="wght" subtype="800">Bardzo gruba</styleName>
 		<styleName type="wght" subtype="900">Ciemna</styleName>
-		<styleName type="wght" subtype="1000">Bardzo ciemna</styleName>
+		<styleName type="wght" subtype="950">Bardzo ciemna</styleName>
 		<styleName type="wght" subtype="unknown">Nieznany</styleName>
 		<styleName type="wght" subtype="unspecified">Nieokreślona</styleName>
 	</typographicNames>
@@ -843,7 +843,7 @@
 		<styleName type="wght" subtype="700">Negrito</styleName>
 		<styleName type="wght" subtype="800">Extranegrito</styleName>
 		<styleName type="wght" subtype="900">Preto</styleName>
-		<styleName type="wght" subtype="1000">Extrapreto</styleName>
+		<styleName type="wght" subtype="950">Extrapreto</styleName>
 		<styleName type="wght" subtype="unknown">Desconhecido</styleName>
 		<styleName type="wght" subtype="unspecified">Não especificada</styleName>
 	</typographicNames>
@@ -865,7 +865,7 @@
 		<styleName type="wght" subtype="400">Normal</styleName>
 		<styleName type="wght" subtype="600">Semi Negrito</styleName>
 		<styleName type="wght" subtype="800">Extra Negrito</styleName>
-		<styleName type="wght" subtype="1000">Extra Preto</styleName>
+		<styleName type="wght" subtype="950">Extra Preto</styleName>
 		<styleName type="wght" subtype="unspecified">Não especificado</styleName>
 	</typographicNames>
 
@@ -897,7 +897,7 @@
 		<styleName type="wght" subtype="700">Aldin</styleName>
 		<styleName type="wght" subtype="800">Extra aldin</styleName>
 		<styleName type="wght" subtype="900">Negru</styleName>
-		<styleName type="wght" subtype="1000">Extra negru</styleName>
+		<styleName type="wght" subtype="950">Extra negru</styleName>
 		<styleName type="wght" subtype="unknown">Necunoscut</styleName>
 		<styleName type="wght" subtype="unspecified">Nespecificat</styleName>
 	</typographicNames>
@@ -935,7 +935,7 @@
 		<styleName type="wght" subtype="700">полужирный</styleName>
 		<styleName type="wght" subtype="800">жирный</styleName>
 		<styleName type="wght" subtype="900">очень жирный</styleName>
-		<styleName type="wght" subtype="1000">сверхжирный</styleName>
+		<styleName type="wght" subtype="950">сверхжирный</styleName>
 		<styleName type="wght" subtype="unknown">Неизвестно</styleName>
 		<styleName type="wght" subtype="unspecified">Не определено</styleName>
 	</typographicNames>
@@ -968,7 +968,7 @@
 		<styleName type="wght" subtype="700">Tučné</styleName>
 		<styleName type="wght" subtype="800">Veľmi tučné</styleName>
 		<styleName type="wght" subtype="900">Čierne</styleName>
-		<styleName type="wght" subtype="1000">Silne čierne</styleName>
+		<styleName type="wght" subtype="950">Silne čierne</styleName>
 		<styleName type="wght" subtype="unknown">Neznáme</styleName>
 		<styleName type="wght" subtype="unspecified">Neurčené</styleName>
 	</typographicNames>
@@ -1001,7 +1001,7 @@
 		<styleName type="wght" subtype="700">krepko</styleName>
 		<styleName type="wght" subtype="800">Zelo krepko</styleName>
 		<styleName type="wght" subtype="900">Črno</styleName>
-		<styleName type="wght" subtype="1000">Zelo črno</styleName>
+		<styleName type="wght" subtype="950">Zelo črno</styleName>
 		<styleName type="wght" subtype="unknown">Neznano</styleName>
 		<styleName type="wght" subtype="unspecified">Ni navedeno</styleName>
 	</typographicNames>
@@ -1034,7 +1034,7 @@
 		<styleName type="wght" subtype="700">Podebljano</styleName>
 		<styleName type="wght" subtype="800">Dodatno podebljano</styleName>
 		<styleName type="wght" subtype="900">Crna</styleName>
-		<styleName type="wght" subtype="1000">Veoma crno</styleName>
+		<styleName type="wght" subtype="950">Veoma crno</styleName>
 		<styleName type="wght" subtype="unknown">Nepoznato</styleName>
 		<styleName type="wght" subtype="unspecified">Neodređeno</styleName>
 	</typographicNames>
@@ -1072,7 +1072,7 @@
 		<styleName type="wght" subtype="700">Fet</styleName>
 		<styleName type="wght" subtype="800">Extrafet</styleName>
 		<styleName type="wght" subtype="900">Svart</styleName>
-		<styleName type="wght" subtype="1000">Extrasvart</styleName>
+		<styleName type="wght" subtype="950">Extrasvart</styleName>
 		<styleName type="wght" subtype="unknown">Okänt</styleName>
 		<styleName type="wght" subtype="unspecified">Ospecificerat</styleName>
 	</typographicNames>
@@ -1105,7 +1105,7 @@
 		<styleName type="wght" subtype="700">ตัวหนา</styleName>
 		<styleName type="wght" subtype="800">ตัวหนาพิเศษ</styleName>
 		<styleName type="wght" subtype="900">ดำ</styleName>
-		<styleName type="wght" subtype="1000">ดำมาก</styleName>
+		<styleName type="wght" subtype="950">ดำมาก</styleName>
 		<styleName type="wght" subtype="unknown">ไม่รู้จัก</styleName>
 		<styleName type="wght" subtype="unspecified">ไม่ระบุ</styleName>
 	</typographicNames>
@@ -1143,7 +1143,7 @@
 		<styleName type="wght" subtype="700">Kalın</styleName>
 		<styleName type="wght" subtype="800">Çok Kalın</styleName>
 		<styleName type="wght" subtype="900">Siyah</styleName>
-		<styleName type="wght" subtype="1000">Çok Siyah</styleName>
+		<styleName type="wght" subtype="950">Çok Siyah</styleName>
 		<styleName type="wght" subtype="unknown">Bilinmiyor</styleName>
 		<styleName type="wght" subtype="unspecified">Belirtilmemiş</styleName>
 	</typographicNames>
@@ -1181,7 +1181,7 @@
 		<styleName type="wght" subtype="700">жирний</styleName>
 		<styleName type="wght" subtype="800">дуже жирний</styleName>
 		<styleName type="wght" subtype="900">чорний</styleName>
-		<styleName type="wght" subtype="1000">дуже чорний</styleName>
+		<styleName type="wght" subtype="950">дуже чорний</styleName>
 		<styleName type="wght" subtype="unknown">Немає даних</styleName>
 		<styleName type="wght" subtype="unspecified">Немає даних</styleName>
 	</typographicNames>
@@ -1219,7 +1219,7 @@
 		<styleName type="wght" subtype="700">粗体</styleName>
 		<styleName type="wght" subtype="800">超粗体</styleName>
 		<styleName type="wght" subtype="900">黑体</styleName>
-		<styleName type="wght" subtype="1000">超黑体</styleName>
+		<styleName type="wght" subtype="950">超黑体</styleName>
 		<styleName type="wght" subtype="unknown">未知</styleName>
 		<styleName type="wght" subtype="unspecified">未指定</styleName>
 	</typographicNames>
@@ -1254,7 +1254,7 @@
 		<styleName type="wght" subtype="700">粗體</styleName>
 		<styleName type="wght" subtype="800">特粗</styleName>
 		<styleName type="wght" subtype="900">黑色</styleName>
-		<styleName type="wght" subtype="1000">特黑</styleName>
+		<styleName type="wght" subtype="950">特黑</styleName>
 	</typographicNames>
 
 </terms>
