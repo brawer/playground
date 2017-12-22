@@ -318,6 +318,8 @@
 		<axisName type="wdth">Width</axisName>
 		<axisName type="wght">Weight</axisName>
 		<styleName type="ital" subtype="1">Cursive</styleName>
+		<styleName type="opsz" subtype="8">Caption</styleName>
+		<styleName type="opsz" subtype="12">Text</styleName>
 		<styleName type="opsz" subtype="18">Titling</styleName>
 		<styleName type="opsz" subtype="72">Display</styleName>
 		<styleName type="opsz" subtype="144">Poster</styleName>

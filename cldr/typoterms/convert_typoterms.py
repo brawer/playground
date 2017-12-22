@@ -25,6 +25,8 @@ def join(parts, lang):
 
 def read_macos_typoterms():
     styleNames = {}
+    styleNames[('opsz', '8', None)] = {'en': 'Caption'}
+    styleNames[('opsz', '12', None)] = {'en': 'Text'}
     for dirname in os.listdir(MACOS_PATH):
         if not dirname.endswith('.lproj'):
             continue
