@@ -1,6 +1,18 @@
 <terms>
 	<!-- in common/main/ar.xml -->
 	<typographicNames>
+		<featureName type="afrc">كسور رأسية</featureName>
+		<featureName type="cpsp">تباعد الأحرف الاستهلالية</featureName>
+		<featureName type="dlig">أحرف مزدوجة اختيارية</featureName>
+		<featureName type="frac">كسور قطرية</featureName>
+		<featureName type="lnum">أرقام مصفوفة</featureName>
+		<featureName type="onum">أرقام قديمة النمط</featureName>
+		<featureName type="ordn">الأرقام الترتيبية</featureName>
+		<featureName type="pnum">الأرقام النسبية</featureName>
+		<featureName type="smcp">الأحرف الاستهلالية الصغيرة</featureName>
+		<featureName type="smcp" alt="short">أحرف استهلالية صغيرة</featureName>
+		<featureName type="tnum">أرقام مسطحة</featureName>
+		<featureName type="zero">الصفر المقسوم بشرطة مائلة</featureName>
 		<styleName type="ital" subtype="1">متصل</styleName>
 		<styleName type="opsz" subtype="18">عنونة</styleName>
 		<styleName type="opsz" subtype="72">عرض</styleName>
@@ -51,6 +63,18 @@
 
 	<!-- in common/main/ca.xml -->
 	<typographicNames>
+		<featureName type="afrc">Fraccions verticals</featureName>
+		<featureName type="cpsp">Espai entre majúscules</featureName>
+		<featureName type="dlig">Lligadures opcionals</featureName>
+		<featureName type="frac">Fraccions diagonals</featureName>
+		<featureName type="lnum">Números alineats</featureName>
+		<featureName type="onum">Xifres a l’antiga</featureName>
+		<featureName type="ordn">Ordinals</featureName>
+		<featureName type="pnum">Nombres proporcionals</featureName>
+		<featureName type="smcp">Majúscules petites</featureName>
+		<featureName type="smcp" alt="short">Minúscules</featureName>
+		<featureName type="tnum">Números tabulars</featureName>
+		<featureName type="zero">Zero amb barra</featureName>
 		<styleName type="ital" subtype="1">Cursiva</styleName>
 		<styleName type="opsz" subtype="18">Inclinada</styleName>
 		<styleName type="opsz" subtype="72">Mostrar</styleName>
@@ -106,6 +130,17 @@
 		<axisName type="slnt">Sklon</axisName>
 		<axisName type="wdth">Šířka</axisName>
 		<axisName type="wght">Tloušťka čáry</axisName>
+		<featureName type="afrc">Svislé zlomkové čáry</featureName>
+		<featureName type="cpsp">Rozestupy velkých písmen</featureName>
+		<featureName type="dlig">Volitelné ligatury</featureName>
+		<featureName type="frac">Šikmé zlomkové čáry</featureName>
+		<featureName type="lnum">Verzálková čísla</featureName>
+		<featureName type="onum">Skákavé číslice</featureName>
+		<featureName type="ordn">Řadové číslovky</featureName>
+		<featureName type="pnum">Proporcionální čísla</featureName>
+		<featureName type="smcp">Kapitálky</featureName>
+		<featureName type="tnum">Tabulková čísla</featureName>
+		<featureName type="zero">Přeškrtnutá nula</featureName>
 		<styleName type="ital" subtype="1">Cursive</styleName>
 		<styleName type="opsz" subtype="18">Titling</styleName>
 		<styleName type="opsz" subtype="72">Display</styleName>
@@ -162,6 +197,17 @@
 		<axisName type="slnt">Skråtstilling</axisName>
 		<axisName type="wdth">Bredde</axisName>
 		<axisName type="wght">Vægt</axisName>
+		<featureName type="afrc">Lodrette brøker</featureName>
+		<featureName type="cpsp">Afstand store bogstaver</featureName>
+		<featureName type="dlig">Valgfrie ligaturer</featureName>
+		<featureName type="frac">Diagonale brøker</featureName>
+		<featureName type="lnum">Moderne tal</featureName>
+		<featureName type="onum">Gammeldags tal</featureName>
+		<featureName type="ordn">Ordinaltal</featureName>
+		<featureName type="pnum">Proportionelle tal</featureName>
+		<featureName type="smcp">Kapitæler</featureName>
+		<featureName type="tnum">Tal i tabelformat</featureName>
+		<featureName type="zero">Tallet nul</featureName>
 		<styleName type="ital" subtype="1">Kursiv</styleName>
 		<styleName type="opsz" subtype="18">Titel</styleName>
 		<styleName type="opsz" subtype="72">Vis</styleName>
@@ -214,6 +260,17 @@
 		<axisName type="slnt">Schrägstellung</axisName>
 		<axisName type="wdth">Breite</axisName>
 		<axisName type="wght">Stärke</axisName>
+		<featureName type="afrc">Vertikale Brüche</featureName>
+		<featureName type="cpsp">Abstand zwischen Großbuchstaben</featureName>
+		<featureName type="dlig">Optionale Ligaturen</featureName>
+		<featureName type="frac">Diagonale Brüche</featureName>
+		<featureName type="lnum">Majuskelziffern</featureName>
+		<featureName type="onum">Mediävalziffern</featureName>
+		<featureName type="ordn">Ordinalzahlen</featureName>
+		<featureName type="pnum">Proportionalziffern</featureName>
+		<featureName type="smcp">Kapitälchen</featureName>
+		<featureName type="tnum">Nichtproportionale Ziffern</featureName>
+		<featureName type="zero">Null mit Schrägstrich</featureName>
 		<styleName type="ital" subtype="1">Kursiv</styleName>
 		<styleName type="opsz" subtype="18">Titel</styleName>
 		<styleName type="opsz" subtype="72">Anzeige</styleName>
@@ -263,6 +320,17 @@
 
 	<!-- in common/main/el.xml -->
 	<typographicNames>
+		<featureName type="afrc">Κάθετα κλάσματα</featureName>
+		<featureName type="cpsp">Διάστιχο κεφαλαίων</featureName>
+		<featureName type="dlig">Προαιρετικά συμπλέγματα</featureName>
+		<featureName type="frac">Διαγώνια κλάσματα</featureName>
+		<featureName type="lnum">Ευθυγραμμισμένοι αριθμοί</featureName>
+		<featureName type="onum">Αριθμοί παλαιού στιλ</featureName>
+		<featureName type="ordn">Τακτικοί</featureName>
+		<featureName type="pnum">Αναλογικοί αριθμοί</featureName>
+		<featureName type="smcp">Μικρά κεφαλαία</featureName>
+		<featureName type="tnum">Αριθμοί σε πίνακα</featureName>
+		<featureName type="zero">Μηδέν με γραμμή</featureName>
 		<styleName type="ital" subtype="1">Λοξά</styleName>
 		<styleName type="opsz" subtype="18">Τίτλοι</styleName>
 		<styleName type="opsz" subtype="72">Display</styleName>
@@ -317,6 +385,18 @@
 		<axisName type="slnt">Slant</axisName>
 		<axisName type="wdth">Width</axisName>
 		<axisName type="wght">Weight</axisName>
+		<featureName type="afrc">Vertical Fractions</featureName>
+		<featureName type="cpsp">Capital Spacing</featureName>
+		<featureName type="dlig">Optional Ligatures</featureName>
+		<featureName type="frac">Diagonal Fractions</featureName>
+		<featureName type="lnum">Lining Numbers</featureName>
+		<featureName type="onum">Old-Style Figures</featureName>
+		<featureName type="ordn">Ordinals</featureName>
+		<featureName type="pnum">Proportional Numbers</featureName>
+		<featureName type="smcp">Small Capitals</featureName>
+		<featureName type="smcp" alt="short">Small Caps</featureName>
+		<featureName type="tnum">Tabular numbers</featureName>
+		<featureName type="zero">Slashed Zero</featureName>
 		<styleName type="ital" subtype="1">Cursive</styleName>
 		<styleName type="opsz" subtype="8">Caption</styleName>
 		<styleName type="opsz" subtype="12">Text</styleName>
@@ -375,6 +455,17 @@
 		<axisName type="slnt">Inclinación</axisName>
 		<axisName type="wdth">Anchura</axisName>
 		<axisName type="wght">Grosor</axisName>
+		<featureName type="afrc">Fracciones verticales</featureName>
+		<featureName type="cpsp">Espaciado entre mayúsculas</featureName>
+		<featureName type="dlig">Ligaduras opcionales</featureName>
+		<featureName type="frac">Fracciones diagonales</featureName>
+		<featureName type="lnum">Números alineados</featureName>
+		<featureName type="onum">Cifras en estilo antiguo</featureName>
+		<featureName type="ordn">Ordinales</featureName>
+		<featureName type="pnum">Números proporcionales</featureName>
+		<featureName type="smcp">Versalitas</featureName>
+		<featureName type="tnum">Números tabulares</featureName>
+		<featureName type="zero">Cero cruzado</featureName>
 		<styleName type="ital" subtype="1">Cursiva</styleName>
 		<styleName type="opsz" subtype="18">Título</styleName>
 		<styleName type="opsz" subtype="72">Pantalla</styleName>
@@ -438,6 +529,18 @@
 		<axisName type="slnt">Kallistus</axisName>
 		<axisName type="wdth">Leveys</axisName>
 		<axisName type="wght">Paksuus</axisName>
+		<featureName type="afrc">Pystysuuntaiset murtoluvut</featureName>
+		<featureName type="cpsp">Versaalivälistys</featureName>
+		<featureName type="dlig">Valinnaiset ligatuurit</featureName>
+		<featureName type="frac">Vinoviivaiset murtoluvut</featureName>
+		<featureName type="lnum">Otsikkonumerot</featureName>
+		<featureName type="onum">Gemenanumerot</featureName>
+		<featureName type="ordn">Järjestysluvut</featureName>
+		<featureName type="pnum">Suhteelliset numerot</featureName>
+		<featureName type="smcp">Kapiteelit</featureName>
+		<featureName type="smcp" alt="short">Kapiteelikirjaimet</featureName>
+		<featureName type="tnum">Sarkautuvat numerot</featureName>
+		<featureName type="zero">Lävistetty nolla</featureName>
 		<styleName type="ital" subtype="1">Kursiivi</styleName>
 		<styleName type="opsz" subtype="18">Otsikko</styleName>
 		<styleName type="opsz" subtype="72">Näyttö</styleName>
@@ -488,6 +591,17 @@
 		<axisName type="slnt">Inclinaison</axisName>
 		<axisName type="wdth">Largeur</axisName>
 		<axisName type="wght">Epaisseur</axisName>
+		<featureName type="afrc">Fractions verticales</featureName>
+		<featureName type="cpsp">Espacement des majuscules</featureName>
+		<featureName type="dlig">Ligatures facultatives</featureName>
+		<featureName type="frac">Fractions diagonales</featureName>
+		<featureName type="lnum">Chiffres d’alignement</featureName>
+		<featureName type="onum">Nombres en bas de casse</featureName>
+		<featureName type="ordn">Nombres ordinaux</featureName>
+		<featureName type="pnum">Nombres en chasse proportionnelle</featureName>
+		<featureName type="smcp">Petites majuscules</featureName>
+		<featureName type="tnum">Chiffres tabulaires</featureName>
+		<featureName type="zero">Ensemble vide</featureName>
 		<styleName type="ital" subtype="1">Cursif</styleName>
 		<styleName type="opsz" subtype="18">Titre</styleName>
 		<styleName type="opsz" subtype="72">Affichage</styleName>
@@ -538,6 +652,18 @@
 
 	<!-- in common/main/he.xml -->
 	<typographicNames>
+		<featureName type="afrc">שברים אנכיים</featureName>
+		<featureName type="cpsp">מרווח של אותיות רישיות</featureName>
+		<featureName type="dlig">משלבי אותיות אופציונליים</featureName>
+		<featureName type="frac">שברים אלכסוניים</featureName>
+		<featureName type="lnum">קווי מספרים</featureName>
+		<featureName type="onum">צורות בסגנון ישן</featureName>
+		<featureName type="ordn">מספרים סידוריים</featureName>
+		<featureName type="pnum">מספרים פרופורציונליים</featureName>
+		<featureName type="smcp">אותיות רישיות קטנות</featureName>
+		<featureName type="smcp" alt="short">רישיות מוקטנות</featureName>
+		<featureName type="tnum">מספרי טבלה</featureName>
+		<featureName type="zero">אפס עם קו חוצה</featureName>
 		<styleName type="ital" subtype="1">מחובר</styleName>
 		<styleName type="opsz" subtype="18">כותרת</styleName>
 		<styleName type="opsz" subtype="72">צג</styleName>
@@ -587,6 +713,17 @@
 
 	<!-- in common/main/hr.xml -->
 	<typographicNames>
+		<featureName type="afrc">Okomiti razlomci</featureName>
+		<featureName type="cpsp">Razmak između velikih slova</featureName>
+		<featureName type="dlig">Opcionalne ligature</featureName>
+		<featureName type="frac">Dijagonalni razlomci</featureName>
+		<featureName type="lnum">Poravnati brojevi</featureName>
+		<featureName type="onum">Staromodni oblici</featureName>
+		<featureName type="ordn">Redni brojevi</featureName>
+		<featureName type="pnum">Proporcionalni brojevi</featureName>
+		<featureName type="smcp">Smanjena velika slova</featureName>
+		<featureName type="tnum">Tablični brojevi</featureName>
+		<featureName type="zero">Prekrižena nula</featureName>
 		<styleName type="ital" subtype="1">Cursive</styleName>
 		<styleName type="opsz" subtype="18">Titling</styleName>
 		<styleName type="opsz" subtype="72">Display</styleName>
@@ -642,6 +779,18 @@
 		<axisName type="slnt">Dőlés</axisName>
 		<axisName type="wdth">Szélesség</axisName>
 		<axisName type="wght">Súly</axisName>
+		<featureName type="afrc">Függőleges törtek</featureName>
+		<featureName type="cpsp">Nagybetűtérköz</featureName>
+		<featureName type="dlig">Kiegészítő ligatúrák</featureName>
+		<featureName type="frac">Átlós törtek</featureName>
+		<featureName type="lnum">Egyenletes számok</featureName>
+		<featureName type="onum">Régi stílusú ábrák</featureName>
+		<featureName type="ordn">Sorszámok</featureName>
+		<featureName type="pnum">Arányos számok</featureName>
+		<featureName type="smcp">Kiskapitálisok</featureName>
+		<featureName type="smcp" alt="short">Kiskapitális</featureName>
+		<featureName type="tnum">Rögzített szélességű számok</featureName>
+		<featureName type="zero">Áthúzott nulla</featureName>
 		<styleName type="ital" subtype="1">Kurzív</styleName>
 		<styleName type="opsz" subtype="18">Címstílus</styleName>
 		<styleName type="opsz" subtype="72">Kijelző</styleName>
@@ -691,6 +840,17 @@
 
 	<!-- in common/main/id.xml -->
 	<typographicNames>
+		<featureName type="afrc">Pecahan Vertikal</featureName>
+		<featureName type="cpsp">Spasi Kapital</featureName>
+		<featureName type="dlig">Ligatur Opsional</featureName>
+		<featureName type="frac">Pecahan Diagonal</featureName>
+		<featureName type="lnum">Nomor Baris</featureName>
+		<featureName type="onum">Angka dengan Ketinggian Sama</featureName>
+		<featureName type="ordn">Ordinal</featureName>
+		<featureName type="pnum">Angka Proporsional</featureName>
+		<featureName type="smcp">Kapital Kecil</featureName>
+		<featureName type="tnum">Nomor Tabel</featureName>
+		<featureName type="zero">Nol Bergaris Miring</featureName>
 		<styleName type="ital" subtype="1">Kursif</styleName>
 		<styleName type="opsz" subtype="18">Judul</styleName>
 		<styleName type="opsz" subtype="72">Tampilkan</styleName>
@@ -745,6 +905,17 @@
 		<axisName type="slnt">Inclinazione</axisName>
 		<axisName type="wdth">Larghezza</axisName>
 		<axisName type="wght">Spessore</axisName>
+		<featureName type="afrc">Frazioni verticali</featureName>
+		<featureName type="cpsp">Spaziatura maiuscole</featureName>
+		<featureName type="dlig">Legature opzionali</featureName>
+		<featureName type="frac">Frazioni diagonali</featureName>
+		<featureName type="lnum">Allineamento numeri</featureName>
+		<featureName type="onum">Numeri maiuscoletti</featureName>
+		<featureName type="ordn">Ordinali</featureName>
+		<featureName type="pnum">Numeri proporzionali</featureName>
+		<featureName type="smcp">Maiuscole piccole</featureName>
+		<featureName type="tnum">Numeri tabulari</featureName>
+		<featureName type="zero">Zero tagliato</featureName>
 		<styleName type="ital" subtype="1">Corsivo</styleName>
 		<styleName type="opsz" subtype="18">Titoli</styleName>
 		<styleName type="opsz" subtype="72">Grande</styleName>
@@ -796,6 +967,17 @@
 		<axisName type="slnt">傾斜角</axisName>
 		<axisName type="wdth">字幅</axisName>
 		<axisName type="wght">太さ</axisName>
+		<featureName type="afrc">縦書きの分数</featureName>
+		<featureName type="cpsp">大文字の間隔</featureName>
+		<featureName type="dlig">オプションのリガチャ</featureName>
+		<featureName type="frac">斜め書きの分数</featureName>
+		<featureName type="lnum">ライニング数字</featureName>
+		<featureName type="onum">古いスタイルの数字</featureName>
+		<featureName type="ordn">序数</featureName>
+		<featureName type="pnum">プロポーショナル数字</featureName>
+		<featureName type="smcp">小さな大文字</featureName>
+		<featureName type="tnum">表形式数字</featureName>
+		<featureName type="zero">スラッシュゼロ</featureName>
 		<styleName type="ital" subtype="1">カーシブ</styleName>
 		<styleName type="opsz" subtype="18">タイトル</styleName>
 		<styleName type="opsz" subtype="72">ディスプレイ</styleName>
@@ -851,6 +1033,17 @@
 		<axisName type="slnt">기울기</axisName>
 		<axisName type="wdth">폭</axisName>
 		<axisName type="wght">두께</axisName>
+		<featureName type="afrc">수직 부분</featureName>
+		<featureName type="cpsp">대문자 간격</featureName>
+		<featureName type="dlig">선택 합자</featureName>
+		<featureName type="frac">수직 부분</featureName>
+		<featureName type="lnum">줄무늬 숫자</featureName>
+		<featureName type="onum">이전 스타일 그림</featureName>
+		<featureName type="ordn">서수</featureName>
+		<featureName type="pnum">가변폭 숫자</featureName>
+		<featureName type="smcp">작은 대문자</featureName>
+		<featureName type="tnum">타불라 숫자</featureName>
+		<featureName type="zero">슬래시 0</featureName>
 		<styleName type="ital" subtype="1">필기체</styleName>
 		<styleName type="opsz" subtype="18">각인체</styleName>
 		<styleName type="opsz" subtype="72">표시체</styleName>
@@ -901,6 +1094,18 @@
 
 	<!-- in common/main/ms.xml -->
 	<typographicNames>
+		<featureName type="afrc">Pecahan Menegak</featureName>
+		<featureName type="cpsp">Jarak Huruf</featureName>
+		<featureName type="dlig">Ligatur Pilihan</featureName>
+		<featureName type="frac">Pecahan Pepenjuru</featureName>
+		<featureName type="lnum">Nombor Pembarisan</featureName>
+		<featureName type="onum">Angka Gaya Lama</featureName>
+		<featureName type="ordn">Ordinal</featureName>
+		<featureName type="pnum">Nombor Berkadar</featureName>
+		<featureName type="smcp">Huruf Besar Kecil</featureName>
+		<featureName type="smcp" alt="short">Huruf Kecil</featureName>
+		<featureName type="tnum">Nombor berjadual</featureName>
+		<featureName type="zero">Sifar Bergaris Condong</featureName>
 		<styleName type="ital" subtype="1">Kursif</styleName>
 		<styleName type="opsz" subtype="18">Sendeng</styleName>
 		<styleName type="opsz" subtype="72">Paparkan</styleName>
@@ -965,6 +1170,17 @@
 		<axisName type="slnt">Schuin</axisName>
 		<axisName type="wdth">Breedte</axisName>
 		<axisName type="wght">Dikte</axisName>
+		<featureName type="afrc">Verticale breuken</featureName>
+		<featureName type="cpsp">Hoofdletterafstand</featureName>
+		<featureName type="dlig">Optionele ligaturen</featureName>
+		<featureName type="frac">Diagonale breuken</featureName>
+		<featureName type="lnum">Tabelgetallen</featureName>
+		<featureName type="onum">Uithangende cijfers</featureName>
+		<featureName type="ordn">Rangtelwoorden</featureName>
+		<featureName type="pnum">Proportionele cijfers</featureName>
+		<featureName type="smcp">Kleinkapitaal</featureName>
+		<featureName type="tnum">Tabelvormige cijfers</featureName>
+		<featureName type="zero">Nul met schuine streep</featureName>
 		<styleName type="ital" subtype="1">Cursief</styleName>
 		<styleName type="opsz" subtype="18">Titel</styleName>
 		<styleName type="opsz" subtype="72">Display</styleName>
@@ -1015,6 +1231,17 @@
 
 	<!-- in common/main/no.xml -->
 	<typographicNames>
+		<featureName type="afrc">Vertikale brøker</featureName>
+		<featureName type="cpsp">Stor bokstav-avstand</featureName>
+		<featureName type="dlig">Valgfrie ligaturer</featureName>
+		<featureName type="frac">Diagonale brøker</featureName>
+		<featureName type="lnum">Sifre i moderne stil</featureName>
+		<featureName type="onum">Tall i gammel stil</featureName>
+		<featureName type="ordn">Ordenstall</featureName>
+		<featureName type="pnum">Proporsjonale tall</featureName>
+		<featureName type="smcp">Kapiteler</featureName>
+		<featureName type="tnum">Tabellsifre</featureName>
+		<featureName type="zero">Null med skråstrek</featureName>
 		<styleName type="ital" subtype="1">Kursiv</styleName>
 		<styleName type="opsz" subtype="18">Tittel</styleName>
 		<styleName type="opsz" subtype="72">Visning</styleName>
@@ -1075,6 +1302,17 @@
 		<axisName type="slnt">Inclinação</axisName>
 		<axisName type="wdth">Largura</axisName>
 		<axisName type="wght">Peso</axisName>
+		<featureName type="afrc">Frações Verticais</featureName>
+		<featureName type="cpsp">Espaçamento de Maiúsculas</featureName>
+		<featureName type="dlig">Ligaduras Opcionais</featureName>
+		<featureName type="frac">Frações Diagonais</featureName>
+		<featureName type="lnum">Números de Revestimento</featureName>
+		<featureName type="onum">Figuras em Estilo Antigo</featureName>
+		<featureName type="ordn">Ordinais</featureName>
+		<featureName type="pnum">Números Proporcionais</featureName>
+		<featureName type="smcp">Versalete</featureName>
+		<featureName type="tnum">Números Tabulares</featureName>
+		<featureName type="zero">Zero Cortado</featureName>
 		<styleName type="ital" subtype="1">Cursivo</styleName>
 		<styleName type="opsz" subtype="18">Título</styleName>
 		<styleName type="opsz" subtype="72">Decorativo</styleName>
@@ -1123,6 +1361,16 @@
 
 	<!-- in common/main/pt_PT.xml -->
 	<typographicNames>
+		<featureName type="afrc">Frações verticais</featureName>
+		<featureName type="cpsp">Espaço entre maiúsculas</featureName>
+		<featureName type="dlig">Ligaduras opcionais</featureName>
+		<featureName type="frac">Frações diagonais</featureName>
+		<featureName type="lnum">Números alinhados à linha de base</featureName>
+		<featureName type="onum">Figuras estilo antigo</featureName>
+		<featureName type="pnum">Números proporcionais</featureName>
+		<featureName type="smcp" alt="short">Maiúsculas pequenas</featureName>
+		<featureName type="tnum">Números tabulares</featureName>
+		<featureName type="zero">Zero cortado</featureName>
 		<styleName type="ital" subtype="1">Itálico</styleName>
 		<styleName type="opsz" subtype="18">Descaído</styleName>
 		<styleName type="opsz" subtype="72">Tela</styleName>
@@ -1150,6 +1398,18 @@
 
 	<!-- in common/main/ro.xml -->
 	<typographicNames>
+		<featureName type="afrc">Fracții verticale</featureName>
+		<featureName type="cpsp">Spațiere majuscule</featureName>
+		<featureName type="dlig">Ligaturi opționale</featureName>
+		<featureName type="frac">Fracții diagonale</featureName>
+		<featureName type="lnum">Numere aliniate</featureName>
+		<featureName type="onum">Cifre în stil vechi</featureName>
+		<featureName type="ordn">Ordinale</featureName>
+		<featureName type="pnum">Numere proporționale</featureName>
+		<featureName type="smcp">Majuscule mici</featureName>
+		<featureName type="smcp" alt="short">Minuscule</featureName>
+		<featureName type="tnum">Numere tabulare</featureName>
+		<featureName type="zero">Zero barat</featureName>
 		<styleName type="ital" subtype="1">Cursiv</styleName>
 		<styleName type="opsz" subtype="18">Înclinare</styleName>
 		<styleName type="opsz" subtype="72">Afișare</styleName>
@@ -1204,6 +1464,17 @@
 		<axisName type="slnt">Наклон</axisName>
 		<axisName type="wdth">Ширина</axisName>
 		<axisName type="wght">Толщина</axisName>
+		<featureName type="afrc">Дроби с вертикальной чертой</featureName>
+		<featureName type="cpsp">Интервал между заглавными</featureName>
+		<featureName type="dlig">Необязательные лигатуры</featureName>
+		<featureName type="frac">Дроби с диагональной чертой</featureName>
+		<featureName type="lnum">Выравнивание цифр</featureName>
+		<featureName type="onum">Старые рисунки</featureName>
+		<featureName type="ordn">Порядковые числительные</featureName>
+		<featureName type="pnum">Пропорциональные цифры</featureName>
+		<featureName type="smcp">Малые прописные</featureName>
+		<featureName type="tnum">Табличные цифры</featureName>
+		<featureName type="zero">Нуль</featureName>
 		<styleName type="ital" subtype="1">Рукописный</styleName>
 		<styleName type="opsz" subtype="18">Титульный</styleName>
 		<styleName type="opsz" subtype="72">Показать</styleName>
@@ -1251,6 +1522,18 @@
 
 	<!-- in common/main/sk.xml -->
 	<typographicNames>
+		<featureName type="afrc">Zvislé zlomky</featureName>
+		<featureName type="cpsp">Rozostupy veľkých písmen</featureName>
+		<featureName type="dlig">Voliteľné ligatúry</featureName>
+		<featureName type="frac">Diagonálne zlomky</featureName>
+		<featureName type="lnum">Zarovnané čísla</featureName>
+		<featureName type="onum">Skákavé číslice</featureName>
+		<featureName type="ordn">Poradové čísla</featureName>
+		<featureName type="pnum">Proporčné čísla</featureName>
+		<featureName type="smcp">Kapitálky</featureName>
+		<featureName type="smcp" alt="short">Malé kapitálky</featureName>
+		<featureName type="tnum">Tabuľkové čísla</featureName>
+		<featureName type="zero">Prečiarknutá nula</featureName>
 		<styleName type="ital" subtype="1">Cursive</styleName>
 		<styleName type="opsz" subtype="18">Titling</styleName>
 		<styleName type="opsz" subtype="72">Display</styleName>
@@ -1307,6 +1590,17 @@
 		<axisName type="slnt">Lutning</axisName>
 		<axisName type="wdth">Bredd</axisName>
 		<axisName type="wght">Vikt</axisName>
+		<featureName type="afrc">Vertikala bråk</featureName>
+		<featureName type="cpsp">Versalavstånd</featureName>
+		<featureName type="dlig">Valfria ligaturer</featureName>
+		<featureName type="frac">Diagonala bråk</featureName>
+		<featureName type="lnum">Linjerade siffror</featureName>
+		<featureName type="onum">Gammaldags siffror</featureName>
+		<featureName type="ordn">Ordningstal</featureName>
+		<featureName type="pnum">Proportionerliga siffror</featureName>
+		<featureName type="smcp">Kapitäler</featureName>
+		<featureName type="tnum">Tabulära siffror</featureName>
+		<featureName type="zero">Genomstruken nolla</featureName>
 		<styleName type="ital" subtype="1">Kursiv</styleName>
 		<styleName type="opsz" subtype="18">Rubrik</styleName>
 		<styleName type="opsz" subtype="72">Skärm</styleName>
@@ -1355,6 +1649,18 @@
 
 	<!-- in common/main/th.xml -->
 	<typographicNames>
+		<featureName type="afrc">เศษส่วนแนวตั้ง</featureName>
+		<featureName type="cpsp">ระยะห่างตัวพิมพ์ใหญ่</featureName>
+		<featureName type="dlig">ลิเกเจอร์ทางเลือก</featureName>
+		<featureName type="frac">เศษส่วนทแยงมุม</featureName>
+		<featureName type="lnum">ตัวเลขบนเส้นบรรทัด</featureName>
+		<featureName type="onum">ตัวเลขลักษณะเก่า</featureName>
+		<featureName type="ordn">ตัวเลขบริบท</featureName>
+		<featureName type="pnum">ตัวเลขแบบสัดส่วน</featureName>
+		<featureName type="smcp">ตัวพิมพ์ใหญ่แบบเล็ก</featureName>
+		<featureName type="smcp" alt="short">ตัวพิมพ์ใหญ่เล็ก</featureName>
+		<featureName type="tnum">ตัวเลขแบบตาราง</featureName>
+		<featureName type="zero">เลขศูนย์เอียง</featureName>
 		<styleName type="ital" subtype="1">เล่นหาง</styleName>
 		<styleName type="opsz" subtype="18">ตัวพิมพ์ใหญ่</styleName>
 		<styleName type="opsz" subtype="72">การแสดงผล</styleName>
@@ -1410,6 +1716,18 @@
 		<axisName type="slnt">Eğim</axisName>
 		<axisName type="wdth">Genişlik</axisName>
 		<axisName type="wght">Kalınlık</axisName>
+		<featureName type="afrc">Düşey Kesirler</featureName>
+		<featureName type="cpsp">Büyük Harf Aralığı</featureName>
+		<featureName type="dlig">İsteğe Bağlı Birleşik Harfler</featureName>
+		<featureName type="frac">Çapraz Kesirler</featureName>
+		<featureName type="lnum">Hizalı Rakamlar</featureName>
+		<featureName type="onum">Eski Stil Resimler</featureName>
+		<featureName type="ordn">Sıra Sayıları</featureName>
+		<featureName type="pnum">Sayılarla Orantılı</featureName>
+		<featureName type="smcp">Küçük Büyük Harfler</featureName>
+		<featureName type="smcp" alt="short">Küçük Büyük Harf</featureName>
+		<featureName type="tnum">Tablo rakamları</featureName>
+		<featureName type="zero">Eğik Çizgili Sıfır</featureName>
 		<styleName type="ital" subtype="1">Bitişik El Yazısı</styleName>
 		<styleName type="opsz" subtype="18">Büyük Harf</styleName>
 		<styleName type="opsz" subtype="72">Ekran</styleName>
@@ -1457,6 +1775,17 @@
 		<axisName type="slnt">Нахил</axisName>
 		<axisName type="wdth">Ширина</axisName>
 		<axisName type="wght">Щільність</axisName>
+		<featureName type="afrc">Вертикальні дроби</featureName>
+		<featureName type="cpsp">Інтервал між заголовними</featureName>
+		<featureName type="dlig">Необовʼязкові лігатури</featureName>
+		<featureName type="frac">Діагональні дроби</featureName>
+		<featureName type="lnum">Нумерація рядків</featureName>
+		<featureName type="onum">Давні цифри</featureName>
+		<featureName type="ordn">Порядкові</featureName>
+		<featureName type="pnum">Пропорційні цифри</featureName>
+		<featureName type="smcp">Малі заглавні</featureName>
+		<featureName type="tnum">Табличні цифри</featureName>
+		<featureName type="zero">Закреслений нуль</featureName>
 		<styleName type="ital" subtype="1">Курсив</styleName>
 		<styleName type="opsz" subtype="18">Надписування</styleName>
 		<styleName type="opsz" subtype="72">Вигляд</styleName>
@@ -1505,6 +1834,17 @@
 
 	<!-- in common/main/vi.xml -->
 	<typographicNames>
+		<featureName type="afrc">Phân số Dọc</featureName>
+		<featureName type="cpsp">Giãn cách Chữ hoa</featureName>
+		<featureName type="dlig">Chữ ghép Tùy chọn</featureName>
+		<featureName type="frac">Phân số Chéo</featureName>
+		<featureName type="lnum">Sắp dòng Số</featureName>
+		<featureName type="onum">Số Kiểu cũ</featureName>
+		<featureName type="ordn">Số thứ tự</featureName>
+		<featureName type="pnum">Số Tỷ lệ</featureName>
+		<featureName type="smcp">Chữ hoa Nhỏ</featureName>
+		<featureName type="tnum">Số trong bảng</featureName>
+		<featureName type="zero">Số 0 Có gạch</featureName>
 		<styleName type="ital" subtype="1">Chữ thảo</styleName>
 		<styleName type="opsz" subtype="18">Văn tự</styleName>
 		<styleName type="opsz" subtype="72">Hiển thị</styleName>
@@ -1561,6 +1901,18 @@
 		<axisName type="slnt">倾斜</axisName>
 		<axisName type="wdth">宽度</axisName>
 		<axisName type="wght">直线宽度</axisName>
+		<featureName type="afrc">竖排分数</featureName>
+		<featureName type="cpsp">大写字母间距</featureName>
+		<featureName type="dlig">可选连字</featureName>
+		<featureName type="frac">对角线分数</featureName>
+		<featureName type="lnum">行内编号</featureName>
+		<featureName type="onum">旧式数字体</featureName>
+		<featureName type="ordn">序数</featureName>
+		<featureName type="pnum">成比例的数字</featureName>
+		<featureName type="smcp">小型大写</featureName>
+		<featureName type="smcp" alt="short">小型大写字母</featureName>
+		<featureName type="tnum">表格编号</featureName>
+		<featureName type="zero">带斜杠的零</featureName>
 		<styleName type="ital" subtype="1">草体</styleName>
 		<styleName type="opsz" subtype="18">标题</styleName>
 		<styleName type="opsz" subtype="72">展示体</styleName>
@@ -1615,6 +1967,17 @@
 		<axisName type="slnt">傾斜</axisName>
 		<axisName type="wdth">寬度</axisName>
 		<axisName type="wght">線段寬度</axisName>
+		<featureName type="afrc">直式分數</featureName>
+		<featureName type="cpsp">大寫間距</featureName>
+		<featureName type="dlig">選擇性連字</featureName>
+		<featureName type="frac">對角線分數</featureName>
+		<featureName type="lnum">齊線數字</featureName>
+		<featureName type="onum">舊式數字</featureName>
+		<featureName type="ordn">順序</featureName>
+		<featureName type="pnum">等比例數字</featureName>
+		<featureName type="smcp">小型大寫字母</featureName>
+		<featureName type="tnum">表格數字</featureName>
+		<featureName type="zero">加斜線的零</featureName>
 		<styleName type="ital" subtype="1">草書體</styleName>
 		<styleName type="opsz" subtype="18">燙印體</styleName>
 		<styleName type="opsz" subtype="72">顯示體</styleName>

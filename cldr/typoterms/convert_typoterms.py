@@ -25,6 +25,7 @@ def join(parts, lang):
 
 def read_macos_typoterms():
     styleNames = {}
+    featureNames = {}
     styleNames[('opsz', '8', None)] = {'en': 'Caption'}
     styleNames[('opsz', '12', None)] = {'en': 'Text'}
     for dirname in os.listdir(MACOS_PATH):
@@ -34,28 +35,50 @@ def read_macos_typoterms():
         lang = {'zh_CN': 'zh', 'zh_TW': 'zh_Hant'}.get(lang, lang)
         if lang == 'pl':
             continue
-        names = read_macos_plist(
+        snames = read_macos_plist(
             '%s/%s/StyleNames.strings' % (MACOS_PATH, dirname))
-        for key, name in sorted(names.items()):
+        for key, name in sorted(snames.items()):
             style = _MACOS_STYLES.get(key)
-            if not style:
-                continue
-            styleNames.setdefault(style, {})[lang] = name
-    prune_variant_styles(styleNames)
-    return {'styleNames': styleNames}
+            if style:
+                styleNames.setdefault(style, {})[lang] = name
+        fnames = read_macos_plist(
+            '%s/%s/FeatureSelectorNames.strings' % (MACOS_PATH, dirname))
+        for key, name in sorted(fnames.items()):
+            feature = _MACOS_FEATURES.get(key)
+            if feature:
+                featureNames.setdefault(feature, {})[lang] = name
+    prune_variant_names(styleNames)
+    prune_variant_names(featureNames)
+    return {'styleNames': styleNames, 'featureNames': featureNames}
 
 
-def prune_variant_styles(styleNames):
+def prune_variant_names(names):
     alts = {}
-    for (axis, value, alt) in styleNames:
+    for (axis, value, alt) in names:
         if alt:
             alts.setdefault((axis, value), set()).add(alt)
     for (axis, value), alt in sorted(alts.items()):
         for a in alt:
-            for lang, altName in sorted(list(styleNames[(axis, value, a)].items())):
-                name = styleNames[(axis, value, None)].get(lang)
+            for lang, altName in sorted(list(names[(axis, value, a)].items())):
+                name = names[(axis, value, None)].get(lang)
                 if name == altName:
-                    del styleNames[(axis, value, a)][lang]
+                    del names[(axis, value, a)][lang]
+
+
+_MACOS_FEATURES = {
+    'Capital Spacing': ('cpsp', None, None),
+    'Optional Ligatures': ('dlig', None, None),
+    'Small Capitals': ('smcp', None, None),
+    'Small Caps': ('smcp', None, 'short'),
+    'Slashed Zero': ('zero', None, None),
+    'Tabular numbers': ('tnum', None, None),
+    'Lining Numbers': ('lnum', None, None),
+    'Old-Style Figures': ('onum', None, None),
+    'Ordinals': ('ordn', None, None),
+    'Proportional Numbers': ('pnum', None, None),
+    'Diagonal Fractions': ('frac', None, None),
+    'Vertical Fractions': ('afrc', None, None),
+}
 
 
 _MACOS_STYLES = {
@@ -242,14 +265,14 @@ def get_axis_names(terms, lang):
     return result
 
 
-def get_style_names(terms, lang):
+def get_names(kind, terms, lang):
     baselang = lang.split('_')[0] if '_' in lang else None
     result = {}
-    for styleKey, names in terms.get('styleNames', {}).items():
+    for key, names in terms.get(kind, {}).items():
         name = names.get(lang)
         basename = names.get(baselang) if baselang else None
         if name is not None and name != basename:
-            result[styleKey] = name
+            result[key] = name
     return result
 
 
@@ -259,7 +282,7 @@ def xmlescape(s):
 
 def get_style_sort_key(key):
     axisTag, axisValue, alt = key
-    if axisValue[0] in '0123456789':
+    if axisValue and axisValue[0] in '0123456789':
         return (axisTag, float(axisValue), alt)
     else:
         return (axisTag, axisValue, alt)
@@ -268,8 +291,9 @@ def get_style_sort_key(key):
 def write_xml(terms, lang, out):
     baselang = lang.split('_')[0] if '_' in lang else None
     axisNames = get_axis_names(terms, lang)
-    styleNames = get_style_names(terms, lang)
-    if not axisNames and not styleNames:
+    styleNames = get_names('styleNames', terms, lang)
+    featureNames = get_names('featureNames', terms, lang)
+    if not axisNames and not styleNames and not featureNames:
         print('**** SKIPPING', lang)
         return
 
@@ -279,6 +303,15 @@ def write_xml(terms, lang, out):
     for tag, name in sorted(axisNames.items()):
         out.write(prefix + '\t<axisName type="%s">%s</axisName>\n' %
                   (tag, xmlescape(name)))
+    for key in sorted(featureNames.keys(), key=get_style_sort_key):
+        name = featureNames[key]
+        type, subtype, alt = key
+        assert subtype is None
+        out.write(prefix)
+        out.write('\t<featureName type="%s"' % type)
+        if alt:
+            out.write(' alt="%s"' % xmlescape(alt))
+        out.write('>%s</featureName>\n' % xmlescape(name))
     for styleKey in sorted(styleNames.keys(), key=get_style_sort_key):
         name = styleNames[styleKey]
         type, subtype, alt = styleKey
@@ -329,7 +362,7 @@ def synthesize_facename(terms, lang, var):
 # results as in Microsoft's localization data.
 def check_combined_facenames(terms, out):
     digits = '0123456789'
-    names = get_style_names(terms, 'en')
+    names = get_names('styleNames', terms, 'en')
     weights = {name: value for (axis, value, alt), name in names.items()
                if axis == 'wght' and value[0] in digits}
     widths = {name: value for (axis, value, alt), name in names.items()
