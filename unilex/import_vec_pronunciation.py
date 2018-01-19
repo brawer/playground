@@ -11,20 +11,24 @@ IPA_TRANSLIT_RULES = '''
 # [2] https://en.wikipedia.org/wiki/Help:IPA/Venetian
 
 $boundary = [^[:L:][:M:][:N:]];
-$ei = [e é è i í ì];
+$e = [e é è];
+$i = [i í ì];
+$ei = [$e $i];
 $vowel = [a á à $ei o ó ò u ú ù];
 
 ::Lower;
 ::NFC;
 ([abefhijklmnoptvw]) → $1;
 [á à] → a;
-{c} [$ei \' ’] → t͡ʃ;
+{c [$ei \' ’]} $vowel → t͡ʃ;
+c $e [\' ’]? → t͡ʃe;
+c $i [\' ’]? → t͡ʃi;
 [c {ch} k q {qu}] → k;
 é → e;
 è → ɛ;
 gl $ei? → ʎ;
 ġ → d͡ʒ;
-{g} $ei → d͡ʒ;
+g $ei → d͡ʒ;
 gn → ɲ;
 [g {gh}] → ɡ;
 [í ì] → i;
@@ -50,10 +54,14 @@ z → z;
 [\- \' ’] → ;
 
 ::NULL;
-{n} ɡ → ŋ;
+{n} [p b t d k ɡ f v ɾ s z $boundary] → ŋ;
+ɰe → e;
+ɰi → i;
+eɰ → e;
+iɰ → i;
 
 ::NULL;
-{sion} $boundary → ˈsjon;
+ɰ → e̯;
 
 '''
 
