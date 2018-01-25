@@ -9,6 +9,8 @@ IPA_TRANSLIT_RULES = '''
 # ----------
 # [1] https://en.wikipedia.org/wiki/Venetian_language#Phonology
 # [2] https://en.wikipedia.org/wiki/Help:IPA/Venetian
+#
+# Output:
 
 $boundary = [^[:L:][:M:][:N:]];
 $e = [e é è];
@@ -18,7 +20,7 @@ $vowel = [a á à $ei o ó ò u ú ù];
 
 ::Lower;
 ::NFC;
-([abefhijklmnoptvw]) → $1;
+([abefhijklmoptvw]) → $1;
 [á à] → a;
 {c [$ei \' ’]} $vowel → t͡ʃ;
 c $e [\' ’]? → t͡ʃe;
@@ -35,12 +37,11 @@ gn → ɲ;
 ł → ɰ;
 ṅ → ŋ;
 ñ → ɲ;
-::NULL;
-{n} [pk] → ŋ;
+nj → ɲ;
 ó → o;
 ò → ɔ;
 r → ɾ;
-[ṡ x] → z;
+[ṡ x z] → z;
 {s}[bdg] → z;
 š → ʃ;
 s → s;
@@ -49,8 +50,6 @@ s → s;
 ž → ʒ;
 [ż đ {dh}] → d͡z;
 d → d;
-$boundary {z} → d͡z;
-z → z;
 [\- \' ’] → ;
 
 ::NULL;
@@ -59,10 +58,7 @@ z → z;
 ɰi → i;
 eɰ → e;
 iɰ → i;
-
-::NULL;
 ɰ → e̯;
-
 '''
 
 
