@@ -12329,7 +12329,6 @@
 1	duroni
 1	dutrina
 1	duzento
-1	ʣ
 1	èbete
 1	èbeti
 1	ecesionałi
@@ -19388,7 +19387,6 @@
 1	nisuna
 1	nisune
 1	nisuni
-1	ǌ
 1	njaga
 1	njancora
 1	njanfa
@@ -29708,7 +29706,6 @@
 1	truzarse
 1	truzi
 1	truzo
-1	ʦ
 1	tsanpàtoła
 1	tsanpàtołe
 1	tsanpeła
