@@ -47,35 +47,35 @@ $onset = [
 ::NFC;
 
 ([abefhijklmoptvw]) → $1;
-[á à] → \\' a;
+[á à] → ˈa;
 {c [$ei \' ’]} $vowel → t͡ʃ;
-c [éè] [\' ’]? → t͡ʃ \\' e;
+c [éè] [\' ’]? → t͡ʃˈe;
 c e [\' ’]? → t͡ʃe;
-c [íì] [\' ’]? → t͡ʃ \\' i;
+c [íì] [\' ’]? → t͡ʃˈi;
 c i [\' ’]? → t͡ʃi;
 [c {ch} k q {qu}] → k;
-é → \\' e;
-è → \\' ɛ;
+é → ˈe;
+è → ˈɛ;
 {g l $ei} $vowel → ʎ;
 g l → ʎ;
 ġ → d͡ʒ;
 {g} $ei → d͡ʒ;
 gn → ɲ;
 [g {gh}] → ɡ;
-[í ì] → \\' i;
+[í ì] → ˈi;
 ł → ɰ;
 ṅ → ŋ;
 ñ → ɲ;
 nj → ɲ;
-ó → \\' o;
-ò → \\' ɔ;
+ó → ˈo;
+ò → ˈɔ;
 r → ɾ;
 [ṡ x z] → z;
 {s}[bdg] → z;
 š → ʃ;
 s → s;
 {u} $vowel → w;
-[ú ù] → \\' u;
+[ú ù] → ˈu;
 u → u;
 y → j;
 ž → ʒ;
@@ -85,14 +85,13 @@ d → d;
 ::NULL;
 
 {n} [p b t d k ɡ f v ɾ s z $boundary] → ŋ;
-ɰ \\'? e → e;
-ɰ \\'? i → i;
+{ɰ} ˈ? [ei] → ;
 eɰ → e;
 iɰ → i;
 ɰ → e̯;
 
 ::NULL;
-($onset) \\' → \\' $1;
+($onset) ˈ → ˈ $1;
 '''
 
 
@@ -104,7 +103,7 @@ def make_transliterator():
 
 
 def make_phoneme_set(s):
-    pat = [u'\\u0020', "'"]
+    pat = [u'\\u0020', "ˈ"]
     for phoneme in s.split():
         if len(phoneme) == 1:
             pat.append(phoneme)
