@@ -141,6 +141,8 @@ CHR_FONIPA = icu.Transliterator.createFromRules(
 REVERSE = icu.Transliterator.createFromRules(
     'chr_Latn-chr', '''
 
+::lower;
+
 a → Ꭰ;
 e → Ꭱ;
 i → Ꭲ;
@@ -149,14 +151,17 @@ u → Ꭴ;
 v → Ꭵ;
 
 ga → Ꭶ;
-#ka → Ꭷ;
+ka → Ꭷ;
 ge → Ꭸ;
+ke → Ꭸ;
 gi → Ꭹ;
 ki → Ꭹ;
 go → Ꭺ;
-#gu → Ꭻ;
-#gv → Ꭼ
-k → Ꭺ;
+ko → Ꭺ;
+gu → Ꭻ;
+ku → Ꭻ;
+gv → Ꭼ;
+kv → Ꭼ;
 
 ha → Ꭽ;
 he → Ꭾ;
@@ -171,9 +176,12 @@ li → Ꮅ;
 lo → Ꮆ;
 lu → Ꮇ;
 lv → Ꮈ;
+l → Ꮅ;
+
+neha → ᏁᎭ;
 
 na → Ꮎ;
-#→ Ꮏ → hna;
+hna → Ꮏ;
 #→ Ꮐ → nah;
 neh → Ꮑ;
 ne → Ꮑ;
@@ -181,6 +189,21 @@ ni → Ꮒ;
 no → Ꮓ;
 nu → Ꮔ;
 nv → Ꮕ;
+n → Ꮒ;
+
+gwa → Ꮖ;
+gwe → Ꮗ;
+gwi → Ꮘ;
+gwo → Ꮙ;
+gwu → Ꮚ;
+gwv → Ꮛ;
+
+kwa → Ꮖ;
+kwe → Ꮗ;
+kwi → Ꮘ;
+kwo → Ꮙ;
+kwu → Ꮚ;
+kwv → Ꮛ;
 
 ma → Ꮉ;
 me → Ꮊ;
@@ -212,10 +235,27 @@ te → Ꮦ;
 di → Ꮧ;
 ti → Ꮨ;
 do → Ꮩ;
+to → Ꮩ;
 du → Ꮪ;
+tu → Ꮪ;
 dv → Ꮫ;
+tv → Ꮫ;
+
+#hla → Ꮬ;
+hla → Ꮭ;
+hle → Ꮮ;
+hli → Ꮯ;
+hlo → Ꮰ;
+hlu → Ꮱ;
+hlv → Ꮲ;
+
 
 ja → Ꮳ;
+je → Ꮴ;
+ji → Ꮵ;
+jo → Ꮶ;
+ju → Ꮷ;
+jv → Ꮸ;
 
 cha → Ꮳ;
 che → Ꮴ;
@@ -230,6 +270,7 @@ wi → Ꮻ;
 wo → Ꮼ;
 wu → Ꮽ;
 wv → Ꮾ;
+w → Ꮻ;
 
 ya → Ꮿ;
 ye → Ᏸ;
@@ -238,30 +279,36 @@ yo → Ᏺ;
 yu → Ᏻ;
 yv → Ᏼ;
 
-\? → ;
-h → ;
+k → Ꭶ;
+ts → Ꮵ;
+d → Ꮨ;
+t → Ꮨ;
+
+\? → ʔ;
+h → H;
 
 ''', icu.UTransDirection.FORWARD)
 
-def make_ipa(form, tone, latin, length):
+def make_ipa(form, tone, latin, length, pos):
     ipa = CHR_FONIPA.transliterate(form)
     rev = REVERSE.transliterate(latin)
-    if rev != form:
-        print '\t'.join([form, ipa, latin, rev]).encode('utf-8')
+    rev_ok = (rev.replace('ʔ', '').replace('H', '') == form)
+    if rev_ok:
+        ipa = CHR_FONIPA.transliterate(rev).replace('H', 'h')
 
     num_syllables = len(form.replace('Ꮝ', ''))
     if len(length) == num_syllables - 1:
         length = length + '.'
     if num_syllables != len(length):
-        return '*** CHECK: ' + ipa
+        return '*** ' + ipa
     marks = [{'-':'ː', '.':''}[c] for c in length]
     tones = tone.split('.')
     tones = [{'1':'¹', '2':'²', '3':'³', '4':'⁴', '23':'²³', '32':'³²', '0':'', '':''}[t] for t in tone.split('.')]
     result = ''
     if len(tones) == num_syllables - 1:
-        tones.append('')
+        tones.append('⁴' if pos == 'NOUN' else '¹')
     if len(tones) > num_syllables:
-        return '*** CHECK: ' + ipa
+        return '*** ' + ipa
     tones_ok = (len(tones) == num_syllables)
     tones = (tones + ([''] * num_syllables))[:num_syllables]
     for syll in form:
@@ -271,13 +318,14 @@ def make_ipa(form, tone, latin, length):
             result = result + CHR_FONIPA.transliterate(syll) + marks[0] + tones[0]
             marks = marks[1:]
             tones = tones[1:]
-    if tones_ok:
+    if tones_ok and rev_ok:
         return result
     else:
-        return '*** CHECK: ' + result
+        return '*** ' + result
 
 
 def read_words(path):
+    print '\t'.join(['no', 'syllabary', 'class', 'suspicious', 'ipa', 'length', 'tone', 'entry']).encode('utf-8')
     poscount = collections.Counter()
     with open(path, 'rb') as csvfile:
         dialect = csv.Sniffer().sniff(csvfile.read(1024))
@@ -293,18 +341,24 @@ def read_words(path):
                 # Missing for 7: ᎦᏃᎭᎵᏙᎯ ᎠᏂᏃᎭᎵᏙᎯ ᏗᏝᏬᏚᎭᎢ ᏧᎵᏍᏚᎢᏓ ᏧᎵᏍᎨᏓ ᏧᏬᎵᏗ ᏧᏲᎢ
                 continue
             lemma, subid = map(int, form_number.split('-'))
-            lemma = 'chr/%d' % lemma
+            lemma = '%d' % lemma
             pos = PARTS_OF_SPEECH.get(item['class'], 'X')
             tone = item['tone'].strip()
             length = item['length'].strip()
             latin = item['entry'].strip()
             num_words = len(form.split())
             if num_words == len(length.split()) and num_words == len(tone.split()) and num_words == len(latin.split()):
-                ipa = ' '.join([make_ipa(w, t, lat, l)
+                ipa = ' '.join([make_ipa(w, t, lat, l, pos)
                                 for w, t, lat, l in zip(form.split(), tone.split(), latin.split(), length.split())])
             else:
-                ipa = '*** CHECK: ' + CHR_FONIPA.transliterate(form)
-            #print '\t'.join([form, lemma, pos, ipa]).encode('utf-8')
+                ipa = '*** ' + CHR_FONIPA.transliterate(form)
+            tricky = '*' in ipa
+            if tricky:
+                ipa = ' '.join(ipa.replace('*', '').split())
+                tricky = '***'
+            else:
+                tricky = ''
+            print '\t'.join([form_number, form, pos, tricky, ipa, length, tone, latin]).encode('utf-8')
             poscount[pos] += 1
 
 
@@ -313,4 +367,3 @@ if __name__ == '__main__':
         os.path.dirname(os.path.abspath(__file__)),
         'data', 'chr', 'words.csv')
     read_words(words_path)
-
