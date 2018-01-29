@@ -16,11 +16,18 @@ i u e e̯ o ɛ ɔ a
 IPA_TRANSLIT_RULES = '''
 # References
 # ----------
-# [1] https://en.wikipedia.org/wiki/Venetian_language#Phonology
-# [2] https://en.wikipedia.org/wiki/Help:IPA/Venetian
+# [1] Personal communication with Academia de ła Bona Creansa, Venice
+# [2] https://en.wikipedia.org/wiki/Venetian_language#Phonology
+# [3] https://en.wikipedia.org/wiki/Help:IPA/Venetian (buggy, mixed with Ladin)
 #
 # Output phonemes
 # ---------------
+#   m n ɲ ŋ
+#   p b t d k ɡ
+#   f v ɾ s z h
+#   l ʎ j w
+#   t͡ʃ d͡ʒ d͡z
+#   i u e e̯ o ɛ ɔ a
 
 $boundary = [^[:L:][:M:][:N:]];
 $e = [e é è];
@@ -71,13 +78,11 @@ nj → ɲ;
 r → ɾ;
 [ṡ x z] → z;
 {s}[bdg] → z;
-š → ʃ;
 s → s;
 {u} $vowel → w;
 [ú ù] → ˈu;
 u → u;
 y → j;
-ž → ʒ;
 [ż đ {dh}] → d͡z;
 d → d;
 [[:P:][:Z:]]+ → ' ';
