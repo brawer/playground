@@ -27,29 +27,23 @@ $e = [e é è];
 $i = [i í ì];
 $ei = [$e $i];
 $vowel = [a á à $ei o ó ò u ú ù];
-$ipa_nasal = [m n ɲ ŋ];
-$ipa_plosive = [p b t d k ɡ];
-$ipa_fricative = [f v ɾ s z h];
-$ipa_consonant = [$ipa_nasal $ipa_plosive $ipa_fricative l ʎ];
-$ipa_affricate = [{t͡ʃ} {d͡ʒ} {d͡z}];
-$ipa_vowel = [i u e {e̯} o ɛ ɔ a];
 $onset = [
-  j w $ipa_consonant $ipa_affricate
-  {mj} {mw} {nj} {nw}
-  {ps} {pɾ} {pɾw} {pl} {pw} {bɾ} {bɾw} {bl} {bw}
-  {ts} {tɾ} {tɾw} {tl} {tw} {dɾ} {dɾw} {dl} {dw}
-  {kɾ} {kw} {kɾw} {kl} {kw} {ɡɾ} {ɡɾw} {ɡl} {ɡw}
-  {fɾ} {fl} {fw} {fɾw} {vɾ} {vw} {ɾw}
-  {zm} {zn} {zɲ} {zl}
-  {zb} {zbɾ} {zbw} {zd} {zdɾ} {zdw} {zɡ} {zɡɾ} {zɡw} {zv} {zvɾ} {zɾ} {zd͡ʒ} {zw}
-  {sp} {spɾ} {spw} {st} {stɾ} {stw} {sk} {skɾ} {skw} {sf} {sfɾ} {sɾ} {st͡ʃ} {sw}
-  {lw}
+  j w m n ɲ ŋ p b t d k ɡ f v ɾ s z h l ʎ {e̯}
+  {t͡ʃ} {d͡ʒ} {d͡z} {mj} {mw} {nj} {nw}
+  {ps} {pɾ} {pɾw} {pl} {pj} {pw} {bɾ} {bɾw} {bw} {bj} {bl}
+  {ts} {tɾ} {tɾw} {tl} {tj} {tw} {dɾ} {dɾw} {dw} {dj} {dl}
+  {kɾ} {kw} {kɾw} {kl} {kj} {kw} {ɡɾ} {ɡɾw} {ɡw} {ɡj} {ɡl}
+  {fɾ} {fj} {fl} {fw} {fɾw} {vɾ} {vj} {vw} {ɾw} {ɾj}
+  {zm} {zn} {zɲ} {zj} {zl} {zb} {zbɾ} {zbj} {zbw} {zd} {zdɾ} {zdj} {zdw}
+  {zɡ} {zɡɾ} {zɡj} {zɡw} {zv} {zvɾ} {zɾ} {zvj} {zd͡ʒ} {zw}
+  {sp} {spɾ} {spw} {st} {stɾ} {stw} {sk} {skɾ} {skw}
+  {sf} {sfɾ} {sɾ} {st͡ʃ} {sj} {sw} {lj} {lw}
 ];
 
 ::Lower;
 ::NFC;
 
-([abefhijklmoptvw]) → $1;
+([abefhjklmoptvw]) → $1;
 [á à] → ˈa;
 {c [$ei \' ’]} $vowel → t͡ʃ;
 c [éè] [\' ’]? → t͡ʃˈe;
@@ -62,10 +56,12 @@ c i [\' ’]? → t͡ʃi;
 {g l $ei} $vowel → ʎ;
 g l → ʎ;
 ġ → d͡ʒ;
+{g [$ei \' ’]} $vowel → d͡ʒ;
 {g} $ei → d͡ʒ;
 gn → ɲ;
 [g {gh}] → ɡ;
 [í ì] → ˈi;
+{i} $vowel → j;
 ł → ɰ;
 ṅ → ŋ;
 ñ → ɲ;
@@ -132,15 +128,16 @@ def _build_split_regexps():
         f v ɾ s z h
         l ʎ  t͡ʃ d͡ʒ d͡z
         mj mw nj nw
-        ps pɾ pɾw pl pw bɾ bɾw bw bl
-        ts tɾ tɾw tl tw dɾ dɾw dw dl
-        kɾ kw kɾw kl kw ɡɾ ɡɾw ɡw ɡl
-        fɾ fl fw fɾw vɾ vw ɾw
-        zm zn zɲ zl
-        zb zbɾ zbw zd zdɾ zdw zɡ zɡɾ zɡw zv zvɾ zɾ zd͡ʒ zw
-        sp spɾ spw st stɾ stw sk skɾ skw sf sfɾ sɾ st͡ʃ sw
-        lw e̯
+        ps pɾ pɾw pl pj pw bɾ bɾw bw bj bl
+        ts tɾ tɾw tl tj tw dɾ dɾw dw dj dl
+        kɾ kw kɾw kl kj kw ɡɾ ɡɾw ɡw ɡj ɡl
+        fɾ fj fl fw fɾw vɾ vj vw ɾw ɾj
+        zm zn zɲ zj zl
+        zb zbɾ zbj zbw zd zdɾ zdj zdw zɡ zɡɾ zɡj zɡw zv zvɾ zɾ zvj zd͡ʒ zw
+        sp spɾ spw st stɾ stw sk skɾ skw sf sfɾ sɾ st͡ʃ sj sw
+        lj lw e̯
     '''.split())
+    #print ' '.join(['{%s}' % o for o in onsets])
     onsets.sort(key=len, reverse=True)
     vowels = list('i u e o ɛ ɔ a'.split())
     vowels.sort(key=len, reverse=True)
@@ -158,9 +155,7 @@ def stress(s):
     syll = [s for s in syll.split('.') if s]
     if len(syll) == 1:
         return s
-    pos = -2
-    if syll[-1].endswith('oŋ') or syll[-1].endswith('aɾ'):
-        pos = -1
+    pos = -2 if s[-1] in 'iueoɛɔa' else -1
     return ''.join(syll[:pos] + ["ˈ"] + syll[pos:])
 
 
@@ -179,6 +174,11 @@ if __name__ == '__main__':
         form = unicodedata.normalize('NFC', form)
         ipa = ' '.join(stress(w) for w in translit.transliterate(form).split())
         print('\t'.join((str(count), form, ipa)).encode('utf-8'))
+        #if 'e̯' in ipa:
+        #    pos = ipa.find('e̯')
+        #    if pos > 1:
+        #        if (ipa + '.')[pos + 2] not in 'aeiou':
+        #            print '\t'.join([form, ipa]).encode('utf-8')
         assert match(ipa, phonemes), ipa.encode('utf-8')
         onset = re.split(r'i|u|e|o|ɛ|ɔ|a', ipa.split()[-1])[0]
         if onset:
