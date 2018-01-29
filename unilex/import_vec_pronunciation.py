@@ -14,17 +14,18 @@ i u e e̯ o ɛ ɔ a
 '''
 
 IPA_TRANSLIT_RULES = '''
+
 # References
 # ----------
 # [1] Personal communication with Academia de ła Bona Creansa, Venice
 # [2] https://en.wikipedia.org/wiki/Venetian_language#Phonology
-# [3] https://en.wikipedia.org/wiki/Help:IPA/Venetian (buggy, mixed with Ladin)
+# [3] https://en.wikipedia.org/wiki/Help:IPA/Venetian (mixed with Ladin)
 #
 # Output phonemes
 # ---------------
 #   m n ɲ ŋ
 #   p b t d k ɡ
-#   f v ɾ s z h
+#   f v ɾ s z
 #   l ʎ j w
 #   t͡ʃ d͡ʒ d͡z
 #   i u e e̯ o ɛ ɔ a
@@ -50,10 +51,11 @@ $onset = [
 ::Lower;
 ::NFC;
 
-([abefhjklmoptvw]) → $1;
+([abefjklmoptvw]) → $1;
 [á à] → ˈa;
 {c [$ei \' ’]} $vowel → t͡ʃ;
-c [éè] [\' ’]? → t͡ʃˈe;
+cé [\' ’]? → t͡ʃˈe;
+cè [\' ’]? → t͡ʃˈɛ;
 c e [\' ’]? → t͡ʃe;
 c [íì] [\' ’]? → t͡ʃˈi;
 c i [\' ’]? → t͡ʃi;
@@ -63,6 +65,9 @@ c i [\' ’]? → t͡ʃi;
 {g l $ei} $vowel → ʎ;
 g l → ʎ;
 ġ → d͡ʒ;
+gé [\' ’]? → d͡ʒˈe;
+gè [\' ’]? → d͡ʒˈɛ;
+g [íì] [\' ’]? → d͡ʒˈi;
 {g [$ei \' ’]} $vowel → d͡ʒ;
 {g} $ei → d͡ʒ;
 gn → ɲ;
@@ -98,6 +103,7 @@ iɰ → i;
 # Move stress marker before syllable onset: [zɡɾaŋfiɲˈae] → [zɡɾaŋfiˈɲae]
 ($onset) ˈ → ˈ $1;
 ::NULL;
+
 '''
 
 
