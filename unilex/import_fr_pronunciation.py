@@ -5,7 +5,7 @@ import codecs, icu, os, re, unicodedata, urllib
 import xml.etree.ElementTree as etree
 
 
-LEXICON_URL = ('https://raw.githubusercontent.com/brawer/marytts-lexicon-fr/'
+LEXICON_URL = ('https://raw.githubusercontent.com/marytts/marytts-lexicon-fr/'
                'master/modules/fr/lexicon/')
 CACHE_DIR = '/tmp/cache-lexicon-fr'
 LOCALE = icu.Locale('fr')
