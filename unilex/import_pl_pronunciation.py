@@ -66,6 +66,7 @@ def ipa(pseudosampa, allophones):
     ipa = ipa.replace(".ˈ", "ˈ")
     ipa = ipa.replace('ɛw̃', 'ɛ̃')
     ipa = ipa.replace('ɔw̃', 'ɔ̃')
+    ipa = ipa.replace('ʲj', 'j')  # brakiem /ˈbra.kʲjɛm/ --> /ˈbra.kjɛm/
     ipa = unicodedata.normalize('NFC', ipa)
     return ipa
 
