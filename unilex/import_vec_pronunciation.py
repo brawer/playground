@@ -141,13 +141,14 @@ def _build_split_regexps():
         f v ɾ s z h
         l ʎ  t͡ʃ d͡ʒ d͡z
         mj mw nj nw
-        ps pɾ pɾw pl pj pw bɾ bɾw bw bj bl
-        ts tɾ tɾw tl tj tw dɾ dɾw dw dj dl
-        kɾ kw kɾw kl kj kw ɡɾ ɡɾw ɡw ɡj ɡl
-        fɾ fj fl fw fɾw vɾ vj vw ɾw ɾj
+        ps pɾ pɾw pɾj pl pj pw bɾ bɾw bɾj bw bj bl
+        ts tɾ tɾw tɾj tl tj tw dɾ dɾw dɾj dw dj dl
+        kɾ kw kɾw kɾj kl kj kw ɡv ɡɾ ɡɾw ɡɾj ɡw ɡj ɡl
+        fɾ fj fl fw fɾw fɾj vɾ vj vw ɾw ɾj
         zm zn zɲ zj zl
         zb zbɾ zbj zbw zd zdɾ zdj zdw zɡ zɡɾ zɡj zɡw zv zvɾ zɾ zvj zd͡ʒ zw
-        sp spɾ spw st stɾ stw sk skɾ skw sf sfɾ sɾ st͡ʃ sj sw
+        sp spɾ spw spj st stɾ stɾj stj stw sk skɾ skw skj sf sfɾ sfj
+        sɾ st͡ʃ sj sw
         lj lw e̯
     '''.split())
     #print ' '.join(['{%s}' % o for o in onsets])
@@ -160,16 +161,24 @@ _onset_vowel = _build_split_regexps()
 
 
 def stress(s):
-    if "ˈ" in s or len(s) == 1:
+    if len(s) == 1:
         return s
-    syll = _onset_vowel.sub(lambda m: "." + m.group(0), s)
-    if syll[0] != '.':
+    syll = _onset_vowel.sub(lambda m: "." + m.group(0), s.replace("ˈ", "_"))
+    if syll[0] not in '._':
         return s
-    syll = [s for s in syll.split('.') if s]
+    syll = syll.replace("_.", "._")
+    syll = [t for t in syll.split('.') if t]
     if len(syll) == 1:
-        return s
-    pos = -2 if s[-1] in 'iueoɛɔa' else -1
+        return s.replace("ˈ", "")
+    pos = -1
+    for i, si in enumerate(syll):
+        if '_' in si:
+            pos = i
+            break
+    if pos == -1:
+        pos = -2 if s[-1] in 'iueoɛɔa' else -1
     ipa = '.'.join(syll[:pos] + ["ˈ"] + syll[pos:])
+    ipa = ipa.replace('_', '')
     ipa = ipa.replace("ˈ.", "ˈ").replace(".ˈ", "ˈ")
     return ipa
 
@@ -185,7 +194,7 @@ def compare_entry(a, b):
         return -1
 
 
-if __name__ == '__main__':
+def main():
     onsets = collections.Counter()
     translit = make_transliterator()
     phonemes = make_phoneme_set(PHONEMES)
@@ -209,3 +218,10 @@ if __name__ == '__main__':
         print('\t'.join(entry).encode('utf-8'))
     #for ipa, count in onsets.most_common():
         #print '\t'.join([ipa, str(count)]).encode('utf-8')
+
+
+if __name__ == '__main__':
+    #print stress('ˈɡɛ').encode('utf-8')
+    #print stress('zveɾɡoˈi').encode('utf-8')
+    #print stress('ˈzveŋtoe').encode('utf-8')
+    main()
