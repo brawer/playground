@@ -106,6 +106,8 @@ iɰ → i;
 
 '''
 
+LOCALE = icu.Locale('vec')
+COLLATOR = icu.Collator.createInstance(LOCALE)
 
 def make_transliterator():
     assert unicodedata.normalize(
@@ -115,7 +117,7 @@ def make_transliterator():
 
 
 def make_phoneme_set(s):
-    pat = [u'\\u0020', "ˈ"]
+    pat = [u'\\u0020', "ˈ", '.']
     for phoneme in s.split():
         if len(phoneme) == 1:
             pat.append(phoneme)
@@ -167,15 +169,29 @@ def stress(s):
     if len(syll) == 1:
         return s
     pos = -2 if s[-1] in 'iueoɛɔa' else -1
-    return ''.join(syll[:pos] + ["ˈ"] + syll[pos:])
+    ipa = '.'.join(syll[:pos] + ["ˈ"] + syll[pos:])
+    ipa = ipa.replace("ˈ.", "ˈ").replace(".ˈ", "ˈ")
+    return ipa
+
+
+def compare_entry(a, b):
+    a = '\t'.join(a)
+    b = '\t'.join(b)
+    if COLLATOR.greater(a, b):
+        return 1
+    elif COLLATOR.greaterOrEqual(a, b):
+        return 0
+    else:
+        return -1
 
 
 if __name__ == '__main__':
     onsets = collections.Counter()
     translit = make_transliterator()
     phonemes = make_phoneme_set(PHONEMES)
-    print('Count\tForm\tPronunciation\n')
+    print('Form\tPronunciation\n')
     print('# SPDX-License-Identifier: Unicode-DFS-2016\n')
+    entries = []
     for line in codecs.open('data/vec/frequency.txt', 'r', 'utf-8'):
         line = line.split('#')[0].strip()
         if not line:
@@ -184,15 +200,12 @@ if __name__ == '__main__':
         count = int(count)
         form = unicodedata.normalize('NFC', form)
         ipa = ' '.join(stress(w) for w in translit.transliterate(form).split())
-        print('\t'.join((str(count), form, ipa)).encode('utf-8'))
-        #if 'e̯' in ipa:
-        #    pos = ipa.find('e̯')
-        #    if pos > 1:
-        #        if (ipa + '.')[pos + 2] not in 'aeiou':
-        #            print '\t'.join([form, ipa]).encode('utf-8')
+        entries.append((form, ipa))
         assert match(ipa, phonemes), ipa.encode('utf-8')
         onset = re.split(r'i|u|e|o|ɛ|ɔ|a', ipa.split()[-1])[0]
         if onset:
             onsets[onset] += 1
+    for entry in sorted(entries, cmp=compare_entry):
+        print('\t'.join(entry).encode('utf-8'))
     #for ipa, count in onsets.most_common():
         #print '\t'.join([ipa, str(count)]).encode('utf-8')
