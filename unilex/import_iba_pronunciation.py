@@ -5,8 +5,8 @@ import argparse, codecs, collections, re, unicodedata
 
 IPA = {
     '@': 'ə',
-    'GG': 'ɡʰ',
-    'KK': 'kʰ',
+    'GG': 'ɣ',  # Malay/Arabic names such as Ghani
+    'KK': 'ʔ',
     'NG': 'ŋ',
     'NJ': 'ɲ',
     'SS': 'ʃ',
@@ -52,5 +52,7 @@ if __name__ == '__main__':
             continue
         ipa = ''.join([IPA[p] for p in phones.split()])
         result.append((word.strip(), ipa))
+    print('Form\tPronunciation\n')
+    print('# SPDX-License-Identifier: Unicode-DFS-2016\n')
     for word, ipa in sorted(result):
-        print('\t'.join([word, ipa]))
+        print('\t'.join([word, ipa]).encode('utf-8'))
