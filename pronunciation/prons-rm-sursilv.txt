@@ -310,6 +310,7 @@ bas̬ạt
 bas̬ạtta
 bas̬ẹgns
 bas̬ẹlgia
+bas̬ignẹivel
 bas̬ignu̲s
 Bas̬ile̲a
 Bas̬ile̲a-Marcạu
@@ -332,11 +333,14 @@ beffegia̲r
 be̲gl
 bẹiber
 bẹin
+beincapẹivel
+beinmanẹivel
 beinsta̲r
 beinstọnt
 beinstọnza
 beintrạtg
 beinvẹgni
+beinves̬ẹivel
 beinves̬ịu
 beinvulẹnt
 beinvuliẹntscha
@@ -689,6 +693,7 @@ commoziụn
 communa̲bel
 communạl
 communicaziụn
+communizẹivel
 cọn
 conce̲der
 concentrạu
@@ -714,6 +719,7 @@ confirma̲r
 confirmaziụn
 conformịst
 conforta̲bel
+confortẹivel
 confụnder
 congruẹnza
 conjuga̲ls
@@ -731,6 +737,7 @@ consẹrvas
 considera̲bel
 considera̲r
 consola̲r
+consolẹivel
 consọrta
 consọrts
 conspiraziụn
@@ -833,6 +840,7 @@ cumbina̲r
 cume̲dia
 cumiạu
 cumịn
+cuminẹivel
 cumissiụns
 cumpạct
 cumpareglia̲bel
@@ -873,6 +881,7 @@ cunscienziu̲s
 cuntẹgn
 cuntẹnt
 cuntenta̲r
+cuntentẹivel
 cuntentiẹntscha
 cunterfa̲r
 cuntị
@@ -959,6 +968,7 @@ dagutta̲r
 dại
 dạlla
 dạllas
+damanẹivel
 damạun
 damọnda
 Danemạrc
@@ -1134,6 +1144,7 @@ disfavorẹivel
 disfidọnt
 disfidọnza
 dis̬graziạu
+dis̬graziẹivel
 dis̬gụst
 dis̬gustu̲s
 disharmo̲nic
@@ -1143,6 +1154,7 @@ dis̬occupaziụn
 dispare̲r
 dispens̬a̲bel
 dispẹta
+dispitẹivel
 displas̬chẹivel
 displas̬che̲r
 disposiziụn
@@ -1192,10 +1204,12 @@ du̲bel
 dubẹtel
 du̲bi
 dubita̲r
+dubitẹivel
 dụbla
 du̲disch
 dudis̬cha̲vel
 duẹi
+duẹivel
 due̲r
 duẹss
 duẹssen
@@ -1211,6 +1225,7 @@ dumigna̲r
 dụn
 dụnna
 dụns
+durẹivel
 durmenta̲r
 durmi̲r
 durmịu
@@ -1220,6 +1235,7 @@ dụscha
 dụtg
 duvra̲bel
 duvra̲r
+duvrẹivel
 dẹ̀tg
 e̲
 eccles̬iạstic
@@ -1364,6 +1380,7 @@ entra̲r
 entschạtta
 entschẹins
 entschẹiva
+entschẹivel
 entschẹiver
 entụorn
 entupa̲r
@@ -1485,6 +1502,7 @@ fạuls
 faulsada̲d
 favorẹivel
 Favụgn
+favurẹivel
 fazalẹt
 fe̲bra
 federa̲l
@@ -1669,8 +1687,10 @@ giạt
 gia̲vel
 giavi̲sch
 giavis̬cha̲r
+giavis̬chẹivel
 gi̲da
 gida̲r
+gidẹivel
 Gie̲
 Gịeri
 gịevgia
@@ -1813,6 +1833,7 @@ họckey
 Hollạnda
 Hollande̲s
 hone̲st
+honorẹivel
 honu̲r
 honzẹli
 horizọnt
@@ -2042,6 +2063,7 @@ lagụoter
 lahergna̲r
 Lại
 lạian
+lamentẹivel
 lappa̲lia
 larghẹzia
 lạrgia
@@ -2255,6 +2277,7 @@ malhonẹst
 malins̬chignẹivel
 maliziu̲s
 malmadi̲r
+malmanẹivel
 malnẹidi
 malnizẹivel
 malobedẹivel
@@ -2295,6 +2318,7 @@ mandarịna
 manegẹis
 mane̲gel
 manegia̲r
+manẹivel
 manẹtsch
 mango̲la
 manịera
@@ -2400,6 +2424,7 @@ mercantịl
 merẹnga
 meridia̲n
 merita̲r
+meritẹivel
 me̲s
 me̲s̬a
 mes̬ada̲d
@@ -2468,6 +2493,7 @@ mischẹida
 mischlọs
 mis̬era̲bel
 mis̬e̲ria
+mis̬ericordẹivel
 missiạla
 missiuna̲ri
 mistergne̲r
@@ -2672,11 +2698,13 @@ nụncla̲r
 nụncultivạu
 nụncumadẹivel
 nụncumplẹt
+nụncuntentẹivel
 nụncura̲bel
 nụncurrigi̲bel
 nụndecidịu
 nụndescrivi̲bel
 nụndetg
+nụndispitẹivel
 nụndisturba̲damein
 nụndumbrẹivel
 nụnduvra̲bel
@@ -2696,6 +2724,7 @@ nụninterrụt
 nụnmaglia̲bel
 nụnmeritạu
 nụnmotivạu
+nunparẹivel
 nụnpartis̬chọnt
 nụnponderạu
 nụnprevịu
@@ -2714,6 +2743,7 @@ nụnsufficiẹnt
 nụnsupporta̲bel
 nụns̬urves̬ẹivel
 nụnsuspectu̲s
+nụns̬vanẹivel
 nụnus̬itạu
 nụnvalẹivel
 nụnvendi̲bel
@@ -3199,6 +3229,7 @@ proprieta̲ri
 pro̲s̬a
 pros̬a̲ic
 prospera̲r
+prosperẹivel
 protecziụn
 prote̲gel
 prote̲ger
@@ -3290,6 +3321,7 @@ quẹndisch
 quẹscher
 quẹsta
 questiuna̲ri
+questiunẹivel
 quest’jạmna
 quiẹt
 quieta̲r
@@ -3447,6 +3479,7 @@ rẹtg
 retrạtg
 retre̲r
 retrovis̬u̲r
+retschẹivel
 retschẹiver
 reussi̲r
 ri̲as
@@ -3539,6 +3572,7 @@ salịn
 salịt
 salta̲r
 salụn
+salutẹivel
 sạlv
 salvamẹnt
 salva̲r
@@ -3565,6 +3599,7 @@ savẹss
 savẹsses
 savẹtscha
 savi̲da
+saviẹivel
 savịu
 savụn
 savu̲r
@@ -3969,6 +4004,7 @@ smarvẹgl
 smịnca
 sminui̲r
 sminuziụn
+smis̬erẹivel
 smus̬chigna̲r
 smutta̲r
 snega̲r
@@ -4175,6 +4211,7 @@ stuịu
 stuli̲r
 stumadi̲ra
 stụn
+stunclentẹivel
 stụorn
 stupẹnt
 sturnida̲r
@@ -4275,6 +4312,7 @@ s̬utpassa̲di
 suttascripziụn
 s̬uttascri̲ver
 s̬utterra̲n
+s̬vanẹivel
 s̬vaneivlada̲d
 s̬vani̲r
 s̬vapu̲r
@@ -4569,6 +4607,7 @@ tussega̲r
 tussegạu
 tụt
 tụts
+tutsaviẹivel
 tụttas
 tuttenịna
 tuttịna
@@ -4599,6 +4638,7 @@ umbriva̲l
 umbrivạun
 ụnda
 undra̲r
+undrẹivel
 undrẹivla
 undrịentscha
 unfis̬a̲r
@@ -4760,6 +4800,7 @@ viagiạr
 viạl
 vianda̲r
 viandọnt
+vicendẹivel
 victo̲ria
 victoriạn
 victoris̬a̲r
