@@ -1308,7 +1308,7 @@ empruạu
 empuni̲r
 empusta̲r
 empustaziụn
-Ẹn
+ẹn
 enamịez
 encadena̲r
 enconuschẹis
@@ -2724,7 +2724,7 @@ nụninterrụt
 nụnmaglia̲bel
 nụnmeritạu
 nụnmotivạu
-nunparẹivel
+nụnparẹivel
 nụnpartis̬chọnt
 nụnponderạu
 nụnprevịu
