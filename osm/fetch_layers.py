@@ -72,9 +72,11 @@ def main():
 
 
 def fetch(url):
+    #with open('cached-results.json', 'rb') as f: return (f.read(), 200)
     connection = urlopen(url)
     content = connection.read()
     connection.close()
+    #with open('cached-results.json', 'wb') as f: f.write(content)
     return (content, connection.code)
 
 
@@ -97,7 +99,7 @@ def overpass_to_geojson(op):
             'type': 'Feature',
             'geometry': {
                 'type': 'Point',
-                'coordinates': [node['lon'], node['lat']],
+                'coordinates': lonlat(node),
             },
             'properties': tags,
         })
@@ -106,7 +108,9 @@ def overpass_to_geojson(op):
         tags = dict(way['tags'])
         tags['.id'] = 'W%s' % way['id']
         closed = (geometry[0] == geometry[-1])
-        coords = [[p['lon'], p['lat']] for p in geometry]
+        coords = [lonlat(p) for p in geometry]
+        if closed:
+            coords = fix_ring_direction('outer', coords)
         features.append({
             'type': 'Feature',
             'geometry': {
@@ -116,13 +120,65 @@ def overpass_to_geojson(op):
             'properties': tags,
         })
     for rel in filter(lambda e: e['type'] == 'relation', elements):
-        tags = dict(rel['tags'])
-        tags['.id'] = 'R%s' % rel['id']
-        pass  # TODO
+        features.append(overpass_relation_to_geojson(rel))
     return {
         'type': 'FeatureCollection',
         'features': features
     }
+
+
+def overpass_relation_to_geojson(rel):
+    tags = dict(rel['tags'])
+    tags['.id'] = 'R%s' % rel['id']
+    members = rel['members']
+    outer = [m for m in members if m['role'] == 'outer' and m['type'] == 'way']
+    if len(outer) != 1:  # we don't handle multipolygons etc., return a point
+        bounds = rel['bounds']
+        minlon, maxlon = bounds['minlon'], bounds['maxlon']
+        minlat, maxlat = bounds['minlat'], bounds['maxlat']
+        lon = minlon + (maxlon - minlon) / 2
+        lat = minlat + (maxlat - minlat) / 2
+        return {
+            'type': 'Feature',
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [lon, lat],
+            },
+            'properties': tags,
+        }
+    assert len(outer) == 1, tags
+    outer_ring = [lonlat(p) for p in outer[0]['geometry']]
+    rings = [fix_ring_direction('outer', outer_ring)]
+    for m in members:
+        if m['role'] == 'inner' and m['type'] == 'way':
+            inner_ring = [lonlat(p) for p in m['geometry']]
+            rings.append(fix_ring_direction('inner', inner_ring))
+    return {
+        'type': 'Feature',
+        'geometry': {
+            'type': 'Polygon',
+            'coordinates': rings,
+         },
+        'properties': tags,
+    }
+
+
+def lonlat(p):
+    return [p['lon'], p['lat']]
+
+
+def fix_ring_direction(direction, coords):
+    # https://stackoverflow.com/questions/1165647
+    assert direction in {'outer', 'inner'}
+    assert coords[0] == coords[-1], 'ring must be closed'
+    total = 0
+    for i in range(len(coords) - 1):
+        (Px, Py), (Qx, Qy) = coords[i], coords[i + 1]
+        total += (Qx - Px) * (Qy + Py)
+    if ((direction == 'outer' and total > 0) or
+        (direction == 'inner' and total <= 0)):
+        coords.reverse()
+    return coords
 
 
 if __name__ == '__main__':
