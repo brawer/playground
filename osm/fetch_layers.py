@@ -1,16 +1,20 @@
+# Copyright 2019 by Sascha Brawer. Licensed under the MIT license.
+# SPDX-License-Identifier: MIT
+#
 # Tool for fetching layers of notable features from OpenStreetMap.
 # This will be used for a hackathon in May 2019 about castles in Switzerland,
 # organized in collaboration with Wikimedia Foundation Switzerland,
-# where the goal is to associate castles with Wikidata.
+# whose goal it is to improve Swiss castles in Wikipedia. The tool
+# can be extended to handle additional layers and regions.
 #
 # The program sends a query to the OSM Overpass API and formats the result
 # in GeoJSON format. The resulting files are written into a place accessible
 # to a webserver running on the same machine, so that clients can access them.
-#
 # Obviously, this simple approach will not work for layers that have lots
 # features, but for the few hundred castles in Switzerland, it should do.
 #
-# To run: $ python fetch_layers.py --output_path=/path/to/public_www_directory
+# This tool should be run as a cron job, eg. once per hour or so. Invocation:
+# $ python fetch_layers.py --output_path=/path/to/public_www_directory
 
 from __future__ import print_function, unicode_literals
 import argparse, codecs, itertools, json, logging, os, tempfile, time, urllib
@@ -114,7 +118,7 @@ def overpass_to_geojson(op):
     for rel in filter(lambda e: e['type'] == 'relation', elements):
         tags = dict(rel['tags'])
         tags['.id'] = 'R%s' % rel['id']
-        pass
+        pass  # TODO
     return {
         'type': 'FeatureCollection',
         'features': features
