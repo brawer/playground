@@ -17,7 +17,10 @@
 # $ python fetch_layers.py --output_path=/path/to/public_www_directory
 
 from __future__ import print_function, unicode_literals
-import argparse, codecs, itertools, json, logging, os, tempfile, time, urllib
+
+import argparse, codecs, collections, itertools, json
+import os, tempfile, urllib
+from datetime import datetime
 
 try:  # Python 3
     import http.client, urllib.parse, urllib.request
@@ -30,6 +33,7 @@ except ImportError:  # Python 2
 
 
 REGIONS = {
+    # ISO 3166-1/2: 'CH' for Switzerland; 'DE-BY' for Bavaria
     'CH':  (45.6, 5.4, 47.99, 11.2),
 }
 
@@ -45,36 +49,70 @@ def main():
     argparser.add_argument('--output_dir',
                            help='path to directory for storing output files')
     args = argparser.parse_args()
-    path = args.output_dir
     for layer, region in itertools.product(LAYERS.keys(), REGIONS.keys()):
-        query = build_overpass_query(layer, region)
-        url = OVERPASS_ENDPOINT + '?data=' + urlquote(query, safe='.:;/()')
-        fetch_start = time.time()
-        content, fetch_status = fetch_url(url)
-        fetch_duration_seconds = time.time() - fetch_start
-        if fetch_status == 200:
-            geojson = overpass_to_geojson(json.loads(content))
-            geojson_str = json.dumps(geojson, ensure_ascii=False,
-                                     sort_keys=True, separators=(',', ':'))
-            filepath = os.path.join(path,
+        process(layer, region, output_dir=args.output_dir)
+
+
+def process(layer, region, output_dir):
+    if not os.path.exists(output_dir):
+        os.mkdir(output_dir)
+    query = build_overpass_query(layer, region)
+    url = OVERPASS_ENDPOINT + '?data=' + urlquote(query, safe='.:;/()')
+    fetch_start = datetime.utcnow()
+    content, fetch_status = fetch_url(url)
+    now = datetime.utcnow()
+    logrec = {
+        'timestamp': now.isoformat() + 'Z',  # 'Z' = UTC as per ISO 8601
+        'layer': layer, 'region': region,
+        'fetch_duration_seconds': (now - fetch_start).total_seconds(),
+        'fetch_http_status_code': fetch_status,
+    }
+    status = 'fail'
+    if fetch_status == 200:
+        geojson = overpass_to_geojson(json.loads(content))
+        logrec.update(summarize_stats(geojson))
+        # Only use results when Overpass actually returned any features.
+        # Sometimes, the API returns empty results in an HTTP reply
+        # with "200 OK" status; let's work around this.
+        if len(geojson['features']) > 0:
+            geojson_blob = format_json(geojson).encode('utf-8')
+            logrec['output_bytes'] = len(geojson_blob)
+            filepath = os.path.join(output_dir,
                                     'osm-%s-%s.geojson' % (layer, region))
-            replace_file_content(filepath, geojson_str.encode('utf-8'))
-            logging.info(
-                'Fetch OK; layer=%s, region=%s, fetch_duration_seconds=%s' %
-                (layer, region, fetch_duration_seconds))
+            changed = replace_file_content(filepath, geojson_blob)
+            logrec['changed'] = 'true' if changed else 'false'
+            status = 'ok'
         else:
-            logging.error(
-                'Fetch failed; layer=%s, region=%s, fetch_status=%s' %
-                (layer, region, fetch_status))
+            status = 'fail_nofeatures'
+    logrec['status'] = status
+    append_logrecord(logrec, os.path.join(output_dir, 'fetch_layers.log'))
+
+
+def summarize_stats(fcoll):
+    """Compute summary statistics for a GeoJSON feature collection."""
+    assert fcoll['type'] == 'FeatureCollection'
+    geometry_type = \
+        collections.Counter([f['geometry']['type'] for f in fcoll['features']])
+    tags = collections.Counter()
+    for f in fcoll['features']:
+        tags.update(f['properties'].keys())
+    return {
+        'geometry_type_most_common': dict(geometry_type.most_common(1000)),
+        'tags_most_common': dict(tags.most_common(1000)),
+        'tags_total': len(tags),
+    }
 
 
 def fetch_url(url):
     #with open('cached-results.json', 'rb') as f: return (f.read(), 200)
-    connection = urlopen(url)
-    content = connection.read()
-    connection.close()
+    try:
+        connection = urlopen(url)
+        content = connection.read()
+        connection.close()
+        return (content, connection.code)
+    except:
+        return (b'', 520)  # unofficial code (eg. Cloudflare) for network errs
     #with open('cached-results.json', 'wb') as f: f.write(content)
-    return (content, connection.code)
 
 
 def replace_file_content(filepath, content):
@@ -86,7 +124,7 @@ def replace_file_content(filepath, content):
         with open(filepath, 'rb') as old_file:
             old_content = old_file.read()
         if content == old_content:
-            return
+            return False  # no change
     basename = os.path.basename(filepath)
     suffix = basename.rsplit('.', 1)[-1] if '.' in basename else '.tmp'
     tmpfd, tmpname = tempfile.mkstemp(dir=os.path.dirname(filepath),
@@ -94,6 +132,15 @@ def replace_file_content(filepath, content):
     with os.fdopen(tmpfd, 'wb') as out:
          out.write(content)
     os.rename(tmpname, filepath)
+    return True  # content has changed
+
+
+def append_logrecord(rec, filepath):
+    with open(filepath, 'ab') as f:
+        f.write(format_json(rec).replace('\n', ' ').encode('utf-8'))
+        f.write(b'\n')
+        f.flush()
+        os.fsync(f.fileno())
 
 
 def build_overpass_query(layer, region):
@@ -195,6 +242,11 @@ def fix_ring_direction(direction, coords):
         (direction == 'inner' and total <= 0)):
         coords.reverse()
     return coords
+
+
+def format_json(j):
+    return json.dumps(j, ensure_ascii=False,
+                      sort_keys=True, separators=(',', ':'))
 
 
 if __name__ == '__main__':
