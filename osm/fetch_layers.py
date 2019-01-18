@@ -50,18 +50,15 @@ def main():
         query = build_overpass_query(layer, region)
         url = OVERPASS_ENDPOINT + '?data=' + urlquote(query, safe='.:;/()')
         fetch_start = time.time()
-        content, fetch_status = fetch(url)
+        content, fetch_status = fetch_url(url)
         fetch_duration_seconds = time.time() - fetch_start
         if fetch_status == 200:
             geojson = overpass_to_geojson(json.loads(content))
             geojson_str = json.dumps(geojson, ensure_ascii=False,
                                      sort_keys=True, separators=(',', ':'))
-            # we replace the file atomically, to never serve partial content
-            tmpfd, tmpname = tempfile.mkstemp(dir=path, suffix='.geojson')
-            with os.fdopen(tmpfd, 'wb') as out:
-                out.write(geojson_str.encode('utf-8'))
-            os.rename(tmpname,
-                      os.path.join(path, '%s-%s.geojson' % (layer, region)))
+            filepath = os.path.join(path,
+                                    'osm-%s-%s.geojson' % (layer, region))
+            replace_file_content(filepath, geojson_str.encode('utf-8'))
             logging.info(
                 'Fetch OK; layer=%s, region=%s, fetch_duration_seconds=%s' %
                 (layer, region, fetch_duration_seconds))
@@ -71,13 +68,32 @@ def main():
                 (layer, region, fetch_status))
 
 
-def fetch(url):
+def fetch_url(url):
     #with open('cached-results.json', 'rb') as f: return (f.read(), 200)
     connection = urlopen(url)
     content = connection.read()
     connection.close()
     #with open('cached-results.json', 'wb') as f: f.write(content)
     return (content, connection.code)
+
+
+def replace_file_content(filepath, content):
+    """Atomially replace filepath by new content if content is new."""
+    assert isinstance(content, bytes)
+    # If content has not changed, we do not touch the existing file
+    # so its timestamp stays the same.
+    if os.path.exists(filepath):
+        with open(filepath, 'rb') as old_file:
+            old_content = old_file.read()
+        if content == old_content:
+            return
+    basename = os.path.basename(filepath)
+    suffix = basename.rsplit('.', 1)[-1] if '.' in basename else '.tmp'
+    tmpfd, tmpname = tempfile.mkstemp(dir=os.path.dirname(filepath),
+                                      prefix='tmp-', suffix=suffix)
+    with os.fdopen(tmpfd, 'wb') as out:
+         out.write(content)
+    os.rename(tmpname, filepath)
 
 
 def build_overpass_query(layer, region):
