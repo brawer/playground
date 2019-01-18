@@ -19,8 +19,9 @@
 from __future__ import print_function, unicode_literals
 
 import argparse, codecs, collections, itertools, json
-import os, tempfile, urllib
+import multiprocessing, os, tempfile, urllib
 from datetime import datetime
+from dateutil.parser import parse as parse_timestamp  # 3rd-party package
 
 try:  # Python 3
     import http.client, urllib.parse, urllib.request
@@ -49,24 +50,46 @@ def main():
     argparser.add_argument('--output_dir',
                            help='path to directory for storing output files')
     args = argparser.parse_args()
+    if not os.path.exists(args.output_dir):
+        os.mkdir(args.output_dir)
     for layer, region in itertools.product(LAYERS.keys(), REGIONS.keys()):
-        process(layer, region, output_dir=args.output_dir)
+        fetch_layer_with_timeout(layer, region, args.output_dir,
+        timeout_seconds=300)  # 5 minutes = 300 seconds
 
 
-def process(layer, region, output_dir):
-    if not os.path.exists(output_dir):
-        os.mkdir(output_dir)
+def fetch_layer_with_timeout(layer, region, output_dir, timeout_seconds):
+    fetch_start = datetime.utcnow()
+    logrec = {
+        # 'Z' = UTC timezone, as per ISO 8601
+        'fetch_start_timestamp': fetch_start.isoformat() + 'Z',
+        'layer': layer,
+        'region': region,
+    }
+    p = multiprocessing.Process(
+        target=fetch_layer, args=(layer, region, logrec, output_dir))
+    timed_out = False
+    p.start()
+    p.join(timeout=timeout_seconds)
+    if p.is_alive():
+        p.terminate()
+        timed_out = True
+    if p.exitcode is not 0:
+        logrec.update({
+            'fetch_duration_seconds':
+                (datetime.utcnow() - fetch_start).total_seconds(),
+            'fetch_status': 'timeout' if timed_out else 'crash'
+        })
+        append_logrecord(logrec, output_dir)
+
+
+def fetch_layer(layer, region, logrec, output_dir):
+    fetch_start = parse_timestamp(logrec['fetch_start_timestamp'])
     query = build_overpass_query(layer, region)
     url = OVERPASS_ENDPOINT + '?data=' + urlquote(query, safe='.:;/()')
-    fetch_start = datetime.utcnow()
     content, fetch_status = fetch_url(url)
-    now = datetime.utcnow()
-    logrec = {
-        'timestamp': now.isoformat() + 'Z',  # 'Z' = UTC as per ISO 8601
-        'layer': layer, 'region': region,
-        'fetch_duration_seconds': (now - fetch_start).total_seconds(),
-        'fetch_http_status_code': fetch_status,
-    }
+    logrec['fetch_duration_seconds'] = \
+        (fetch_start - fetch_start).total_seconds()
+    logrec['fetch_http_status_code'] = fetch_status
     status = 'fail'
     if fetch_status == 200:
         geojson = overpass_to_geojson(json.loads(content))
@@ -80,12 +103,12 @@ def process(layer, region, output_dir):
             filepath = os.path.join(output_dir,
                                     'osm-%s-%s.geojson' % (layer, region))
             changed = replace_file_content(filepath, geojson_blob)
-            logrec['changed'] = 'true' if changed else 'false'
+            logrec['output_changed'] = changed
             status = 'ok'
         else:
             status = 'fail_nofeatures'
-    logrec['status'] = status
-    append_logrecord(logrec, os.path.join(output_dir, 'fetch_layers.log'))
+    logrec['fetch_status'] = status
+    append_logrecord(logrec, output_dir)
 
 
 def summarize_stats(fcoll):
@@ -100,6 +123,7 @@ def summarize_stats(fcoll):
         'geometry_type_most_common': dict(geometry_type.most_common(1000)),
         'tags_most_common': dict(tags.most_common(1000)),
         'tags_total': len(tags),
+        'osm_base_timestamp': fcoll['properties']['osm_base_timestamp']
     }
 
 
@@ -135,7 +159,8 @@ def replace_file_content(filepath, content):
     return True  # content has changed
 
 
-def append_logrecord(rec, filepath):
+def append_logrecord(rec, output_dir):
+    filepath = os.path.join(output_dir, 'fetch_layers.log')
     with open(filepath, 'ab') as f:
         f.write(format_json(rec).replace('\n', ' ').encode('utf-8'))
         f.write(b'\n')
@@ -186,7 +211,10 @@ def overpass_to_geojson(op):
         features.append(overpass_relation_to_geojson(rel))
     return {
         'type': 'FeatureCollection',
-        'features': features
+        'features': features,
+        'properties': {
+            'osm_base_timestamp': op['osm3s']['timestamp_osm_base']
+        },
     }
 
 
