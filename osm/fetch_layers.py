@@ -20,7 +20,7 @@ from __future__ import print_function, unicode_literals
 
 import argparse, codecs, collections, itertools, json
 import multiprocessing, os, tempfile, urllib
-from datetime import datetime
+from datetime import datetime, timezone
 from dateutil.parser import parse as parse_timestamp  # 3rd-party package
 
 try:  # Python 3
@@ -58,10 +58,9 @@ def main():
 
 
 def fetch_layer_with_timeout(layer, region, output_dir, timeout_seconds):
-    fetch_start = datetime.utcnow()
+    fetch_start = datetime.now(timezone.utc)
     logrec = {
-        # 'Z' = UTC timezone, as per ISO 8601
-        'fetch_start_timestamp': fetch_start.isoformat() + 'Z',
+        'fetch_start_timestamp': fetch_start.isoformat(),
         'layer': layer,
         'region': region,
     }
@@ -76,7 +75,7 @@ def fetch_layer_with_timeout(layer, region, output_dir, timeout_seconds):
     if p.exitcode is not 0:
         logrec.update({
             'fetch_duration_seconds':
-                (datetime.utcnow() - fetch_start).total_seconds(),
+                (datetime.now(timezone.utc) - fetch_start).total_seconds(),
             'fetch_status': 'timeout' if timed_out else 'crash'
         })
         append_logrecord(logrec, output_dir)
@@ -88,7 +87,7 @@ def fetch_layer(layer, region, logrec, output_dir):
     url = OVERPASS_ENDPOINT + '?data=' + urlquote(query, safe='.:;/()')
     content, fetch_status = fetch_url(url)
     logrec['fetch_duration_seconds'] = \
-        (fetch_start - fetch_start).total_seconds()
+        (datetime.now(timezone.utc) - fetch_start).total_seconds()
     logrec['fetch_http_status_code'] = fetch_status
     status = 'fail'
     if fetch_status == 200:
