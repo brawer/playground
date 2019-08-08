@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: 2019 Sascha Brawer <sascha@brawer.ch>
 
+import csv
 import datetime
 import collections
 import re
@@ -57,12 +58,14 @@ def create_payslip(env, start_response, campaign_id):
 
 def handle_payslips_csv(env, start_response):
     method = env['REQUEST_METHOD']
-    # TODO: Handle PUT to replace current databse contents.
     if method in ('GET', 'HEAD'):
         return get_payslips_csv(env, start_response)
+    elif method == 'PUT':
+        return put_payslips_csv(env, start_response)
     else:
         return send_error_method_not_allowed(env, start_response,
-                                             'GET, HEAD')
+                                             'GET, HEAD, PUT')
+
 
 def get_payslips_csv(env, start_response):
     out = StringIO()
@@ -78,13 +81,53 @@ def get_payslips_csv(env, start_response):
     return [output] if env['REQUEST_METHOD'] != 'HEAD' else []
 
 
+def put_payslips_csv(env, start_response):
+    payslips = []
+    with StringIO() as buf:
+        for line in env['wsgi.input']:
+            buf.write(line.decode('utf-8'))
+        body = buf.getvalue()
+    dialect = csv.Sniffer().sniff(body)
+    line_number = 1  # Not 0, because CSV header is at line 1.
+    for rec in csv.DictReader(body.splitlines(), dialect=dialect):
+        line_number += 1
+        payslip_id = rec['Payslip'].replace(' ', '')
+        if re.match(r'^\d{27}$', payslip_id) is None:
+            return send_error_bad_request(
+                env, start_response, 'Bad Payslip on line %d' % line_number)
+        campaign_id = rec['Campaign'].strip()
+        if re.match(r'^[A-Za-z0-9\-]+$', campaign_id) is None:
+            return send_error_bad_request(
+                env, start_response, 'Bad Campaign on line %d' % line_number)
+        timestamp = rec['Timestamp'].strip()
+        if re.match(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$',
+                    timestamp) is None:
+            return send_error_bad_request(
+                env, start_response, 'Bad Timestamp on line %d' % line_number)
+        p = Payslip(payslip_id=payslip_id, campaign_id=campaign_id,
+                    timestamp=timestamp)
+        payslips.append(p)
+    with PayslipDB(DATABASE_PATH) as db:
+        db.put_payslips(payslips)
+    start_response('204 No Content', [])
+    return []
+
+
+def send_error_bad_request(env, start_response, msg):
+    status = '400 Bad Request'
+    output = ('400 Bad Request: %s\n' % msg).encode('utf-8')
+    start_response(status, [('Content-Type', 'text/plain;charset=utf-8'),
+                            ('Content-Length', str(len(output)))])
+    return [output]
+
+
 def send_error_method_not_allowed(env, start_response, allow):
     status = '405 Method Not Allowed'
     output = ('405 Method Not Allowed; use %s\n' % allow).encode('utf-8')
     start_response(status, [('Content-Type', 'text/plain;charset=utf-8'),
                             ('Content-Length', str(len(output))),
                             ('Allow', allow)])
-    return [output] if env['REQUEST_METHOD'] != 'HEAD' else []
+    return [output]
 
 
 Payslip = collections.namedtuple('Payslip', 'payslip_id campaign_id timestamp')
@@ -136,6 +179,19 @@ class PayslipDB(object):
             ORDER BY payslip_id;'''):
             yield Payslip(payslip_id=row[0], campaign_id=row[1],
                           timestamp=row[2])
+        del c
+
+    def put_payslips(self, payslips):
+        c = self.db.cursor()
+        c.execute('DELETE FROM Payslips;')
+        for p in payslips:
+            seqno = int(p.payslip_id[12:-1])
+            c.execute(
+                'INSERT INTO Payslips '
+                '(sequence_number, payslip_id, campaign_id, timestamp) '
+                'VALUES (?, ?, ?, ?);',
+                (seqno, p.payslip_id, p.campaign_id, p.timestamp))
+        self.db.commit()
         del c
 
     def _format_reference_number(self, seqno):
