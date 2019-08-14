@@ -49,7 +49,7 @@ def create_payslip(env, start_response, campaign_id):
     with PayslipDB(DATABASE_PATH) as db:
         payslip = db.create_payslip(campaign_id=campaign_id)
     status = '200 OK'
-    output = (payslip.payslip_id + '\n').encode('utf-8')
+    output = payslip.payslip_id.encode('utf-8')
     response_headers = [('Content-Type', 'text/plain;charset=utf-8'),
                         ('Content-Length', str(len(output)))]
     start_response(status, response_headers)
