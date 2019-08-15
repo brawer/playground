@@ -2,17 +2,23 @@
 # SPDX-License-Identifier: MIT
 #
 # For running the server on a development machine:
-# $ docker build -t payslip . && docker run -it --rm -p 8000:80 payslip
+# $ mkdir -p /tmp/payslips
+# $ docker build -t payslips . && docker run -it --rm --mount type=bind,source=/tmp/payslips,target=/etc/payslips payslips -p 8000:8000 payslips
 #
-# To create a new payslip reference number (do this on the host machine):
+# To create a new payslip reference number (do this on the guest machine):
 # $ curl -X POST http://localhost:8000/path/to/payslips/api/v1/merchants/wik-i7yylr/campaigns/Campaign789/payingin-slip-refno/fetch
 #
-# To retrieve the current list of ever-issued payslips (on the host machine):
+# To retrieve the current list of ever-issued payslips (on the guest machine):
 # $ curl http://localhost:8000/path/to/payslips/payslips.csv -o payslips.csv
 #
 # To replace the internal database:
 # $ curl http://localhost:8000/path/to/payslips/payslips.csv --upload-file payslips.csv
 
-FROM grahamdumpleton/mod-wsgi-docker:python-3.5-onbuild
-CMD [ "payslip.wsgi" ]
-EXPOSE 80
+FROM python:3.7.4-alpine3.10
+WORKDIR /app
+COPY requirements.txt *.py /app/
+RUN pip install -r requirements.txt
+RUN mkdir -p /etc/payslips
+
+CMD [ "gunicorn", "-w2", "payslips:app" ]
+EXPOSE 8000

@@ -13,18 +13,18 @@ import time
 from io import StringIO
 
 
-DATABASE_PATH = './payslip.db'
+DATABASE_PATH = '/etc/payslips/payslip.db'
 
 
-# TODO: Ask PostFinance for the actual number
-REFNO_PREFIX = '990001'
-assert len(REFNO_PREFIX) == 6
+# PostFinance allows for arbitrary reference numbers without any constraints.
+# We use a statically assigned prefix of 12 digits of our own choosing,
+# so that other processes who generate reference numbers will be unlikely
+# to hand out conflicting numbers.
+REFNO_PREFIX = '990001997812'
+assert len(REFNO_PREFIX) == 12
 
-REFNO_NAMESPACE = '997812'  # Assigned by ourselves, follows REFNO_PREFIX.
-assert len(REFNO_NAMESPACE) == 6
 
-
-def application(environ, start_response):
+def app(environ, start_response):
     path = environ['PATH_INFO']
     match = re.match(
         r'^.*?/api/v1/merchants/wik-i7yylr/campaigns/([a-zA-Z0-9\-]+)/'
@@ -49,6 +49,9 @@ def create_payslip(env, start_response, campaign_id):
     with PayslipDB(DATABASE_PATH) as db:
         payslip = db.create_payslip(campaign_id=campaign_id)
     status = '200 OK'
+    # It is intentional that the output contains no trailing newline character.
+    # The RaiseNow.ch site (which is the client to this server) does not
+    # strip off any whitespace; RaiseNow breaks if we return a newline.
     output = payslip.payslip_id.encode('utf-8')
     response_headers = [('Content-Type', 'text/plain;charset=utf-8'),
                         ('Content-Length', str(len(output)))]
@@ -195,7 +198,7 @@ class PayslipDB(object):
         del c
 
     def _format_reference_number(self, seqno):
-        digits = REFNO_PREFIX + REFNO_NAMESPACE + '%014d' % seqno
+        digits = REFNO_PREFIX + '%014d' % seqno
         assert len(digits) == 26, 'should have 26 digits: %s' % digits
         table, carry = (0, 9, 4, 6, 8, 2, 7, 1, 3, 5), 0
         for n in digits:
