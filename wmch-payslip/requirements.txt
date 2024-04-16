@@ -1,4 +1,4 @@
 # SPDX-FileCopyrightText: 2019 Sascha Brawer <sascha@brawer.ch>
 # SPDX-License-Identifier: MIT
 
-gunicorn==19.9.0
+gunicorn==22.0.0
