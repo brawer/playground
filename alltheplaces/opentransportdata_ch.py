@@ -12,6 +12,7 @@
 # Description of the upstream data model:
 # https://opentransportdata.swiss/en/cookbook/service-points/
 
+import collections
 import csv
 import datetime
 import io
@@ -61,6 +62,9 @@ SECONDARY_STATION_TAGS = _prepare_tags_table(
 )
 
 
+FakeScrapyResponse = collections.namedtuple("FakeScrapyResponse", "body")
+
+
 class OpenTransportDataCHSpider(object):
     name = "opentransportdata_ch"
     allowed_domains = ["opentransportdata.swiss"]
@@ -83,40 +87,38 @@ class OpenTransportDataCHSpider(object):
 
     def start_requests(self):
         url_pattern = "https://opentransportdata.swiss/en/dataset/%s/permalink"
-        url = url_pattern % "service-points-full"
         # yield scrapy.Request(url, callback=self.extract_service_points)
-        zip_path = self.download(url)
+        # yield scrapy.Request(url, callback=self.extract_traffic_points)
+        self.download(
+            url_pattern % "service-points-full", callback=self.extract_service_points
+        )
+        self.download(
+            url_pattern % "traffic-points-full", callback=self.extract_traffic_points
+        )
 
     # TODO: Remove this method before including in All The Places.
     # In the real setup, fetches are handled by the Scrapy framework.
-    def download(self, url):
-        zip_path = "service_points.zip"
+    def download(self, url, callback):
+        zip_path = url.split("/")[-2] + ".zip"
         if not os.path.exists(zip_path):
             print(f"fetching {url}")
             with open(zip_path + ".tmp", "wb") as fp:
                 with urllib.request.urlopen(url) as req:
                     fp.write(req.read())  # not atomic
             os.rename(zip_path + ".tmp", zip_path)  # atomic
-        return self.extract_service_points_zip(zip_path)
+        with open(zip_path, "rb") as fp:
+            response = FakeScrapyResponse(fp.read())
+            for item in callback(response):
+                print(item)
 
-    def extract_service_points_zip(self, response):
-        # TODO: The scrapy version of this is:
-        # zipfile.ZipFile(io.BytesIO(response.body))
-        with zipfile.ZipFile(open(response, "rb")) as feed_zip:
-            filename = next(
-                n
-                for n in feed_zip.namelist()
-                if "service_point" in n and n.endswith(".csv")
-            )
-            with feed_zip.open(filename) as fp:
-                content = fp.read().decode("utf-8").removeprefix("\ufeff")
-                sio = io.StringIO(content)
-                for rec in csv.DictReader(sio, delimiter=";"):
-                    for item in spider.process_service_point(rec):
-                        print(item)
+    def extract_service_points(self, response):
+        return self.process_zip(response, self.process_service_point)
+
+    def extract_traffic_points(self, response):
+        return self.process_zip(response, self.process_traffic_point)
 
     def process_service_point(self, r):
-        if r["status"] != "VALIDATED":
+        if r.get("status") != "VALIDATED":
             return
         item = {
             "lat": round(float(r["wgs84North"] or "0"), 8),
@@ -183,8 +185,36 @@ class OpenTransportDataCHSpider(object):
             item["extras"].setdefault(key, value)
         return True
 
+    def process_traffic_point(self, r):
+        if r["trafficPointElementType"] != "BOARDING_PLATFORM":
+            return
+        item = {
+            "lat": round(float(r["wgs84North"] or "0"), 8),
+            "lon": round(float(r["wgs84East"] or "0"), 8),
+            "ref": r["sloid"],
+            "extras": {
+                "ele:regional": round(float(r["height"] or "0"), 2),
+                "official_name": self.cleanup_name(r["designationOfficial"]),
+                "public_transport": "platform",
+                "ref:IFOPT": r["sloid"],
+            },
+        }
+        item["extras"] = {k: v for k, v in item["extras"].items() if v}
+        item = {k: v for k, v in item.items() if v}
+        yield item
+
     def cleanup_name(self, name):
         return " ".join(name.split()).replace("'", "’")
+
+    def process_zip(self, response, row_callback):
+        with zipfile.ZipFile(io.BytesIO(response.body)) as zf:
+            file = next(n for n in zf.namelist() if n.endswith(".csv"))
+            with zf.open(file) as fp:
+                content = fp.read().decode("utf-8").removeprefix("\ufeff")
+                sio = io.StringIO(content)
+                for rec in csv.DictReader(sio, delimiter=";"):
+                    for item in row_callback(rec):
+                        yield item
 
 
 if __name__ == "__main__":
