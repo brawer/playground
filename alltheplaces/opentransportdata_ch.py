@@ -11,11 +11,15 @@
 #
 # Description of the upstream data model:
 # https://opentransportdata.swiss/en/cookbook/service-points/
+#
+# Usage: Run this script without any argouments.
+# Output: A file called "out.geojson".
 
 import collections
 import csv
 import datetime
 import io
+import json
 import os
 import urllib.request
 import zipfile
@@ -68,6 +72,7 @@ FakeScrapyResponse = collections.namedtuple("FakeScrapyResponse", "body")
 class OpenTransportDataCHSpider(object):
     name = "opentransportdata_ch"
     allowed_domains = ["opentransportdata.swiss"]
+    url_pattern = "https://opentransportdata.swiss/en/dataset/%s/permalink"
 
     # TODO: Change attribution to "optional" once All The Places appears
     # on this list: https://opentransportdata.swiss/en/authorised-databases/
@@ -86,15 +91,12 @@ class OpenTransportDataCHSpider(object):
     }
 
     def start_requests(self):
-        url_pattern = "https://opentransportdata.swiss/en/dataset/%s/permalink"
-        # yield scrapy.Request(url, callback=self.extract_service_points)
-        # yield scrapy.Request(url, callback=self.extract_traffic_points)
-        self.download(
-            url_pattern % "service-points-full", callback=self.extract_service_points
-        )
-        self.download(
-            url_pattern % "traffic-points-full", callback=self.extract_traffic_points
-        )
+        self.today = datetime.date.today().isoformat()
+        self.stations = {}
+        self.station_type_tags = {}
+        url = self.url_pattern % "service-points-full"
+        # yield scrapy.Request(url, callback=self.extract_stations)
+        self.download(url, callback=self.extract_stations)
 
     # TODO: Remove this method before including in All The Places.
     # In the real setup, fetches are handled by the Scrapy framework.
@@ -106,20 +108,56 @@ class OpenTransportDataCHSpider(object):
                 with urllib.request.urlopen(url) as req:
                     fp.write(req.read())  # not atomic
             os.rename(zip_path + ".tmp", zip_path)  # atomic
+        features = []
         with open(zip_path, "rb") as fp:
             response = FakeScrapyResponse(fp.read())
             for item in callback(response):
-                print(item)
+                f = {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [item["lon"], item["lat"]],
+                    },
+                    "properties": {
+                        "country": item.get("country", ""),
+                        "ref": item["ref"],
+                    },
+                }
+                f["properties"].update(item["extras"])
+                features.append(f)
+        with open("out.geojson", "w") as out:
+            out.write('{"type":"FeatureCollection","features":[\n')
+            first = True
+            for f in features:
+                if not first:
+                    out.write(",\n")
+                json.dump(f, out, ensure_ascii=False, sort_keys=True)
+                first = False
+            out.write("\n]}\n")
 
-    def extract_service_points(self, response):
-        return self.process_zip(response, self.process_service_point)
+    def extract_stations(self, response):
+        for item in self.process_zip(response, self.process_station):
+            yield item
+
+        # Since we need some station sttributes to emit platforms
+        # with the correct OSM tags, we need to process the stations
+        # ("service points") before the platforms ("traffic points").
+        # However, Scrapy does not support serializing requests,
+        # and the order of handling responses is non-deterministic.
+        # So we need to shoeshorn serialization by issuing the
+        # follow-up request for the platform file from here.
+        url = self.url_pattern % "traffic-points-full"
+        # yield scrapy.Request(url, callback=self.extract_traffic_points)
+        self.download(url, callback=self.extract_traffic_points)
 
     def extract_traffic_points(self, response):
-        return self.process_zip(response, self.process_traffic_point)
+        return self.process_zip(response, self.process_platform)
 
-    def process_service_point(self, r):
+    def process_station(self, r):
         if r.get("status") != "VALIDATED":
             return
+
+        ifopt_id = r["sloid"]
         item = {
             "lat": round(float(r["wgs84North"] or "0"), 8),
             "lon": round(float(r["wgs84East"] or "0"), 8),
@@ -129,15 +167,23 @@ class OpenTransportDataCHSpider(object):
                 "ele:regional": round(float(r["height"] or "0"), 2),
                 "official_name": self.cleanup_name(r["designationOfficial"]),
                 "operator": self.parse_operator(r),
-                "ref:IFOPT": r["sloid"],
+                "ref:IFOPT": ifopt_id,
             },
         }
         item["extras"].update(self.parse_lifecycle(r))
-        if not self.parse_type(r, item):
+        type_tags = self.parse_station_type(r, item)
+        if len(type_tags) == 0:
             return
+        self.set_type_tags(item, type_tags, platform=False)
+
         item["extras"] = {k: v for k, v in item["extras"].items() if v}
         item = {k: v for k, v in item.items() if v}
-        yield item
+
+        # needed later for emitting platforms with the right tags
+        self.stations[ifopt_id] = item
+        self.station_type_tags[ifopt_id] = type_tags
+        if "lat" in item and "lon" in item:
+            yield item
 
     def parse_operator(self, r):
         op = r["businessOrganisationAbbreviationEn"].strip()
@@ -157,51 +203,74 @@ class OpenTransportDataCHSpider(object):
         }
         return {k: v for k, v in tags.items() if v}
 
-    def parse_type(self, r, item):
-        stop_types = r["meansOfTransport"].split("|")
-        if len(stop_types) == 0:
-            return False
-        tags = list(PRIMARY_STATION_TAGS.get(stop_types[0], []))
-        for st in stop_types[1:]:
+    def lifecycle_prefix(self, item):
+        start_date = item["extras"].get("start_date", self.today)
+        end_date = item["extras"].get("end_date", self.today)
+        if self.today < start_date:
+            return "planned:"
+        elif self.today > end_date:
+            return "disused:"
+        else:
+            return ""
+
+    def parse_station_type(self, r, item):
+        station_types = r["meansOfTransport"].split("|")
+        if len(station_types) == 0:
+            return []
+        tags = list(PRIMARY_STATION_TAGS.get(station_types[0], []))
+        for st in station_types[1:]:
             tags.extend(SECONDARY_STATION_TAGS.get(st, []))
-        if len(tags) == 0:
-            return False
+        return tags
 
-        # Primary mode of transportation, possibly with lifecycle prefix.
-        key, value = tags[0]
-        today = datetime.date.today().isoformat()
-        start_date = item["extras"].get("start_date", today)
-        end_date = item["extras"].get("end_date", today)
-        if today < start_date:
-            key = "planned:" + key
-        elif today > end_date:
-            key = "disused:" + key
-        item["extras"][key] = value
+    # Sets the type of the station or platform, possibly with a
+    # lifecycle prefix such as "planned:" or "disused:" depending
+    # on "start_date" and "end_date" tags already present on item.
+    def set_type_tags(self, item, tags, platform):
+        extras = item["extras"]
+        prefix = self.lifecycle_prefix(item)
+        for key, value in tags:
+            extras.setdefault(prefix + key, value)
+        if platform:
+            public_transport = "platform"
+        elif any(key == "railway" for (key, _) in tags):
+            public_transport = "station"
+        else:
+            public_transport = "stop_area"
+        extras[prefix + "public_transport"] = public_transport
 
-        # Secondary keys. It seems the upstream data model adds a new
-        # station, and marks the old one as disused, if the modes of
-        # transportation change.
-        for key, value in tags[1:]:
-            item["extras"].setdefault(key, value)
-        return True
-
-    def process_traffic_point(self, r):
+    def process_platform(self, r):
         if r["trafficPointElementType"] != "BOARDING_PLATFORM":
             return
+
+        platform_id = r["sloid"]
+        station_id = r["parentSloidServicePoint"]
+        station = self.stations.get(station_id)
+        station_type = self.station_type_tags.get(station_id)
+        if not station or not station_type:
+            return
+
+        operator = r["servicePointBusinessOrganisationAbbreviationEn"]
+        if operator.startswith("Dummy"):
+            operator = ""
+
         item = {
+            "country": station.get("country"),
             "lat": round(float(r["wgs84North"] or "0"), 8),
             "lon": round(float(r["wgs84East"] or "0"), 8),
-            "ref": r["sloid"],
+            "ref": platform_id,
             "extras": {
                 "ele:regional": round(float(r["height"] or "0"), 2),
                 "official_name": self.cleanup_name(r["designationOfficial"]),
-                "public_transport": "platform",
-                "ref:IFOPT": r["sloid"],
+                "operator": operator,
+                "ref:IFOPT": platform_id,
             },
         }
+        item["extras"].update(self.parse_lifecycle(r))
+        self.set_type_tags(item, station_type, platform=True)
         item["extras"] = {k: v for k, v in item["extras"].items() if v}
         item = {k: v for k, v in item.items() if v}
-        yield item
+        if "lat" in item and "lon" in item:
+            yield item
 
     def cleanup_name(self, name):
         return " ".join(name.split()).replace("'", "’")
