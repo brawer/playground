@@ -90,6 +90,9 @@ class OpenTransportDataCHSpider(object):
         "website": "https://opentransportdata.swiss/",
     }
 
+    def __init__(self, exporter):
+        self.exporter = exporter
+
     def start_requests(self):
         self.today = datetime.date.today().isoformat()
         self.stations = {}
@@ -112,28 +115,7 @@ class OpenTransportDataCHSpider(object):
         with open(zip_path, "rb") as fp:
             response = FakeScrapyResponse(fp.read())
             for item in callback(response):
-                f = {
-                    "type": "Feature",
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [item["lon"], item["lat"]],
-                    },
-                    "properties": {
-                        "country": item.get("country", ""),
-                        "ref": item["ref"],
-                    },
-                }
-                f["properties"].update(item["extras"])
-                features.append(f)
-        with open("out.geojson", "w") as out:
-            out.write('{"type":"FeatureCollection","features":[\n')
-            first = True
-            for f in features:
-                if not first:
-                    out.write(",\n")
-                json.dump(f, out, ensure_ascii=False, sort_keys=True)
-                first = False
-            out.write("\n]}\n")
+                self.exporter.write(item)
 
     def extract_stations(self, response):
         for item in self.process_zip(response, self.process_station):
@@ -286,6 +268,38 @@ class OpenTransportDataCHSpider(object):
                         yield item
 
 
+# Just for debugging, in the real setup this is part of the ATP framwork.
+class Exporter(object):
+    def __init__(self, path):
+        self.out = open(path, "w")
+        self.out.write('{"type":"FeatureCollection","features":[\n')
+        self.first = True
+
+    def write(self, item):
+        f = {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [item["lon"], item["lat"]],
+            },
+            "properties": {
+                "country": item.get("country", ""),
+                "ref": item["ref"],
+            },
+        }
+        f["properties"].update(item["extras"])
+        if not self.first:
+            self.out.write(",\n")
+        json.dump(f, self.out, ensure_ascii=False, sort_keys=True)
+        self.first = False
+
+    def close(self):
+        self.out.write("]}\n")
+        self.out.close()
+
+
 if __name__ == "__main__":
-    spider = OpenTransportDataCHSpider()
+    exporter = Exporter("out.geojson")
+    spider = OpenTransportDataCHSpider(exporter)
     spider.start_requests()
+    exporter.close()
